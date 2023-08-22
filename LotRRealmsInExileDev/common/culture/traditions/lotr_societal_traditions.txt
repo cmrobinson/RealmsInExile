@@ -1061,6 +1061,7 @@ tradition_hobbit_feasts = {
 		characters_are_better_food_tasters = yes
 		lazy_trait_more_common = yes
 		gluttonous_trait_more_common = yes
+		may_challenge_to_drinking_duel = yes
 	}
 	
 	cost = {
