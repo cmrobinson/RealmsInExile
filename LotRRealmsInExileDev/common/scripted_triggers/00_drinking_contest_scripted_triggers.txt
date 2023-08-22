@@ -1,0 +1,25 @@
+﻿
+##################################################
+# GENERIC TRIGGERS
+
+# Note: this is a very stripped down trigger set. It's expected that it'll be parsed through something that parses out more typically unsuitable candidates (e.g., prisoners under most circumstances).
+dc_can_start_drinking_contest_trigger = {
+	# Check for the usual stuff.
+	can_start_drinking_contest_eligibility_checks_trigger = yes
+	# And filter out those who can never play a board game.
+	dc_can_start_drinking_contest_is_scope_banned_checks_trigger = no
+}
+
+can_start_drinking_contest_eligibility_checks_trigger = {
+	# Children need to be old enough to know to not eat the playing pieces.
+	OR = {
+		child_not_infant_trigger = yes
+		is_adult = yes
+	}
+	# Otherwise, we're actually pretty forgiving of basically everyone being able to play somehow. For now.
+}
+
+dc_can_start_drinking_contest_is_scope_banned_checks_trigger = {
+	# Currently, we just *always* filter anyone who's already in a bout.
+	exists = var:engaged_in_drinking_contest
+}

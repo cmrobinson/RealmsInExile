@@ -12,7 +12,7 @@ challenge_to_drinking_contest_interaction = {
 	common_interaction = yes
 
 	greeting = positive
-	notification_text = CHALLENGE_TO_2P_CHESS_INTERACTION_NOTIFICATION
+	notification_text = CHALLENGE_TO_DRINKING_CONTEST_INTERACTION_NOTIFICATION
 	ai_maybe = yes
 
 	cooldown = { years = 1 }
@@ -22,14 +22,11 @@ challenge_to_drinking_contest_interaction = {
 		scope:actor = {
 			NOT = { has_culture = culture:wastelands }
 			is_in_valinor = no
-			# Actor needs to either have a CulTrad or be a fan of board games
-			OR = {
-				culture = { has_cultural_parameter = may_challenge_to_drinking_duel }
-				has_perk = befriend_perk
-			}
+			# Actor needs to either have a CulTrad
+			culture = { has_cultural_parameter = may_challenge_to_drinking_duel }
 			# Plus be able to start & continue such a game generally.
-			bg_can_start_board_game_trigger = yes
-			# ... no, I'm sorry, you can't play yourself at board games.
+			dc_can_start_drinking_contest_trigger = yes
+			# ... no, I'm sorry, you can't play yourself at drinking contest, can you?.
 			NOT = { this = scope:recipient }
 		}
 		scope:recipient = {
@@ -38,37 +35,32 @@ challenge_to_drinking_contest_interaction = {
 		}
 	}
 
-	is_valid_showing_failures_only = {
-		# Both characters must be available (adults or old-enough children)
+	is_valid_showig_failures_only = {
+		# Both charnacters must be available (adults or old-enough children)
 		scope:actor = { 
 			is_available = yes
-			can_start_board_game_eligibility_checks_trigger = yes
+			can_start_drinking_contest_eligibility_checks_trigger = yes
 		}
 		scope:recipient = { 
 			is_available = yes
-			can_start_board_game_eligibility_checks_trigger = yes
+			can_start_drinking_contest_eligibility_checks_trigger = yes
 		}
-		# Neither of you can be currently engaged in a board game.
+		# Neither of you can be currently engaged in a drinking contest.
 		scope:recipient = {
 			custom_description = {
-				text = fp2_bg_recipient_banned_from_board_games
-				bg_can_start_board_game_is_scope_banned_checks_trigger = no
+				text = dc_recipient_banned_from_drinking_contest
+				dc_can_start_drinking_contest_is_scope_banned_checks_trigger = no
 			}
 		}
 	}
 
 	on_send = {
-		# We want to set this up in advance to stop scope:actor from giving away a county for opinion that they've already wagered.
-		if = {
-			limit = { always = scope:chess_land }
-			challenge_to_2p_chess_interaction_lock_in_actor_stake_land_effect = yes
-		}
-		# Plus lock in the game type.
-		challenge_to_2p_chess_interaction_lock_in_game_type_effect = { GAME_TYPE_SETTER = scope:actor }
+		# Lock in the game type.
+		challenge_to_drinking_contest_interaction_lock_in_game_type_effect = { GAME_TYPE_SETTER = scope:actor }
 	}
 
 	on_accept = {
-		# Save gold & land stakes.
+		# Save gold stakes.
 		if = {
 			limit = { always = scope:chess_gold }
 			save_scope_value_as = {
@@ -76,99 +68,18 @@ challenge_to_drinking_contest_interaction = {
 				value = challenge_to_chess_gold_change_value
 			}
 		}
-		if = {
-			limit = { always = scope:chess_land }
-			# We check scope:actor's county in the on_send block to stop them sneakily giving the county away after they've staked it.
-			show_as_tooltip = { challenge_to_2p_chess_interaction_lock_in_actor_stake_land_effect = yes }
-			scope:recipient = {
-				save_temporary_scope_as = ordering_char_temp
-				ordered_held_title = {
-					limit = {
-						bg_stake_land_valid_neighbouring_county_to_trade_trigger = { NEIGHBOUR = scope:actor }
-					}
-					order_by = bg_stake_land_evaluate_appropriate_county_ordering_value
-					save_scope_as = bg_stake_land_recipient
-					set_variable = wagered_county
-				}
-			}
-		}
 		# Proceed with general set-up & preamble.
 		scope:actor = {
 			# Log scope:actor as having taken the interaction for the purposes of invalidation
-			add_character_flag = taken_challenge_to_chess_interaction
+			add_character_flag = taken_challenge_to_drinking_contest_interaction
 			# Fire the actual first event for scope:actor.
 			## Sort some placeholder scopes so the UI doesn't freak out.
 			show_as_tooltip = {
-				challenge_to_2p_chess_interaction_lock_in_game_type_effect = { GAME_TYPE_SETTER = scope:actor }
+				challenge_to_drinking_contest_interaction_lock_in_game_type_effect = { GAME_TYPE_SETTER = scope:actor }
 			}
-			## Pachisi
+			## Drinking Contest
 			if = {
-				limit = { scope:bg_interaction_game_type = flag:pachisi }
-				configure_start_board_game_effect = {
-					BG_INITIATOR = scope:actor
-					BG_ATTACKER = scope:actor
-					BG_DEFENDER = scope:recipient
-					SYSTEM = pachisi
-					LOCALE = random_nice_day
-					OUTPUT_EVENT = perk_interaction.0121
-					INVALIDATION_EVENT = board_games.0021
-				}
-			}
-			## Hnefatafl
-			if = {
-				limit = { scope:bg_interaction_game_type = flag:hnefatafl }
-				configure_start_board_game_effect = {
-					BG_INITIATOR = scope:actor
-					BG_ATTACKER = scope:actor
-					BG_DEFENDER = scope:recipient
-					SYSTEM = hnefatafl
-					LOCALE = random_nice_day
-					OUTPUT_EVENT = perk_interaction.0121
-					INVALIDATION_EVENT = board_games.0021
-				}
-			}
-			## Tabula
-			if = {
-				limit = { scope:bg_interaction_game_type = flag:tabula }
-				configure_start_board_game_effect = {
-					BG_INITIATOR = scope:actor
-					BG_ATTACKER = scope:actor
-					BG_DEFENDER = scope:recipient
-					SYSTEM = tabula
-					LOCALE = random_nice_day
-					OUTPUT_EVENT = perk_interaction.0121
-					INVALIDATION_EVENT = board_games.0021
-				}
-			}
-			## Go
-			if = {
-				limit = { scope:bg_interaction_game_type = flag:go }
-				configure_start_board_game_effect = {
-					BG_INITIATOR = scope:actor
-					BG_ATTACKER = scope:actor
-					BG_DEFENDER = scope:recipient
-					SYSTEM = go
-					LOCALE = random_nice_day
-					OUTPUT_EVENT = perk_interaction.0121
-					INVALIDATION_EVENT = board_games.0021
-				}
-			}
-			## Fidchell
-			if = {
-				limit = { scope:bg_interaction_game_type = flag:fidchell }
-				configure_start_board_game_effect = {
-					BG_INITIATOR = scope:actor
-					BG_ATTACKER = scope:actor
-					BG_DEFENDER = scope:recipient
-					SYSTEM = fidchell
-					LOCALE = random_nice_day
-					OUTPUT_EVENT = perk_interaction.0121
-					INVALIDATION_EVENT = board_games.0021
-				}
-			}
-			## Chess
-			if = {
-				limit = { scope:bg_interaction_game_type = flag:chess }
+				limit = { scope:dc_interaction_game_type = flag:drinking_contest }
 				configure_start_board_game_effect = {
 					BG_INITIATOR = scope:actor
 					BG_ATTACKER = scope:actor

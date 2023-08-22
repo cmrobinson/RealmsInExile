@@ -7,9 +7,9 @@
  culture_parameter_may_wager_land_on_board_games:0 "May wager a personally held [county|E] in [board_games|E], if both players have this rule"
  
  challenge_to_drinking_contest_interaction:2 "Challenge to a Drinking Contest"
- challenge_to_drinking_contest_interaction_desc:2 "Play [recipient.GetName] at a [board_game|E]"
+ challenge_to_drinking_contest_interaction_desc:2 "Play [recipient.GetName] at a [drinking_contest|E]"
  
- CHALLENGE_TO_2P_CHESS_INTERACTION_NOTIFICATION:2 "Salutations my fine [actor.Custom2('RelationToMeShort', recipient)]! Would you care for a rousing game of [actor.Custom('BG_GameType_Concept_Dark')]?"
+ CHALLENGE_TO_DRINKING_CONTEST_INTERACTION_NOTIFICATION:2 "Salutations my fine [actor.Custom2('RelationToMeShort', recipient)]! Would you care for a rousing game of [actor.Custom('BG_GameType_Concept_Dark')]?"
  CHESS_FRIENDLY:1 "Friendly Game"
  CHESS_PRESTIGE:1 "Wager Fame"
  CHESS_GOLD:1 "Wager Fortune"
@@ -21,7 +21,7 @@
  perk_interaction.0122.loser_toast.t:1 "You lose the game!"
  fp2_bg_interaction.winner.actor:1 "If [Select_CString( actor.IsLocalPlayer, 'you win', 'your opponent wins' )] the wager"
  fp2_bg_interaction.winner.recipient:1 "If [Select_CString( recipient.IsLocalPlayer, 'you win', 'your opponent wins' )] the wager"
- fp2_bg_recipient_banned_from_board_games:1 "[character|E] cannot currently play a board game"
+ dc_recipient_banned_from_drinking_contest:1 "[character|E] cannot currently play a drinking contest"
  challenge_to_2p_chess_interaction.need_bordering_non_capital_domains.tt:1 "You and your opponent must have bordering [domains|E] that are not your [realm_capitals|E]"
  bet_gold_actor_not_enough_gold:0 "You do not have enough [gold|E]"
  bet_gold_recipient_not_enough_gold:0 "Your opponent do not have enough [gold|E]"

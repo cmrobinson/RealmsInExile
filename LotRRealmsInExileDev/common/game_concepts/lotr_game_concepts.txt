@@ -1503,3 +1503,11 @@ oiolare = {
 	parent = conceptplant
 	alias = { oiolare_tree oiolare_trees }
 }
+
+###################################
+######## Drinking Contest #########
+###################################
+
+drinking_contest = {
+
+}
