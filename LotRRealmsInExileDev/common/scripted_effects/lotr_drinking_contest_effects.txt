@@ -8,135 +8,72 @@
 
 configure_start_drinking_contest_effect = {
 	# DOCUMENTATION
-	## scope:bg_initiator
+	## scope:dc_initiator
 		### Who started the board game? This is who the output/invalidation events will fire for.
-	## scope:bg_attacker
+	## scope:dc_attacker
 		### The hostile party - in the event of a tie, the match is decided against them.
-	## scope:bg_defender
+	## scope:dc_defender
 		### The defending party - in the event of a tie, the match is decided in their favour.
-	## scope:bg_system = flag:XYZ
+	## scope:dc_system = flag:XYZ
 		### These control both the relevant skills, counters, & some flavour adjacent to the game.
 		### drinking_contest
 	## scope:locale = flag:XYZ
-		### These just trigger the event background of the same name. New ones can be added as needed, but should be added across all three events (round, victory, loss/board_games.0001, board_games.0031, board_games.0041), as we can't add a scripted list.
-		### terrain_scope
-		### wilderness_scope
-		### battlefield
-		### temple
-		### council_chamber
-		### courtyard
-		### dungeon
-		### docks
-		### feast
-		### gallows
-		### garden
-		### market
-		### sitting_room
-		### bedchamber
-		### study
-		### physicians_study
+		### These just trigger the event background of the same name. New ones can be added as needed, but should be added across all three events (round, victory, loss/drinking_contest.0001, drinking_contest.0031, drinking_contest.0041), as we can't add a scripted list.
 		### tavern
-		### throne_room
-		### army_camp
-		### random_nice_day
-		#### Selects either garden or sitting_room, depending on season.
 	## output event ID
 		### Which event fires after the game's completion?
 
 	# Sort parties.
-	$BG_INITIATOR$ = { save_scope_as = bg_initiator }
-	$BG_DEFENDER$ = { save_scope_as = bg_defender }
-	$BG_ATTACKER$ = { save_scope_as = bg_attacker }
+	$DC_INITIATOR$ = { save_scope_as = dc_initiator }
+	$DC_DEFENDER$ = { save_scope_as = dc_defender }
+	$DC_ATTACKER$ = { save_scope_as = dc_attacker }
 	# Make sure they're clean for setup.
-	hidden_effect = { remove_board_game_variables_effect = yes}
+	hidden_effect = { remove_drinking_contest_variables_effect = yes}
 	# Set them both to busy for the single combat.
-	scope:bg_defender = {
+	scope:dc_defender = {
 		set_variable = {
-			name = engaged_in_board_game
+			name = engaged_in_drinking_contest
 			value = yes
 		}
 	}
-	scope:bg_attacker = {
+	scope:dc_attacker = {
 		set_variable = {
-			name = engaged_in_board_game
+			name = engaged_in_drinking_contest
 			value = yes
 		}
 	}
-	## Sadly, we have no good justification for ripping your shirt off whilst playing board games.
+	## Sadly, we have no good justification for ripping your shirt off whilst doing a drinking contest.
 	# Set rules & system.
 	save_scope_value_as = {
-		name = bg_system
+		name = dc_system
 		value = flag:$SYSTEM$
 	}
-	## Chess
-	### In chess, our counter order is Martial -> Learning -> Intrigue.
+	## Drinking Contest
+	### In a drinking contest, our counter order is Stewardship -> Diplomacy -> Intrigue.
 	if = {
-		limit = { scope:bg_system = flag:drinking_contest }
+		limit = { scope:dc_system = flag:drinking_contest }
 		save_scope_value_as = {
-			name = bg_skill_a
-			value = flag:martial
+			name = dc_skill_a
+			value = flag:stewardship
 		}
 		save_scope_value_as = {
-			name = bg_skill_b
-			value = flag:learning
+			name = dc_skill_b
+			value = flag:diplomacy
 		}
 		save_scope_value_as = {
-			name = bg_skill_c
+			name = dc_skill_c
 			value = flag:intrigue
 		}
 	}
 	# Note where the fight is taking place, if we're using a specific location.
 	save_scope_value_as = {
-		name = bg_locale
+		name = dc_locale
 		value = flag:$LOCALE$
 	}
 	## Grab _scope backgrounds appropriately..
 	if = {
-		limit = { scope:bg_locale = flag:terrain_scope }
-		scope:bg_defender.location = { save_scope_as = background_terrain_scope }
-	}
-	else_if = {
-		limit = { scope:bg_locale = flag:wilderness_scope }
-		scope:bg_defender.location = { save_scope_as = background_wilderness_scope }
-	}
-	## Sort any random_ backgrounds if necessary.
-	else_if = {
-		limit = { scope:bg_locale = flag:random_nice_day }
-		random_list = {
-			# Indoors.
-			50 = {
-				trigger = {
-					exists = scope:bg_defender.location
-					is_nice_season_to_be_inside_trigger = { LOCATION = scope:bg_defender.location }
-				}
-				save_scope_value_as = {
-					name = bg_locale
-					value = flag:sitting_room
-				}
-			}
-			# Outdoors.
-			50 = {
-				trigger = {
-					exists = scope:bg_defender.location
-					is_nice_season_to_be_outside_trigger = { LOCATION = scope:bg_defender.location }
-				}
-				save_scope_value_as = {
-					name = bg_locale
-					value = flag:garden
-				}
-			}
-			# Fallback: occasionally characters fall into a bloody void between space and time, I guess, and when they do we need to stop trying to calculate the weather for non-Euclidian space.
-			50 = {
-				trigger = {
-					NOT = { exists = scope:bg_defender.location }
-				}
-				save_scope_value_as = {
-					name = bg_locale
-					# Because black holes are from space and space lives inside books.
-					value = flag:study
-				}
-			}
-		}
+		limit = { scope:dc_locale = flag:tavern }
+		scope:dc_defender.location = { save_scope_as = tavern }
 	}
 	# Arrange aftermath.
 	save_scope_value_as = {
@@ -148,112 +85,103 @@ configure_start_drinking_contest_effect = {
 		value = event_id:$INVALIDATION_EVENT$
 	}
 	# Configure starting scopes'n'variables.
-	scope:bg_defender = {
+	scope:dc_defender = {
 		# Set our current round.
 		set_variable = {
-			name = bg_current_round
+			name = dc_current_round
 			value = 1
 		}
 		# Set up our initial scores.
 		set_variable = {
-			name = bg_current_score
+			name = dc_current_score
 			value = 0
 		} 
 	}
-	scope:bg_attacker = {
+	scope:dc_attacker = {
 		# Set up our initial scores.
 		set_variable = {
-			name = bg_current_score
+			name = dc_current_score
 			value = 0
 		}
 	}
 	# Finally, send the first event.
-	scope:bg_defender = { trigger_event = board_games.0001 }
+	scope:dc_defender = { trigger_event = drinking_contest.0001 }
 }
 
-# Clean up all variables resulting from playing a board game.
-remove_board_game_variables_effect = {
+# Clean up all variables resulting from playing a drinking contest.
+remove_drinking_contest_variables_effect = {
 	# Player-side variables.
-	remove_variable = bg_current_round
-	remove_variable = bg_current_score
-	remove_variable = bg_move_result
-	# If there are any wagering counties, clear the blockers on their being wagered.
-	if = {
-		limit = { exists = scope:bg_stake_land_recipient }
-		scope:bg_stake_land_recipient = { remove_variable = wagered_county }
-	}
-	if = {
-		limit = { exists = scope:bg_stake_land_actor }
-		scope:bg_stake_land_actor = { remove_variable = wagered_county }
-	}
+	remove_variable = dc_current_round
+	remove_variable = dc_current_score
+	remove_variable = dc_move_result
 	# Remove any debug variables.
-	remove_variable = bg_gib_only_losing_locs
-	remove_variable = bg_gib_only_winning_locs
-	# Note, we don't remove var:engaged_in_board_game here, as we run this effect at the start of games for clean-up also.
+	remove_variable = dc_gib_only_losing_locs
+	remove_variable = dc_gib_only_winning_locs
+	# Note, we don't remove var:engaged_in_drinking_contest here, as we run this effect at the start of games for clean-up also.
 }
 
-remove_engaged_in_board_game_variables_effect = {
-	scope:bg_attacker = {
+remove_engaged_in_drinking_contest_variables_effect = {
+	scope:dc_attacker = {
 		if = {
 			# Restrict to live characters to prevent errors.
 			limit = { is_alive = yes }
-			remove_variable = engaged_in_board_game
+			remove_variable = engaged_in_drinking_contest
 		}
 	}
-	scope:bg_defender = {
+	scope:dc_defender = {
 		if = {
 			# Restrict to live characters to prevent errors.
 			limit = { is_alive = yes }
-			remove_variable = engaged_in_board_game
+			remove_variable = engaged_in_drinking_contest
 		}
 	}
 }
 
 # Clean all consequences of a single combat.
-remove_board_game_info_effect = {
-	scope:bg_defender = {
+remove_drinking_contest_info_effect = {
+	scope:dc_defender = {
 		# Only remove variables if they're alive, as otherwise we get errors.
 		if = {
 			limit = { is_alive = yes }
-			remove_board_game_variables_effect = yes
+			remove_drinking_contest_variables_effect = yes
 		}
 	}
-	scope:bg_attacker = {
+	scope:dc_attacker = {
 		# Only remove variables if they're alive, as otherwise we get errors.
 		if = {
 			limit = { is_alive = yes }
-			remove_board_game_variables_effect = yes
+			remove_drinking_contest_variables_effect = yes
 		}
 	}
-	remove_engaged_in_board_game_variables_effect = yes
+	remove_engaged_in_drinking_contest_variables_effect = yes
 }
 
-bg_fire_clean_up_and_invalidate_effect = {
-	remove_engaged_in_board_game_variables_effect = yes
-	# We try to wing this at scope:bg_defender...
+dc_fire_clean_up_and_invalidate_effect = {
+	remove_engaged_in_drinking_contest_variables_effect = yes
+	# We try to wing this at scope:dc_defender...
 	if = {
 		limit = {
-			scope:bg_defender = { is_alive = yes }
+			scope:dc_defender = { is_alive = yes }
 		}
-		scope:bg_defender = {
+		scope:dc_defender = {
 			trigger_event = { saved_event_id = scope:invalidation_event }
 		}
 	}
-	# ... then scope:bg_attacker...
+	# ... then scope:dc_attacker...
 	else_if = {
 		limit = {
-			scope:bg_attacker = { is_alive = yes }
+			scope:dc_attacker = { is_alive = yes }
 		}
-		scope:bg_attacker = {
+		scope:dc_attacker = {
 			trigger_event = { saved_event_id = scope:invalidation_event }
 		}
 	}
-	# ... then scope:bg_initiator...
+	# ... then scope:dc_initiator...
 	else_if = {
 		limit = {
-			scope:bg_initiator = { is_alive = yes }
+			scope:dc_initiator = { is_alive = yes }
 		}
-		scope:bg_initiator = {
+		scope:dc_initiator = {
 			trigger_event = { saved_event_id = scope:invalidation_event }
 		}
 	}
@@ -289,7 +217,7 @@ challenge_to_drinking_contest_interaction_lock_in_game_type_effect = {
 	}
 }
 
-fp2_bg_stake_friendly_effect = {
+fp2_dc_stake_friendly_effect = {
 	$VICTOR$ = {
 		if = {
 			# Obscure opinion adds from players.
@@ -316,29 +244,29 @@ fp2_bg_stake_friendly_effect = {
 	}	
 }
 
-fp2_bg_stake_fame_effect = {
+fp2_dc_stake_fame_effect = {
 	$VICTOR$ = { add_prestige = medium_prestige_gain }
 	$LOSER$ = { add_prestige = minor_prestige_loss }
 }
 
-fp2_bg_stake_fortune_effect = {
+fp2_dc_stake_fortune_effect = {
 	# A nice, simple, transfer of funds.
 	$LOSER$ = {
 		pay_short_term_gold = {
 			target = $VICTOR$
-			gold = scope:bg_stake_gold
+			gold = scope:dc_stake_gold
 		}
 	}
 }
 
-fp2_bg_stake_titles_effect = {
+fp2_dc_stake_titles_effect = {
 	create_title_and_vassal_change = {
 		type = granted
 		save_scope_as = change
 	}
 	if = {
 		limit = { $VICTOR$ = scope:actor }
-		scope:bg_stake_land_recipient = {
+		scope:dc_stake_land_recipient = {
 			change_title_holder = {
 				holder = scope:actor
 				change = scope:change
@@ -347,7 +275,7 @@ fp2_bg_stake_titles_effect = {
 	}
 	else_if = {
 		limit = { $VICTOR$ = scope:recipient }
-		scope:bg_stake_land_actor = {
+		scope:dc_stake_land_actor = {
 			change_title_holder = {
 				holder = scope:recipient
 				change = scope:change
@@ -365,30 +293,30 @@ perk_interaction_0122_apply_effects_effect = {
 	## Friendlies bet opinion & stress.
 	if = {
 		limit = { always = scope:chess_friendly }
-		fp2_bg_stake_friendly_effect = {
-			VICTOR = scope:bg_victor
-			LOSER = scope:bg_loser
+		fp2_dc_stake_friendly_effect = {
+			VICTOR = scope:dc_victor
+			LOSER = scope:dc_loser
 		}
 	}
 	## Fame bets prestige.
 	if = {
 		limit = { always = scope:chess_prestige }
-		fp2_bg_stake_fame_effect = {
-			VICTOR = scope:bg_victor
-			LOSER = scope:bg_loser
+		fp2_dc_stake_fame_effect = {
+			VICTOR = scope:dc_victor
+			LOSER = scope:dc_loser
 		}
 	}
 	## Fortune bets gold.
 	if = {
 		limit = { always = scope:chess_gold }
-		fp2_bg_stake_fortune_effect = {
-			VICTOR = scope:bg_victor
-			LOSER = scope:bg_loser
+		fp2_dc_stake_fortune_effect = {
+			VICTOR = scope:dc_victor
+			LOSER = scope:dc_loser
 		}
 	}
 	## Land bets... land.
 	if = {
 		limit = { always = scope:chess_land }
-		fp2_bg_stake_titles_effect = { VICTOR = scope:bg_victor }
+		fp2_dc_stake_titles_effect = { VICTOR = scope:dc_victor }
 	}
 }
