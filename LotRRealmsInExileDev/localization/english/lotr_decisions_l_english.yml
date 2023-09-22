@@ -612,6 +612,10 @@ decision_bellakar_x_gondor_custom_tooltip_b:0 "You have reconciled with Felaya" 
  decision_unify_the_orcs_desc:0 "For so long, the orcs have been scattered and disunited, beaten back at every turn by Men, Dwarves and Elves. We were unified under the Dark Lords, but they are not worthy of our swords! Orcs should rule orcs, and the strongest of them all shall lead - me. \n\nBeneath my banner, the Orc Warhost shall spread across all the earth!"
  decision_unify_the_orcs_confirm:0 "The time of the Orc has come!"
  
+
+
+ NEW_GOBLIN_TITLE_NAME:0 "[founder.GetCulture.GetNameNoTooltip]s"
+
  ##############################
  #### Near Harad Decisions ####
  ##############################
@@ -827,6 +831,7 @@ decision_margoz_cleanse_nelornieth_confirm:0 "I am Szrel the cruel reborn"
  
  decision_restore_hillmen_rhudaur:0 "Restore the Hillmen Kingdom of Rhudaur"
  decision_restore_hillmen_rhudaur_tooltip:0 "The time to restore the Kingdom of Rhudaur by its rightful lords has come!"
+ decision_hillmen_new_tradition:0 "Access to the forges of Cameth Brin, enables a new formal army"
  decision_restore_hillmen_rhudaur_desc:0 "For too long have the Noi Trevan people have dwelled scattered, hiding in the hills north of our once great realm. No more! It is time for the sons of Rhudaur to rise up and regain their former glory under a single banner and a single King!"
  decision_restore_hillmen_rhudaur_confirm:0 "For the Noi Trevan people!"
 
