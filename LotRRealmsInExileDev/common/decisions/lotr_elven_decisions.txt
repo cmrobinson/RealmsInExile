@@ -1043,7 +1043,7 @@ decision_umbar_burns = { # Starts war against Umbar
 	is_shown = {
 		root = character:linefinwe11
 		
-		exists = title:e_umbar.holder
+		exists = title:k_umbar.holder
 		NOT = {
 			is_target_in_global_variable_list = {
 				name = unavailable_unique_decisions
@@ -1073,6 +1073,12 @@ decision_umbar_burns = { # Starts war against Umbar
 	
 	# EFFECT 
 	effect = {
+		
+		start_war = {
+			casus_belli = destroy_dol_guldur_cb
+			target = title:k_umbar.holder
+			target_title = title:k_umbar
+		}
 		add_to_global_variable_list = {
 			name = unavailable_unique_decisions
 			target = flag:decision_umbar_burns
@@ -1134,6 +1140,11 @@ decision_annihilate_dol_guldur = { # Starts war against Dol Guldur
 	
 	# EFFECT 
 	effect = {
+		start_war = {
+			casus_belli = destroy_dol_guldur_cb
+			target = character:nazgul2
+			target_title = title:k_amon_lanc
+		}
 		add_to_global_variable_list = {
 			name = unavailable_unique_decisions
 			target = flag:annihilate_dol_guldur
