@@ -1098,11 +1098,11 @@ decision_umbar_burns = { # Starts war against Umbar
 
 decision_annihilate_dol_guldur = { # Starts war against Dol Guldur
 	# TEXT
-	title = annihilate_dol_guldur
+	title = decision_annihilate_dol_guldur
 	picture = "gfx/interface/illustrations/decisions/decision_fornost_02.dds"
-	selection_tooltip = annihilate_dol_guldur_tooltip
-	desc = annihilate_dol_guldur_desc
-	confirm_text = annihilate_dol_guldur_confirm
+	selection_tooltip = decision_annihilate_dol_guldur_tooltip
+	desc = decision_annihilate_dol_guldur_desc
+	confirm_text = decision_annihilate_dol_guldur_confirm
 	major = yes
 
 	# IS_SHOWN
@@ -1116,7 +1116,7 @@ decision_annihilate_dol_guldur = { # Starts war against Dol Guldur
 		NOT = {
 			is_target_in_global_variable_list = {
 				name = unavailable_unique_decisions
-				target = flag:annihilate_dol_guldur
+				target = flag:decision_annihilate_dol_guldur
 			}
 		}
 	}
@@ -1147,7 +1147,97 @@ decision_annihilate_dol_guldur = { # Starts war against Dol Guldur
 		}
 		add_to_global_variable_list = {
 			name = unavailable_unique_decisions
-			target = flag:annihilate_dol_guldur
+			target = flag:decision_annihilate_dol_guldur
+		}
+	}
+
+	# AI
+	ai_goal = yes
+	ai_potential = { always = yes }
+	ai_will_do = { base = 100 }
+}
+
+##################################################
+# Annihilate Dol Guldur
+# by Jaco_Daan
+##################################################
+
+decision_fourth_kinslaying = { # Starts war against Dol Guldur
+	# TEXT
+	title = decision_fourth_kinslaying
+	picture = "gfx/interface/illustrations/decisions/decision_fornost_02.dds"
+	selection_tooltip = decision_fourth_kinslaying_tooltip
+	desc = decision_fourth_kinslaying_desc
+	confirm_text = decision_fourth_kinslaying_confirm
+	major = yes
+
+	# IS_SHOWN
+	is_shown = {
+		root = character:linefinwe11
+		has_variable = rallied_loyalist
+		character:lineofcirdan = {
+			has_title = title:e_lindon
+		}
+
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:decision_fourth_kinslaying
+			}
+		}
+	}
+	
+	# IS_VALID
+	is_valid = {
+		custom_tooltip = { text = "Completed: Stronghold at Edhellond" }
+	}
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_available_adult = yes
+		is_at_war = no
+	}
+
+	# COST 
+	# cost = {
+	# 	gold = 250
+	# 	prestige = 500
+	# 	piety = 500
+	# }
+	
+	# EFFECT 
+	effect = {
+		start_war = {
+			casus_belli = fourth_kinslaying_cb
+			target = title:e_lindon.holder
+			target_title = title:e_lindon
+		}
+		title:e_lindon.holder = {
+			every_character_war = {
+				limit = { using_cb = fourth_kinslaying_cb }
+				add_to_list = war_to_join
+			}
+			every_vassal_or_below = {
+				limit = { has_variable = joined_maglor }
+				every_in_list = {
+					list = war_to_join
+					limit = { NOT = { is_defender = prev } }
+					hidden_effect = { set_called_to = prev }
+					add_attacker = prev
+				}
+			}
+			every_vassal_or_below = {
+				limit = { culture = culture:sindar }
+				every_in_list = {
+					list = war_to_join
+					limit = { NOT = { is_attacker = prev } }
+					hidden_effect = { set_called_to = prev }
+					add_defender = prev
+				}
+			}
+		}
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:decision_fourth_kinslaying
 		}
 	}
 

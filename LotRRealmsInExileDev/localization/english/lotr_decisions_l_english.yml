@@ -69,20 +69,25 @@
  decision_return_cuind_vassals_custom:1 "Every $penni$ and $avari$ [vassal|E]"
  decision_return_cuind_counties_custom:1 "Every $penni$ and $avari$ [county|e] in your [realm|E]"
 
-  decision_annihilate_abhorred:0 "VECTOR - Placeholder" # Title text to start war against Sauron
+  decision_annihilate_abhorred:0 "Annihilate Sauron the Abhorred" # Title text to start war against Sauron
   decision_annihilate_abhorred_tooltip:0 "VECTOR - Placeholder" # Tooltip text to start war against Sauron
   decision_annihilate_abhorred_desc:0 "VECTOR - Placeholder" # Description text to start war against Sauron
   decision_annihilate_abhorred_confirm:0 "VECTOR - Placeholder" # Confirm text to start war against Sauron
 
-  decision_annihilate_dol_guldur:0 "VECTOR - Placeholder" # Title text to start war against Dol Guldur
+  decision_annihilate_dol_guldur:0 "Annihilate Dol Guldur" # Title text to start war against Dol Guldur
   decision_annihilate_dol_guldur_tooltip:0 "VECTOR - Placeholder" # Tooltip text to start war against Dol Guldur
   decision_annihilate_dol_guldur_desc:0 "VECTOR - Placeholder" # Description text to start war against Dol Guldur
   decision_annihilate_dol_guldur_confirm:0 "VECTOR - Placeholder" # Confirm text to start war against Dol Guldur
 
-  decision_umbar_burns:0 "VECTOR - Placeholder" # Title text to start war against Umbar
+  decision_umbar_burns:0 "Umbar Burns" # Title text to start war against Umbar
   decision_umbar_burns_tooltip:0 "VECTOR - Placeholder" # Tooltip text to start war against Umbar
   decision_umbar_burns_desc:0 "VECTOR - Placeholder" # Description text to start war against Umbar
   decision_umbar_burns_confirm:0 "VECTOR - Placeholder" # Confirm text to start war against Umbar
+
+  decision_fourth_kinslaying:0 "Fourth Kinslaying" # Title text to start war against Lindon
+  decision_fourth_kinslaying_tooltip:0 "VECTOR - Placeholder" # Tooltip text to start war against Lindon
+  decision_fourth_kinslaying_desc:0 "VECTOR - Placeholder" # Description text to start war against Lindon
+  decision_fourth_kinslaying_confirm:0 "VECTOR - Placeholder" # Confirm text to start war against Lindon
 
  ###########################
  ### Dorwinion Decisions ###

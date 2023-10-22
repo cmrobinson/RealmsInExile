@@ -665,15 +665,61 @@ elven.1555 = { # Rally the Loyalists
 	
 	option = { 
 		name = elven.1555.a
+
+		title:e_lindon.holder = {
+			every_vassal_or_below = {
+				limit = { 
+					culture = culture:noldor 
+					NOR = {
+						dynasty = dynasty:dynasty_nacilion
+						dynasty = dynasty:dynasty_penlod
+					}
+				}
+				trigger_event = elven.1556
+			}
+		}
+		set_variable = rallied_loyalist
+	}
+}
+
+elven.1556 = { # Send letter to loyalist asking for support
+	type = letter_event
+	sender = scope:recipient
+
+	opening = {
+		desc = elven.1556.opening
 	}
 
-	after = {
+	desc = elven.1556.desc
+
+
+	on_trigger_fail = { #Trigger invitation again if it was blocked because the character was handling another invitation
 		trigger_event = {
-			id = elven.1560
+			id = elven.1556
 			days = 1
 		}
 	}
+
+	option = { # Accept | Join Maglor
+		name = elven.1556.a
+		set_variable = joined_maglor
+
+		
+		ai_chance = {
+			base = 100
+		}
+	}	
+	
+	option = { # Decline
+		name = elven.1556.b
+
+		
+		ai_chance = {
+			base = 0 
+		}
+	}
 }
+
 
 elven.1560 = { # The Fourth Kinslaying
 	content_source = realms
@@ -689,9 +735,26 @@ elven.1560 = { # The Fourth Kinslaying
 	option = { 
 		name = elven.1560.a
 	}
+}
 
-	after = {
-
+elven.1565 = {
+	content_source = realms
+	type = character_event
+	title = elven.1560.t
+	desc = elven.1560.desc
+	theme = death
+	right_portrait = {
+		character = root
+		animation = fear
+	}
+	
+	option = { 
+		name = elven.1560.a
+		
+		death = { 
+			death_reason = death_execution # Executed 
+			killer = character:lineofcirdan		
+		}
 	}
 }
 
@@ -774,6 +837,7 @@ elven.1603 = { # Army of the Righteous
 		name = elven.1603.a
 	}
 }
+
 
 ### Strike the Heart of the Enemy event line ###
 
