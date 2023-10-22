@@ -963,7 +963,7 @@ decision_return_cuind = {
 # by Jaco_Daan
 ##################################################
 
-decision_annihilate_abhorred = {
+decision_annihilate_abhorred = { # Starts war against Sauron
 	# TEXT
 	title = decision_annihilate_abhorred
 	picture = "gfx/interface/illustrations/decisions/decision_fornost_02.dds"
@@ -976,6 +976,7 @@ decision_annihilate_abhorred = {
 	is_shown = {
 		root = character:linefinwe11
 		
+		exists = title:e_mordor.holder
 		NOT = {
 			is_target_in_global_variable_list = {
 				name = unavailable_unique_decisions
@@ -1015,6 +1016,127 @@ decision_annihilate_abhorred = {
 		add_to_global_variable_list = {
 			name = unavailable_unique_decisions
 			target = flag:decision_annihilate_abhorred
+		}
+	}
+
+	# AI
+	ai_goal = yes
+	ai_potential = { always = yes }
+	ai_will_do = { base = 100 }
+}
+
+##################################################
+# Umbar Burns
+# by Jaco_Daan
+##################################################
+
+decision_umbar_burns = { # Starts war against Umbar
+	# TEXT
+	title = decision_umbar_burns
+	picture = "gfx/interface/illustrations/decisions/decision_fornost_02.dds"
+	selection_tooltip = decision_umbar_burns_tooltip
+	desc = decision_umbar_burns_desc
+	confirm_text = decision_umbar_burns_confirm
+	major = yes
+
+	# IS_SHOWN
+	is_shown = {
+		root = character:linefinwe11
+		
+		exists = title:e_umbar.holder
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:decision_umbar_burns
+			}
+		}
+	}
+	
+	# IS_VALID
+	is_valid = {
+		custom_tooltip = { text = "Reclaimed Eregion" }
+		custom_tooltip = { text = "Repayed the debt of Azaghal" }
+		custom_tooltip = { text = "Secured the mountain passes" }
+	}
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_available_adult = yes
+		is_at_war = no
+	}
+	
+	# COST 
+	cost = {
+		gold = 250
+		prestige = 500
+		piety = 500
+	}
+	
+	# EFFECT 
+	effect = {
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:decision_umbar_burns
+		}
+	}
+
+	# AI
+	ai_goal = yes
+	ai_potential = { always = yes }
+	ai_will_do = { base = 100 }
+}
+
+##################################################
+# Annihilate Dol Guldur
+# by Jaco_Daan
+##################################################
+
+decision_annihilate_dol_guldur = { # Starts war against Dol Guldur
+	# TEXT
+	title = annihilate_dol_guldur
+	picture = "gfx/interface/illustrations/decisions/decision_fornost_02.dds"
+	selection_tooltip = annihilate_dol_guldur_tooltip
+	desc = annihilate_dol_guldur_desc
+	confirm_text = annihilate_dol_guldur_confirm
+	major = yes
+
+	# IS_SHOWN
+	is_shown = {
+		root = character:linefinwe11
+		
+		character:nazgul2 = {
+			has_title = title:k_amon_lanc
+		}
+
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:annihilate_dol_guldur
+			}
+		}
+	}
+	
+	# IS_VALID
+	is_valid = {
+		custom_tooltip = { text = "Completed: Stronghold at Edhellond" }
+	}
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_available_adult = yes
+		is_at_war = no
+	}
+
+	# COST 
+	cost = {
+		gold = 250
+		prestige = 500
+		piety = 500
+	}
+	
+	# EFFECT 
+	effect = {
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:annihilate_dol_guldur
 		}
 	}
 

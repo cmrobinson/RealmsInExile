@@ -704,7 +704,7 @@ decision_destroy_mordor = {
 			has_primary_title = title:e_reunitedkingdom
 		}	
 		lotr_numenor_culture_trigger = yes
-		exists = title:e_mordor
+		exists = title:e_mordor.holder
 		NOR = {
 			is_target_in_global_variable_list = {
 				name = unavailable_unique_decisions
