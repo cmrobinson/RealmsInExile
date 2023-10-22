@@ -10,6 +10,8 @@
 #			elven.0300		Elrond Introduction
 #			elven.0400		Cirdan Introduction
 #			elven.0500		Sirgala Introduction (Realms-in-Exile Start)
+#			elven.1000 		Maglor Introduction
+#			elven.1500-2000 Maglor event chain
 #			elven.9999		It burns !
 
 
@@ -566,6 +568,216 @@ elven.0500 = { # Introduction to Sirgala
 		custom_tooltip = elven.0500.b.tt
 	}
 }
+
+elven.1000 = { # Maglor Introduction
+	content_source = realms
+	type = character_event
+	title = elven.1000.t
+	desc = elven.1000.desc
+	theme = stewardship_wealth_focus
+	right_portrait = {
+		character = root
+		animation = disgust
+	}
+	override_background = { reference = elven_town }
+
+	option = { # Rouse himself
+		name = elven.1000.a
+
+		trigger_event = {
+			id = elven.1500
+			days = 1
+		}
+	}
+	
+	option = { # Remain Melancholy 
+		name = elven.1000.b
+	}
+}
+
+elven.1500 = { # Rouse from slumber
+	content_source = realms
+	type = character_event
+	title = elven.1500.t
+	desc = elven.1500.desc
+	theme = stewardship_wealth_focus
+
+	right_portrait = {
+		character = root
+		animation = marshal
+	}
+
+	option = { # Crusade Against Darkness
+		name = elven.1500.a
+
+		trigger_event = {
+			id = elven.1600
+			days = 1
+		}
+	}
+
+	option = { # Kingship by Seniority
+		name = elven.1500.b
+
+		set_variable = kin_slaying
+
+		trigger_event = {
+			id = elven.1550
+			days = 1
+		}
+	}
+}
+
+### 4th Kin-slaying route | Crusade against darkness, elven.1600 onwards ###
+elven.1550 = {  # Claim high-kingship via seniority
+	content_source = realms
+	type = character_event
+	title = elven.1550.t
+	desc = elven.1550.desc
+	theme = death
+	right_portrait = {
+		character = root
+		animation = fear
+	}
+	
+	option = { 
+		name = elven.1550.a
+	}
+
+	after = {
+		trigger_event = {
+			id = elven.1555
+			days = 1
+		}
+	}
+}
+
+elven.1555 = { # Rally the Loyalists
+	content_source = realms
+	type = character_event
+	title = elven.1555.t
+	desc = elven.1555.desc
+	theme = death
+	right_portrait = {
+		character = root
+		animation = fear
+	}
+	
+	option = { 
+		name = elven.1555.a
+	}
+
+	after = {
+		trigger_event = {
+			id = elven.1560
+			days = 1
+		}
+	}
+}
+
+elven.1560 = { # The Fourth Kinslaying
+	content_source = realms
+	type = character_event
+	title = elven.1560.t
+	desc = elven.1560.desc
+	theme = death
+	right_portrait = {
+		character = root
+		animation = fear
+	}
+	
+	option = { 
+		name = elven.1560.a
+	}
+
+	after = {
+
+	}
+}
+
+### Crusade against darkness route | 4th Kin-slaying, elven.1550 onwards ###
+elven.1600 = { # Crusade against Darkness
+	content_source = realms
+	type = character_event
+	title = elven.1600.t
+	desc = elven.1600.desc
+	theme = martial_authority_focus
+	right_portrait = {
+		character = root
+		animation = fear
+	}
+	
+	option = { 
+		name = elven.1600.a
+
+		trigger_event = {
+			id = elven.1601
+			days = 1
+		}
+	}
+	option = { 
+		name = elven.1600.b
+		
+		trigger_event = {
+			id = elven.1602
+			days = 1
+		}
+	}
+}
+
+elven.1601 = { # Strike the Heart of the Enemy starting event
+	content_source = realms
+	type = character_event
+	title = elven.1601.t
+	desc = elven.1601.desc
+	theme = martial_authority_focus
+	right_portrait = {
+		character = root
+		animation = fear
+	}
+	
+	option = { 
+		name = elven.1601.a
+		set_variable = strike_heart_of_enemy
+	}
+}
+
+elven.1602 = { # Shield of the Free Peoples starting event
+	content_source = realms
+	type = character_event
+	title = elven.1602.t
+	desc = elven.1602.desc
+	theme = martial_authority_focus
+	right_portrait = {
+		character = root
+		animation = fear
+	}
+	
+	option = { 
+		name = elven.1602.a
+		set_variable = shield_of_free_people
+	}
+}
+
+elven.1603 = { # Army of the Righteous
+	content_source = realms
+	type = character_event
+	title = elven.1603.t
+	desc = elven.1603.desc
+	theme = martial_authority_focus
+	right_portrait = {
+		character = root
+		animation = fear
+	}
+	
+	option = { 
+		name = elven.1603.a
+	}
+}
+
+### Strike the Heart of the Enemy event line ###
+
+### Shield of the Free Peoples ###
 
 elven.9999 = { #It burns !
 	content_source = realms

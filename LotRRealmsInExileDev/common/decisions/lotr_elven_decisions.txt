@@ -119,6 +119,7 @@ request_elven_healer_decision = {
 # Establish the high kingdom of Eryn Lasgalen
 # by Fredsch
 ##################################################
+
 decision_establish_high_kingdom_of_eryn_lasgalen = {
 	picture = "gfx/interface/illustrations/decisions/decision_eryn_lasgalen.dds"
 	title = decision_establish_high_kingdom_of_eryn_lasgalen
@@ -255,6 +256,7 @@ decision_destroy_dol_guldur = {
 # Claim Amon Lanc for Laurelindorenan
 # by Fredsch
 ##################################################
+
 claim_amon_lanc_for_laurelindorenan = {
 	picture = "gfx/interface/illustrations/decisions/decision_eryn_lasgalen.dds"
 	title = claim_amon_lanc_for_laurelindorenan
@@ -344,6 +346,7 @@ claim_amon_lanc_for_laurelindorenan = {
 # Elevate Edhellond into Kingdom
 # by Jaco_Daan
 ##################################################
+
 decision_make_edhellond_kingdom = {
 	picture = "gfx/interface/illustrations/event_scenes/armenelos.dds"
 	title = decision_make_edhellond_kingdom
@@ -946,6 +949,72 @@ decision_return_cuind = {
 		add_to_global_variable_list = {
 			name = unavailable_unique_decisions
 			target = flag:decision_return_cuind
+		}
+	}
+
+	# AI
+	ai_goal = yes
+	ai_potential = { always = yes }
+	ai_will_do = { base = 100 }
+}
+
+##################################################
+# Annihilate the Abhorred
+# by Jaco_Daan
+##################################################
+
+decision_annihilate_abhorred = {
+	# TEXT
+	title = decision_annihilate_abhorred
+	picture = "gfx/interface/illustrations/decisions/decision_fornost_02.dds"
+	selection_tooltip = decision_annihilate_abhorred_tooltip
+	desc = decision_annihilate_abhorred_desc
+	confirm_text = decision_annihilate_abhorred_confirm
+	major = yes
+
+	# IS_SHOWN
+	is_shown = {
+		root = character:linefinwe11
+		
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:decision_annihilate_abhorred
+			}
+		}
+	}
+	
+	# IS_VALID
+	is_valid = {
+		trigger_if = { # Maglor went with Kin-slaying route
+			limit = { has_variable = kin_slaying }
+			custom_tooltip = "King Slaying"
+		}
+		trigger_else_if = {
+			limit = { has_variable = strike_heart_of_enemy }
+			custom_tooltip = "Strike heart of enemy"
+		}
+		trigger_else = {
+			custom_tooltip = "Shield of Free Peoples"
+		}
+	}
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_available_adult = yes
+		is_at_war = no
+	}
+	
+	# EFFECT 
+	effect = {
+
+		if = {
+			limit = { has_variable = kin_slaying }
+			remove_variable = kin_slaying
+		}
+		else = { remove_variable = crusade_against_darkness }
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:decision_annihilate_abhorred
 		}
 	}
 

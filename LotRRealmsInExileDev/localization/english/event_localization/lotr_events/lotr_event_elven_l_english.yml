@@ -56,6 +56,58 @@
  elven.0500.b:0 "Sîrgala wanes, but is not yet gone!"
  elven.0500.b.tt:0 "We shall not cede our claim to Elendil and the Dunedain. This may have consequences, as the Dunedain settlers in our land desire to join with the High-king..."
 
+  ##########################
+  ### Maglor Event Chain ###
+  ##########################
+
+  elven.1000.t:0 "VECTOR - Placeholder" # Title for Maglor intro
+  elven.1000.desc:0 "VECTOR - Placeholder" # Description for Maglor intro
+  elven.1000.a:0 "VECTOR - Placeholder" # Rouse himself 
+  elven.1000.b:0 "VECTOR - Placeholder" # Remain Melancholy 
+
+  elven.1500.t:0 "VECTOR - Placeholder" 
+  elven.1500.desc:0 "VECTOR - Placeholder"
+  elven.1500.a:0 "VECTOR - Placeholder\nGood Route" # Crusade Against Darkness
+  elven.1500.b:0 "VECTOR - Placeholder\nThe Fourth Kinslaying" # Kingship by Seniority
+
+  ### 4th Kin-slaying ###
+
+  # Claim high-kingship via seniority
+  elven.1550.t:0 "VECTOR - Placeholder"
+  elven.1550.desc:0 "VECTOR - Placeholder"
+  elven.1550.a:0 "VECTOR - Placeholder"
+
+  # Rally the Loyalists
+  elven.1555.t:0 "VECTOR - Placeholder"
+  elven.1555.desc:0 "VECTOR - Placeholder"
+  elven.1555.a:0 "VECTOR - Placeholder"
+
+  # The Fourth Kinslaying
+  elven.1560.t:0 "VECTOR - Placeholder"
+  elven.1560.desc:0 "VECTOR - Placeholder"
+  elven.1560.a:0 "VECTOR - Placeholder"
+
+  # Crusade against Darkness 
+  elven.1600.t:0 "VECTOR - Placeholder"
+  elven.1600.desc:0 "VECTOR - Placeholder"
+  elven.1600.a:0 "VECTOR - Placeholder" # Strike the Heart of the Enemy route
+  elven.1600.b:0 "VECTOR - Placeholder" # Shield of the Free Peoples route
+
+  # Strike the Heart of the Enemy
+  elven.1601.t:0 "VECTOR - Placeholder"
+  elven.1601.desc:0 "VECTOR - Placeholder"
+  elven.1601.a:0 "VECTOR - Placeholder"
+
+  # Shield of the Free Peoples
+  elven.1602.t:0 "VECTOR - Placeholder"
+  elven.1602.desc:0 "VECTOR - Placeholder"
+  elven.1602.a:0 "VECTOR - Placeholder"
+
+  # Army of the Righteous
+  elven.1603.t:0 "VECTOR - Placeholder"
+  elven.1603.desc:0 "VECTOR - Placeholder"
+  elven.1603.a:0 "VECTOR - Placeholder" 
+
  ### Elven artifact burns evil characters
  
  elven.9999.t:0 "The Work of the Elves"
