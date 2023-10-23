@@ -99,5 +99,5 @@
  reclaim_calenardhon_cb:0 "War to Reclaim Calenardhon"
  reclaim_calenardhon_cb_victory_desc:0 "You seize all titles within the Kingdom of Rohan, save those still held by the Rohirrim themselves, or any held by our Dúnedain kin."
 
-  fourth_kinslaying_cb_defeat_desc:0 "You are captured and killed by Cirdan"
+  fourth_kinslaying_cb_defeat_desc:0 "You are captured and killed by [defender.GetShortUINamePossessive]"
   fourth_kinslaying_cb_name:0 "The Fourth Kinslaying"

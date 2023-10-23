@@ -113,6 +113,20 @@
   elven.1603.t:0 "VECTOR - Placeholder"
   elven.1603.desc:0 "VECTOR - Placeholder"
   elven.1603.a:0 "VECTOR - Placeholder" 
+  
+  elven.1700.opening:0 "Letter Opening"
+  elven.1700.desc:0 "Letter Description"
+  elven.1700.a:0 "Accept"
+  elven.1700.b:0 "Decline"
+  
+  elven.1705.t:0 "VECTOR - Placeholder"
+  elven.1705.desc:0 "VECTOR - Placeholder"
+  elven.1705.a:0 "VECTOR - Placeholder" # Recieved troops from Gondor lord
+  elven.1705.event_troops:0 "[gondor_ruler.GetNameNoTooltip]'s troops"
+  
+  elven.1710.t:0 "VECTOR - Placeholder"
+  elven.1710.desc:0 "VECTOR - Placeholder"
+  elven.1710.a:0 "VECTOR - Placeholder" # Starts war against Umbar/Anadune
 
  ### Elven artifact burns evil characters
  

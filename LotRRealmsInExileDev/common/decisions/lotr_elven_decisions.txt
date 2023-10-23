@@ -344,7 +344,7 @@ claim_amon_lanc_for_laurelindorenan = {
 
 ##################################################
 # Elevate Edhellond into Kingdom
-# by Jaco_Daan
+# Coding/Localization by Jaco_Daan
 ##################################################
 
 decision_make_edhellond_kingdom = {
@@ -461,7 +461,8 @@ decision_make_edhellond_kingdom = {
 
 ##################################################
 # Reclaim Sîrgala Kingdom
-# by Jaco_Daan
+# Coding by Jaco_Daan
+# Localization by Commander Sol
 ##################################################
 
 decision_reclaim_sirgala = {
@@ -960,7 +961,8 @@ decision_return_cuind = {
 
 ##################################################
 # Annihilate the Abhorred
-# by Jaco_Daan
+# Coding by Jaco_Daan
+# Localization by VectorMaximus
 ##################################################
 
 decision_annihilate_abhorred = { # Starts war against Sauron
@@ -1027,7 +1029,8 @@ decision_annihilate_abhorred = { # Starts war against Sauron
 
 ##################################################
 # Umbar Burns
-# by Jaco_Daan
+# Coding by Jaco_Daan
+# Localization by VectorMaximus
 ##################################################
 
 decision_umbar_burns = { # Starts war against Umbar
@@ -1042,8 +1045,16 @@ decision_umbar_burns = { # Starts war against Umbar
 	# IS_SHOWN
 	is_shown = {
 		root = character:linefinwe11
-		
-		exists = title:k_umbar.holder
+		OR = {
+			AND = {
+				exists = title:k_umbar.holder
+				title:k_umbar.holder ?= { faith_is_evil = yes }
+			}
+			AND = {
+				exists = title:e_umbar.holder
+				title:e_umbar.holder ?= { faith_is_evil = yes }
+			}
+		}
 		NOT = {
 			is_target_in_global_variable_list = {
 				name = unavailable_unique_decisions
@@ -1073,6 +1084,30 @@ decision_umbar_burns = { # Starts war against Umbar
 	
 	# EFFECT 
 	effect = {
+
+		if = {
+			limit = { exists = title:e_gondor.holder }
+			title:e_gondor.holder = { save_scope_as = gondor_ruler }
+		}
+		else = {
+			title:e_gondor_steward.holder = { save_scope_as = gondor_ruler }
+		}
+
+		if = {
+			limit = {
+				scope:gondor_ruler = { faith_is_good = yes }
+			}
+			scope:gondor_ruler = {
+				every_vassal_or_below = {
+					limit = {
+						highest_held_title_tier >= tier_county
+						any_held_title = { is_coastal_county = yes }
+					}
+					trigger_event = elven.1700
+				}
+				trigger_event = elven.1700
+			}
+		}
 		
 		start_war = {
 			casus_belli = destroy_dol_guldur_cb
@@ -1093,7 +1128,8 @@ decision_umbar_burns = { # Starts war against Umbar
 
 ##################################################
 # Annihilate Dol Guldur
-# by Jaco_Daan
+# Coding by Jaco_Daan
+# Localization by VectorMaximus
 ##################################################
 
 decision_annihilate_dol_guldur = { # Starts war against Dol Guldur
@@ -1158,8 +1194,9 @@ decision_annihilate_dol_guldur = { # Starts war against Dol Guldur
 }
 
 ##################################################
-# Annihilate Dol Guldur
-# by Jaco_Daan
+# Fourth Kin-Slaying
+# Coding by Jaco_Daan
+# Localization by VectorMaximus
 ##################################################
 
 decision_fourth_kinslaying = { # Starts war against Dol Guldur
