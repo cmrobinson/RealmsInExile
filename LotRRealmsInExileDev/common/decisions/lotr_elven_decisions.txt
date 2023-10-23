@@ -1045,15 +1045,13 @@ decision_umbar_burns = { # Starts war against Umbar
 	# IS_SHOWN
 	is_shown = {
 		root = character:linefinwe11
+		character:lineofsauron = { 
+			is_alive = yes
+			is_ruler = yes
+		}
 		OR = {
-			AND = {
-				exists = title:k_umbar.holder
-				title:k_umbar.holder ?= { faith_is_evil = yes }
-			}
-			AND = {
-				exists = title:e_umbar.holder
-				title:e_umbar.holder ?= { faith_is_evil = yes }
-			}
+			title:k_umbar.holder ?= { faith_is_evil = yes }
+			title:e_umbar.holder ?= { faith_is_evil = yes }
 		}
 		NOT = {
 			is_target_in_global_variable_list = {
@@ -1109,11 +1107,6 @@ decision_umbar_burns = { # Starts war against Umbar
 			}
 		}
 		
-		start_war = {
-			casus_belli = destroy_dol_guldur_cb
-			target = title:k_umbar.holder
-			target_title = title:k_umbar
-		}
 		add_to_global_variable_list = {
 			name = unavailable_unique_decisions
 			target = flag:decision_umbar_burns
