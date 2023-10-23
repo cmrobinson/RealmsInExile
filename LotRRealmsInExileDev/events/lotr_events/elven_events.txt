@@ -1046,6 +1046,27 @@ elven.1710 = { # Starts war against Umbar
 	}
 }
 
+elven.1715 = { # Event if win against Umbar
+	content_source = realms
+	type = character_event
+	title = elven.1715.t
+	desc = elven.1715.desc
+	theme = war
+	right_portrait = {
+		character = root
+		animation = marshal
+	}
+	
+	widget = {
+		is_shown = {}
+		
+		gui = "umbar_maglor_option_select_widget"
+		container = "custom_widgets_container"  
+	}
+	
+	option = { name = elven.1715.a }
+}
+
 ### Shield of the Free Peoples ###
 
 elven.9999 = { #It burns !

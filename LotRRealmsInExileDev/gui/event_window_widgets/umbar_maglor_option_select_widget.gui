@@ -1,0 +1,61 @@
+widget = {
+	allow_outside = yes
+	name = "umbar_maglor_option_select_widget"
+	size = { 480 200 }
+	container = {
+		allow_outside = yes
+		layoutpolicy_horizontal = expanding
+		layoutpolicy_vertical = expanding
+		ignoreinvisible = yes
+		maximumsize = { 480 200 }
+		vbox = {
+			allow_outside = yes
+			margin = { 3 3 }
+
+			text_single = {
+				text = "elven.1715.gui.umbar_raze"
+				default_format = "#high"
+				align = nobaseline
+			}
+
+			button_round = {
+				enabled = "[Character.IsPlayerInteractionWithTargetTitleValid('return_settlement_county_to_wilderness', Title.Self)]"
+				tooltip = "[Character.GetPlayerInteractionWithTargetTitleTooltip('return_settlement_county_to_wilderness', Title.Self)]"
+				oversound = "event:/SFX/UI/Generic/sfx_ui_generic_pointer_over"
+				clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_select"
+				onclick = "[GetVariableSystem.Toggle( 'maglor_umbar_raze' )]"
+			}
+			button_round = {
+				enabled = "[Character.IsPlayerInteractionWithTargetTitleValid('return_settlement_county_to_wilderness', Title.Self)]"
+				tooltip = "[Character.GetPlayerInteractionWithTargetTitleTooltip('return_settlement_county_to_wilderness', Title.Self)]"
+				oversound = "event:/SFX/UI/Generic/sfx_ui_generic_pointer_over"
+				clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_select"
+				onclick = "[GetVariableSystem.Toggle( 'maglor_umbar_raze' )]"
+			}
+
+			spacer = { size = { 0 10 } }
+			
+			text_single = {
+				text = "elven.1715.gui.gondorian_governor"
+				default_format = "#high"
+				align = nobaseline
+			}
+			button_round = {
+				enabled = "[Character.IsPlayerInteractionWithTargetTitleValid('return_settlement_county_to_wilderness', Title.Self)]"
+				tooltip = "[Character.GetPlayerInteractionWithTargetTitleTooltip('return_settlement_county_to_wilderness', Title.Self)]"
+				oversound = "event:/SFX/UI/Generic/sfx_ui_generic_pointer_over"
+				clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_select"
+				onclick = "[GetVariableSystem.Toggle( 'maglor_umbar_governor' )]"
+			}
+			button_round = {
+				enabled = "[Character.IsPlayerInteractionWithTargetTitleValid('return_settlement_county_to_wilderness', Title.Self)]"
+				tooltip = "[Character.GetPlayerInteractionWithTargetTitleTooltip('return_settlement_county_to_wilderness', Title.Self)]"
+				oversound = "event:/SFX/UI/Generic/sfx_ui_generic_pointer_over"
+				clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_select"
+				onclick = "[GetVariableSystem.Toggle( 'maglor_umbar_governor' )]"
+			}
+
+			expand = {}
+		}
+	}
+}

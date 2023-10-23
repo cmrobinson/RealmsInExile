@@ -128,6 +128,12 @@
   elven.1710.desc:0 "VECTOR - Placeholder"
   elven.1710.a:0 "VECTOR - Placeholder" # Starts war against Umbar/Anadune
 
+  elven.1715.t:0 "VECTOR - Placeholder"
+  elven.1715.desc:0 "VECTOR - Placeholder"
+  elven.1715.gui.umbar_raze:0 "Action to take with Umbar:"
+  elven.1715.gui.gondorian_governor:0 "Action to take with titles in Umbar:"
+  elven.1715.a:0 "VECTOR - Placeholder" # Starts war against Umbar/Anadune
+
  ### Elven artifact burns evil characters
  
  elven.9999.t:0 "The Work of the Elves"
