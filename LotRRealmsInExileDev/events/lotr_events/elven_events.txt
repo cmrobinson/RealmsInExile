@@ -586,7 +586,7 @@ elven.1000 = { # Maglor Introduction
 
 		trigger_event = {
 			id = elven.1500
-			months = { 4 8 }
+			months = { 2 4 }
 		}
 	}
 	
@@ -610,21 +610,11 @@ elven.1500 = { # Rouse from slumber
 	option = { # Crusade Against Darkness
 		name = elven.1500.a
 
-		trigger_event = {
-			id = elven.1600
-			years = 3
-		}
+		set_variable = crusade_against_darkness
 	}
 
 	option = { # Kingship by Seniority
 		name = elven.1500.b
-
-		set_variable = kin_slaying
-
-		trigger_event = {
-			id = elven.1550
-			years = 3
-		}
 	}
 }
 
@@ -772,22 +762,26 @@ elven.1600 = { # Crusade against Darkness
 	option = { 
 		name = elven.1600.a
 
-		trigger_event = {
+		set_variable = maglor_defensive
+
+		trigger_event = { # Shield of the Free Peoples | Defensive
 			id = elven.1601
-			days = 1
+			days = { 15 30 }
 		}
 	}
-	option = { 
+	option = { # Strike Heart of Enemy | Aggresive
 		name = elven.1600.b
+
+		set_variable = maglor_aggresive
 		
 		trigger_event = {
 			id = elven.1602
-			days = 1
+			days = { 5 10 }
 		}
 	}
 }
 
-elven.1601 = { # Strike the Heart of the Enemy starting event
+elven.1601 = { # Shield of the Free Peoples starting event | 
 	content_source = realms
 	type = character_event
 	title = elven.1601.t
@@ -800,11 +794,16 @@ elven.1601 = { # Strike the Heart of the Enemy starting event
 	
 	option = { 
 		name = elven.1601.a
-		set_variable = strike_heart_of_enemy
+		set_variable = cannot_cancel_travel
+
+		start_travel_plan = {
+			destination = title:c_edhellond
+			on_arrival_event = elven.1604
+		}
 	}
 }
 
-elven.1602 = { # Shield of the Free Peoples starting event
+elven.1602 = { # Strike the Heart of the Enemy starting event | Go to Edhellond
 	content_source = realms
 	type = character_event
 	title = elven.1602.t
@@ -817,7 +816,14 @@ elven.1602 = { # Shield of the Free Peoples starting event
 	
 	option = { 
 		name = elven.1602.a
-		set_variable = shield_of_free_people
+		set_variable = cannot_cancel_travel
+
+		start_travel_plan = {
+			destination = title:c_edhellond.holder.capital_province
+			on_arrival_event = elven.1604
+			return_trip = no
+			players_use_planner = no
+		}
 	}
 }
 
@@ -837,6 +843,131 @@ elven.1603 = { # Army of the Righteous
 	}
 }
 
+elven.1604 = { # Hidden event | Swap titles for Edhellond
+	hidden = yes
+
+	immediate = {
+		remove_variable = cannot_cancel_travel
+		## Grant Himring to Maglor Friend
+
+		create_title_and_vassal_change = {
+			type = granted
+			save_scope_as = title_change
+			add_claim_on_loss = no
+		}
+		title:c_himring = {
+			change_title_holder = {
+				holder = root
+				change = scope:title_change
+			}
+		}
+		
+		resolve_title_and_vassal_change = scope:title_change
+		
+		## Grant Maglor Edhellond
+
+		create_title_and_vassal_change = {
+			type = granted
+			save_scope_as = title_change
+			add_claim_on_loss = no
+		}
+		title:c_edhellond = {
+			change_title_holder = {
+				holder = root
+				change = scope:title_change
+			}
+		}
+		
+		resolve_title_and_vassal_change = scope:title_change
+	}
+}
+
+elven.1605 = { # Hidden event | Swap titles for Eregion
+	hidden = yes
+
+	immediate = {
+		remove_variable = cannot_cancel_travel
+
+	}
+}
+
+elven.1606 = { # Letter Event, Request troops from Lindon
+	type = letter_event
+	sender = scope:recipient
+
+	opening = {
+		desc = elven.1606.opening
+	}
+
+	desc = elven.1606.desc
+
+	immediate = {
+		root = { save_scope_as = elven_ruler }
+		primary_title = { save_scope_as = elven_ruler_title }
+	}
+
+	on_trigger_fail = { #Trigger invitation again if it was blocked because the character was handling another invitation
+		trigger_event = {
+			id = elven.1606
+			days = 1
+		}
+	}
+	
+	option = {
+		name = elven.1606.a
+
+		character:linefinwe11 = {
+			send_interface_toast = {
+				title = elven.1606.toast_full.t
+
+				maglor_crusade_elven_warriors = { SUPPORT = 2 }
+			}
+		}
+
+		ai_chance = {
+			base = 25
+			
+			modifier = { # Noldor are bloodthirsty
+				culture = culture:noldor
+				add = 20
+			}
+		}
+	}
+	
+	option = {
+		name = elven.1606.b
+
+		character:linefinwe11 = {
+			send_interface_toast = {
+				title = elven.1606.toast_half.t
+
+				maglor_crusade_elven_warriors = { SUPPORT = 1 }
+			}
+		}
+
+		ai_chance = {
+			base = 15
+			
+			modifier = { # Noldor are bloodthirsty
+				culture = culture:noldor
+				add = 10
+			}
+		}
+	}
+	
+	option = {
+		name = elven.1606.c
+
+		ai_chance = {
+			base = 35
+			
+			modifier = { # Noldor are bloodthirsty
+				culture = culture:noldor
+				subtract = 5
+			}
+		}
+	}
+}
 
 ### Strike the Heart of the Enemy event line ###
 
@@ -854,7 +985,6 @@ elven.1700 = {
 	immediate = {
 		root = { save_scope_as = gondor_ruler }
 	}
-
 
 	on_trigger_fail = { #Trigger invitation again if it was blocked because the character was handling another invitation
 		trigger_event = {
@@ -1032,15 +1162,15 @@ elven.1710 = { # Starts war against Umbar
 		if = {
 			limit = { exists = title:e_umbar.holder }
 			start_war = {
-				casus_belli = fourth_kinslaying_cb
+				casus_belli = maglor_umbar_cb
 				target = title:e_umbar.holder
-				target_title = title:e_umbar
+				target_title = title:d_umbar
 			}
 		} else = {
 			start_war = {
-				casus_belli = fourth_kinslaying_cb
+				casus_belli = maglor_umbar_cb
 				target = title:k_umbar.holder
-				target_title = title:k_umbar
+				target_title = title:d_umbar
 			}
 		}
 	}
@@ -1064,7 +1194,121 @@ elven.1715 = { # Event if win against Umbar
 		container = "custom_widgets_container"  
 	}
 	
-	option = { name = elven.1715.a }
+	option = {
+		name = elven.1715.a
+		if = {
+			limit = { has_variable = appoint_governor }
+			trigger_event = elven.1720
+		}
+		if = {
+			limit = { has_variable = raze_umbar }
+			trigger_event = elven.1726
+		}
+		else = { trigger_event = elven.1725 }
+		remove_variable = maglor_umbar_event
+	}
+}
+
+elven.1720 = { # hidden event to appoint governors
+	hidden = yes 
+	immediate = {
+		every_held_title = {
+			limit = { tier > tier_barony }
+			add_to_list = titles_in_umbar
+		}
+
+		every_in_list = {
+			list = titles_in_umbar
+
+			
+		}
+	}
+}
+
+elven.1725 = { # hidden event to recieve all troops from umbar
+	hidden = yes 
+	
+	trigger = {
+		trigger_if = {
+			limit = { has_variable = maglor_umbar_event_troops }
+			var:maglor_umbar_event_troops < 4
+		}
+	}
+
+	immediate = {
+		spawn_army = {
+			name = elven.umbar_marines
+			men_at_arms = {
+				type = gondorian_marines
+				stacks = 4
+			}
+			location = root.capital_province
+		}
+
+		if = {
+			limit = { 
+				NOT = { has_variable = maglor_umbar_event_troops }
+			}
+			set_variable = {
+				name = maglor_umbar_event_troops
+				value = 1
+			}
+		}
+		else = {
+			change_variable = {
+				name = maglor_umbar_event_troops
+				add = 1
+			}
+		}
+
+		trigger_event = {
+			id = elven.1725
+			months = 6
+		}
+	}
+}
+
+elven.1726 = { # hidden event to recieve half troops form umbar
+	hidden = yes 
+	
+	trigger = {
+		trigger_if = {
+			limit = { has_variable = maglor_umbar_event_troops }
+			var:maglor_umbar_event_troops < 4
+		}
+	}
+
+	immediate = {
+		spawn_army = {
+			name = elven.umbar_marines
+			men_at_arms = {
+				type = gondorian_marines
+				stacks = 2
+			}
+			location = root.capital_province
+		}
+
+		if = {
+			limit = { 
+				NOT = { has_variable = maglor_umbar_event_troops }
+			}
+			set_variable = {
+				name = maglor_umbar_event_troops
+				value = 1
+			}
+		}
+		else = {
+			change_variable = {
+				name = maglor_umbar_event_troops
+				add = 1
+			}
+		}
+
+		trigger_event = {
+			id = elven.1726
+			months = 6
+		}
+	}
 }
 
 ### Shield of the Free Peoples ###

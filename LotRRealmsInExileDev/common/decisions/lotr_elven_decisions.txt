@@ -977,8 +977,11 @@ decision_annihilate_abhorred = { # Starts war against Sauron
 	# IS_SHOWN
 	is_shown = {
 		root = character:linefinwe11
-		
-		exists = title:e_mordor.holder
+		has_variable = crusade_against_darkness
+		character:lineofsauron = { 
+			is_alive = yes
+			is_ruler = yes
+		}
 		NOT = {
 			is_target_in_global_variable_list = {
 				name = unavailable_unique_decisions
@@ -989,12 +992,8 @@ decision_annihilate_abhorred = { # Starts war against Sauron
 	
 	# IS_VALID
 	is_valid = {
-		trigger_if = { # Maglor went with Kin-slaying route
-			limit = { has_variable = kin_slaying }
-			custom_tooltip = "King Slaying"
-		}
-		trigger_else_if = {
-			limit = { has_variable = strike_heart_of_enemy }
+		trigger_if = {
+			limit = { has_variable = maglor_defensive }
 			custom_tooltip = "Strike heart of enemy"
 		}
 		trigger_else = {
@@ -1009,12 +1008,10 @@ decision_annihilate_abhorred = { # Starts war against Sauron
 	
 	# EFFECT 
 	effect = {
-
 		if = {
-			limit = { has_variable = kin_slaying }
-			remove_variable = kin_slaying
+			limit = { has_variable = crusade_against_darkness }
+			remove_variable = crusade_against_darkness
 		}
-		else = { remove_variable = crusade_against_darkness }
 		add_to_global_variable_list = {
 			name = unavailable_unique_decisions
 			target = flag:decision_annihilate_abhorred
@@ -1045,6 +1042,7 @@ decision_umbar_burns = { # Starts war against Umbar
 	# IS_SHOWN
 	is_shown = {
 		root = character:linefinwe11
+		has_variable = maglor_aggresive
 		character:lineofsauron = { 
 			is_alive = yes
 			is_ruler = yes
@@ -1137,10 +1135,8 @@ decision_annihilate_dol_guldur = { # Starts war against Dol Guldur
 	# IS_SHOWN
 	is_shown = {
 		root = character:linefinwe11
-		
-		character:nazgul2 = {
-			has_title = title:k_amon_lanc
-		}
+		has_variable = maglor_defensive
+		character:nazgul2 = { has_title = title:k_amon_lanc }
 
 		NOT = {
 			is_target_in_global_variable_list = {
@@ -1268,6 +1264,161 @@ decision_fourth_kinslaying = { # Starts war against Dol Guldur
 		add_to_global_variable_list = {
 			name = unavailable_unique_decisions
 			target = flag:decision_fourth_kinslaying
+		}
+	}
+
+	# AI
+	ai_goal = yes
+	ai_potential = { always = yes }
+	ai_will_do = { base = 100 }
+}
+
+##################################################
+# Seek Aid from Gondor Lords
+# Coding by Jaco_Daan
+# Localization by VectorMaximus
+##################################################
+
+decision_seek_aid_from_gondor_lords = { # Starts war against Dol Guldur
+	# TEXT
+	title = decision_seek_aid_from_gondor_lords
+	picture = "gfx/interface/illustrations/decisions/decision_fornost_02.dds"
+	selection_tooltip = decision_seek_aid_from_gondor_lords_tooltip
+	desc = decision_seek_aid_from_gondor_lords_desc
+	confirm_text = decision_seek_aid_from_gondor_lords_confirm
+	major = yes
+
+	# IS_SHOWN
+	is_shown = {
+		root = character:linefinwe11
+		has_variable = maglor_aggresive
+		character:lineofsauron = { 
+			is_alive = yes
+			is_ruler = yes
+		}
+
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:decision_seek_aid_from_gondor_lords
+			}
+		}
+	}
+	
+	# IS_VALID
+	is_valid = {
+	}
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_available_adult = yes
+		is_at_war = no
+	}
+	
+	# EFFECT 
+	effect = {
+		start_war = {
+			casus_belli = fourth_kinslaying_cb
+			target = title:e_lindon.holder
+			target_title = title:e_lindon
+		}
+		title:e_lindon.holder = {
+			every_character_war = {
+				limit = { using_cb = fourth_kinslaying_cb }
+				add_to_list = war_to_join
+			}
+			every_vassal_or_below = {
+				limit = { has_variable = joined_maglor }
+				every_in_list = {
+					list = war_to_join
+					limit = { NOT = { is_defender = prev } }
+					hidden_effect = { set_called_to = prev }
+					add_attacker = prev
+				}
+			}
+			every_vassal_or_below = {
+				limit = { culture = culture:sindar }
+				every_in_list = {
+					list = war_to_join
+					limit = { NOT = { is_attacker = prev } }
+					hidden_effect = { set_called_to = prev }
+					add_defender = prev
+				}
+			}
+		}
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:decision_seek_aid_from_gondor_lords
+		}
+	}
+
+	# AI
+	ai_goal = yes
+	ai_potential = { always = yes }
+	ai_will_do = { base = 100 }
+}
+
+##################################################
+# Rally the Army of the Willing/Righteous
+# Coding by Jaco_Daan
+# Localization by VectorMaximus
+##################################################
+
+decision_rally_army_righteous = { # Starts war against Dol Guldur
+	# TEXT
+	title = decision_rally_army_righteous
+	picture = "gfx/interface/illustrations/decisions/decision_fornost_02.dds"
+	selection_tooltip = decision_rally_army_righteous_tooltip
+	desc = decision_rally_army_righteous_desc
+	confirm_text = decision_rally_army_righteous_confirm
+	major = yes
+
+	# IS_SHOWN
+	is_shown = {
+		root = character:linefinwe11
+		has_variable = crusade_against_darkness
+
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:decision_rally_army_righteous
+			}
+		}
+	}
+	
+	# IS_VALID
+	is_valid = { always = yes }
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_available_adult = yes
+		is_at_war = no
+	}
+	
+	# EFFECT 
+	effect = {
+		title:e_lindon.holder = {
+			trigger_event = {
+				id = elven.1606
+				days = { 5 10 }
+			}
+			every_vassal_or_below = {
+				limit = { is_elf = yes}
+				trigger_event = {
+					id = elven.1606
+					days = { 5 10 }
+				}
+			}
+		}
+
+		character:linefinwe11 = {
+			trigger_event = {
+				id = elven.1600
+				months = 1
+			}
+		}
+
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:decision_rally_army_righteous
 		}
 	}
 

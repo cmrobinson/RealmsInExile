@@ -924,3 +924,113 @@ replace_unelven_traits = {
 		add_new_elf_friendly_trait = yes
 	}
 }
+
+maglor_crusade_elven_warriors = {
+	if = {
+		limit = { scope:elven_ruler.culture = culture:noldor }
+		random_list = {
+			1 = {
+				spawn_army = {
+					name = elven.1606.toast
+					men_at_arms = {
+						type = noldor_swordsmen
+						stacks = $SUPPORT$
+					}
+					location = root.capital_province
+					origin = scope:gondor_ruler.primary_title.capital_province
+				}
+			}
+			1 = {
+				spawn_army = {
+					name = elven.1606.toast
+					men_at_arms = {
+						type = noldor_archers
+						stacks = $SUPPORT$
+					}
+					location = root.capital_province
+					origin = scope:gondor_ruler.primary_title.capital_province
+				}
+			}
+		}
+	}
+	else_if = {
+		limit = { scope:elven_ruler.culture = culture:sindar }
+		random_list = {
+			1 = {
+				spawn_army = {
+					name = elven.1606.toast
+					men_at_arms = {
+						type = falathrim_haven_guard
+						stacks = $SUPPORT$
+					}
+					location = root.capital_province
+					origin = scope:gondor_ruler.primary_title.capital_province
+				}
+			}
+			1 = {
+				spawn_army = {
+					name = elven.1606.toast
+					men_at_arms = {
+						type = marchwardens
+						stacks = $SUPPORT$
+					}
+					location = root.capital_province
+					origin = scope:gondor_ruler.primary_title.capital_province
+				}
+			}
+		}
+	}
+	else_if = {
+		limit = { scope:elven_ruler.culture = culture:falathrim }
+		random_list = {
+			1 = {
+				spawn_army = {
+					name = elven.1606.toast
+					men_at_arms = {
+						type = hir_hathol
+						stacks = $SUPPORT$
+					}
+					location = root.capital_province
+					origin = scope:gondor_ruler.primary_title.capital_province
+				}
+			}
+			1 = {
+				spawn_army = {
+					name = elven.1606.toast
+					men_at_arms = {
+						type = sindar_nobility
+						stacks = $SUPPORT$
+					}
+					location = root.capital_province
+					origin = scope:gondor_ruler.primary_title.capital_province
+				}
+			}
+		}
+	}
+	else = {
+		random_list = {
+			1 = {
+				spawn_army = {
+					name = elven.1606.toast
+					men_at_arms = {
+						type = noldor_veterans
+						stacks = $SUPPORT$
+					}
+					location = root.capital_province
+					origin = scope:gondor_ruler.primary_title.capital_province
+				}
+			}
+			1 = {
+				spawn_army = {
+					name = elven.1606.toast
+					men_at_arms = {
+						type = noldor_glaivesmen
+						stacks = $SUPPORT$
+					}
+					location = root.capital_province
+					origin = scope:gondor_ruler.primary_title.capital_province
+				}
+			}
+		}
+	}
+}
