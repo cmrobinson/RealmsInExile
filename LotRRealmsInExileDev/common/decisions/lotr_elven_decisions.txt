@@ -1354,8 +1354,13 @@ decision_bring_harad_down = { # Starts war against Dol Guldur
 	# IS_SHOWN
 	is_shown = {
 		root = character:linefinwe11
-		has_variable = crusade_against_darkness
+		has_variable = maglor_aggresive
 
+
+		is_target_in_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:decision_umbar_burns
+		}
 		NOT = {
 			is_target_in_global_variable_list = {
 				name = unavailable_unique_decisions

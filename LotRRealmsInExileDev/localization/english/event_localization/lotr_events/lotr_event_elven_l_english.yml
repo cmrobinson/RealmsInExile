@@ -139,8 +139,10 @@
   elven.1715.gui.gondorian_governor.b:0 "Hand the titles out manually"
   elven.1715.gui.gondorian_governor.b.tt:0 "Hand the titles out manually"
   elven.1715.a:0 "A lament for the fallen sons of Elros!" # Starts war against Umbar/Anadune
-  elven.1715.a.event_troops_full.tt:0 "Periodically you will recieve a full retinue of Gondorian Marines."
-  elven.1715.a.event_troops_half.tt:0 "Periodically you will recieve half a retinue of Gondorian Marines."
+  elven.1715.a.event_troops_full.tt:0 "Periodically you will recieve a #P full#! retinue of Gondorian Marines."
+  elven.1715.a.event_troops_half.tt:0 "Periodically you will recieve #P half#! a retinue of Gondorian Marines."
+  elven.1715.a.event_troops_none.tt:0 "You will recieve #N no#! Gondorian Marines as you do not have Gondorian Governors."
+  elven.1715.a.upgrade_edhellond.tt:0 "Due to sacking Umbar, Edhellond will recieve #high additional#! resources to further its development"
 
   elven.1725.toast:0 "Freed Gondorian Marines"
 

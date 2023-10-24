@@ -1011,6 +1011,33 @@ maglor_crusade_elven_warriors = {
 			}
 		}
 	}
+	else_if = {
+		limit = { scope:elven_ruler.culture = culture:laiquendi }
+		random_list = {
+			1 = {
+				spawn_army = {
+					name = elven.1606.toast
+					men_at_arms = {
+						type = laiquendi_ambushers
+						stacks = $SUPPORT$
+					}
+					location = root.capital_province
+					origin = scope:gondor_ruler.primary_title.capital_province
+				}
+			}
+			1 = {
+				spawn_army = {
+					name = elven.1606.toast
+					men_at_arms = {
+						type = laiquendi_scouts
+						stacks = $SUPPORT$
+					}
+					location = root.capital_province
+					origin = scope:gondor_ruler.primary_title.capital_province
+				}
+			}
+		}
+	}
 	else = {
 		random_list = {
 			1 = {
@@ -1035,23 +1062,6 @@ maglor_crusade_elven_warriors = {
 					origin = scope:gondor_ruler.primary_title.capital_province
 				}
 			}
-		}
-	}
-}
-
-maglor_umbar_governors_assign_title = {
-	this = { # Duchy title
-		change_title_holder = {
-			holder = scope:new_holder
-			change = scope:title_change
-		}
-	}
-	every_de_jure_county = { # Associated county titles
-		limit = { de_jure_liege = scope:duchy_title }
-		
-		change_title_holder = {
-			holder = scope:new_holder
-			change = scope:title_change
 		}
 	}
 }
