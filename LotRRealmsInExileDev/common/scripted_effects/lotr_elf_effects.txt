@@ -925,6 +925,10 @@ replace_unelven_traits = {
 	}
 }
 
+###############################################
+### Scripted Effects for Maglor Event Chain ###
+###############################################
+
 maglor_crusade_elven_warriors = {
 	if = {
 		limit = { scope:elven_ruler.culture = culture:noldor }

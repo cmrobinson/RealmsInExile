@@ -1085,10 +1085,8 @@ elven.1700 = {
 	option = { 
 		name = elven.1700.a
 
-		set_variable = donate_troops_maglor
-		character:linefinwe11 = { 
-			trigger_event = elven.1705
-		}
+		add_to_list = gondorian_ruler_supported_maglor
+		character:linefinwe11 = { trigger_event = elven.1705 }
 		ai_chance = {
 			base = 0
 			
@@ -1191,6 +1189,27 @@ elven.1705 = { # Spawns armies for Maglor
 							}
 						}
 					}
+
+					random = {
+						chance = 50
+
+						if = {
+							limit = {
+								scope:gondor_ruler = {
+									any_knight = {
+										maglor_aggresive_gondorian_knight_trigger = { SAVED_SCOPE = gondor_ruler }
+									}
+								}
+							}
+							random_knight = {
+								limit = {
+									maglor_aggresive_gondorian_knight_trigger = { SAVED_SCOPE = gondor_ruler }
+								}
+								set_employer = character:linefinwe11
+								add_to_list = potential_gondorian_governors
+							}
+						}
+					}
 				}
 			}
 		}
@@ -1226,6 +1245,27 @@ elven.1705 = { # Spawns armies for Maglor
 								location = root.capital_province
 								levies = 100
 								origin = scope:gondor_ruler.primary_title.capital_province
+							}
+						}
+					}
+					
+					random = {
+						chance = 33
+
+						if = {
+							limit = {
+								scope:gondor_ruler = {
+									any_knight = {
+										maglor_aggresive_gondorian_knight_trigger = { SAVED_SCOPE = gondor_ruler }
+									}
+								}
+							}
+							random_knight = {
+								limit = {
+									maglor_aggresive_gondorian_knight_trigger = { SAVED_SCOPE = gondor_ruler }
+								}
+								set_employer = character:linefinwe11
+								add_to_list = potential_gondorian_governors
 							}
 						}
 					}
@@ -1310,15 +1350,110 @@ elven.1720 = { # hidden event to appoint governors
 	hidden = yes 
 	immediate = {
 		every_held_title = {
-			limit = { tier > tier_barony }
+			limit = {
+				tier = tier_duchy
+				de_jure_liege = title:e_umbar
+			}
 			add_to_list = titles_in_umbar
 		}
 
-		every_in_list = {
-			list = titles_in_umbar
-
-			
+		if = {
+			limit = {
+				any_in_list = {
+					list = potential_gondorian_governors
+					this = { is_alive = yes } # Need to check whether they're still alive
+				}
+			}
+			every_in_list = {
+				list = potential_gondorian_governors
+				limit = { is_alive = no }
+				remove_from_list = potential_gondorian_governors
+			}
 		}
+
+		# Hand out the currently held duchies
+		# If there are any counties and you don't have the duchy, grant all the titles
+		# in the de jure duchy to a single person
+
+		
+		create_title_and_vassal_change = {
+			type = granted
+			save_scope_as = title_change
+			add_claim_on_loss = no
+		}
+
+		every_in_list = { # All duchy tiered titles for Umbar that Maglor has
+			list = titles_in_umbar
+			this = { save_scope_as = duchy_title }
+			if = { # If there are gondorian knights still alive
+				limit = {
+					any_in_list = {
+						list = potential_gondorian_governors
+						count > 0
+					}
+				}
+				random_in_list = {
+					list = potential_gondorian_governors
+					limit = { # Bit redundant, but rather safe than sorry
+						is_ruler = no
+						is_alive = yes 
+					}
+					save_scope_as = new_holder
+					this = { remove_from_list = potential_gondorian_governors }
+				}
+				
+				maglor_umbar_governors_assign_title = yes
+			}
+			else_if = { # Grab some courtiers of same house of knight, even if they didn't fight
+				limit = {
+					any_in_list = {
+						list = gondorian_ruler_supported_maglor
+
+						this = { save_temporary_scope_as = gondorian_ruler }
+						scope:gondorian_ruler.primary_title = { save_temporary_scope_as = gondorian_ruler_title }
+						dynasty = {
+							any_dynasty_member = {
+								OR = {
+									is_courtier_of = scope:gondorian_ruler
+									is_courtier_of = scope:gondorian_ruler_title.holder
+								}
+							}
+						}
+					}
+				}
+				random_in_list = {
+					list = gondorian_ruler_supported_maglor
+
+					this = { save_temporary_scope_as = gondorian_ruler }
+					scope:gondorian_ruler.primary_title = { save_temporary_scope_as = gondorian_ruler_title }
+					dynasty = {
+						random_dynasty_member = {
+							limit = {
+								OR = {
+									is_courtier_of = scope:gondorian_ruler
+									is_courtier_of = scope:gondorian_ruler_title.holder
+								}
+							}
+							save_scope_as = new_holder
+						}
+					}
+				}
+
+				maglor_umbar_governors_assign_title = yes
+			}
+			else = { # Generate some random gondorian rulers
+				create_character = {
+					template = gondorian_governor_template
+					save_scope_as = new_holder
+				}
+				
+				maglor_umbar_governors_assign_title = yes
+			}
+		}
+
+		# Any county titles left that still need to be handed out
+		
+		resolve_title_and_vassal_change = scope:title_change
 	}
 }
 

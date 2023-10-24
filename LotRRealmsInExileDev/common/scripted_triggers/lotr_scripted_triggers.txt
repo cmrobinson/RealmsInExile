@@ -1231,3 +1231,9 @@ not_has_county_on_island_region = {
 		}
 	}
 } 
+
+maglor_aggresive_gondorian_knight_trigger = {
+	is_ruler = no
+	NOT = { is_primary_heir_of = scope:$SAVED_SCOPE$ }
+	dynasty = scope:$SAVED_SCOPE$.dynasty
+}
