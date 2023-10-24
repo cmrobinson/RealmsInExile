@@ -109,11 +109,6 @@
   elven.1602.desc:0 "VECTOR - Placeholder"
   elven.1602.a:0 "VECTOR - Placeholder"
 
-  # Army of the Righteous
-  elven.1603.t:0 "VECTOR - Placeholder"
-  elven.1603.desc:0 "VECTOR - Placeholder"
-  elven.1603.a:0 "VECTOR - Placeholder" 
-
   elven.1606.t:0 "VECTOR - Placeholder" # Elven ruler recieves letter from Maglor requesting elven volunteers
   elven.1606.desc:0 "VECTOR - Placeholder"
   elven.1606.a:0 "VECTOR - Placeholder" 
@@ -122,16 +117,15 @@
   elven.1606.toast_full.t:0 "VECTOR - Placeholder" # Ruler supported Maglor | Toast Title
   elven.1606.toast_half.t:0 "VECTOR - Placeholder" # Ruler doesn't care | Toast Title
   elven.1606.toast:0 "Volunteers from [elven_ruler_title.GetNameNoTierNoTooltip]" # Ruler doesn't care | MaA name
+  elven.maglor_help_songsmiths:0 "Volunteers from Helevorn"
   
   elven.1700.opening:0 "Letter Opening"
   elven.1700.desc:0 "Letter Description"
   elven.1700.a:0 "Accept"
   elven.1700.b:0 "Decline"
-  
-  elven.1705.t:0 "VECTOR - Placeholder"
-  elven.1705.desc:0 "VECTOR - Placeholder"
-  elven.1705.a:0 "VECTOR - Placeholder" # Recieved troops from Gondor lord
+
   elven.1705.event_troops:0 "[gondor_ruler.GetNameNoTooltip]'s troops"
+  elven.1705.event_troops.toast:0 "Gondorian Soldiers from [gondor_ruler.GetPrimaryTitle.GetNameNoTierNoTooltip]"
   
   elven.1710.t:0 "VECTOR - Placeholder"
   elven.1710.desc:0 "VECTOR - Placeholder"
@@ -150,6 +144,8 @@
   elven.1715.gui.gondorian_governor.b:0 "Hand the titles out manually"
   elven.1715.gui.gondorian_governor.b.tt:0 "Hand the titles out manually"
   elven.1715.a:0 "A lament for the fallen sons of Elros!" # Starts war against Umbar/Anadune
+
+  elven.1725.toast:0 "Freed Gondorian Marines"
 
   elven.umbar_marines:0 "Freed Gondorian Troops"
 

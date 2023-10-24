@@ -4111,6 +4111,7 @@ fourth_kinslaying_cb = {
 	ai_only_against_neighbors = yes
 
 	allowed_for_character = {
+		always = no
 	}
 	
 	allowed_against_character_display_regardless = {
@@ -4325,6 +4326,7 @@ maglor_umbar_cb = {
 	ai_only_against_neighbors = yes
 
 	allowed_for_character = {
+		always = no
 	}
 	
 	allowed_against_character_display_regardless = {

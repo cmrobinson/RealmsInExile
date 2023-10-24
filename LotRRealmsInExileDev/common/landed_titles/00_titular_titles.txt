@@ -828,3 +828,10 @@ d_edhellond = {
 	de_jure_drift_disabled = no
 	capital = c_edhellond
 }
+
+k_feanor_host = {
+	color = { 26 105 217 }
+	landless = yes
+	de_jure_drift_disabled = no
+	capital = c_himring
+}

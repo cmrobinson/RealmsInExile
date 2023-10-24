@@ -84,11 +84,6 @@
   decision_umbar_burns_desc:0 "VECTOR - Placeholder"
   decision_umbar_burns_confirm:0 "VECTOR - Placeholder"
 
-  decision_seek_aid_from_gondor_lords:0 "Seek Aid from Gondor Lords" 
-  decision_seek_aid_from_gondor_lords_tooltip:0 "VECTOR - Placeholder" 
-  decision_seek_aid_from_gondor_lords_desc:0 "VECTOR - Placeholder" 
-  decision_seek_aid_from_gondor_lords_confirm:0 "VECTOR - Placeholder" 
-
   decision_fourth_kinslaying:0 "Fourth Kinslaying" 
   decision_fourth_kinslaying_tooltip:0 "VECTOR - Placeholder" 
   decision_fourth_kinslaying_desc:0 "VECTOR - Placeholder"

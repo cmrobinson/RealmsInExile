@@ -674,7 +674,7 @@ elven.1555 = { # Rally the Loyalists
 
 elven.1556 = { # Send letter to loyalist asking for support
 	type = letter_event
-	sender = scope:recipient
+	sender = character:linefinwe11
 
 	opening = {
 		desc = elven.1556.opening
@@ -799,6 +799,9 @@ elven.1601 = { # Shield of the Free Peoples starting event |
 		start_travel_plan = {
 			destination = title:c_edhellond
 			on_arrival_event = elven.1604
+			return_trip = no
+			players_use_planner = no
+			on_arrival_destinations = first
 		}
 	}
 }
@@ -823,23 +826,8 @@ elven.1602 = { # Strike the Heart of the Enemy starting event | Go to Edhellond
 			on_arrival_event = elven.1604
 			return_trip = no
 			players_use_planner = no
+			on_arrival_destinations = first
 		}
-	}
-}
-
-elven.1603 = { # Army of the Righteous
-	content_source = realms
-	type = character_event
-	title = elven.1603.t
-	desc = elven.1603.desc
-	theme = martial_authority_focus
-	right_portrait = {
-		character = root
-		animation = fear
-	}
-	
-	option = { 
-		name = elven.1603.a
 	}
 }
 
@@ -848,21 +836,49 @@ elven.1604 = { # Hidden event | Swap titles for Edhellond
 
 	immediate = {
 		remove_variable = cannot_cancel_travel
-		## Grant Himring to Maglor Friend
 
-		create_title_and_vassal_change = {
-			type = granted
-			save_scope_as = title_change
-			add_claim_on_loss = no
+		title:c_edhellond = { # Remove any human buildings
+			remove_building_any_level = { BUILDING = caravanserai }
+			remove_building_any_level = { BUILDING = watermills }
+			remove_building_any_level = { BUILDING = windmills }
+			remove_building_any_level = { BUILDING = common_tradeport }
+			remove_building_any_level = { BUILDING = pastures }
+			remove_building_any_level = { BUILDING = hunting_grounds }
+			remove_building_any_level = { BUILDING = orchards }
+			remove_building_any_level = { BUILDING = farm_estates }
+			remove_building_any_level = { BUILDING = cereal_fields }
+			remove_building_any_level = { BUILDING = logging_camps }
+			remove_building_any_level = { BUILDING = peat_quarries }
+			remove_building_any_level = { BUILDING = hill_farms }
+			remove_building_any_level = { BUILDING = elephant_pens }
+			remove_building_any_level = { BUILDING = plantations }
+			remove_building_any_level = { BUILDING = quarries }
+			remove_building_any_level = { BUILDING = guild_halls }
+			remove_building_any_level = { BUILDING = ramparts }
+			remove_building_any_level = { BUILDING = curtain_walls }
+			remove_building_any_level = { BUILDING = watchtowers }
+			remove_building_any_level = { BUILDING = hill_forts }
+			remove_building_any_level = { BUILDING = wind_furnace }
+			remove_building_any_level = { BUILDING = workshops }
+			remove_building_any_level = { BUILDING = horse_pastures }
+			remove_building_any_level = { BUILDING = hillside_grazing }
+			remove_building_any_level = { BUILDING = warrior_lodges }
+			remove_building_any_level = { BUILDING = military_camps }
+			remove_building_any_level = { BUILDING = regimental_grounds }
+			remove_building_any_level = { BUILDING = outposts }
+			remove_building_any_level = { BUILDING = barracks }
+			remove_building_any_level = { BUILDING = camel_farms }
+			remove_building_any_level = { BUILDING = stables }
+			remove_building_any_level = { BUILDING = smiths }
+			remove_building_any_level = { BUILDING = hillside_grazing }
 		}
-		title:c_himring = {
-			change_title_holder = {
-				holder = root
-				change = scope:title_change
+		every_province = { # Changes province to elven holding
+			limit = { 
+				county = title:c_edhellond
+				has_holding = yes
 			}
+			set_holding_type = elven_holding			
 		}
-		
-		resolve_title_and_vassal_change = scope:title_change
 		
 		## Grant Maglor Edhellond
 
@@ -871,6 +887,7 @@ elven.1604 = { # Hidden event | Swap titles for Edhellond
 			save_scope_as = title_change
 			add_claim_on_loss = no
 		}
+
 		title:c_edhellond = {
 			change_title_holder = {
 				holder = root
@@ -878,7 +895,37 @@ elven.1604 = { # Hidden event | Swap titles for Edhellond
 			}
 		}
 		
+		becomes_independent = { change = scope:title_change }
+
 		resolve_title_and_vassal_change = scope:title_change
+
+		title:c_edhellond = {
+			set_county_culture = root.culture
+			set_county_faith = root.faith
+		}
+		province:420 = {
+			add_building = elven_forges_01
+			add_building = wonder_edhellond_03
+			add_building = elven_settlement_02
+		}
+		## Grant Himring to Maglor Friend
+
+		create_title_and_vassal_change = {
+			type = granted
+			save_scope_as = title_change
+			add_claim_on_loss = no
+		}
+
+		title:c_himring = {
+			change_title_holder = {
+				holder = character:lineoflauriel
+				change = scope:title_change
+			}
+		}
+		
+		resolve_title_and_vassal_change = scope:title_change
+
+		get_title = title:k_feanor_host
 	}
 }
 
@@ -893,7 +940,7 @@ elven.1605 = { # Hidden event | Swap titles for Eregion
 
 elven.1606 = { # Letter Event, Request troops from Lindon
 	type = letter_event
-	sender = scope:recipient
+	sender = character:linefinwe11
 
 	opening = {
 		desc = elven.1606.opening
@@ -969,12 +1016,54 @@ elven.1606 = { # Letter Event, Request troops from Lindon
 	}
 }
 
+elven.1607 = { # Letter Event, Request troops from Lindon
+	hidden = yes
+	immediate = {
+		
+		send_interface_toast = {
+			title = elven.1606.toast_full.t
+			random_list = {
+				5 = {
+					spawn_army = {
+						name = elven.maglor_help_songsmiths
+						men_at_arms = {
+							type = song_smiths
+							stacks = 1
+						}
+						location = root.capital_province
+					}
+				}
+				2 = {
+					spawn_army = {
+						name = elven.maglor_help_songsmiths
+						men_at_arms = {
+							type = song_smiths
+							stacks = 2
+						}
+						location = root.capital_province
+					}
+				}
+				1 = {
+					spawn_army = {
+						name = elven.maglor_help_songsmiths
+						men_at_arms = {
+							type = song_smiths
+							stacks = 3
+						}
+						location = root.capital_province
+					}
+				}
+			}
+		}
+	}
+}
+
 ### Strike the Heart of the Enemy event line ###
 
 # Letter to gondorian ruler to contribute troops to Maglor Umbar war
 elven.1700 = {
 	type = letter_event
-	sender = scope:recipient
+	sender = character:linefinwe11
 
 	opening = {
 		desc = elven.1700.opening
@@ -997,21 +1086,21 @@ elven.1700 = {
 		name = elven.1700.a
 
 		set_variable = donate_troops_maglor
-
-		character:linefinwe11 = { trigger_event = elven.1705 }
-
+		character:linefinwe11 = { 
+			trigger_event = elven.1705
+		}
 		ai_chance = {
 			base = 0
 			
-			modifier = { # Game Rule
+			modifier = { 
 				has_trait = brave
-				add = 1
+				add = 20
 			}
-			modifier = { # Game Rule
+			modifier = { 
 				has_trait = zealous
-				add = 1
+				add = 20
 			}
-			modifier = { # Game Rule
+			modifier = { 
 				OR = {
 					title:k_belfalas = {
 						any_de_jure_county = {
@@ -1024,15 +1113,15 @@ elven.1700 = {
 						}
 					}
 				}
-				add = 1
+				add = 20
 			}
-			modifier = { # Game Rule
+			modifier = { 
 				has_trait = greedy
-				add = 1
+				add = 20
 			}
-			modifier = { # Game Rule
+			modifier = { 
 				has_trait = vengeful
-				add = 1
+				add = 20
 			}
 		}
 	}
@@ -1044,103 +1133,104 @@ elven.1700 = {
 		ai_chance = {
 			base = 0
 			
-			modifier = { # Game Rule
+			modifier = { 
 				has_trait = craven
-				add = 1
+				add = 10
 			}
-			modifier = { # Game Rule
+			modifier = { 
 				has_trait = lazy
-				add = 1
+				add = 10
 			}
-			modifier = { # Game Rule
+			modifier = { 
 				has_trait = paranoid
-				add = 1
+				add = 10
 			}
 		}
 	}
 }
 
 elven.1705 = { # Spawns armies for Maglor
-	content_source = realms
-	type = character_event
-	title = elven.1705.t
-	desc = elven.1705.desc
-	theme = martial
-	right_portrait = {
-		character = root
-		animation = personality_honorable
-	}
+	hidden = yes
 	
-	option = { 
-		name = elven.1705.a
-
+	immediate = {
 		if = {
 			limit = {
 				scope:gondor_ruler = { has_title = title:k_belfalas }
 			}
-			spawn_army = {
-				name = elven.1705.event_troops
-				men_at_arms = {
-					type = wardens_tirith_aear
-					stacks = 1
-				}
-				location = root.capital_province
-				origin = scope:gondor_ruler.primary_title.capital_province
-			}
-			spawn_army = {
-				name = elven.1705.event_troops
-				men_at_arms = {
-					type = swan_knights
-					stacks = 1
-				}
-				location = root.capital_province
-				origin = scope:gondor_ruler.primary_title.capital_province
-			}
-		}
-		else_if = {
-			limit = {
-				scope:gondor_ruler = {
-					OR = {
-						has_title = title:e_gondor_steward
-						has_title = title:e_gondor
-						has_title = title:e_reunitedkingdom
+			character:linefinwe11 = {
+				send_interface_toast = {
+					title = elven.1705.event_troops.toast
+	
+					random_list = {
+						1 = {
+							spawn_army = {
+								name = elven.1705.event_troops
+								men_at_arms = {
+									type = wardens_tirith_aear
+									stacks = 1
+								}
+								location = root.capital_province
+								origin = scope:gondor_ruler.primary_title.capital_province
+							}
+							spawn_army = {
+								name = elven.1705.event_troops
+								men_at_arms = {
+									type = swan_knights
+									stacks = 1
+								}
+								location = root.capital_province
+								origin = scope:gondor_ruler.primary_title.capital_province
+							}
+						}
+						2 = {
+							spawn_army = {
+								name = elven.1705.event_troops
+								location = root.capital_province
+								levies = 100
+								origin = scope:gondor_ruler.primary_title.capital_province
+							}
+						}
 					}
 				}
 			}
-			spawn_army = {
-				name = elven.1705.event_troops
-				men_at_arms = {
-					type = guard_of_the_citadel
-					stacks = 1
-				}
-				location = root.capital_province
-				origin = scope:gondor_ruler.primary_title.capital_province
-			}
 		}
 		else = {
-			spawn_army = {
-				name = elven.1705.event_troops
-				men_at_arms = {
-					type = gondorian_footmen
-					stacks = 2
-				}
-				location = root.capital_province
-				origin = scope:gondor_ruler.primary_title.capital_province
-			}
-			spawn_army = {
-				name = elven.1705.event_troops
-				men_at_arms = {
-					type = gondorian_bowmen
-					stacks = 2
-				}
-				location = root.capital_province
-				origin = scope:gondor_ruler.primary_title.capital_province
-			}
-		}
+			character:linefinwe11 = {
+				send_interface_toast = {
+					title = elven.1705.event_troops.toast
 
-		trigger_event = {
-			id = elven.1710
-			days = { 15 30 }
+					random_list = {
+						1 = {
+							spawn_army = {
+								name = elven.1705.event_troops
+								men_at_arms = {
+									type = gondorian_footmen
+									stacks = 1
+								}
+								location = root.capital_province
+								origin = scope:gondor_ruler.primary_title.capital_province
+							}
+							spawn_army = {
+								name = elven.1705.event_troops
+								men_at_arms = {
+									type = gondorian_bowmen
+									stacks = 1
+								}
+								location = root.capital_province
+								origin = scope:gondor_ruler.primary_title.capital_province
+							}
+						}
+						2 = {
+							spawn_army = {
+								name = elven.1705.event_troops
+								location = root.capital_province
+								levies = 100
+								origin = scope:gondor_ruler.primary_title.capital_province
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 }
@@ -1154,6 +1244,9 @@ elven.1710 = { # Starts war against Umbar
 	right_portrait = {
 		character = root
 		animation = marshal
+	}
+	override_background = {
+		reference = docks_elven
 	}
 	
 	option = { 
@@ -1186,6 +1279,9 @@ elven.1715 = { # Event if win against Umbar
 		character = root
 		animation = marshal
 	}
+	override_background = {
+		reference = docks_adunai
+	}
 	
 	widget = {
 		is_shown = {}
@@ -1205,6 +1301,7 @@ elven.1715 = { # Event if win against Umbar
 			trigger_event = elven.1726
 		}
 		else = { trigger_event = elven.1725 }
+		
 		remove_variable = maglor_umbar_event
 	}
 }
@@ -1236,13 +1333,17 @@ elven.1725 = { # hidden event to recieve all troops from umbar
 	}
 
 	immediate = {
-		spawn_army = {
-			name = elven.umbar_marines
-			men_at_arms = {
-				type = gondorian_marines
-				stacks = 4
+		send_interface_toast = {
+			title = elven.1725.toast
+
+			spawn_army = {
+				name = elven.umbar_marines
+				men_at_arms = {
+					type = gondorian_marines
+					stacks = 2
+				}
+				location = root.capital_province
 			}
-			location = root.capital_province
 		}
 
 		if = {
@@ -1279,13 +1380,18 @@ elven.1726 = { # hidden event to recieve half troops form umbar
 	}
 
 	immediate = {
-		spawn_army = {
-			name = elven.umbar_marines
-			men_at_arms = {
-				type = gondorian_marines
-				stacks = 2
+		
+		send_interface_toast = {
+			title = elven.1725.toast
+
+			spawn_army = {
+				name = elven.umbar_marines
+				men_at_arms = {
+					type = gondorian_marines
+					stacks = 1
+				}
+				location = root.capital_province
 			}
-			location = root.capital_province
 		}
 
 		if = {

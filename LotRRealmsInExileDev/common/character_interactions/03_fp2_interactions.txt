@@ -4373,6 +4373,7 @@ bargain_fealty_interaction = {
 				is_at_war_with = scope:actor
 			}
 		}
+		
 	}
 
 	is_valid_showing_failures_only = {
