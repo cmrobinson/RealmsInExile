@@ -615,83 +615,32 @@ elven.1500 = { # Rouse from slumber
 
 	option = { # Kingship by Seniority
 		name = elven.1500.b
+		
+		set_variable = fourth_kin_slaying
 	}
 }
 
 ### 4th Kin-slaying route | Crusade against darkness, elven.1600 onwards ###
-elven.1550 = {  # Claim high-kingship via seniority
-	content_source = realms
-	type = character_event
-	title = elven.1550.t
-	desc = elven.1550.desc
-	theme = crown
-	right_portrait = {
-		character = root
-		animation = fear
-	}
-	
-	option = { 
-		name = elven.1550.a
-	}
-
-	after = {
-		trigger_event = {
-			id = elven.1555
-			months = { 6 12 }
-		}
-	}
-}
-
-elven.1555 = { # Rally the Loyalists
-	content_source = realms
-	type = character_event
-	title = elven.1555.t
-	desc = elven.1555.desc
-	theme = martial
-	right_portrait = {
-		character = root
-		animation = fear
-	}
-	
-	option = { 
-		name = elven.1555.a
-
-		title:e_lindon.holder = {
-			every_vassal_or_below = {
-				limit = { 
-					culture = culture:noldor 
-					NOR = {
-						dynasty = dynasty:dynasty_nacilion
-						dynasty = dynasty:dynasty_penlod
-					}
-				}
-				trigger_event = elven.1556
-			}
-		}
-		set_variable = rallied_loyalist
-	}
-}
-
-elven.1556 = { # Send letter to loyalist asking for support
+elven.1555 = { # Send letter to loyalist asking for support
 	type = letter_event
 	sender = character:linefinwe11
 
 	opening = {
-		desc = elven.1556.opening
+		desc = elven.1555.opening
 	}
 
-	desc = elven.1556.desc
+	desc = elven.1555.desc
 
 
 	on_trigger_fail = { #Trigger invitation again if it was blocked because the character was handling another invitation
 		trigger_event = {
-			id = elven.1556
+			id = elven.1555
 			days = 1
 		}
 	}
 
 	option = { # Accept | Join Maglor
-		name = elven.1556.a
+		name = elven.1555.a
 		set_variable = joined_maglor
 
 		
@@ -701,7 +650,7 @@ elven.1556 = { # Send letter to loyalist asking for support
 	}	
 	
 	option = { # Decline
-		name = elven.1556.b
+		name = elven.1555.b
 
 		
 		ai_chance = {
@@ -710,7 +659,53 @@ elven.1556 = { # Send letter to loyalist asking for support
 	}
 }
 
-elven.1560 = { # The Fourth Kinslaying
+elven.1556 = {
+	content_source = realms
+	type = character_event
+	title = elven.1556.t
+	desc = elven.1556.desc
+	theme = death
+	right_portrait = {
+		character = root
+		animation = fear
+	}
+	
+	option = { 
+		name = elven.1556.a
+
+		start_war = {
+			casus_belli = fourth_kinslaying_cb
+			target = title:e_lindon.holder
+			target_title = title:e_lindon
+		}
+		title:e_lindon.holder = {
+			every_character_war = {
+				limit = { using_cb = fourth_kinslaying_cb }
+				add_to_list = war_to_join
+			}
+			every_vassal_or_below = {
+				limit = { has_variable = joined_maglor }
+				every_in_list = {
+					list = war_to_join
+					limit = { NOT = { is_defender = prev } }
+					hidden_effect = { set_called_to = prev }
+					add_attacker = prev
+				}
+			}
+			every_vassal_or_below = {
+				limit = { culture = culture:sindar }
+				every_in_list = {
+					list = war_to_join
+					limit = { NOT = { is_attacker = prev } }
+					hidden_effect = { set_called_to = prev }
+					add_defender = prev
+				}
+			}
+		}
+	}
+}
+
+elven.1560 = { # The Fourth Kinslaying | Maglor wins the war against Cirdan
 	content_source = realms
 	type = character_event
 	title = elven.1560.t
@@ -747,7 +742,7 @@ elven.1565 = { # Maglor loses the war against Cirdan
 	}
 }
 
-### Crusade against darkness route | 4th Kin-slaying, elven.1550 onwards ###
+### Crusade against darkness route | 4th Kin-slaying, elven.1555 onwards ###
 elven.1600 = { # Crusade against Darkness
 	content_source = realms
 	type = character_event

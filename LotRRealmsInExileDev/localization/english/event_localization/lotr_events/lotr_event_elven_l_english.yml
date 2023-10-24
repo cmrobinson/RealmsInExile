@@ -72,21 +72,16 @@
 
   ### 4th Kin-slaying ###
 
-  # Claim high-kingship via seniority
-  elven.1550.t:0 "VECTOR - Placeholder"
-  elven.1550.desc:0 "VECTOR - Placeholder"
-  elven.1550.a:0 "Claim the Kingship"
-
-  # Rally the Loyalists
-  elven.1555.t:0 "VECTOR - Placeholder"
-  elven.1555.desc:0 "VECTOR - Placeholder"
-  elven.1555.a:0 "Rally the Loyalist"
-
   # Send letter to loyalists
-  elven.1556.opening:0 "Letter Opening"
-  elven.1556.desc:0 "Letter Description"
-  elven.1556.a:0 "Accept"
-  elven.1556.b:0 "Decline"
+  elven.1555.opening:0 "Letter Opening"
+  elven.1555.desc:0 "Letter Description"
+  elven.1555.a:0 "Accept"
+  elven.1555.b:0 "Decline"
+
+  # Starts war against Cirdan 
+  elven.1556.t:0 "VECTOR - Placeholder"
+  elven.1556.desc:0 "VECTOR - Placeholder"
+  elven.1556.a:0 "VECTOR - Placeholder"
 
   # The Fourth Kinslaying
   elven.1560.t:0 "VECTOR - Placeholder"

@@ -1208,7 +1208,7 @@ decision_fourth_kinslaying = { # Starts war against Dol Guldur
 	# IS_SHOWN
 	is_shown = {
 		root = character:linefinwe11
-		has_variable = rallied_loyalist
+		has_variable = fourth_kin_slaying
 		character:lineofcirdan = {
 			has_title = title:e_lindon
 		}
@@ -1230,45 +1230,25 @@ decision_fourth_kinslaying = { # Starts war against Dol Guldur
 		is_available_adult = yes
 		is_at_war = no
 	}
-
-	# COST 
-	# cost = {
-	# 	gold = 250
-	# 	prestige = 500
-	# 	piety = 500
-	# }
 	
 	# EFFECT 
 	effect = {
-		start_war = {
-			casus_belli = fourth_kinslaying_cb
-			target = title:e_lindon.holder
-			target_title = title:e_lindon
-		}
+
 		title:e_lindon.holder = {
-			every_character_war = {
-				limit = { using_cb = fourth_kinslaying_cb }
-				add_to_list = war_to_join
-			}
 			every_vassal_or_below = {
-				limit = { has_variable = joined_maglor }
-				every_in_list = {
-					list = war_to_join
-					limit = { NOT = { is_defender = prev } }
-					hidden_effect = { set_called_to = prev }
-					add_attacker = prev
+				limit = { 
+					culture = culture:noldor 
+					NOR = {
+						dynasty = dynasty:dynasty_nacilion
+						dynasty = dynasty:dynasty_penlod
+					}
 				}
-			}
-			every_vassal_or_below = {
-				limit = { culture = culture:sindar }
-				every_in_list = {
-					list = war_to_join
-					limit = { NOT = { is_attacker = prev } }
-					hidden_effect = { set_called_to = prev }
-					add_defender = prev
-				}
+				trigger_event = elven.1555
 			}
 		}
+
+		remove_variable = fourth_kin_slaying
+		
 		add_to_global_variable_list = {
 			name = unavailable_unique_decisions
 			target = flag:decision_fourth_kinslaying
