@@ -1011,7 +1011,7 @@ elven.1606 = { # Letter Event, Request troops from Lindon
 	}
 }
 
-elven.1607 = { # Letter Event, Request troops from Lindon
+elven.1607 = {
 	hidden = yes
 	immediate = {
 		
@@ -1327,6 +1327,24 @@ elven.1715 = { # Event if win against Umbar
 	
 	option = {
 		name = elven.1715.a
+
+		custom_tooltip = {
+			text = "elven.1715.a.event_troops_full.tt"
+
+			AND = {
+				has_variable = appoint_governor
+				NOT = { has_variable = raze_umbar } 
+			}
+		}
+		custom_tooltip = {
+			text = "elven.1715.a.event_troops_half.tt"
+
+			AND = {
+				has_variable = appoint_governor
+				has_variable = raze_umbar
+			}
+		}	
+
 		if = {
 			limit = { has_variable = appoint_governor }
 			trigger_event = elven.1720

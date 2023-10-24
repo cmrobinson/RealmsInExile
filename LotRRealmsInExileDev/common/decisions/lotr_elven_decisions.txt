@@ -1335,3 +1335,54 @@ decision_rally_army_righteous = { # Starts war against Dol Guldur
 	ai_potential = { always = yes }
 	ai_will_do = { base = 100 }
 }
+
+##################################################
+# Bring Harad to Heel
+# Coding by Jaco_Daan
+# Localization by VectorMaximus
+##################################################
+
+decision_bring_harad_down = { # Starts war against Dol Guldur
+	# TEXT
+	title = decision_rally_army_righteous
+	picture = "gfx/interface/illustrations/decisions/decision_fornost_02.dds"
+	selection_tooltip = decision_bring_harad_down_tooltip
+	desc = decision_bring_harad_down_desc
+	confirm_text = decision_bring_harad_down_confirm
+	major = yes
+
+	# IS_SHOWN
+	is_shown = {
+		root = character:linefinwe11
+		has_variable = crusade_against_darkness
+
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:decision_bring_harad_down
+			}
+		}
+	}
+	
+	# IS_VALID
+	is_valid = { always = yes }
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_available_adult = yes
+		is_at_war = no
+	}
+	
+	# EFFECT 
+	effect = {
+
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:decision_bring_harad_down
+		}
+	}
+
+	# AI
+	ai_goal = yes
+	ai_potential = { always = yes }
+	ai_will_do = { base = 100 }
+}

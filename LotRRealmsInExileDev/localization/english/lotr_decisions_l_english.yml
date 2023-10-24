@@ -94,6 +94,11 @@
   decision_rally_army_righteous_desc:0 "VECTOR - Placeholder"
   decision_rally_army_righteous_confirm:0 "VECTOR - Placeholder"
 
+  decision_bring_harad_down:0 "Rally the Army of the Righteous"
+  decision_bring_harad_down_tooltip:0 "VECTOR - Placeholder" 
+  decision_bring_harad_down_desc:0 "VECTOR - Placeholder"
+  decision_bring_harad_down_confirm:0 "VECTOR - Placeholder"
+
  ###########################
  ### Dorwinion Decisions ###
  ###########################
