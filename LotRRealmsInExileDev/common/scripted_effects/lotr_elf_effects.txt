@@ -1038,3 +1038,20 @@ maglor_crusade_elven_warriors = {
 		}
 	}
 }
+
+maglor_umbar_governors_assign_title = {
+	this = { # Duchy title
+		change_title_holder = {
+			holder = scope:new_holder
+			change = scope:title_change
+		}
+	}
+	every_de_jure_county = { # Associated county titles
+		limit = { de_jure_liege = scope:duchy_title }
+		
+		change_title_holder = {
+			holder = scope:new_holder
+			change = scope:title_change
+		}
+	}
+}
