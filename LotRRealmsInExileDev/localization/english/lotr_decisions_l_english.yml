@@ -79,10 +79,11 @@
   decision_annihilate_dol_guldur_desc:0 "VECTOR - Placeholder"
   decision_annihilate_dol_guldur_confirm:0 "VECTOR - Placeholder" 
 
-  decision_umbar_burns:0 "Umbar Burns"
-  decision_umbar_burns_tooltip:0 "VECTOR - Placeholder" 
-  decision_umbar_burns_desc:0 "VECTOR - Placeholder"
-  decision_umbar_burns_confirm:0 "VECTOR - Placeholder"
+  decision_umbar_burns:0 "Destroy the City of Corsairs"
+  decision_umbar_burns_tooltip:0 "Rally the men of Gondor to attack Umbar" 
+  decision_umbar_burns_desc:0 "Umbar is the oldest and mightiest of the colonial strongholds of the Numenoreans, steeped in the corruption of first the King’s Men and then those in the service of Sauron. For countless generations it has been a thorn in Gondor's side, and now, a knife aimed at its coastal underbelly. Its raids tie up much of the men and materials of Gondor, depriving them from the war against Sauron. This cannot stand any longer. Let us rally what of the Men of Gondor will join us and neutralize this threat.\n\nUmbar is not the first port Maglor has put to the torch, but Eru willing, let this be the last."
+  decision_umbar_burns_confirm:0 "To me, men of Gondor!"
+  decision_umbar_burns_effect_tt:0 "You may recieve Men-at-Arms, Levies, and Knights from coastal Gondorian lords\n\nAfter a mustering period, you will launch a war against Umbar to destroy it."
 
   decision_fourth_kinslaying:0 "Fourth Kinslaying" 
   decision_fourth_kinslaying_tooltip:0 "VECTOR - Placeholder" 
@@ -90,14 +91,21 @@
   decision_fourth_kinslaying_confirm:0 "VECTOR - Placeholder" 
 
   decision_rally_army_righteous:0 "Rally the Army of the Righteous"
-  decision_rally_army_righteous_tooltip:0 "VECTOR - Placeholder" 
-  decision_rally_army_righteous_desc:0 "VECTOR - Placeholder"
-  decision_rally_army_righteous_confirm:0 "VECTOR - Placeholder"
+  decision_rally_army_righteous_tooltip:0 "Put out a call for Elven veterans and volunteers to join your campaigns" 
+  decision_rally_army_righteous_desc:0 "After the great struggle of the Last Alliance and then the long wars against Angmar, Lindon quieted and retreated into isolation, protected by the great distances it was from any threat. But there are threats which will one day come to its shores if they are not pre-empted. Many in Lindon know this, but lack the leadership to take the step. Well, I am. My name, and that of my family, is stained with innocent blood, which might never be cleansed. But let it not be said we did not try. Let all of Lindon know - if any desire to take the fight to the enemy, to make safe the lands of the free peoples, rally to the Star of Fëanor!"
+  decision_rally_army_righteous_confirm:0 "Death we will deal him ere Day's ending..."
 
-  decision_bring_harad_down:0 "Bring Harad to Heel"
-  decision_bring_harad_down_tooltip:0 "VECTOR - Placeholder" 
-  decision_bring_harad_down_desc:0 "VECTOR - Placeholder"
-  decision_bring_harad_down_confirm:0 "VECTOR - Placeholder"
+  decision_bring_harad_down:0 "Strike against the Haradrim"
+  decision_bring_harad_down_tooltip:0 "Summon men of Gondor to begin a campaign against Near Harad" 
+  decision_bring_harad_down_desc:0 "Much of the Haradrim of the Harnen river valley have long been in the sway of Sauron, providing him valuable men and material, as well as providing a threat to Gondor. We must sever Sauron from his servants. With Umbar fallen, we now have a foothold from which to strike deep into Near Harad. Let us put out a call to all willing men of Gondor - with Umbar no more, it is time to dismantle the last threat from the south!"
+  decision_bring_harad_down_confirm:0 "Send forth the heralds."
+
+  decision_help_good_dynasty_rise:0 "Bring Harad to Heel" 
+  decision_help_good_dynasty_rise_tooltip:0 "VECTOR - Placeholder" 
+  decision_help_good_dynasty_rise_desc:0 "With Sauron's most powerful servants in Harad defeated, many of the Haradrim have lost faith in Khaz-gramaze. Their god either unwilling or unable to defend them, many are starting to turn away from him. Perhaps with our support, these dissidents could not only further weaken Sauron's grip, but cause the whole region to turn against him? Rumors already have spread of a zealous leader preaching against Sauron..."
+  decision_help_good_dynasty_rise_confirm:0 "Rise, Men of Harad, and know truth and light." 
+  decision_help_good_dynasty_rise_custom_tt.1:0 "A powerful new dynasty will rise in Haruzan aligned with us\n"
+  decision_help_good_dynasty_rise_custom_tt.2:0 "The 'Shatter Realm' Casus Belli can now be used globally"
 
  ###########################
  ### Dorwinion Decisions ###

@@ -1079,7 +1079,7 @@ decision_umbar_burns = { # Starts war against Umbar
 	
 	# EFFECT 
 	effect = {
-
+		custom_tooltip = decision_umbar_burns_effect_tt
 		if = {
 			limit = { exists = title:e_gondor.holder }
 			title:e_gondor.holder = { save_scope_as = gondor_ruler }
@@ -1196,7 +1196,7 @@ decision_annihilate_dol_guldur = { # Starts war against Dol Guldur
 # Localization by VectorMaximus
 ##################################################
 
-decision_fourth_kinslaying = { # Starts war against Dol Guldur
+decision_fourth_kinslaying = {
 	# TEXT
 	title = decision_fourth_kinslaying
 	picture = "gfx/interface/illustrations/decisions/decision_fornost_02.dds"
@@ -1267,7 +1267,7 @@ decision_fourth_kinslaying = { # Starts war against Dol Guldur
 # Localization by VectorMaximus
 ##################################################
 
-decision_rally_army_righteous = { # Starts war against Dol Guldur
+decision_rally_army_righteous = { 
 	# TEXT
 	title = decision_rally_army_righteous
 	picture = "gfx/interface/illustrations/decisions/decision_fornost_02.dds"
@@ -1342,9 +1342,9 @@ decision_rally_army_righteous = { # Starts war against Dol Guldur
 # Localization by VectorMaximus
 ##################################################
 
-decision_bring_harad_down = { # Starts war against Dol Guldur
+decision_bring_harad_down = {
 	# TEXT
-	title = decision_rally_army_righteous
+	title = decision_bring_harad_down
 	picture = "gfx/interface/illustrations/decisions/decision_fornost_02.dds"
 	selection_tooltip = decision_bring_harad_down_tooltip
 	desc = decision_bring_harad_down_desc
@@ -1355,12 +1355,8 @@ decision_bring_harad_down = { # Starts war against Dol Guldur
 	is_shown = {
 		root = character:linefinwe11
 		has_variable = maglor_aggresive
-
-
-		is_target_in_global_variable_list = {
-			name = unavailable_unique_decisions
-			target = flag:decision_umbar_burns
-		}
+		has_variable = won_against_umbar
+		
 		NOT = {
 			is_target_in_global_variable_list = {
 				name = unavailable_unique_decisions
@@ -1379,10 +1375,95 @@ decision_bring_harad_down = { # Starts war against Dol Guldur
 	
 	# EFFECT 
 	effect = {
+		if = {
+			limit = { exists = title:e_gondor.holder }
+			title:e_gondor.holder = { save_scope_as = gondor_ruler }
+		}
+		else = {
+			title:e_gondor_steward.holder = { save_scope_as = gondor_ruler }
+		}
+
+		if = {
+			limit = {
+				scope:gondor_ruler = { faith_is_good = yes }
+			}
+			scope:gondor_ruler = {
+				every_vassal_or_below = {
+					limit = {
+						highest_held_title_tier >= tier_county
+						any_held_title = { 
+							title_province ?= {
+								geographical_region = special_eastern_gondorian_fiefdoms
+							}
+						}
+					}
+					trigger_event = {
+						id = elven.1730
+						days = { 15 30 }
+					}
+				}
+			}
+		}
 
 		add_to_global_variable_list = {
 			name = unavailable_unique_decisions
 			target = flag:decision_bring_harad_down
+		}
+	}
+
+	# AI
+	ai_goal = yes
+	ai_potential = { always = yes }
+	ai_will_do = { base = 100 }
+}
+
+##################################################
+# The X Dynasty rises
+# Coding by Jaco_Daan
+# Localization by VectorMaximus
+##################################################
+
+decision_help_good_dynasty_rise = { 
+	# TEXT
+	title = decision_help_good_dynasty_rise
+	picture = "gfx/interface/illustrations/decisions/decision_fornost_02.dds"
+	selection_tooltip = decision_help_good_dynasty_rise_tooltip
+	desc = decision_help_good_dynasty_rise_desc
+	confirm_text = decision_help_good_dynasty_rise_confirm
+	major = yes
+
+	# IS_SHOWN
+	is_shown = {
+		root = character:linefinwe11
+		has_variable = maglor_aggresive
+		
+		is_target_in_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:decision_bring_harad_down
+		}
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:decision_help_good_dynasty_rise
+			}
+		}
+	}
+	
+	# IS_VALID
+	is_valid = { always = yes }
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_available_adult = yes
+		is_at_war = no
+	}
+	
+	# EFFECT 
+	effect = {
+		custom_tooltip = decision_help_good_dynasty_rise_custom_tt.1
+		custom_tooltip = decision_help_good_dynasty_rise_custom_tt.2
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:decision_help_good_dynasty_rise
 		}
 	}
 

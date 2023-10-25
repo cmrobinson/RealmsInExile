@@ -122,9 +122,9 @@
   elven.1705.event_troops:0 "[gondor_ruler.GetNameNoTooltip]'s troops"
   elven.1705.event_troops.toast:0 "Gondorian Soldiers from [gondor_ruler.GetPrimaryTitle.GetNameNoTierNoTooltip]"
   
-  elven.1710.t:0 "VECTOR - Placeholder"
-  elven.1710.desc:0 "VECTOR - Placeholder"
-  elven.1710.a:0 "VECTOR - Placeholder" # Starts war against Umbar/Anadune
+  elven.1710.t:0 "The Expedition against Umbar"
+  elven.1710.desc:0 "At last, the preparations have finished. From across Gondor, men have come for the chance to put an end to the threat of Umbar. Comparatively, the Elves are fewer, but none can doubt their skill and valor. While once disorganized, my leadership skills have proven themselves not so rusted as I thought. Now both sides work together ably, though perhaps still not to the level of the great Mannish-Elven armies of Beleriand of old. Our fleet is somewhat motley, with graceful oarless Elven-craft berthed alongside lumbering Gondorian ships. Yet I have faith. A new note is in the air, a new chorus to the song, one perhaps not originally intended but adding a unique harmony to it.\n\nPenance begins here, by fire and sword and hate of evil which will not rest ere the breaking of the world. Let the flame of Fëanor burn once more, and incinerate all darkness."
+  elven.1710.a:0 "We make for Umbar!"
 
   elven.1715.t:0 "The Fate of Umbar"
   elven.1715.desc:0 "With Umbar having fallen, the question now turns to what to do with it.\n\nThe simplest option would be to turn over the land to the mannish war-captains, to provide troops for the coming campaigns.\n\nAs for the city of Umbar itself, the war council is split. Some advocate for the city to be spared, its location and infrastructure a lynchpin of the new administration. Others content the city should be sacked, too dangerous and corrupted to leave intact. They argue the booty gained from Umbar’s corpse could be used to greatly strengthen Edhellond. "
@@ -145,6 +145,13 @@
   elven.1715.a.upgrade_edhellond.tt:0 "Due to sacking Umbar, Edhellond will recieve #high additional#! resources to further its development"
 
   elven.1725.toast:0 "Freed Gondorian Marines"
+
+  elven.1730.opening:0 "Letter Opening"
+  elven.1730.desc:0 "Letter Description"
+  elven.1730.a:0 "Accept"
+  elven.1730.b:0 "Decline"
+  elven.1730.event_troops.toast:0 "[gondor_ruler.GetNameNoTooltip]'s troops"
+  elven.1730.event_troops:0 "Gondorian Soldiers from [gondor_ruler.GetPrimaryTitle.GetNameNoTierNoTooltip]"
 
   elven.umbar_marines:0 "Freed Gondorian Troops"
 

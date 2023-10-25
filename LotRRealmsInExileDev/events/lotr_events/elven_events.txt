@@ -1352,7 +1352,8 @@ elven.1715 = { # Event if win against Umbar
 	
 	option = {
 		name = elven.1715.a
-
+		set_variable = won_against_umbar
+		set_variable = CB_region_locked
 		if = {
 			limit = {
 				has_variable = appoint_governor
@@ -1609,6 +1610,70 @@ elven.1727 = { # Hidden event to upgrade Edhellond
 	}
 }
 
+elven.1730 = {
+	type = letter_event
+	sender = character:linefinwe11
+
+	opening = {
+		desc = elven.1730.opening
+	}
+
+	desc = elven.1730.desc
+
+	immediate = { save_scope_as = gondor_ruler }
+
+	on_trigger_fail = { #Trigger invitation again if it was blocked because the character was handling another invitation
+		trigger_event = {
+			id = elven.1730
+			days = 1
+		}
+	}
+	
+	option = {
+		name = elven.1730.a
+
+		character:linefinwe11 = {
+			send_interface_toast = {
+				title = elven.1730.event_troops.toast
+
+				random_list = {
+					1 = {
+						spawn_army = {
+							name = elven.1730.event_troops
+							men_at_arms = {
+								type = gondorian_footmen
+								stacks = 1
+							}
+							location = root.capital_province
+							origin = scope:gondor_ruler.primary_title.capital_province
+						}
+						spawn_army = {
+							name = elven.1730.event_troops
+							men_at_arms = {
+								type = gondorian_bowmen
+								stacks = 1
+							}
+							location = root.capital_province
+							origin = scope:gondor_ruler.primary_title.capital_province
+						}
+					}
+					3 = {
+						spawn_army = {
+							name = elven.1730.event_troops
+							location = root.capital_province
+							levies = 100
+							origin = scope:gondor_ruler.primary_title.capital_province
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = elven.1730.b
+	}
+}
 ### Shield of the Free Peoples ###
 
 elven.9999 = { #It burns !
