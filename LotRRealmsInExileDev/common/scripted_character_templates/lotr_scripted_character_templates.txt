@@ -506,36 +506,18 @@ miner_template = {
 	}
 }
 
-gondorian_governor_template = {
-	age = { 30 60 }
-	dynasty = none
+maglor_nadi_manye_leader = {
+	age = { 20 40 }
 	random_traits = yes
-	faith = faith:faith_edain
- 	culture = culture:gondorian
-	random_culture = {
-		this.culture = {
-			trigger = {
-				restricted_culture = no
-			}
-		}
-		culture:isengard_dunlending = {
-			trigger = {
-				is_istari = yes
-			}
-		}
-		culture:morlughai = {
-			trigger = {
-				is_istari = no
-				faith = faith:lidless_eye
-			}
-		}
-	}
-	random_traits_list = {
-		count = { 0 1 }
-		blood_of_numenor_1 = {}
-	}
+	dynasty = none
+	culture = haruze
+	faith = faith:faith_chelkar
 	gender_female_chance = root_soldier_female_chance
-
+	stewardship = {
+		min_template_decent_skill
+		max_template_decent_skill
+	}
+	add_trait = holy_warrior
 	after_creation = {
 		if = {
 			limit = { is_elf = yes }
@@ -545,12 +527,6 @@ gondorian_governor_template = {
 		if = {
 			limit = { is_dwarf = yes }
 			change_age = { 0 240 }
-		}
-		add_random_tiered_trait_track_xp_effect = {
-			TRAIT = lifestyle_miner
-			TRACK = hewer
-			LEVEL_1 = no
-			LEVEL_3 = yes
 		}
 	}
 }

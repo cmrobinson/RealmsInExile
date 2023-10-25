@@ -1450,7 +1450,9 @@ decision_help_good_dynasty_rise = {
 	}
 	
 	# IS_VALID
-	is_valid = { always = yes }
+	is_valid = {
+		title:c_amrun.holder = { is_independent_ruler = yes } 
+	}
 	is_valid_showing_failures_only = {
 		is_imprisoned = no
 		is_available_adult = yes

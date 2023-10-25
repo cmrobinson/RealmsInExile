@@ -152,8 +152,18 @@
   elven.1730.b:0 "Decline"
   elven.1730.event_troops.toast:0 "[gondor_ruler.GetNameNoTooltip]'s troops"
   elven.1730.event_troops:0 "Gondorian Soldiers from [gondor_ruler.GetPrimaryTitle.GetNameNoTierNoTooltip]"
-
   elven.umbar_marines:0 "Freed Gondorian Troops"
+
+  elven.1735.t:0 "VECTOR - Placeholder"
+  elven.1735.desc:0 "VECTOR - Placeholder"
+  elven.1735.a:0 "Give titles away"
+  elven.1735.b:0 "Give All Duchy title away"
+  elven.1735.c:0 "Resist!!!"
+
+  elven.1740.opening:0 "Letter Opening"
+  elven.1740.desc:0 "Letter Description"
+  elven.1740.a:0 "Accept"
+  elven.1740.b:0 "Decline"
 
  ### Elven artifact burns evil characters
  
