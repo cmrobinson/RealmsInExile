@@ -1375,6 +1375,7 @@ decision_bring_harad_down = {
 	
 	# EFFECT 
 	effect = {
+		custom_tooltip = maglor_shatter_realm_cb_effect_tt.3
 		if = {
 			limit = { exists = title:e_gondor.holder }
 			title:e_gondor.holder = { save_scope_as = gondor_ruler }
@@ -1461,6 +1462,12 @@ decision_help_good_dynasty_rise = {
 	
 	# EFFECT 
 	effect = {
+		title:c_amrun.holder = {
+			trigger_event = {
+				id = elven.1735
+				days = { 10 15 }
+			}
+		}
 		custom_tooltip = decision_help_good_dynasty_rise_custom_tt.1
 		custom_tooltip = decision_help_good_dynasty_rise_custom_tt.2
 		add_to_global_variable_list = {

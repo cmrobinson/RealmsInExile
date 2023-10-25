@@ -5216,7 +5216,10 @@ maglor_shatter_realm_cb = {
 
 	allowed_for_character = {
 		this = character:linefinwe11
-		scope:attacker = { has_variable = won_against_umbar }
+		is_target_in_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:decision_bring_harad_down
+		}
 	}
 
 	allowed_against_character = {

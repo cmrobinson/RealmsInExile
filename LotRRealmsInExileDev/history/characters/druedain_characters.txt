@@ -418,11 +418,11 @@ lineofaghanghu17 = {
 	7019.1.1 = {								
 		effect = {				
 			make_tributary = {
-					TYPE = tributary_protectorate
-					SUZERAIN = character:linesteward38
-					TRIBUTARY = character:lineofaghanghu17
-			}		
-		}				
+				TYPE = tributary_protectorate
+				SUZERAIN = character:linesteward38
+				TRIBUTARY = character:lineofaghanghu17
+			}
+		}
 	}
 						
 	7025.1.1 = {					

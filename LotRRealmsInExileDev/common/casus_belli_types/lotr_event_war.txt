@@ -4333,7 +4333,7 @@ maglor_umbar_cb = {
 	}
 	
 	allowed_against_character = {
-		always = no
+		# always = no
 	}
 	
 	should_invalidate = {

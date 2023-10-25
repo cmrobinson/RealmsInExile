@@ -510,15 +510,17 @@ maglor_nadi_manye_leader = {
 	age = { 20 40 }
 	random_traits = yes
 	dynasty = none
-	culture = haruze
+	culture = culture:haruze
 	faith = faith:faith_chelkar
 	gender_female_chance = root_soldier_female_chance
 	stewardship = {
 		min_template_decent_skill
 		max_template_decent_skill
 	}
-	add_trait = holy_warrior
 	after_creation = {
+		add_trait = holy_warrior
+		add_trait = zealous
+		remove_trait = cynical
 		if = {
 			limit = { is_elf = yes }
 			change_age = { 100 6950 }
