@@ -231,7 +231,6 @@ elven.0104 = { #Elessar as a wedding present - Recipient
 	}
 }
 
-
 elven.0150 = { # Parth Celebrant receives elven envoy
 	content_source = realms
 	type = character_event
@@ -561,10 +560,43 @@ elven.0500 = { # Introduction to Sirgala
 	option = { # The time of Sirgala has passed
 		name = elven.0500.a
 		custom_tooltip = elven.0500.a.tt
+
+		ai_chance = {
+			base = 0 # LotR: This should be tied to WotR mode.
+			modifier = { # Game Rule
+				has_game_rule = default_ai_behavior
+				add = 100
+			}
+			modifier = { # Game Rule
+				has_game_rule = weighted_ai_behavior
+				add = 70
+			}
+			modifier = { # Game Rule
+				has_game_rule = random_ai_behavior
+				add = 50
+			}
+		}
 	}
+
 	option = { # 
 		name = elven.0500.b
 		custom_tooltip = elven.0500.b.tt
+
+		ai_chance = {
+			base = 0 # LotR: This should be tied to WotR mode.
+			modifier = { # Game Rule
+				has_game_rule = default_ai_behavior
+				add = 0
+			}
+			modifier = { # Game Rule
+				has_game_rule = weighted_ai_behavior
+				add = 30
+			}
+			modifier = { # Game Rule
+				has_game_rule = random_ai_behavior
+				add = 50
+			}
+		}
 	}
 }
 
@@ -587,10 +619,42 @@ elven.1000 = { # Maglor Introduction
 			id = elven.1500
 			months = { 2 4 }
 		}
+
+		ai_chance = {
+			base = 0 # LotR: This should be tied to WotR mode.
+			modifier = { # Game Rule
+				has_game_rule = default_ai_behavior
+				add = 0
+			}
+			modifier = { # Game Rule
+				has_game_rule = weighted_ai_behavior
+				add = 30
+			}
+			modifier = { # Game Rule
+				has_game_rule = random_ai_behavior
+				add = 50
+			}
+		}
 	}
 	
 	option = { # Remain Melancholy 
 		name = elven.1000.b
+
+		ai_chance = {
+			base = 0 # LotR: This should be tied to WotR mode.
+			modifier = { # Game Rule
+				has_game_rule = default_ai_behavior
+				add = 100
+			}
+			modifier = { # Game Rule
+				has_game_rule = weighted_ai_behavior
+				add = 70
+			}
+			modifier = { # Game Rule
+				has_game_rule = random_ai_behavior
+				add = 50
+			}
+		}
 	}
 }
 
@@ -790,7 +854,7 @@ elven.1601 = { # Shield of the Free Peoples starting event |
 	theme = martial_authority_focus
 	right_portrait = {
 		character = root
-		animation = personality_boldpersonality_bold
+		animation = personality_bold
 	}
 	override_background = {
 		reference = eregion_city
@@ -2389,21 +2453,72 @@ elven.1810 = { # Maglor goes to Rivendell to seek Elrond and Glorfindel's aid
 elven.1815 = { # Fight Balrog
 	content_source = realms
 	type = character_event
-	window = fullscreen_event # tour_arrival_event
+	# window = fullscreen_event_with_portrait # tour_arrival_event
 	title = elven.1815.t
 	desc = elven.1815.desc
 	theme = stewardship_duty_focus
+
 	right_portrait = {
 		character = root
 		animation = aggressive_sword
+		# camera = camera_event_left_wedding
+	}
+
+	left_portrait = {
+		character = character:lineofglorfindel
+		animation = aggressive_spear
+		# camera = camera_event_right_wedding
 	}
 
 	override_background = {
-		reference = halls
+		reference = durins_bane
+	}
+
+	immediate = {
+
+		current_travel_plan ?= {
+			every_entourage_character = {
+				limit = { is_elf = yes }
+				add_to_list = elf_characters
+			}
+		}
 	}
 
 	option = { 
 		name = elven.1815.a
+
+		duel = {
+			skill = prowess
+			value = very_high_skill_rating
+			50 = {
+				compare_modifier = {
+					value = scope:duel_value
+					# multiplier = -1
+					# min = -43
+					# Always give _some_ chance.
+					# min = -39
+				}
+				desc = "You defeat the Balrog"
+				send_interface_toast = {
+					title = "Defeated Balrog"
+					left_icon = root
+					# add_character_modifier = {
+					# 	modifier = warlord_modifier
+					# 	years = scope:total_duel_prowess
+					# }
+				}
+			}
+			# You're not as fit as you thought you were.
+			50 = {
+				desc = "You die to the Balrog"
+				# compare_modifier = {
+				# 	value = scope:total_duel_prowess
+				# 	# multiplier = -3.5
+				# 	# Limit how low the off-chance can go.
+				# 	# min = -19
+				# }
+			}
+		}
 	}
 }
 
