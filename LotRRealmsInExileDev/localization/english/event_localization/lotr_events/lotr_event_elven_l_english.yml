@@ -165,6 +165,22 @@
   elven.1740.a:0 "Accept"
   elven.1740.b:0 "Decline"
 
+  elven.1800.t:0 "VECTOR - Placeholder"
+  elven.1800.desc:0 "VECTOR - Placeholder"
+  elven.1800.a:0 "Probe into Khazad-dum"
+
+  elven.1805.t:0 "VECTOR - Placeholder"
+  elven.1805.desc:0 "VECTOR - Placeholder"
+  elven.1805.a:0 "Maglor senses the Balrog"
+
+  elven.1806.t:0 "Exploration of [khazaddum|E]"
+  elven.1806.desc:0 "With the West-gate of [moria|E] open, we slowly map out the ancient halls of Dwarrowdelf. No tales do its immensity justice, for every hall and path leads to new ones, heading down into the deeps of the earth.\n\nYet these halls are not empty. In their depths scramble goblins, bent and crooked. But they are no match for [elven|E] steel and arrow, and soon the halls fall silent once more. \n\nYet after one group, we find a small bunch of [dwarves|E], harrowed and worn, huddling for warmth in a small hall. Their axes are worn and their armor dulled, and a pall of despair lies on them. Who knows how long they have been trapped here in the deep darkness, bereft of their kin and assailed by the foul goblins? Seeing the light of our lamps, hope returns to their faces, rising with creaking of metal and bone."
+  elven.1806.a:0 "They need healing - we shall return to [eregion|E]."
+  elven.1806.a.tt.1:0 "The leader, a veteran warrior, joins you as a [knight|E] in thanks"
+  elven.1806.a.tt.2:0 "The battle-hardened Dwarves join you as [men_at_arms|E]"
+  elven.1806.a.tt.3:0 "The Dwarves put their great skills to use, helping to rebuild Ost-in-Edhil"
+  elven.1806.event_troops:0 "Dwarven Soldiers"
+
  ### Elven artifact burns evil characters
  
  elven.9999.t:0 "The Work of the Elves"

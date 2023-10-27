@@ -10,6 +10,15 @@ widget = {
 		size = { 200 150 }
 
 		vbox = {
+			state = {
+				name = _show
+				trigger_on_create = yes
+				on_start = "[GetVariableSystem.Clear( 'maglor_umbar_raze')]"
+				on_start = "[GetVariableSystem.Clear( 'maglor_umbar_not_raze')]"
+				on_start = "[GetVariableSystem.Clear( 'maglor_umbar_governor')]"
+				on_start = "[GetVariableSystem.Clear( 'maglor_umbar_not_governor')]"
+			}
+
 			allow_outside = yes
 			margin = { 3 3 }
 

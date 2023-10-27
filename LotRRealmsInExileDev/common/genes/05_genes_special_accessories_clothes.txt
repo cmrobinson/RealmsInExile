@@ -3306,7 +3306,6 @@ special_genes = {
 
 				female = {
 					2 = female_clothes_dwarf_war_01_gold
-
 				}
 
 				boy = male

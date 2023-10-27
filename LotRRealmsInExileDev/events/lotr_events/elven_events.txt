@@ -247,7 +247,7 @@ elven.0150 = { # Parth Celebrant receives elven envoy
 		animation = personality_honorable
 	}
 	
-	option = { 		#We submit, thank you. This will rekindle our claim to Drownholt!
+	option = { # We submit, thank you. This will rekindle our claim to Drownholt!
 		name = elven.0150.a
 		custom_tooltip = elven.0150.att
 			character:linefinwe36 = {
@@ -489,7 +489,6 @@ elven.0153 = { # Parth Celebrant submits, Galadriel informed about claim RC VAR
 		}
 	}
 }
-	
 
 elven.0200 = { # Introduction to Thranduil.
 	content_source = realms
@@ -605,6 +604,9 @@ elven.1500 = { # Rouse from slumber
 	right_portrait = {
 		character = root
 		animation = marshal
+	}
+	override_background = {
+		reference = elven_town
 	}
 
 	option = { # Crusade Against Darkness
@@ -751,7 +753,11 @@ elven.1600 = { # Crusade against Darkness
 	theme = martial_authority_focus
 	right_portrait = {
 		character = root
-		animation = fear
+		animation = marshal
+	}
+	
+	override_background = {
+		reference = docks_elf
 	}
 	
 	option = { 
@@ -784,7 +790,10 @@ elven.1601 = { # Shield of the Free Peoples starting event |
 	theme = martial_authority_focus
 	right_portrait = {
 		character = root
-		animation = fear
+		animation = personality_boldpersonality_bold
+	}
+	override_background = {
+		reference = eregion_city
 	}
 	
 	option = { 
@@ -792,11 +801,12 @@ elven.1601 = { # Shield of the Free Peoples starting event |
 		set_variable = cannot_cancel_travel
 
 		start_travel_plan = {
-			destination = title:c_edhellond
-			on_arrival_event = elven.1604
+			destination = title:c_ost_in_edhil.title_province
+			on_arrival_event = elven.1605
 			return_trip = no
 			players_use_planner = no
-			on_arrival_destinations = first
+			on_arrival_on_action 
+			on_arrival_destinations = all
 		}
 	}
 }
@@ -817,7 +827,7 @@ elven.1602 = { # Strike the Heart of the Enemy starting event | Go to Edhellond
 		set_variable = cannot_cancel_travel
 
 		start_travel_plan = {
-			destination = title:c_edhellond.holder.capital_province
+			destination = title:c_edhellond.title_province
 			on_arrival_event = elven.1604
 			return_trip = no
 			players_use_planner = no
@@ -930,6 +940,120 @@ elven.1605 = { # Hidden event | Swap titles for Eregion
 	immediate = {
 		remove_variable = cannot_cancel_travel
 
+		every_province = { # Changes province to elven holding
+			limit = { 
+				county = title:c_ost_in_edhil
+				has_holding = yes
+			}
+			set_holding_type = elven_holding			
+		}
+		
+		## Grant Maglor Edhellond
+
+		create_title_and_vassal_change = {
+			type = granted
+			save_scope_as = title_change
+			add_claim_on_loss = no
+		}
+
+		title:c_ost_in_edhil = {
+			change_title_holder = {
+				holder = root
+				change = scope:title_change
+			}
+		}
+
+		if = {
+			limit = {
+				title:e_lindon.holder = {
+					any_vassal_or_below = {
+						is_elf = yes 
+						has_variable = volunteers_sent
+						count > 8
+					}
+				}
+			}
+			every_province = { # Changes province to elven holding
+				limit = { 
+					county = title:c_sirannon
+					has_holding = yes
+				}
+				set_holding_type = elven_holding			
+			}
+			title:c_sirannon = {
+				change_title_holder = {
+					holder = root
+					change = scope:title_change
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				title:e_lindon.holder = {
+					has_variable = volunteers_sent
+					is_elf = yes 
+					any_vassal_or_below = {
+						is_elf = yes 
+						has_variable = volunteers_sent
+						count > 16
+					}
+				}
+			}
+			every_province = { # Changes province to elven holding
+				limit = { 
+					county = title:c_arabrand
+					has_holding = yes
+				}
+				set_holding_type = elven_holding			
+			}
+			title:c_arabrand = {
+				change_title_holder = {
+					holder = root
+					change = scope:title_change
+				}
+			}
+			get_title = title:d_eregion
+		}
+
+		becomes_independent = { change = scope:title_change }
+
+		resolve_title_and_vassal_change = scope:title_change
+
+		title:c_ost_in_edhil = {
+			set_county_culture = root.culture
+			set_county_faith = root.faith
+		}
+		title:c_arabrand = {
+			set_county_culture = root.culture
+			set_county_faith = root.faith
+		}
+		title:c_sirannon = {
+			set_county_culture = root.culture
+			set_county_faith = root.faith
+		}
+
+		## Grant Himring to Maglor Friend
+
+		create_title_and_vassal_change = {
+			type = granted
+			save_scope_as = title_change
+			add_claim_on_loss = no
+		}
+
+		title:c_himring = {
+			change_title_holder = {
+				holder = character:lineoflauriel
+				change = scope:title_change
+			}
+		}
+		
+		resolve_title_and_vassal_change = scope:title_change
+
+		trigger_event = {
+			id = elven.1800
+			days = { 15 30 }
+		}
 	}
 }
 
@@ -1348,6 +1472,7 @@ elven.1715 = { # Event if win against Umbar
 		
 		gui = "umbar_maglor_option_select_widget"
 		container = "custom_widgets_container"  
+		controller = event_chain_progress
 	}
 	
 	option = {
@@ -1413,6 +1538,7 @@ elven.1720 = { # hidden event to appoint governors
 							}
 						}
 						is_ruler = no
+						is_adult = yes
 						NOT = { is_primary_heir_of = scope:gondor_ruler }
 					}
 					save_temporary_scope_as = new_gondor_ruler
@@ -1445,25 +1571,34 @@ elven.1720 = { # hidden event to appoint governors
 			}
 		}
 
-		if = {
+		every_in_global_list = {
+			variable = potential_gondorian_governors
+			limit = { is_alive = no }
+			remove_list_global_variable = { # Remove knight from available governors
+				name = potential_gondorian_governors
+				target = this
+			}
+		}
+
+		while = { # While loop that gives out duchy titles to Gondor knights until list is exhausted
 			limit = {
 				any_in_global_list = {
-					variable = potential_gondorian_governors 
+					variable = potential_gondorian_governors
 					exists = this
 				}
 			}
-			every_in_list = {
+			random_in_list = { # Take random duchy to be handed out
 				list = duchy_titles_in_umbar
-				random_in_global_list = {
+				random_in_global_list = { # Take random gondorian knight to hand duchy too
 					variable = potential_gondorian_governors
 					limit = { is_alive = yes }
 					save_scope_as = new_holder
-					remove_list_global_variable = {
+					remove_list_global_variable = { # Remove knight from available governors
 						name = potential_gondorian_governors
 						target = this
 					}
 				}
-				every_de_jure_county = { # Associated county titles
+				every_de_jure_county = { # Give every de jure title of duchy to knight
 					limit = { de_jure_liege = prev }
 					
 					change_title_holder = {
@@ -1475,9 +1610,12 @@ elven.1720 = { # hidden event to appoint governors
 					holder = scope:new_holder
 					change = scope:title_change
 				}
+				remove_from_list = duchy_titles_in_umbar # Remove current duchy from available duchies
 			}
 		}
-		else = { # Generate some random gondorian rulers
+
+		if = { # Generate some random gondorian rulers
+			limit = { any_in_list = { list = duchy_titles_in_umbar } }
 			every_in_list = {
 				list = duchy_titles_in_umbar
 				random_in_global_list = {
@@ -1502,6 +1640,7 @@ elven.1720 = { # hidden event to appoint governors
 				}
 			}
 		}
+
 		resolve_title_and_vassal_change = scope:title_change
 	}
 }
@@ -1747,43 +1886,63 @@ elven.1735 = { # Dynasty Rises in Amrun | Demands sent to current Amrun ruler
 		}
 	}
 
-	# option = { # Give all duchy titles + Amrun away
-	# 	trigger = { # Have more than 2 counties
-	# 		any_in_list = {
-	# 			list = target_titles_county
-	# 			exists = this
-	# 		}
-	# 	}
+	option = { # Give all duchy titles + Amrun away
+		trigger = { # Have more than 2 counties
+			any_in_list = {
+				list = target_titles_county
+				count > 1
+			}
+		}
 		
-	# 	random_in_list = {
-	# 		list = target_titles_county
-	# 		limit = {
-	# 			NOT = { this = title:c_amrun }
-	# 		}
-	# 		remove_from_list = target_titles_county
-	# 	}
+		random_in_list = {
+			list = target_titles_county
+			limit = {
+				NOT = { this = title:c_amrun }
+			}
+			remove_from_list = target_titles_county
+		}
 
-	# 	create_title_and_vassal_change = {
-	# 		type = granted
-	# 		save_scope_as = title_change
-	# 		add_claim_on_loss = no
-	# 	}
+		create_title_and_vassal_change = {
+			type = granted
+			save_scope_as = title_change
+			add_claim_on_loss = no
+		}
 
-	# 	every_in_list = {
-	# 		list = target_titles_county
+		every_in_list = {
+			list = target_titles_county
 
-	# 		limit = {
-	# 			holder = { any_held_title = { count > 1 } }
-	# 		}
-	# 		change_title_holder = {
-	# 			holder = scope:nadi_manye_leader
-	# 			change = scope:title_change
-	# 		}
-	# 	}
-	# 	resolve_title_and_vassal_change = scope:change
+			limit = {
+				holder = { any_held_title = { count > 1 } }
+			}
+			change_title_holder = {
+				holder = scope:nadi_manye_leader
+				change = scope:title_change
+			}
+		}
+		every_in_list = {
+			list = target_titles_duchy
+			
+			change_title_holder = {
+				holder = scope:nadi_manye_leader
+				change = scope:title_change
+			}
+		}
+		
+		change_liege = {
+			liege = scope:nadi_manye_leader
+			change = scope:title_change
+		}
+		resolve_title_and_vassal_change = scope:title_change
 
-	# 	name = elven.1735.b
-	# }
+		character:linefinwe11 = {
+			trigger_event = {
+				id = elven.1745
+				days = { 10 15 }
+			} 
+		}
+
+		name = elven.1735.b
+	}
 
 	option = { # Resist against dynasty
 		name = elven.1735.c
@@ -1892,7 +2051,7 @@ elven.1745 = { # Maglor gets choice to make Nadi-Manye tributaries
 		name = elven.1745.b
 
 		province:420 = {
-			add_building = elven_forges_03
+			add_next_building_tier_effect = { BUILDING = elven_settlement }
 		}
 	}
 
@@ -1992,6 +2151,261 @@ elven.1750 = { # Toast event to give Maglor Haruzan Event Troops
 }
 
 ### Shield of the Free Peoples ###
+
+elven.1800 = { # Probing investigation into Khazad-dum
+	content_source = realms
+	type = character_event
+	title = elven.1800.t
+	desc = elven.1800.desc
+	theme = intrigue
+
+	right_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	override_background = {
+		reference = durins_door
+	}
+	
+	option = { 
+		name = elven.1800.a
+
+		trigger_event = {
+			id = elven.1806
+			days = { 45 60 }
+		}
+	}
+}
+
+elven.1805 = { # Maglor senses the Balrog
+	content_source = realms
+	type = character_event
+	title = elven.1805.t
+	desc = elven.1805.desc
+	theme = skull
+	right_portrait = {
+		character = root
+		animation = personality_proud
+	}
+
+	override_background = {
+		reference = halls
+	}
+
+	option = { 
+		name = elven.1805.a
+		
+		# destination = title:c_edhellond.title_province
+		start_travel_plan = {
+			destination = title:c_imladris.title_province
+			destination = title:c_hall_of_a_thousand_pillars.title_province
+			destination = root.capital_county.title_province
+			on_arrival_on_action = maglor_khazad_dum_on_action
+			return_trip = no
+			players_use_planner = no
+			on_arrival_destinations = all
+		}
+	}
+}
+
+elven.1806 = { # Generic event while searching Khazad-dum as Maglor
+	content_source = realms
+	type = character_event
+	title = elven.1806.t
+	desc = elven.1806.desc
+	theme = skull
+	right_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	left_portrait = {
+		character = scope:dwarven_leader
+		animation = sick
+		# triggered_outfit = { # Figure this out later
+		# 	outfit_tags = { dwarf_war_steel }
+		# }
+	}
+
+	override_background = {
+		reference = halls
+	}
+
+	immediate = {
+		create_character = {
+			template = mag_beard_leader
+			location = root.capital_province
+			save_scope_as = dwarven_leader
+		}
+
+		if = {
+			limit = { 
+				NOT = { has_variable = searched_khazad_dum }
+			}
+			set_variable = {
+				name = searched_khazad_dum
+				value = 1
+			}
+		}
+		else = {
+			change_variable = {
+				name = searched_khazad_dum
+				add = 1
+			}
+		}
+	}
+
+	option = { 
+		name = elven.1806.a
+
+		random_list = {
+			33 = {	
+				custom_tooltip = elven.1806.a.tt.1
+				character:linefinwe11 = {
+					send_interface_toast = {
+						title = elven.1806.a.tt.1
+		
+						scope:dwarven_leader = {
+							set_employer = root
+							set_knight_status = force
+						}
+					}
+				}
+			}
+			33 = {
+				custom_tooltip = elven.1806.a.tt.2
+				
+				character:linefinwe11 = {
+					send_interface_toast = {
+						title = elven.1806.event_troops
+		
+						spawn_army = {
+							name = elven.1806.event_troops
+							men_at_arms = {
+								type = longbeard_heavy_infantry
+								stacks = 1
+							}
+							location = root.capital_province
+						}
+					}
+				}
+			}
+			33 = {
+				custom_tooltip = elven.1806.a.tt.3
+				title:c_ost_in_edhil = {
+					add_county_modifier = {
+						modifier = rebuilding_ost_in_edhil
+						years = 5
+					}
+				}
+			}
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			random_list = {
+				20 = {
+					modifier = {
+						add = 25
+						multiply = var:searched_khazad_dum
+					}
+					trigger_event = {
+						id = elven.1805
+						days = { 10 20 }
+					}
+				}
+				80 = {
+					modifier = {
+						subtract = 25
+						multiply = var:searched_khazad_dum
+					}
+					trigger_event = {
+						id = elven.1806
+						days = { 10 20 }
+					}
+				}
+			}
+		}
+	}
+}
+
+elven.1810 = { # Maglor goes to Rivendell to seek Elrond and Glorfindel's aid
+	content_source = realms
+	type = character_event
+	title = elven.1810.t
+	desc = elven.1810.desc
+	theme = family
+	right_portrait = {
+		character = scope:elf_1
+		animation = marshal
+	}
+
+	left_portrait = {
+		character = scope:elf_2
+		animation = personality_bold
+	}
+
+	override_background = {
+		reference = throne_room
+	}
+
+	immediate = {
+		if = {
+			limit = { character:linefinwe27 = { is_alive = yes } }
+			character:linefinwe27 = { save_scope_as = elf_1 }
+		}
+		else = {
+			create_character = {
+				template = noldor_feanorian
+				location = title:c_imladris.capital_province
+				save_scope_as = elf_1
+			}
+		}
+		if = {
+			limit = { character:lineofglorfindel = { is_alive = yes } }
+			character:lineofglorfindel = { save_scope_as = elf_2 }
+		}
+		else = {
+			create_character = {
+				template = noldor_feanorian
+				location = title:c_imladris.capital_province
+				save_scope_as = elf_2
+			}
+		}
+		
+		root.current_travel_plan ?= {
+			add_companion = scope:elf_1
+			add_companion = scope:elf_2
+		}
+	}
+
+	option = { 
+		name = elven.1810.a
+	}
+}
+
+elven.1815 = { # Fight Balrog
+	content_source = realms
+	type = character_event
+	window = fullscreen_event # tour_arrival_event
+	title = elven.1815.t
+	desc = elven.1815.desc
+	theme = stewardship_duty_focus
+	right_portrait = {
+		character = root
+		animation = aggressive_sword
+	}
+
+	override_background = {
+		reference = halls
+	}
+
+	option = { 
+		name = elven.1815.a
+	}
+}
 
 elven.9999 = { #It burns !
 	content_source = realms

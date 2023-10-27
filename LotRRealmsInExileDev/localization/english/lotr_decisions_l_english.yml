@@ -99,6 +99,7 @@
   decision_bring_harad_down_tooltip:0 "Summon men of Gondor to begin a campaign against Near Harad" 
   decision_bring_harad_down_desc:0 "Much of the Haradrim of the Harnen river valley have long been in the sway of Sauron, providing him valuable men and material, as well as providing a threat to Gondor. We must sever Sauron from his servants. With Umbar fallen, we now have a foothold from which to strike deep into Near Harad. Let us put out a call to all willing men of Gondor - with Umbar no more, it is time to dismantle the last threat from the south!"
   decision_bring_harad_down_confirm:0 "Send forth the heralds."
+  decision_bring_harad_down_custom_tt:0 "You destroyed Umbar."
 
   decision_help_good_dynasty_rise:0 "Bring Harad to Heel" 
   decision_help_good_dynasty_rise_tooltip:0 "VECTOR - Placeholder" 
@@ -106,6 +107,7 @@
   decision_help_good_dynasty_rise_confirm:0 "Rise, Men of Harad, and know truth and light." 
   decision_help_good_dynasty_rise_custom_tt.1:0 "A powerful new dynasty will rise in Haruzan aligned with us\n"
   decision_help_good_dynasty_rise_custom_tt.2:0 "The 'Shatter Realm' Casus Belli can now be used globally"
+  decision_help_good_dynasty_rise_custom_tt.3:0 "Only realms of Duchy tier may exist in the Haradwaith Empire if their holder is of an evil faith."
 
  ###########################
  ### Dorwinion Decisions ###
