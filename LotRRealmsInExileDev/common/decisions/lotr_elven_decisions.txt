@@ -1525,3 +1525,72 @@ decision_help_good_dynasty_rise = {
 	ai_potential = { always = yes }
 	ai_will_do = { base = 100 }
 }
+
+##################################################
+# Reclamation of Khazad-dum
+# Coding by Jaco_Daan
+# Localization by VectorMaximus
+##################################################
+
+decision_reclamation_of_moria = { 
+	# TEXT
+	title = decision_reclamation_of_moria
+	picture = "gfx/interface/illustrations/decisions/decision_fornost_02.dds"
+	selection_tooltip = decision_reclamation_of_moria_tooltip
+	desc = decision_reclamation_of_moria_desc
+	confirm_text = decision_reclamation_of_moria_confirm
+	major = yes
+
+	# IS_SHOWN
+	is_shown = {
+		root = character:linefinwe11
+		has_variable = unlock_underground_cb
+		faith_is_good = yes
+
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:decision_reclamation_of_moria
+			}
+		}
+	}
+	
+	# IS_VALID
+	is_valid = {
+		# NOT = {
+			title:k_kazad_dum = {
+				any_de_jure_county_holder = { 
+					# OR = {
+						# this = character:k_wastelands_holder
+						is_dwarf = yes
+					# }
+				}
+			}
+
+			title:k_high_pass = {
+				any_de_jure_county_holder = {
+					is_dwarf = yes
+				}
+			}
+		# }
+	}
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_available_adult = yes
+		is_at_war = no
+	}
+	
+	# EFFECT 
+	effect = { # Give Dwarf back the titles
+
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:decision_reclamation_of_moria
+		}
+	}
+
+	# AI
+	ai_goal = yes
+	ai_potential = { always = yes }
+	ai_will_do = { base = 100 }
+}

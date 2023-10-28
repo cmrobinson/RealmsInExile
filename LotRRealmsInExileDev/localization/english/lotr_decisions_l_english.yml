@@ -109,6 +109,11 @@
   decision_help_good_dynasty_rise_custom_tt.2:0 "The 'Shatter Realm' Casus Belli can now be used globally"
   decision_help_good_dynasty_rise_custom_tt.3:0 "Only realms of Duchy tier may exist in the Haradwaith Empire if their holder is of an evil faith."
 
+  decision_reclamation_of_moria:0 "Reclamation of Khazad-dum"
+  decision_reclamation_of_moria_tooltip:0 "Tooltip"
+  decision_reclamation_of_moria_desc:0 "Description"
+  decision_reclamation_of_moria_confirm:0 "Confirm"
+
  ###########################
  ### Dorwinion Decisions ###
  ###########################

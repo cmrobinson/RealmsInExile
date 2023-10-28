@@ -181,6 +181,15 @@
   elven.1806.a.tt.3:0 "The Dwarves put their great skills to use, helping to rebuild Ost-in-Edhil"
   elven.1806.event_troops:0 "Dwarven Soldiers"
 
+  elven.1810.t:0 "VECTOR - Placeholder"
+  elven.1810.desc:0 "VECTOR - Placeholder"
+  elven.1810.a:0 "Maglor seeks help from Elrond/Glorfindel"
+
+  elven.1815.t:0 "VECTOR - Placeholder"
+  elven.1815.desc:0 "VECTOR - Placeholder"
+  elven.1815.a:0 "Maglor fights the Balrog"
+  elven.1815.toast:0 "You slay Durin's Bane."
+
  ### Elven artifact burns evil characters
  
  elven.9999.t:0 "The Work of the Elves"

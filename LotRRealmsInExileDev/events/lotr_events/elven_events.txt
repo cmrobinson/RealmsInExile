@@ -2450,6 +2450,18 @@ elven.1810 = { # Maglor goes to Rivendell to seek Elrond and Glorfindel's aid
 	}
 }
 
+scripted_effect maglor_wins_balrog = {
+	set_variable = unlock_underground_cb
+	send_interface_toast = {
+		title = elven.1815.toast
+
+		add_character_modifier = {
+			modifier = warlord_modifier
+			years = 15
+		}
+	}
+}
+
 elven.1815 = { # Fight Balrog
 	content_source = realms
 	type = character_event
@@ -2479,18 +2491,8 @@ elven.1815 = { # Fight Balrog
 			every_entourage_character = {
 				limit = { is_elf = yes }
 				add_to_list = elf_characters
+				root = { add_to_list = elf_characters }
 			}
-		}
-		set_variable = {
-			name = rand_var
-			value = { 
-				value = { 0 15 }
-				round = yes
-			}
-		}
-		set_variable = {
-			name = neg_rand_var
-			value = { value = var:rand_var.neg }
 		}
 	}
 
@@ -2509,12 +2511,15 @@ elven.1815 = { # Fight Balrog
 					}
 				}
 			}
-			random_list = {
-				85 = {
-					# modifier = { add = var:rand_var }
+			random_list = { # Both Elrond AND Glorfindel joined Maglor
+				85 = { # Wins against a Balrog
+					maglor_wins_balrog = yes
 				}
-				15 = {
-					# modifier = { add = var:neg_rand_var }
+				15 = { # Loses against a Balrog
+					every_in_list = {
+						list = elf_characters
+						death = { death_reason = death_durins_bane }
+					}
 				}
 			}
 		}
@@ -2547,32 +2552,34 @@ elven.1815 = { # Fight Balrog
 					}
 				}
 			}
-			random_list = {
-				70 = {
-					# modifier = { add = var:rand_var }
+			random_list = { # Either Elrod OR Glorfindel joined Maglor
+				70 = { # Wins against a Balrog
+					maglor_wins_balrog = yes
 				}
-				30 = {
-					# modifier = { add = var:neg_rand_var }
+				30 = { # Loses against a Balrog 
+					every_in_list = {
+						list = elf_characters
+						death = { death_reason = death_durins_bane }
+					}
 				}
 			}
 		}
 		else = {
-			random_list = {
-				50 = {
-					# modifier = { add = var:rand_var }
+			random_list = { # Elrond/Glorfindel didn't join Maglor
+				50 = { # Wins against a Balrog
+					maglor_wins_balrog = yes
 				}
-				50 = {
-					# modifier = { add = var:neg_rand_var }
+				50 = { # Loses against a Balrog
+					every_in_list = {
+						list = elf_characters
+						death = { death_reason = death_durins_bane }
+					}
 				}
 			}
 		}
 	}
 
-	after = {
-		remove_variable = rand_var
-		remove_variable = neg_rand_var
-		remove_variable = searched_khazad_dum
-	}
+	after = { remove_variable = searched_khazad_dum }
 }
 
 elven.9999 = { #It burns !
