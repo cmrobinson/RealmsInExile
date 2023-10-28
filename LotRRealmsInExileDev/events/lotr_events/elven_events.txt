@@ -2461,13 +2461,13 @@ elven.1815 = { # Fight Balrog
 	right_portrait = {
 		character = root
 		animation = aggressive_sword
-		# camera = camera_event_left_wedding
+		camera = camera_event_right_wedding
 	}
 
 	left_portrait = {
 		character = character:lineofglorfindel
 		animation = aggressive_spear
-		# camera = camera_event_right_wedding
+		camera = camera_event_left_wedding
 	}
 
 	override_background = {
@@ -2475,50 +2475,103 @@ elven.1815 = { # Fight Balrog
 	}
 
 	immediate = {
-
 		current_travel_plan ?= {
 			every_entourage_character = {
 				limit = { is_elf = yes }
 				add_to_list = elf_characters
 			}
 		}
+		set_variable = {
+			name = rand_var
+			value = { 
+				value = { 0 15 }
+				round = yes
+			}
+		}
+		set_variable = {
+			name = neg_rand_var
+			value = { value = var:rand_var.neg }
+		}
 	}
 
 	option = { 
 		name = elven.1815.a
-
-		duel = {
-			skill = prowess
-			value = very_high_skill_rating
-			50 = {
-				compare_modifier = {
-					value = scope:duel_value
-					# multiplier = -1
-					# min = -43
-					# Always give _some_ chance.
-					# min = -39
-				}
-				desc = "You defeat the Balrog"
-				send_interface_toast = {
-					title = "Defeated Balrog"
-					left_icon = root
-					# add_character_modifier = {
-					# 	modifier = warlord_modifier
-					# 	years = scope:total_duel_prowess
-					# }
+		if = {
+			limit = {
+				AND = {
+					any_in_list = {
+						list = elf_characters
+						this = character:linefinwe27
+					}
+					any_in_list = {
+						list = elf_characters
+						this = character:lineofglorfindel
+					}
 				}
 			}
-			# You're not as fit as you thought you were.
-			50 = {
-				desc = "You die to the Balrog"
-				# compare_modifier = {
-				# 	value = scope:total_duel_prowess
-				# 	# multiplier = -3.5
-				# 	# Limit how low the off-chance can go.
-				# 	# min = -19
-				# }
+			random_list = {
+				85 = {
+					# modifier = { add = var:rand_var }
+				}
+				15 = {
+					# modifier = { add = var:neg_rand_var }
+				}
 			}
 		}
+		else_if = {
+			limit = {
+				OR = {
+					AND = {
+						any_in_list = {
+							list = elf_characters
+							this = character:linefinwe27
+						}
+						NOT = {
+							any_in_list = {
+								list = elf_characters
+								this = character:lineofglorfindel
+							}
+						}
+					}
+					AND = {
+						any_in_list = {
+							list = elf_characters
+							this = character:lineofglorfindel
+						}
+						NOT = {
+							any_in_list = {
+								list = elf_characters
+								this = character:linefinwe27
+							}
+						}
+					}
+				}
+			}
+			random_list = {
+				70 = {
+					# modifier = { add = var:rand_var }
+				}
+				30 = {
+					# modifier = { add = var:neg_rand_var }
+				}
+			}
+		}
+		else = {
+			random_list = {
+				50 = {
+					# modifier = { add = var:rand_var }
+				}
+				50 = {
+					# modifier = { add = var:neg_rand_var }
+				}
+			}
+		}
+	}
+
+	after = {
+		remove_variable = rand_var
+		remove_variable = neg_rand_var
+		remove_variable = searched_khazad_dum
 	}
 }
 
