@@ -145,7 +145,6 @@ longbeard_heavy_infantry = { #sigin baruk
 	allowed_in_hired_troops = no
 }
 
-
 longbeard_cavalry = { #setfôn thârag
 	
 	type = heavy_cavalry
@@ -187,7 +186,6 @@ longbeard_cavalry = { #setfôn thârag
 	ai_quality = { value = @cultural_maa_extra_ai_score }
 	icon = longbeard_cavalry
 }
-
 
 longbeard_horse_archers = {	#higêm thinbîn
 	type = archer_cavalry

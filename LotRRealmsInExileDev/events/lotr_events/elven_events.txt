@@ -1243,8 +1243,7 @@ elven.1607 = {
 
 ### Strike the Heart of the Enemy event line ###
 
-# Letter to gondorian ruler to contribute troops to Maglor Umbar war
-elven.1700 = {
+elven.1700 = { # Letter to gondorian ruler to contribute troops to Maglor Umbar war
 	type = letter_event
 	sender = character:linefinwe11
 
@@ -1813,7 +1812,7 @@ elven.1727 = { # Hidden event to upgrade Edhellond
 	}
 }
 
-elven.1730 = {
+elven.1730 = { # Letter event to ask for troops from Gondor Lords
 	type = letter_event
 	sender = character:linefinwe11
 
@@ -2131,9 +2130,8 @@ elven.1750 = { # Toast event to give Maglor Haruzan Event Troops
 			var:maglor_haruzan_event_troops < 4
 		}
 	}
-	immediate = {
-	
 
+	immediate = {
 		if = {
 			limit = { 
 				NOT = { has_variable = maglor_haruzan_event_troops }
@@ -2465,7 +2463,7 @@ scripted_effect maglor_wins_balrog = {
 elven.1815 = { # Fight Balrog
 	content_source = realms
 	type = character_event
-	# window = fullscreen_event_with_portrait # tour_arrival_event
+	window = fullscreen_event_with_portrait # tour_arrival_event
 	title = elven.1815.t
 	desc = elven.1815.desc
 	theme = stewardship_duty_focus
@@ -2477,7 +2475,7 @@ elven.1815 = { # Fight Balrog
 	}
 
 	left_portrait = {
-		character = character:lineofglorfindel
+		character = scope:portrait_elf
 		animation = aggressive_spear
 		camera = camera_event_left_wedding
 	}
@@ -2492,6 +2490,19 @@ elven.1815 = { # Fight Balrog
 				limit = { is_elf = yes }
 				add_to_list = elf_characters
 				root = { add_to_list = elf_characters }
+
+				if = {
+					limit = {
+						this = character:lineofglorfindel
+					}
+					this = { save_scope_as = portrait_elf }
+				}
+				else = {
+					random_entourage_character = {
+						limit = { is_elf = yes }
+						save_scope_as = portrait_elf
+					}
+				}
 			}
 		}
 	}
@@ -2520,6 +2531,13 @@ elven.1815 = { # Fight Balrog
 						list = elf_characters
 						death = { death_reason = death_durins_bane }
 					}
+					root = { death = { death_reason = death_durins_bane } }
+				}
+			}
+			title:c_ost_in_edhil.holder = {
+				trigger_event = {
+					id = elven.1817
+					days = 1
 				}
 			}
 		}
@@ -2561,6 +2579,13 @@ elven.1815 = { # Fight Balrog
 						list = elf_characters
 						death = { death_reason = death_durins_bane }
 					}
+					root = { death = { death_reason = death_durins_bane } }
+				}
+			}
+			title:c_ost_in_edhil.holder = {
+				trigger_event = {
+					id = elven.1817
+					days = 1
 				}
 			}
 		}
@@ -2574,12 +2599,213 @@ elven.1815 = { # Fight Balrog
 						list = elf_characters
 						death = { death_reason = death_durins_bane }
 					}
+					root = { death = { death_reason = death_durins_bane } }
+				}
+			}
+			title:c_ost_in_edhil.holder = {
+				trigger_event = {
+					id = elven.1817
+					days = 1
 				}
 			}
 		}
 	}
 
-	after = { remove_variable = searched_khazad_dum }
+	after = {
+		remove_variable = searched_khazad_dum
+	}
+}
+
+elven.1816 = { # Hidden Event to recieve dwarven troops
+	hidden = yes 
+
+	trigger = {
+		trigger_if = {
+			limit = { has_variable = maglor_khazad_dum_event_troops }
+			var:maglor_khazad_dum_event_troops < 5
+		}
+	}
+
+	immediate = {
+
+		if = {
+			limit = { 
+				NOT = { has_variable = maglor_khazad_dum_event_troops }
+			}
+			set_variable = {
+				name = maglor_khazad_dum_event_troops
+				value = 1
+			}
+		}
+		else = {
+			change_variable = {
+				name = maglor_khazad_dum_event_troops
+				add = 1
+			}
+		}
+
+		send_interface_toast = {
+			title = elven.1816.toast
+
+			if = { # Check if Longbeard
+				limit = {
+					title:k_khazad_dum.holder.culture = culture:longbeards 
+					title:k_khazad_dum.holder = { is_dwarf = yes }
+				}
+				random_list = {
+					1 = { # Special Longbeard unit
+						spawn_army = {
+							name = elven.1816.toast
+							men_at_arms = {
+								type = longbeard_horse_archers
+								stacks = 1
+							}
+							location = root.capital_province
+						}
+					}
+					5 = { # Skirmishers
+						spawn_army = {
+							name = elven.1816.toast
+							men_at_arms = {
+								type = longbeard_skirmishers
+								stacks = 1
+							}
+							location = root.capital_province
+						}
+					}
+					5 = { # Archers
+						spawn_army = {
+							name = elven.1816.toast
+							men_at_arms = {
+								type = longbeard_crossbowmen
+								stacks = 1
+							}
+							location = root.capital_province
+						}
+					}
+					5 = { # Heavy Infantry
+						spawn_army = {
+							name = elven.1816.toast
+							men_at_arms = {
+								type = longbeard_heavy_infantry
+								stacks = 1
+							}
+							location = root.capital_province
+						}
+					}
+					5 = { # Pikemen
+						spawn_army = {
+							name = elven.1816.toast
+							men_at_arms = {
+								type = longbeard_pikemen
+								stacks = 1
+							}
+							location = root.capital_province
+						}
+					}
+					25 = { # Levies
+						spawn_army = {
+							name = elven.1816.toast
+							levies = 100
+							location = root.capital_province
+						}
+					}
+				}
+			}
+			else = { # Otherwise has to be Broadbeam
+				if = {
+					limit = { title:k_khazad_dum.holder = { is_dwarf = yes } }
+					random_list = {
+						1 = { # Special Firebeard unit
+							spawn_army = {
+								name = elven.1816.toast
+								men_at_arms = {
+									type = firebeard_monsters
+									stacks = 1
+								}
+								location = root.capital_province
+							}
+						}
+						5 = { # Skirmishers
+							spawn_army = {
+								name = elven.1816.toast
+								men_at_arms = {
+									type = firebeard_skirmishers
+									stacks = 1
+								}
+								location = root.capital_province
+							}
+						}
+						5 = { # Archers
+							spawn_army = {
+								name = elven.1816.toast
+								men_at_arms = {
+									type = firebeard_archers
+									stacks = 1
+								}
+								location = root.capital_province
+							}
+						}
+						5 = { # Heavy Infantry
+							spawn_army = {
+								name = elven.1816.toast
+								men_at_arms = {
+									type = firebeard_heavy_infantry
+									stacks = 1
+								}
+								location = root.capital_province
+							}
+						}
+						5 = { # Pikemen
+							spawn_army = {
+								name = elven.1816.toast
+								men_at_arms = {
+									type = firebeard_pikemen
+									stacks = 1
+								}
+								location = root.capital_province
+							}
+						}
+						25 = { # Levies
+							spawn_army = {
+								name = elven.1816.toast
+								levies = 100
+								location = root.capital_province
+							}
+						}
+					}
+				}
+			}
+			
+			trigger_event = {
+				id = elven.1816
+				days = { 60 120 }
+			}
+		}
+	}
+}
+
+elven.1817 = { # Event if Maglor dies
+	hidden = yes
+
+	immediate = {
+		if = {
+			limit = { 
+				character:linefinwe11 = { is_alive = no }
+			}
+			create_title_and_vassal_change = {
+				type = swear_fealty
+				save_scope_as = change
+			}
+			title:c_ost_in_edhil.holder = { 
+				change_liege = {
+					liege = title:k_imladris.holder
+					change = scope:change
+				}
+			}
+			resolve_title_and_vassal_change = scope:change
+		}
+	}
 }
 
 elven.9999 = { #It burns !

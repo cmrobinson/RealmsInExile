@@ -1557,22 +1557,25 @@ decision_reclamation_of_moria = {
 	
 	# IS_VALID
 	is_valid = {
-		# NOT = {
-			title:k_kazad_dum = {
-				any_de_jure_county_holder = { 
-					# OR = {
-						# this = character:k_wastelands_holder
-						is_dwarf = yes
-					# }
-				}
+		NOT = {
+			title:k_khazad_dum = {
+				any_in_de_jure_hierarchy = {
+					culture = {
+						is_orc_culture = yes
+					}
+				}	
 			}
+		}
 
+		NOT = {
 			title:k_high_pass = {
-				any_de_jure_county_holder = {
-					is_dwarf = yes
-				}
+				any_in_de_jure_hierarchy = {
+					culture = {
+						is_orc_culture = yes
+					}
+				}	
 			}
-		# }
+		}
 	}
 	is_valid_showing_failures_only = {
 		is_imprisoned = no
@@ -1581,7 +1584,129 @@ decision_reclamation_of_moria = {
 	}
 	
 	# EFFECT 
-	effect = { # Give Dwarf back the titles
+	effect = { # Give Dwarf back the titles 
+		if = {
+			limit = { character:lineofdurin95 = { is_alive = yes } }
+			custom_tooltip = { 
+				text = decision_reclamation_of_moria_tt.1
+				maglor_reclaim_moria = { NEW_HOLDER = character:lineofdurin95 }
+				character:lineofdurin95 = { save_scope_as = new_moria_ruler}
+			}
+		}
+		else_if = {
+			limit = {
+				dynasty:dynasty_durin = {	
+					any_dynasty_member = {
+						limit = {
+							is_ruler = no
+							is_adult = yes
+						}
+					}
+				}
+			}
+			random_ruler = {
+				limit = {
+					is_dwarf = yes
+					dynast = dynasty:dynasty_durin
+				}
+				dynasty = {
+					random_dynasty_member = {
+						limit = {
+							is_ruler = no
+							is_adult = yes
+							is_alive = yes
+							count > 0
+						}
+						save_scope_as = new_moria_ruler
+					}
+				}
+			}
+			custom_tooltip = { 
+				text = decision_reclamation_of_moria_tt.2
+				maglor_reclaim_moria = { NEW_HOLDER = scope:new_moria_ruler }
+			}
+		}
+		else_if = {
+			limit = {
+				title:e_iron_mountains = {
+					any_in_de_jure_hierarchy = {
+						holder = {
+							is_dwarf = yes 
+							
+							any_dynasty_member = {
+								is_ruler = no
+								is_adult = yes
+							} 
+						}
+					}
+				}
+			}
+			random_ruler = {
+				limit = {
+					is_dwarf = yes
+					any_held_title = {
+						OR = {
+							de_jure_liege = title:e_iron_mountains
+							de_jure_liege.de_jure_liege = title:e_iron_mountains
+							de_jure_liege.de_jure_liege.de_jure_liege = title:e_iron_mountains
+						}
+					}
+					any_dynasty_member = {
+						is_ruler = no
+						is_adult = yes
+					}
+				}
+				dynasty = {
+					random_dynasty_member = {
+						limit = {
+							is_ruler = no
+							is_adult = yes
+						}
+						save_scope_as = new_moria_ruler
+					}
+				}
+			}
+			custom_tooltip = { 
+				text = decision_reclamation_of_moria_tt.3
+				maglor_reclaim_moria = { NEW_HOLDER = scope:new_moria_ruler }
+			}
+		}
+		else = {
+			random_ruler = {
+				limit = {
+					is_dwarf = yes
+					any_held_title = {
+						OR = {
+							de_jure_liege = title:e_blue_mountains
+							de_jure_liege.de_jure_liege = title:e_blue_mountains
+							de_jure_liege.de_jure_liege.de_jure_liege = title:e_blue_mountains
+						}
+					}
+					any_dynasty_member = {
+						is_ruler = no
+						is_adult = yes
+					}
+				}
+				dynasty = {
+					random_dynasty_member = {
+						limit = {
+							is_ruler = yes
+							is_adult = yes
+						}
+						save_scope_as = new_moria_ruler
+					}
+				}
+				custom_tooltip = { 
+					text = decision_reclamation_of_moria_tt.4
+					maglor_reclaim_moria = { NEW_HOLDER = scope:new_moria_ruler }
+				}
+			}
+		}
+
+		trigger_event = {
+			id = elven.1816
+			days = { 30 45 }
+		}
 
 		add_to_global_variable_list = {
 			name = unavailable_unique_decisions

@@ -113,6 +113,11 @@
   decision_reclamation_of_moria_tooltip:0 "Tooltip"
   decision_reclamation_of_moria_desc:0 "Description"
   decision_reclamation_of_moria_confirm:0 "Confirm"
+  decision_reclamation_of_moria_tt.1:0 "[new_moria_ruler.GetNameNoTooltip] recieves the duchies of \n$BULLET_WITH_TAB$[GetTitleByKey('d_zirakzigil').GetName]\n$BULLET_WITH_TAB$[GetTitleByKey('d_barazinbar').GetName]\n$BULLET_WITH_TAB$[GetTitleByKey('d_bundushathur').GetName]"
+  decision_reclamation_of_moria_tt.2:0 "A family member of the Durin dynasty, [new_moria_ruler.GetNameNoTooltip], recieves \n$BULLET_WITH_TAB$[GetTitleByKey('d_zirakzigil').GetName]\n$BULLET_WITH_TAB$[GetTitleByKey('d_barazinbar').GetName]\n$BULLET_WITH_TAB$[GetTitleByKey('d_bundushathur').GetName]"
+  decision_reclamation_of_moria_tt.3:0 "[new_moria_ruler.GetName], a dwarf from the reputed dynasty of [new_moria_ruler.GetDynastyName] in the Iron Mountains recieves\n$BULLET_WITH_TAB$[GetTitleByKey('d_zirakzigil').GetName]\n$BULLET_WITH_TAB$[GetTitleByKey('d_barazinbar').GetName]\n$BULLET_WITH_TAB$[GetTitleByKey('d_bundushathur').GetName]"
+  decision_reclamation_of_moria_tt.4:0 "[new_moria_ruler.GetName], a dwarf from the reputed dynasty of [new_moria_ruler.GetDynastyName] in the Blue Mountains recieves\n$BULLET_WITH_TAB$[GetTitleByKey('d_zirakzigil').GetName]\n$BULLET_WITH_TAB$[GetTitleByKey('d_barazinbar').GetName]\n$BULLET_WITH_TAB$[GetTitleByKey('d_bundushathur').GetName]"
+
 
  ###########################
  ### Dorwinion Decisions ###
