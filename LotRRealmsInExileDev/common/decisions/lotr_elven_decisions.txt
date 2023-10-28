@@ -1590,8 +1590,8 @@ decision_reclamation_of_moria = {
 			custom_tooltip = { 
 				text = decision_reclamation_of_moria_tt.1
 				maglor_reclaim_moria = { NEW_HOLDER = character:lineofdurin95 }
-				character:lineofdurin95 = { save_scope_as = new_moria_ruler}
 			}
+			character:lineofdurin95 = { save_scope_as = new_moria_ruler}
 		}
 		else_if = {
 			limit = {
@@ -1607,7 +1607,7 @@ decision_reclamation_of_moria = {
 			random_ruler = {
 				limit = {
 					is_dwarf = yes
-					dynast = dynasty:dynasty_durin
+					dynasty = dynasty:dynasty_durin
 				}
 				dynasty = {
 					random_dynasty_member = {
