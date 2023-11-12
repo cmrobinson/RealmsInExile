@@ -12,8 +12,6 @@
 #			elven.0500		Sirgala Introduction (Realms-in-Exile Start)
 #			elven.1000 		Maglor Introduction
 #			elven.1500-2000 Maglor event chain
-#			elven.9999		It burns !
-
 
 
 
@@ -87,6 +85,8 @@ elven.0100 = { # Introduction to Galadriel
 			}
 		}
 	}	
+
+	after = { house = { set_house_head = character:linefinwe36 } }
 }
 
 elven.0101 = { #Elessar as a wedding present - Actor
@@ -2855,26 +2855,5 @@ elven.1817 = { # Event if Maglor dies
 			}
 			resolve_title_and_vassal_change = scope:change
 		}
-	}
-}
-
-elven.9999 = { #It burns !
-	content_source = realms
-	type = character_event
-	title = elven.9999.t
-	desc = elven.9999.desc
-	theme = stewardship_wealth_focus
-	right_portrait = {
-		character = root
-		animation = fear
-	}
-	
-	trigger = {
-		faith_is_evil = yes
-	}
-	
-	option = { 
-		name = elven.9999.a
-		increase_wounds_no_death_effect = { REASON = burned }
 	}
 }
