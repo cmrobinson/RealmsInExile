@@ -416,6 +416,10 @@
  
  dwarf_friend_modifier:0 "Dwarf-friend"
  dwarf_friend_modifier_desc:0 "This character has been named a friend to all Dwarfkind for their amicable actions"
+
+ warlord_modifier:0 "Hérohta of the Eldar"
+ warlord_modifier_desc:0 "No king, but a master of war. Though the Eldar days pass, the mighty of the Eldar Days will not pass silently, but blaze against the night - to victory or ruin."
  
-  warlord_modifier:0 "Hérohta of the Eldar"
-  warlord_modifier_desc:0 "No king, but a master of war. Though the Eldar days pass, the mighty of the Eldar Days will not pass silently, but blaze against the night - to victory or ruin."
+ ## Faith conversion modifier
+ faith_conversion_cost_slave_to_saurons_will:0 "Slave to Sauron's will"
+ 
