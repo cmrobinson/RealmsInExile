@@ -160,6 +160,7 @@
   elven.1735.b:0 "Give All Duchy title away"
   elven.1735.c:0 "Resist!!!"
   elven.1735.army:0 "Faithful Haradrim"
+  elven.1735.dynamic_title:0 "Haradric Heretics"
 
   elven.1740.opening:0 "Letter Opening"
   elven.1740.desc:0 "Letter Description"

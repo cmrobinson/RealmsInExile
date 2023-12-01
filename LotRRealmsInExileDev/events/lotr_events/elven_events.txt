@@ -1922,8 +1922,22 @@ elven.1735 = { # Dynasty Rises in Amrun | Demands sent to current Amrun ruler
 			location = root.capital_province
 			save_scope_as = nadi_manye_leader
 		}
-
 		scope:nadi_manye_leader = { set_variable = nadi_manye_war_leader }
+
+		title:c_amrun = {
+			title_create_faction = {
+				type = peasant_faction
+				target = title:c_amrun.holder
+			}
+			holder = {
+				every_targeting_faction = {  # go through all existing factions
+					if = {
+						limit = { any_faction_county_member = { this = title:c_amrun } }
+						save_scope_as = amrun_peasant_faction
+					}
+				}
+			}
+		}
 	}
 
 	option = { # Give all of your titles to new dynasty
@@ -2022,33 +2036,20 @@ elven.1735 = { # Dynasty Rises in Amrun | Demands sent to current Amrun ruler
 	option = { # Resist against dynasty
 		name = elven.1735.c
 
-		if = {
-			limit = {
-				title:c_amrun.holder = { highest_held_title_tier = tier_duchy }
-			}
-			scope:nadi_manye_leader = {
-				start_war = {
-					casus_belli = duchy_conquest_cb
-					target = title:c_amrun.holder
-					target_title = title:c_amrun.holder.primary_title
-				}
-			}
-		}
-		else = {
-			scope:nadi_manye_leader = { 
-				start_war = {
-					casus_belli = county_conquest_cb
-					target = title:c_amrun.holder
-					target_title = title:c_amrun.holder.primary_title
+		hidden_effect = {
+			scope:amrun_peasant_faction = {
+				setup_nadi_manye_leader_effect = yes
+				faction_start_war = {}
+				faction_spawn_member_county_armies_effect = {
+					FACTION = scope:amrun_peasant_faction
+					ARMY_OWNER = scope:nadi_manye_leader
+					PEASANT_ARMY_NAME = elven.1735.army
 				}
 			}
 		}
 
-		scope:nadi_manye_leader = {
-			random_character_war = {
-				save_scope_as = harad_special_war
-			}
-		}
+		scope:nadi_manye_leader = { random_character_war = { save_scope_as = harad_special_war } }
+		
 
 		character:linefinwe11 = {
 			trigger_event = {
@@ -2058,24 +2059,28 @@ elven.1735 = { # Dynasty Rises in Amrun | Demands sent to current Amrun ruler
 		}
 	}
 
-	after = {
-		hidden_effect = {
-			scope:nadi_manye_leader = {
-				spawn_army = {
-					levies = 800
-					location = title:c_amrun.title_province
-					war = scope:harad_special_war
-					name = elven.1735.army
-					men_at_arms = {
-						type = desert_javelineers
-						stacks = 5
-					}
-					men_at_arms = {
-						type = desert_spearmen
-						stacks = 3
-					}
-				}
+	after = { scope:nadi_manye_leader = { trigger_event = elven.1736 } }
+}
+
+elven.1736 = {
+	hidden = yes
+
+	immediate = {
+		spawn_army = {
+			name = elven.1735.army
+			men_at_arms = {
+				type = desert_javelineers
+				stacks = 4
 			}
+			men_at_arms = {
+				type = haradrim_radiers
+				stacks = 2
+			}
+			men_at_arms = {
+				type = desert_screamers 
+				stacks = 1
+			}
+			location = root.capital_province
 		}
 	}
 }
