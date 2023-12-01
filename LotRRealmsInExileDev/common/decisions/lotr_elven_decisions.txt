@@ -1298,6 +1298,25 @@ decision_rally_army_righteous = {
 		is_available_adult = yes
 		is_at_war = no
 	}
+
+	widget = {
+		gui = "decision_view_widget_option_list_generic"
+		controller = decision_option_list_controller
+		decision_to_second_step_button = "decision_rally_army_righteous_confirm"
+
+		item = { # Northern Route
+			value = maglor_defensive_route
+			current_description = decision_rally_army_righteous_defensivett
+			localization = decision_rally_army_righteous_defensive
+			icon = "gfx/interface/icons/message_feed/a_catch_all_councillor_icon.dds"
+		}
+		item = { # Southern Route
+			value = maglor_aggresive_route
+			current_description = decision_rally_army_righteous_aggresive.tt
+			localization = decision_rally_army_righteous_aggresive
+			icon = "gfx/interface/icons/message_feed/mercenary.dds"
+		}
+	}
 	
 	# EFFECT 
 	effect = {
@@ -1310,21 +1329,40 @@ decision_rally_army_righteous = {
 			every_vassal_or_below = {
 				limit = { is_elf = yes }
 				set_variable = volunteers_sent
-				trigger_event = {
-					id = elven.1606
+				trigger_evlven.1606ent = {
+					id = e
 					days = { 5 10 }
 				}
 			}
 		}
 
-		character:linefinwe11 = {
-			trigger_event = {
-				id = elven.1600
-				months = 1
+		if = {
+			limit = { scope:maglor_defensive_route = yes }
+			character:linefinwe11 = { 
+				set_variable = maglor_defensive
+	
+				trigger_event = {
+					id = elven.1607
+					days = { 5 10 }
+				}
+				trigger_event = {
+					id = elven.1601
+					months = 1
+				}
 			}
-			trigger_event = {
-				id = elven.1607
-				days = { 5 10 }
+		}
+		else = {
+			character:linefinwe11 = { 
+				set_variable = maglor_aggresive
+				
+				trigger_event = {
+					id = elven.1607
+					days = { 5 10 }
+				}
+				trigger_event = {
+					id = elven.1602
+					months = 1
+				}
 			}
 		}
 

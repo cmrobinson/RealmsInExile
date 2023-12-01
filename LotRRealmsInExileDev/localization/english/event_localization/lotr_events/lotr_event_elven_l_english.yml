@@ -94,12 +94,6 @@
   elven.1560.desc:0 "VECTOR - Placeholder"
   elven.1560.a:0 "VECTOR - Placeholder"
 
-  # Crusade against Darkness 
-  elven.1600.t:0 "VECTOR - Placeholder"
-  elven.1600.desc:0 "VECTOR - Placeholder"
-  elven.1600.a:0 "Shield of the Free Peoples"
-  elven.1600.b:0 "Strike Heart of Enemy"
-
   # Strike the Heart of the Enemy
   elven.1601.t:0 "VECTOR - Placeholder"
   elven.1601.desc:0 "VECTOR - Placeholder"
@@ -165,6 +159,7 @@
   elven.1735.a:0 "Give titles away"
   elven.1735.b:0 "Give All Duchy title away"
   elven.1735.c:0 "Resist!!!"
+  elven.1735.army:0 "Faithful Haradrim"
 
   elven.1740.opening:0 "Letter Opening"
   elven.1740.desc:0 "Letter Description"

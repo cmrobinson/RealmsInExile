@@ -94,6 +94,10 @@
   decision_rally_army_righteous_tooltip:0 "Put out a call for Elven veterans and volunteers to join your campaigns" 
   decision_rally_army_righteous_desc:0 "After the great struggle of the Last Alliance and then the long wars against Angmar, Lindon quieted and retreated into isolation, protected by the great distances it was from any threat. But there are threats which will one day come to its shores if they are not pre-empted. Many in Lindon know this, but lack the leadership to take the step. Well, I am. My name, and that of my family, is stained with innocent blood, which might never be cleansed. But let it not be said we did not try. Let all of Lindon know - if any desire to take the fight to the enemy, to make safe the lands of the free peoples, rally to the Star of Fëanor!"
   decision_rally_army_righteous_confirm:0 "Death we will deal him ere Day's ending..."
+  decision_rally_army_righteous_aggresive:0 "PLACEHOLDER - Vector"
+  decision_rally_army_righteous_aggresive.tt:0 "PLACEHOLDER - Vector"
+  decision_rally_army_righteous_defensive:0 "PLACEHOLDER - Vector"
+  decision_rally_army_righteous_defensive.tt:0 "PLACEHOLDER - Vector"
 
   decision_bring_harad_down:0 "Strike against the Haradrim"
   decision_bring_harad_down_tooltip:0 "Summon men of Gondor to begin a campaign against Near Harad" 
