@@ -1329,8 +1329,8 @@ decision_rally_army_righteous = {
 			every_vassal_or_below = {
 				limit = { is_elf = yes }
 				set_variable = volunteers_sent
-				trigger_evlven.1606ent = {
-					id = e
+				trigger_event = {
+					id = elven.1606
 					days = { 5 10 }
 				}
 			}
