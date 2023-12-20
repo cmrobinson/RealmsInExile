@@ -451,5 +451,16 @@ autoerrorfixer_variable.1 = {
 		fix_variable_error = {ERROR = settled_seljuk}
 		fix_variable_error = {ERROR = new_zanj_leader}
 		fix_variable_error = {ERROR = barazanthual}
+		fix_variable_error = {ERROR = tale_kings_kettle}
+		fix_variable_error = {ERROR = tributaries_map_tooltip}
+		fix_variable_error = {ERROR = sceptre_of_annuminas}
+		fix_variable_error = {ERROR = elendilmir_elendil}
+		fix_variable_error = {ERROR = palantir_elostirion}
+		fix_variable_error = {ERROR = elendilmir_valandil}
+		fix_variable_error = {ERROR = shards_of_narsil}
+		fix_variable_error = {ERROR = turkic_style}
+		fix_variable_error = {ERROR = legendary_crafting_tool}
+		fix_variable_error = {ERROR = expedition_success_chance}
+		fix_variable_error = {ERROR = dwarven_expedition}
 	}
 }

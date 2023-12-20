@@ -2746,7 +2746,6 @@ debug.504 = { # Have my house killed by a feud target member
 debug.510 = { # Placeholder debug event - Used to mark the location of placeholders
 	type = character_event
 	title = { # My favourite movie of the original triology
-		desc = d_star_company_adj
 		desc = game_concept_wars
 		desc = KEY_KP_MINUS
 		desc = cat_revenge_modifier
@@ -2766,7 +2765,7 @@ debug.510 = { # Placeholder debug event - Used to mark the location of placehold
 	#orphan = yes
 	theme = mental_break
 	left_portrait = root
-	right_portrait = character:33922
+	#right_portrait = character:33922
 
 	option = { name = debug_generic_option  } # Dear debug console, quiet please.
 	option = { name = debug_generic_option trigger = { always = no } trigger_event = debug.510 }
@@ -3174,7 +3173,7 @@ debug.9611 = { # Spawn a assassin
 		send_interface_message = {
 			type = event_stewardship_good
 			title = {
-				desc = d_assassin
+				#desc = d_assassin
 				desc = motto_greed
 			}
 			right_icon = scope:generated_actor

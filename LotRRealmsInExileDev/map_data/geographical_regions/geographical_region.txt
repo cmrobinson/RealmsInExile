@@ -1739,10 +1739,25 @@ dlc_fp1_region_lotr_wildmen_pool = {
 
 dlc_fp3_region_lotr_easterling_invasion_targets = {
 	regions = {
-		middleearth_west_rhovanion middleearth_haradwaith middleearth_rhun
+		middleearth_west_rhovanion middleearth_rhun adventure_nearharad custom_bellakar
 	}
 	duchies = {
 		d_harithilien d_cormalthen d_thewold d_eastemnet d_lithlad d_ghurzun
+	}
+}
+
+dlc_fp3_region_pukel_men = {
+	regions = {
+		middleearth_west_gondor_whitemountains
+	}
+	duchies = {
+		d_eastfold d_thefolde
+	}
+}
+
+dlc_fp3_greater_gondorian_frontier_regions = {
+	regions = {
+		middleearth_west_gondor_andrast middleearth_west_gondor_ithilien middleearth_haradwaith_harondor
 	}
 }
 
@@ -1766,6 +1781,11 @@ adventure_elvenlands = {
 adventure_elvenwoods = {
 	regions = {  middleearth_west_lothlorien middleearth_west_rhovanion_mirkwood }
 	duchies = { d_nimbregardh d_dor_banath d_naergurthardh d_kugathavuld d_gazar_kug}
+}
+
+adventure_elvencities = {
+	regions = {  middleearth_beleriand middleearth_orrostar_noldoro }
+	duchies = { d_anfalas }
 }
 
 adventure_orclands = {

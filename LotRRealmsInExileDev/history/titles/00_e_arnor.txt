@@ -403,9 +403,7 @@ d_tyrn_hodhath = {
         holder = lineofcerentir49 #Pelendur
     }
 	5669.1.1 = { # The Barrows are abandoned after the death of Carthean, son of Pelendur
-		holder = k_wastelands_holder
-		change_development_level = 0
-		government = wastelands_government
+		holder = 0
 	}
 }
 
@@ -6471,7 +6469,7 @@ c_tumnogoth_iaur = {
     6042.7.27 = {
         holder = lineofwegdrasil11 # _On
         change_development_level = 5
-        government = feudal_government
+        government = clan_government
     }
     6147.10.3 = {
         holder = lineofwegdrasil13 # D_ori
@@ -7268,7 +7266,7 @@ d_eketya = {
     5940.5.15 = {
         holder = lineofeketya85 #Electhel Last duke of Eketya
     }
-    # 6008.1.1 = { #Aranbor, younger brother of Aranarth, becomes chief of the Uialdain, new titular title d_emyn_uialdain
+    # 6008.1.1 = { #Aranbor, younger brother of Aranarth, becomes chief of the Uialdain, new titular title d_emyn_uialdain }
 }
 
 c_nothrimos = {
@@ -9097,7 +9095,7 @@ c_bree = {
     6925.1.1 = { # Founding of the Prancing Pony
 		holder = lineofbutterbur1
         government = oligarchy_government
-        succession_laws = { oligarchic_elective_succession_law }
+        succession_laws = { oligarchic_government_succession_law }
 	}
     6984.10.4 = {
 		holder = lineofbutterbur3

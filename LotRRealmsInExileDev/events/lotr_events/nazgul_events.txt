@@ -338,6 +338,34 @@ nazgul.0003 = { # Nazgûl attacks a loved one
 			}
 			cp:councillor_court_chaplain = { save_scope_as = messenger }
 		}
+		
+		if = {
+			limit = { NOT = { exists = scope:nazgul } }
+			if = {
+				limit = {
+					any_character_artifact = {
+						has_variable = ring_of_men
+						any_artifact_claimant = {
+							is_nazgul = yes
+						}
+					}
+				}
+				random_character_artifact = {
+					limit = { has_variable = ring_of_men }
+					random_artifact_claimant = {
+						limit = { is_nazgul = yes }
+						save_scope_as = nazgul
+					}
+				}
+			}
+			else_if = {
+				random_living_character = {
+					limit = { is_nazgul = yes }
+					save_scope_as = nazgul
+				}
+			}
+		}
+		
 		random_courtier = {
 			limit = {
 				OR = {
@@ -426,6 +454,10 @@ nazgul.0050 = { # Introduction to Khamul
 	left_portrait = {
 		character = root
 		animation = personality_bold
+	}
+	
+	immediate = {
+		play_music_cue = aotr_calm_dolguldur_02
 	}
 	
 	option = { 

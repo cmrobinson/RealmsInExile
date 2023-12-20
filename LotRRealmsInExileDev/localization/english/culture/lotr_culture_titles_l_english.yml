@@ -11,8 +11,8 @@
  
 # barony_feudal_orcs:0 ""
  
- count_male_evil:0 "Chief"
- count_female_evil:0 "Chieftess"
+ count_male_evil:0 "Captain"
+ count_female_evil:0 "Captain"
  county_evil:0 "Encampment"
  duke_male_evil:0 "Warchief"
  duke_female_evil:0 "Warchieftess"
@@ -48,6 +48,8 @@
  empire_feudal_e_mordor:0 "Dominion"
  emperor_feudal_male_e_mordor:0 "Dark Lord"
  emperor_feudal_female_e_mordor:0 "Dark Queen"
+
+ empire_iron_crown_angmar:0 "Iron Crown"
  
  ### ISTARI ###
 
@@ -89,6 +91,12 @@
  duke_dunedain_male:0 "[CHARACTER.Custom('duke_dunedain_male')]"
  duke_dunedain_female:0 "[CHARACTER.Custom('duke_dunedain_female')]"
  kingdom_dunedain:0 "[CHARACTER.Custom('kingdom_dunedain')]"
+ high_kingdom_dunedain:0 "Kingdom"
+ high_king_dunedain:0 "King"
+ high_king_dunedain_female:0 "Queen"
+ high_king_dunedain_reunited_kingdom:0 "High King"
+ high_king_dunedain_reunited_kingdom_female:0 "High Queen"
+ high_kingdom_dunedain_reunited_kingdom:0 "High Kingdom"
  dunedain_province:0 "Province"
  dunedain_princality:0 "Principality"
  king_dunedain_male:0 "[CHARACTER.Custom('king_dunedain_male')]"
@@ -152,6 +160,8 @@
  emperor_feudal_male_black_numenorean:0 "Ar"
  emperor_feudal_female_black_numenorean:0 "Ar"
  emperor_feudal_female_black_numenorean_nonholder:0 "High Consort"
+ emperor_feudal_male_adunaic:0 "Ar"
+ emperor_feudal_female_adunaic:0 "Ar"
  
  ## FELAYAN ##
  king_male_felayan:0 "First Lord"
@@ -372,13 +382,13 @@
  baron_hobbit_male:0 "Sheriff"
  baron_hobbit_female:0 "Sheriff"
  count_hobbit_male:0 "Master"
- count_hobbit_female:0 "Master"
+ count_hobbit_female:0 "Mistress"
  duke_hobbit_male:0 "Mayor"
  duke_hobbit_female:0 "Mayor"
  king_hobbit_male:0 "Thain"
  king_hobbit_female:0 "Thain"
  emperor_hobbit_male:0 "Lord"
- emperor_hobbit_female:0 "Lord"
+ emperor_hobbit_female:0 "Lady"
 
  county_hobbit:0 "Township"
  duchy_hobbit:0 "Mayoralty"

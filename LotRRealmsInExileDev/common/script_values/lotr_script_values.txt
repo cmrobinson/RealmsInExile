@@ -557,6 +557,7 @@ culture_ai_weight_monsters = {
 			OR = {
 				culture = { has_cultural_pillar = heritage_ainur }
 				culture = { has_cultural_pillar = heritage_orc }
+				culture = { has_cultural_pillar = heritage_goblin }
 				culture = { has_cultural_pillar = heritage_nafarati }
 				culture = { has_cultural_pillar = heritage_undead }
 			}
@@ -602,4 +603,12 @@ settlement_title_tier_limit = {
 		limit = { highest_held_title_tier = tier_empire }
 		value = 4
 	}
+}
+
+## Easterling invasion values
+request_easterling_invasion_troop_value_estimate = {
+	value = scope:recipient.max_military_strength
+	subtract = scope:secondary_recipient.max_military_strength
+	divide = 10
+	round = yes
 }

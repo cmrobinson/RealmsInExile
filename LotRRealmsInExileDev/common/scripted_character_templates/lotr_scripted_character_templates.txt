@@ -441,7 +441,7 @@ miner_template = {
 	dynasty = none
 	random_traits = yes
 	faith = this.faith
- #	culture = this.culture
+ 	# culture = this.culture
 	random_culture = {
 		this.culture = {
 			trigger = {
@@ -502,6 +502,54 @@ miner_template = {
 			TRACK = hewer
 			LEVEL_1 = no
 			LEVEL_3 = yes
+		}
+	}
+}
+
+dwarf_expedition_template = {
+	age = { 18 50 }
+	dynasty = none
+	random_traits = yes
+	faith = this.faith
+	random_culture = {
+		this.culture = {
+			trigger = {
+				restricted_culture = no
+			}
+		}
+		culture:isengard_dunlending = {
+			trigger = {
+				is_istari = yes
+			}
+		}
+		culture:morlughai = {
+			trigger = {
+				is_istari = no
+				faith = faith:lidless_eye
+			}
+		}
+	}
+	gender_female_chance = root_soldier_female_chance
+	random_traits_list = {
+		count = 1
+		brave = {}
+		calm = {}
+		shy = {}
+		patient = {}
+		physique_good_1 = {}
+		physique_good_2 = {}
+		strong = {}
+		deceitful = {}
+		greedy = {}
+		shrewd = {}
+		diligent = {}
+		stubborn = {}
+		athletic = {}
+	}
+	after_creation = {
+		if = {
+			limit = { is_dwarf = yes }
+			change_age = { 0 240 }
 		}
 	}
 }
