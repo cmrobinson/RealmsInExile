@@ -1572,6 +1572,17 @@ elven.1715 = { # Event if win against Umbar
 		container = "custom_widgets_container"  
 		controller = event_chain_progress
 	}
+
+	immediate = {
+		send_interface_toast = {
+			title = elven.1715.toast
+
+			add_character_modifier = {
+				modifier = warlord_modifier
+				years = 15
+			}
+		}
+	}
 	
 	option = {
 		name = elven.1715.a
@@ -1948,6 +1959,7 @@ elven.1735 = { # Dynasty Rises in Amrun | Demands sent to current Amrun ruler
 		scope:nadi_manye_leader = { set_variable = nadi_manye_war_leader }
 
 		title:c_amrun = {
+			change_county_control = medium_county_control_loss
 			title_create_faction = {
 				type = peasant_faction
 				target = title:c_amrun.holder
@@ -1960,6 +1972,12 @@ elven.1735 = { # Dynasty Rises in Amrun | Demands sent to current Amrun ruler
 					}
 				}
 			}
+		}
+
+		scope:amrun_peasant_faction = {
+			title:c_amrun = { save_scope_as = peasant_county }
+			scope:nadi_manye_leader = { save_scope_as = peasant_leader }
+			setup_nadi_manye_leader_effect = yes
 		}
 	}
 
@@ -2059,10 +2077,12 @@ elven.1735 = { # Dynasty Rises in Amrun | Demands sent to current Amrun ruler
 	option = { # Resist against dynasty
 		name = elven.1735.c
 
-		hidden_effect = {
+		if = {
+			limit = { exists = scope:amrun_peasant_faction }
+			title:c_amrun = { save_scope_as = peasant_county }
+			scope:nadi_manye_leader = { save_scope_as = peasant_leader }
 			scope:amrun_peasant_faction = {
-				setup_nadi_manye_leader_effect = yes
-				faction_start_war = {}
+				faction_start_war = { title = scope:peasant_county }
 				faction_spawn_member_county_armies_effect = {
 					FACTION = scope:amrun_peasant_faction
 					ARMY_OWNER = scope:nadi_manye_leader
@@ -2072,7 +2092,6 @@ elven.1735 = { # Dynasty Rises in Amrun | Demands sent to current Amrun ruler
 		}
 
 		scope:nadi_manye_leader = { random_character_war = { save_scope_as = harad_special_war } }
-		
 
 		character:linefinwe11 = {
 			trigger_event = {

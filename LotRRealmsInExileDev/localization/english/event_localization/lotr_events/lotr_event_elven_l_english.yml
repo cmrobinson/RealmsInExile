@@ -143,6 +143,7 @@
   elven.1715.a.event_troops_half.tt:0 "Periodically you will recieve #P half#! a retinue of Gondorian Marines."
   elven.1715.a.event_troops_none.tt:0 "You will recieve #N no#! Gondorian Marines as you do not have Gondorian Governors."
   elven.1715.a.upgrade_edhellond.tt:0 "Due to sacking Umbar, Edhellond will recieve #high additional#! resources to further its development"
+  elven.1715.toast:0 "You put an end to Umbar"
 
   elven.1725.toast:0 "Freed Gondorian Marines"
 

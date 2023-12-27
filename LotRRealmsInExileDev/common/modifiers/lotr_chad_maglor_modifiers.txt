@@ -12,4 +12,5 @@ less_levy_count_gondor_lords = {
 warlord_modifier = {
 	icon = martial_positive
 	tolerance_advantage_mod = 15
+	diplomatic_range_mult = 0.4
 }
