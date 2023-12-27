@@ -39,7 +39,7 @@ elven.0100 = { # Introduction to Galadriel
 		trigger = {
 			exists = title:d_parth_celebrant
 		}
-			#character:lineofguthmunding5 = {
+			#character:lineofguthmunding5
 			title:d_parth_celebrant.holder	= {
 				if = {
 					limit = {
@@ -636,6 +636,7 @@ elven.0501 = {
 	title = elven.0501.t
 	desc = elven.0501.desc
 	theme = stewardship_duty_focus
+	orphan = yes
 	right_portrait = {
 		character = root
 		animation = personality_proud
@@ -903,7 +904,7 @@ elven.1601 = { # Shield of the Free Peoples starting event | Go to Eregion
 			on_arrival_event = elven.1605
 			return_trip = no
 			players_use_planner = no
-			on_arrival_on_action 
+			on_arrival_on_action = maglor_khazad_dum_on_action
 			on_arrival_destinations = all
 		}
 	}
@@ -1227,7 +1228,7 @@ elven.1606 = { # Letter Event, Request troops from Lindon
 			
 			modifier = { # Noldor are bloodthirsty
 				culture = culture:noldor
-				subtract = 5
+				add = -5
 			}
 		}
 	}
@@ -1388,8 +1389,8 @@ elven.1705 = { # Spawns armies for Maglor
 									type = wardens_tirith_aear
 									stacks = 1
 								}
-								location = root.capital_province
-								origin = scope:gondor_ruler.primary_title.capital_province
+								location = root.capital_county.title_province
+								origin = scope:gondor_ruler.capital_county.title_province
 							}
 							spawn_army = {
 								name = elven.1705.event_troops
@@ -1397,16 +1398,16 @@ elven.1705 = { # Spawns armies for Maglor
 									type = swan_knights
 									stacks = 1
 								}
-								location = root.capital_province
-								origin = scope:gondor_ruler.primary_title.capital_province
+								location = root.capital_county.title_province
+								origin = scope:gondor_ruler.capital_county.title_province
 							}
 						}
 						2 = {
 							spawn_army = {
 								name = elven.1705.event_troops
-								location = root.capital_province
 								levies = 100
-								origin = scope:gondor_ruler.primary_title.capital_province
+								location = root.capital_county.title_province
+								origin = scope:gondor_ruler.capital_county.title_province
 							}
 						}
 					}
@@ -1458,8 +1459,8 @@ elven.1705 = { # Spawns armies for Maglor
 									type = gondorian_footmen
 									stacks = 1
 								}
-								location = root.capital_province
-								origin = scope:gondor_ruler.primary_title.capital_province
+								location = root.capital_county.title_province
+								origin = scope:gondor_ruler.capital_county.title_province
 							}
 							spawn_army = {
 								name = elven.1705.event_troops
@@ -1467,16 +1468,16 @@ elven.1705 = { # Spawns armies for Maglor
 									type = gondorian_bowmen
 									stacks = 1
 								}
-								location = root.capital_province
-								origin = scope:gondor_ruler.primary_title.capital_province
+								location = root.capital_county.title_province
+								origin = scope:gondor_ruler.capital_county.title_province
 							}
 						}
 						2 = {
 							spawn_army = {
 								name = elven.1705.event_troops
-								location = root.capital_province
 								levies = 100
-								origin = scope:gondor_ruler.primary_title.capital_province
+								location = root.capital_county.title_province
+								origin = scope:gondor_ruler.capital_county.title_province
 							}
 						}
 					}
@@ -1881,7 +1882,7 @@ elven.1730 = { # Letter event to ask for troops from Gondor Lords
 								stacks = 1
 							}
 							location = root.capital_province
-							origin = scope:gondor_ruler.primary_title.capital_province
+							origin = scope:gondor_ruler.capital_province
 						}
 						spawn_army = {
 							name = elven.1730.event_troops
@@ -1890,7 +1891,7 @@ elven.1730 = { # Letter event to ask for troops from Gondor Lords
 								stacks = 1
 							}
 							location = root.capital_province
-							origin = scope:gondor_ruler.primary_title.capital_province
+							origin = scope:gondor_ruler.capital_province
 						}
 					}
 					3 = {
@@ -1898,7 +1899,7 @@ elven.1730 = { # Letter event to ask for troops from Gondor Lords
 							name = elven.1730.event_troops
 							location = root.capital_province
 							levies = 100
-							origin = scope:gondor_ruler.primary_title.capital_province
+							origin = scope:gondor_ruler.capital_province
 						}
 					}
 				}
@@ -2153,6 +2154,39 @@ elven.1740 = { # Maglor gets message to join war with Nadi-Manye rebels
 	}
 }
 
+scripted_effect elven_settlement_add_building_effect = {
+	if = {
+		limit = {
+			NOT = { has_building_or_higher = elven_settlement_01 }
+		}
+		add_building = elven_settlement_01
+	}
+	else_if = {
+		limit = { has_building = elven_settlement_01 }
+		add_building = elven_settlement_02
+	}
+	else_if = {
+		limit = { has_building = elven_settlement_02 }
+		add_building = elven_settlement_03
+	}
+	else_if = {
+		limit = { has_building = elven_settlement_03 }
+		add_building = elven_settlement_04
+	}
+	else_if = {
+		limit = { has_building = elven_settlement_04 }
+		add_building = elven_settlement_05
+	}
+	else_if = {
+		limit = { has_building = elven_settlement_05 }
+		add_building = elven_settlement_06
+	}
+	else_if = {
+		limit = { has_building = elven_settlement_06 }
+		add_building = elven_settlement_07
+	}
+}
+
 elven.1745 = { # Maglor gets choice to make Nadi-Manye tributaries
 	content_source = realms
 	type = character_event
@@ -2182,9 +2216,7 @@ elven.1745 = { # Maglor gets choice to make Nadi-Manye tributaries
 	option = { # Decline, take resources back to Edhellond
 		name = elven.1745.b
 
-		province:420 = {
-			add_next_building_tier_effect = { BUILDING = elven_settlement }
-		}
+		province:420 = { elven_settlement_add_building_effect = yes }
 	}
 
 	after = {
@@ -2193,6 +2225,8 @@ elven.1745 = { # Maglor gets choice to make Nadi-Manye tributaries
 }
 
 elven.1750 = { # Toast event to give Maglor Haruzan Event Troops
+	hidden = yes
+
 	trigger = {
 		trigger_if = {
 			limit = { has_variable = maglor_haruzan_event_troops }
@@ -2439,8 +2473,10 @@ elven.1806 = { # Generic event while searching Khazad-dum as Maglor
 			random_list = {
 				20 = {
 					modifier = {
-						add = 25
-						multiply = var:searched_khazad_dum
+						add = {
+							value = 25
+							multiplier = var:searched_khazad_dum
+						}
 					}
 					trigger_event = {
 						id = elven.1805
@@ -2449,8 +2485,10 @@ elven.1806 = { # Generic event while searching Khazad-dum as Maglor
 				}
 				80 = {
 					modifier = {
-						subtract = 25
-						multiply = var:searched_khazad_dum
+						subtract = {
+							value = 25
+							multiplier = var:searched_khazad_dum
+						}
 					}
 					trigger_event = {
 						id = elven.1806
@@ -2490,7 +2528,7 @@ elven.1810 = { # Maglor goes to Rivendell to seek Elrond and Glorfindel's aid
 		else = {
 			create_character = {
 				template = noldor_feanorian
-				location = title:c_imladris.capital_province
+				employer = title:c_imladris.holder
 				save_scope_as = elf_1
 			}
 		}
@@ -2501,7 +2539,7 @@ elven.1810 = { # Maglor goes to Rivendell to seek Elrond and Glorfindel's aid
 		else = {
 			create_character = {
 				template = noldor_feanorian
-				location = title:c_imladris.capital_province
+				employer = title:c_imladris.holder
 				save_scope_as = elf_2
 			}
 		}
@@ -2566,11 +2604,12 @@ elven.1815 = { # Fight Balrog
 					}
 					this = { save_scope_as = portrait_elf }
 				}
-				else = {
-					random_entourage_character = {
-						limit = { is_elf = yes }
-						save_scope_as = portrait_elf
-					}
+			}
+			if = {
+				limit = { NOT = { exists = scope:portrait_elf } } 
+				random_entourage_character = {
+					limit = { is_elf = yes }
+					save_scope_as = portrait_elf
 				}
 			}
 		}

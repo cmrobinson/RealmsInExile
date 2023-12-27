@@ -104,7 +104,7 @@
   elven.1602.desc:0 "VECTOR - Placeholder"
   elven.1602.a:0 "VECTOR - Placeholder"
 
-  elven.1606.t:0 "VECTOR - Placeholder" # Elven ruler recieves letter from Maglor requesting elven volunteers
+  elven.1606.opening:0 "VECTOR - Placeholder" # Elven ruler recieves letter from Maglor requesting elven volunteers
   elven.1606.desc:0 "VECTOR - Placeholder"
   elven.1606.a:0 "VECTOR - Placeholder" 
   elven.1606.b:0 "VECTOR - Placeholder" 
@@ -166,6 +166,12 @@
   elven.1740.desc:0 "Letter Description"
   elven.1740.a:0 "Accept"
   elven.1740.b:0 "Decline"
+
+  elven.1745.t:0 "VECTOR - Placeholder"
+  elven.1745.desc:0 "VECTOR - Placeholder"
+  elven.1745.a:0 "VECTOR - Placeholder"
+  elven.1745.b:0 "VECTOR - Placeholder"
+  elven.1740.event_troops:0 "VECTOR - Placeholder"
 
   elven.1800.t:0 "VECTOR - Placeholder"
   elven.1800.desc:0 "VECTOR - Placeholder"

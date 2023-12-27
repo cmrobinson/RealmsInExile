@@ -995,10 +995,10 @@ decision_annihilate_abhorred = { # Starts war against Sauron
 	is_valid = {
 		trigger_if = {
 			limit = { has_variable = maglor_defensive }
-			custom_tooltip = "Strike heart of enemy"
+			custom_tooltip = { text = "decision_annihilate_abhorred_aggresive_tt"}
 		}
 		trigger_else = {
-			custom_tooltip = "Shield of Free Peoples"
+			custom_tooltip = { text = "decision_annihilate_abhorred_defensive_tt"}
 		}
 	}
 	is_valid_showing_failures_only = {
@@ -1063,9 +1063,7 @@ decision_umbar_burns = { # Starts war against Umbar
 	
 	# IS_VALID
 	is_valid = {
-		custom_tooltip = { text = "Reclaimed Eregion" }
-		custom_tooltip = { text = "Repayed the debt of Azaghal" }
-		custom_tooltip = { text = "Secured the mountain passes" }
+		custom_tooltip = { text = "WIP" }
 	}
 	is_valid_showing_failures_only = {
 		is_imprisoned = no
@@ -1159,7 +1157,7 @@ decision_annihilate_dol_guldur = { # Starts war against Dol Guldur
 	
 	# IS_VALID
 	is_valid = {
-		custom_tooltip = { text = "Completed: Stronghold at Edhellond" }
+		custom_tooltip = { text = "decision_annihilate_dol_guldur_is_valid_tt" }
 	}
 	is_valid_showing_failures_only = {
 		is_imprisoned = no
@@ -1310,7 +1308,7 @@ decision_rally_army_righteous = {
 
 		item = { # Northern Route
 			value = maglor_defensive_route
-			current_description = decision_rally_army_righteous_defensivett
+			current_description = decision_rally_army_righteous_defensive.tt
 			localization = decision_rally_army_righteous_defensive
 			icon = "gfx/interface/icons/message_feed/a_catch_all_councillor_icon.dds"
 		}
@@ -1627,123 +1625,6 @@ decision_reclamation_of_moria = {
 	
 	# EFFECT 
 	effect = { # Give Dwarf back the titles 
-		if = {
-			limit = { character:lineofdurin95 = { is_alive = yes } }
-			custom_tooltip = { 
-				text = decision_reclamation_of_moria_tt.1
-				maglor_reclaim_moria = { NEW_HOLDER = character:lineofdurin95 }
-			}
-			character:lineofdurin95 = { save_scope_as = new_moria_ruler}
-		}
-		else_if = {
-			limit = {
-				dynasty:dynasty_durin = {	
-					any_dynasty_member = {
-						limit = {
-							is_ruler = no
-							is_adult = yes
-						}
-					}
-				}
-			}
-			random_ruler = {
-				limit = {
-					is_dwarf = yes
-					dynasty = dynasty:dynasty_durin
-				}
-				dynasty = {
-					random_dynasty_member = {
-						limit = {
-							is_ruler = no
-							is_adult = yes
-							is_alive = yes
-							count > 0
-						}
-						save_scope_as = new_moria_ruler
-					}
-				}
-			}
-			custom_tooltip = { 
-				text = decision_reclamation_of_moria_tt.2
-				maglor_reclaim_moria = { NEW_HOLDER = scope:new_moria_ruler }
-			}
-		}
-		else_if = {
-			limit = {
-				title:e_iron_mountains = {
-					any_in_de_jure_hierarchy = {
-						holder = {
-							is_dwarf = yes 
-							
-							any_dynasty_member = {
-								is_ruler = no
-								is_adult = yes
-							} 
-						}
-					}
-				}
-			}
-			random_ruler = {
-				limit = {
-					is_dwarf = yes
-					any_held_title = {
-						OR = {
-							de_jure_liege = title:e_iron_mountains
-							de_jure_liege.de_jure_liege = title:e_iron_mountains
-							de_jure_liege.de_jure_liege.de_jure_liege = title:e_iron_mountains
-						}
-					}
-					any_dynasty_member = {
-						is_ruler = no
-						is_adult = yes
-					}
-				}
-				dynasty = {
-					random_dynasty_member = {
-						limit = {
-							is_ruler = no
-							is_adult = yes
-						}
-						save_scope_as = new_moria_ruler
-					}
-				}
-			}
-			custom_tooltip = { 
-				text = decision_reclamation_of_moria_tt.3
-				maglor_reclaim_moria = { NEW_HOLDER = scope:new_moria_ruler }
-			}
-		}
-		else = {
-			random_ruler = {
-				limit = {
-					is_dwarf = yes
-					any_held_title = {
-						OR = {
-							de_jure_liege = title:e_blue_mountains
-							de_jure_liege.de_jure_liege = title:e_blue_mountains
-							de_jure_liege.de_jure_liege.de_jure_liege = title:e_blue_mountains
-						}
-					}
-					any_dynasty_member = {
-						is_ruler = no
-						is_adult = yes
-					}
-				}
-				dynasty = {
-					random_dynasty_member = {
-						limit = {
-							is_ruler = yes
-							is_adult = yes
-						}
-						save_scope_as = new_moria_ruler
-					}
-				}
-				custom_tooltip = { 
-					text = decision_reclamation_of_moria_tt.4
-					maglor_reclaim_moria = { NEW_HOLDER = scope:new_moria_ruler }
-				}
-			}
-		}
 
 		trigger_event = {
 			id = elven.1816

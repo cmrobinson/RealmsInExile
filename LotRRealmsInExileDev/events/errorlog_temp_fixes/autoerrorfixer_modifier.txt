@@ -447,5 +447,6 @@ autoerrorfixer_modifier.1 = {
 		add_character_modifier = fp3_house_modifier_frontier_ambitions
 		add_character_modifier = fp3_incursion_instability
 		add_character_modifier = fp3_zanj_rebellion_work_concessions_modifier
+		add_character_modifier = less_levy_count_gondor_lords
 	}
 }

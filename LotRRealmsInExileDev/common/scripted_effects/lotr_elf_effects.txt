@@ -940,8 +940,8 @@ maglor_crusade_elven_warriors = {
 						type = noldor_swordsmen
 						stacks = $SUPPORT$
 					}
-					location = root.capital_province
-					origin = scope:gondor_ruler.primary_title.capital_province
+					location = root.capital_county.title_province
+					origin = scope:gondor_ruler.capital_county.title_province
 				}
 			}
 			1 = {
@@ -951,8 +951,8 @@ maglor_crusade_elven_warriors = {
 						type = noldor_archers
 						stacks = $SUPPORT$
 					}
-					location = root.capital_province
-					origin = scope:gondor_ruler.primary_title.capital_province
+					location = root.capital_county.title_province
+					origin = scope:gondor_ruler.capital_county.title_province
 				}
 			}
 		}
@@ -967,8 +967,8 @@ maglor_crusade_elven_warriors = {
 						type = falathrim_haven_guard
 						stacks = $SUPPORT$
 					}
-					location = root.capital_province
-					origin = scope:gondor_ruler.primary_title.capital_province
+					location = root.capital_county.title_province
+					origin = scope:gondor_ruler.capital_county.title_province
 				}
 			}
 			1 = {
@@ -978,8 +978,8 @@ maglor_crusade_elven_warriors = {
 						type = marchwardens
 						stacks = $SUPPORT$
 					}
-					location = root.capital_province
-					origin = scope:gondor_ruler.primary_title.capital_province
+					location = root.capital_county.title_province
+					origin = scope:gondor_ruler.capital_county.title_province
 				}
 			}
 		}
@@ -994,8 +994,8 @@ maglor_crusade_elven_warriors = {
 						type = hir_hathol
 						stacks = $SUPPORT$
 					}
-					location = root.capital_province
-					origin = scope:gondor_ruler.primary_title.capital_province
+					location = root.capital_county.title_province
+					origin = scope:gondor_ruler.capital_county.title_province
 				}
 			}
 			1 = {
@@ -1005,8 +1005,8 @@ maglor_crusade_elven_warriors = {
 						type = sindar_nobility
 						stacks = $SUPPORT$
 					}
-					location = root.capital_province
-					origin = scope:gondor_ruler.primary_title.capital_province
+					location = root.capital_county.title_province
+					origin = scope:gondor_ruler.capital_county.title_province
 				}
 			}
 		}
@@ -1021,8 +1021,8 @@ maglor_crusade_elven_warriors = {
 						type = laiquendi_ambushers
 						stacks = $SUPPORT$
 					}
-					location = root.capital_province
-					origin = scope:gondor_ruler.primary_title.capital_province
+					location = root.capital_county.title_province
+					origin = scope:gondor_ruler.capital_county.title_province
 				}
 			}
 			1 = {
@@ -1032,8 +1032,8 @@ maglor_crusade_elven_warriors = {
 						type = laiquendi_scouts
 						stacks = $SUPPORT$
 					}
-					location = root.capital_province
-					origin = scope:gondor_ruler.primary_title.capital_province
+					location = root.capital_county.title_province
+					origin = scope:gondor_ruler.capital_county.title_province
 				}
 			}
 		}
@@ -1047,8 +1047,8 @@ maglor_crusade_elven_warriors = {
 						type = noldor_veterans
 						stacks = $SUPPORT$
 					}
-					location = root.capital_province
-					origin = scope:gondor_ruler.primary_title.capital_province
+					location = root.capital_county.title_province
+					origin = scope:gondor_ruler.capital_county.title_province
 				}
 			}
 			1 = {
@@ -1058,8 +1058,8 @@ maglor_crusade_elven_warriors = {
 						type = noldor_glaivesmen
 						stacks = $SUPPORT$
 					}
-					location = root.capital_province
-					origin = scope:gondor_ruler.primary_title.capital_province
+					location = root.capital_county.title_province
+					origin = scope:gondor_ruler.capital_county.title_province
 				}
 			}
 		}

@@ -1,4 +1,4 @@
-maglor_khazad_dum_on_action = {
+﻿maglor_khazad_dum_on_action = {
 	effect = {
 
 		if = {

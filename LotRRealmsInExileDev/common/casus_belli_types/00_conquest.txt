@@ -916,9 +916,9 @@ duchy_conquest_cb = {
 				SUZERAIN = character:linefinwe11
 				TRIBUTARY = scope:attacker
 			}
-			character:linefinwe11 = {
-				trigger_event = 
-			}
+			# character:linefinwe11 = {
+			# 	trigger_event = 
+			# }
 		}
 		scope:attacker = {
 			remove_variable = nadi_manye_war_leader
