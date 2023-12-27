@@ -781,7 +781,6 @@ elven.1555 = { # Send letter to loyalist asking for support
 	option = { # Accept | Join Maglor
 		name = elven.1555.a
 		set_variable = joined_maglor
-
 		
 		ai_chance = {
 			base = 100

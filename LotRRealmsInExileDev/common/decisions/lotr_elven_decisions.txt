@@ -1234,11 +1234,10 @@ decision_fourth_kinslaying = {
 	
 	# EFFECT 
 	effect = {
-
 		title:e_lindon.holder = {
 			every_vassal_or_below = {
 				limit = { 
-					culture = culture:noldor 
+					culture = culture:noldor
 					NOR = {
 						dynasty = dynasty:dynasty_nacilion
 						dynasty = dynasty:dynasty_penlod
@@ -1253,6 +1252,11 @@ decision_fourth_kinslaying = {
 		add_to_global_variable_list = {
 			name = unavailable_unique_decisions
 			target = flag:decision_fourth_kinslaying
+		}
+
+		trigger_event = {
+			id = elven.1556
+			days = 30
 		}
 	}
 

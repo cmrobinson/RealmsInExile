@@ -5436,8 +5436,8 @@ maglor_shatter_realm_cb = {
 					}
 				}
 			}
+
 			### Converts county to different faith
-			
 			every_in_list = {
 				list = target_titles
 				
@@ -5450,14 +5450,19 @@ maglor_shatter_realm_cb = {
 					}
 				}
 			}
-
 		}
 
 		### last effect, otherwise title is destroyed too early for other effect to take place
 		every_in_list = {
 			list = target_titles
-
-			holder = { destroy_title = prev }
+			save_scope_as = targeted_title
+			scope:defender = {
+				every_held_title = {
+					this.tier = scope:targeted_title.tier
+					holder = { destroy_title = this }
+				}
+				holder = { destroy_title = prev }
+			}
 		}
 	}
 
