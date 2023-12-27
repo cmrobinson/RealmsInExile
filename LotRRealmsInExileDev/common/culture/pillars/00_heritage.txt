@@ -60,6 +60,9 @@ heritage_druedain = {
 		forest_travel_danger = forest_high_danger_reduction
 		mallorn_forest_travel_danger = mallorn_forest_high_danger_reduction
 	}
+	culture_modifier = {
+		mercenary_count_mult = -10
+	}
 }
 
 heritage_dunedain = {
@@ -259,6 +262,9 @@ heritage_orc = {
 		general_opinion = -25
 		rf_eruhini_opinion = -100
 	}
+	culture_modifier = {
+		mercenary_count_mult = -10
+	}
 }
 
 heritage_goblin = { #juke note: boni should be adjusted later
@@ -277,6 +283,9 @@ heritage_goblin = { #juke note: boni should be adjusted later
 		
 		general_opinion = -25
 		rf_eruhini_opinion = -100
+	}
+	culture_modifier = {
+		mercenary_count_mult = -10
 	}
 }
 
@@ -350,6 +359,9 @@ heritage_longbeard = {
 		mountains_travel_danger = mountains_high_danger_reduction
 		hills_travel_danger = hills_high_danger_reduction
 	}
+	culture_modifier = {
+		mercenary_count_mult = -10
+	}
 }
 
 heritage_firebeard = {
@@ -370,6 +382,9 @@ heritage_firebeard = {
 		halls_travel_danger = halls_high_danger_reduction
 		mountains_travel_danger = mountains_high_danger_reduction
 		hills_travel_danger = hills_high_danger_reduction
+	}
+	culture_modifier = {
+		mercenary_count_mult = -10
 	}
 }
 
@@ -392,6 +407,9 @@ heritage_broadbeam = {
 		mountains_travel_danger = mountains_high_danger_reduction
 		hills_travel_danger = hills_high_danger_reduction
 	}
+	culture_modifier = {
+		mercenary_count_mult = -10
+	}
 }
 
 heritage_ironfist = {
@@ -412,6 +430,9 @@ heritage_ironfist = {
 		halls_travel_danger = halls_high_danger_reduction
 		mountains_travel_danger = mountains_high_danger_reduction
 		hills_travel_danger = hills_high_danger_reduction
+	}
+	culture_modifier = {
+		mercenary_count_mult = -10
 	}
 }
 
@@ -434,6 +455,9 @@ heritage_stiffbeard = {
 		mountains_travel_danger = mountains_high_danger_reduction
 		hills_travel_danger = hills_high_danger_reduction
 	}
+	culture_modifier = {
+		mercenary_count_mult = -10
+	}
 }
 
 heritage_blacklock = {
@@ -455,6 +479,9 @@ heritage_blacklock = {
 		mountains_travel_danger = mountains_high_danger_reduction
 		hills_travel_danger = hills_high_danger_reduction
 	}
+	culture_modifier = {
+		mercenary_count_mult = -10
+	}
 }
 
 heritage_stonefoot = {
@@ -475,6 +502,9 @@ heritage_stonefoot = {
 		halls_travel_danger = halls_high_danger_reduction
 		mountains_travel_danger = mountains_high_danger_reduction
 		hills_travel_danger = hills_high_danger_reduction
+	}
+	culture_modifier = {
+		mercenary_count_mult = -10
 	}
 }
 
