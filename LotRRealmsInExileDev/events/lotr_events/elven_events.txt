@@ -2475,7 +2475,7 @@ elven.1806 = { # Generic event while searching Khazad-dum as Maglor
 					modifier = {
 						add = {
 							value = 25
-							multiplier = var:searched_khazad_dum
+							multiply = var:searched_khazad_dum
 						}
 					}
 					trigger_event = {
@@ -2485,9 +2485,9 @@ elven.1806 = { # Generic event while searching Khazad-dum as Maglor
 				}
 				80 = {
 					modifier = {
-						subtract = {
-							value = 25
-							multiplier = var:searched_khazad_dum
+						add = {
+							value = -25
+							multiply = var:searched_khazad_dum
 						}
 					}
 					trigger_event = {
@@ -2552,6 +2552,109 @@ elven.1810 = { # Maglor goes to Rivendell to seek Elrond and Glorfindel's aid
 
 	option = { 
 		name = elven.1810.a
+	}
+}
+
+elven.1811 = { # ROYAL COURT EVENT  | Elrond recieves Maglor in his court
+	content_source = realms
+	type = character_event
+	title = elven.1811.t
+	desc = elven.1811.desc
+	type = court_event
+	theme = realm
+	override_sound = { reference = event:/SFX/Events/Themes/sfx_event_theme_type_generic }
+	court_scene = {
+		button_position_character = character:linefinwe11
+		court_event_force_open = yes
+		show_timeout_info = no
+		should_pause_time = yes
+		roles = {
+			character:linefinwe11 = {
+				group = petitioners_group
+				animation = happiness
+			}
+			scope:elf_2 = {
+				group = petitioners_group
+				animation = happiness
+			}
+		}
+	}
+	immediate = {
+		if = {
+			limit = { character:linefinwe27 = { is_alive = yes } }
+			character:linefinwe27 = { save_scope_as = elf_1 }
+		}
+		else = {
+			create_character = {
+				template = noldor_feanorian
+				employer = title:c_imladris.holder
+				save_scope_as = elf_1
+			}
+		}
+		if = {
+			limit = { character:lineofglorfindel = { is_alive = yes } }
+			character:lineofglorfindel = { save_scope_as = elf_2 }
+		}
+		else = {
+			create_character = {
+				template = noldor_feanorian
+				employer = title:c_imladris.holder
+				save_scope_as = elf_2
+			}
+		}
+		
+		root.current_travel_plan ?= {
+			add_companion = scope:elf_1
+			add_companion = scope:elf_2
+		}
+	}
+	option = { 		
+		name = elven.1811.a
+		show_as_tooltip = {
+		}
+	}
+}
+
+elven.1812 = { # NON-ROYAL COURT EVENT | Elrond recieves Maglor in his court
+	content_source = realms
+	type = character_event
+	title = elven.1812.t
+	desc = elven.1812.desc
+	type = court_event
+	theme = realm
+	override_sound = { reference = event:/SFX/Events/Themes/sfx_event_theme_type_generic }
+	immediate = {
+		if = {
+			limit = { character:linefinwe27 = { is_alive = yes } }
+			character:linefinwe27 = { save_scope_as = elf_1 }
+		}
+		else = {
+			create_character = {
+				template = noldor_feanorian
+				employer = title:c_imladris.holder
+				save_scope_as = elf_1
+			}
+		}
+		if = {
+			limit = { character:lineofglorfindel = { is_alive = yes } }
+			character:lineofglorfindel = { save_scope_as = elf_2 }
+		}
+		else = {
+			create_character = {
+				template = noldor_feanorian
+				employer = title:c_imladris.holder
+				save_scope_as = elf_2
+			}
+		}
+		
+		root.current_travel_plan ?= {
+			add_companion = scope:elf_1
+			add_companion = scope:elf_2
+		}
+	}
+	option = { 		
+		name = elven.1812.a
+		
 	}
 }
 
