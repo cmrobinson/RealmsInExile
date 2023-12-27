@@ -5374,6 +5374,7 @@ maglor_shatter_realm_cb = {
 			add_claim_on_loss = yes
 		}
 
+		# Vassals of duke/count tier are added to list
 		every_in_list = {
 			list = target_titles
 			
@@ -5429,6 +5430,7 @@ maglor_shatter_realm_cb = {
 			### Converts holder to different faith
 			every_in_list = {
 				list = affected_rulers
+				limit = { any_held_title = { title_province = { geographical_region = middleearth_haradwaith_near } } }
 				random_list = {
 					67 = {} # Stay same faith
 					33 = {
@@ -5440,6 +5442,7 @@ maglor_shatter_realm_cb = {
 			### Converts county to different faith
 			every_in_list = {
 				list = target_titles
+				limit = { title_province = { geographical_region = middleearth_haradwaith_near } }
 				
 				every_de_jure_county = {
 					random_list = {
@@ -5452,16 +5455,21 @@ maglor_shatter_realm_cb = {
 			}
 		}
 
-		### last effect, otherwise title is destroyed too early for other effect to take place
-		every_in_list = {
+		random_in_list = {
 			list = target_titles
-			save_scope_as = targeted_title
+			save_scope_as = targeted_top_title
+		}
+		custom_tooltip = {
+			text = "maglor_shatter_realm_cb_victory_tt"
 			scope:defender = {
 				every_held_title = {
-					this.tier = scope:targeted_title.tier
-					holder = { destroy_title = this }
+					limit = {
+						tier = scope:targeted_top_title.tier
+					}
+					holder = { # Destroy that title
+						destroy_title = prev
+					}
 				}
-				holder = { destroy_title = prev }
 			}
 		}
 	}
