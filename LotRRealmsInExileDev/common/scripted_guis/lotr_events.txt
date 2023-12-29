@@ -1,4 +1,4 @@
-maglor_umbar_raze_sgui = {
+﻿maglor_umbar_raze_sgui = {
 	effect = {
 		if = {
 			limit = {
