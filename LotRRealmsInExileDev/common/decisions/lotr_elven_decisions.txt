@@ -1597,23 +1597,23 @@ decision_reclamation_of_moria = {
 	
 	# IS_VALID
 	is_valid = {
-		NOT = {
-			title:k_khazad_dum = {
-				any_in_de_jure_hierarchy = {
-					culture = {
-						is_orc_culture = yes
-					}
-				}	
-			}
-		}
-
-		NOT = {
-			title:k_high_pass = {
-				any_in_de_jure_hierarchy = {
-					culture = {
-						is_orc_culture = yes
-					}
-				}	
+		custom_tooltip = {
+			text = decision_reclamation_of_moria_valid_tt
+			NOR = {
+				title:k_khazad_dum = {
+					any_in_de_jure_hierarchy = {
+						culture = {
+							is_orc_culture = yes
+						}
+					}	
+				}
+				title:k_high_pass = {
+					any_in_de_jure_hierarchy = {
+						culture = {
+							is_orc_culture = yes
+						}
+					}	
+				}
 			}
 		}
 	}
@@ -1625,6 +1625,107 @@ decision_reclamation_of_moria = {
 	
 	# EFFECT 
 	effect = { # Give Dwarf back the titles 
+		if = { # Check for Durin dwarf in Moria
+			limit = { 
+				title:k_khazad_dum = {
+					any_in_de_jure_hierarchy = {
+						holder = {
+							culture = { is_dwarf_culture = yes }
+							dynasty = dynasty:dynasty_durin	
+						}
+						holder = { save_temporary_scope_as = dwarf_in_moria }
+					}	
+				}
+			}
+			custom_tooltip = { # Works
+				text = "decision_reclamation_of_moria_tt.2"
+				transfer_central_moria_effect = yes
+			}
+		}
+		else_if = { # Check for Durin dwarf in Erebor/Iron Hills
+			limit = {
+				OR = {
+					title:e_iron_mountains = {
+						any_in_de_jure_hierarchy = {
+							holder = {
+								culture = { is_dwarf_culture = yes }
+								dynasty = dynasty:dynasty_durin		
+							}
+							holder = { save_temporary_scope_as = dwarf_in_moria }
+						}	
+					}
+				}
+			}
+			custom_tooltip = { # Works
+				text = "decision_reclamation_of_moria_tt.2"
+				transfer_central_moria_effect = yes
+			}
+		}
+		else_if = { # Check for random dwarf in Moria
+			limit = {
+				title:k_khazad_dum = {
+					any_in_de_jure_hierarchy = {
+						holder = { culture = { is_dwarf_culture = yes } }
+						holder = { save_temporary_scope_as = dwarf_in_moria }
+					}	
+				}
+			}
+			custom_tooltip = { # Works
+				text = "decision_reclamation_of_moria_tt.1"
+				transfer_central_moria_effect = yes
+			}
+		}
+		else_if = { # Check for Broadbeam dwarf in BM
+			limit = {
+				title:e_blue_mountains = {
+					any_in_de_jure_hierarchy = {
+						holder = {
+							culture = { is_dwarf_culture = yes }
+							dynasty = dynasty:dynasty_dwalin
+						}
+						holder = { save_temporary_scope_as = dwarf_in_moria }
+					}	
+				}
+			}
+			custom_tooltip = { # Works
+				text = "decision_reclamation_of_moria_tt.4"
+				transfer_central_moria_effect = yes
+			}
+		}
+		else_if = { # Check for noble dwarf in Iron Hills
+			limit = {
+				OR = {
+					title:e_iron_mountains = {
+						any_in_de_jure_hierarchy = {
+							tier = tier_duchy
+							holder = { culture = { is_dwarf_culture = yes } }
+							holder = { save_temporary_scope_as = dwarf_in_moria }
+						}	
+					}
+				}
+			}
+			custom_tooltip = { # Works
+				text = "decision_reclamation_of_moria_tt.3"
+				transfer_central_moria_effect = yes
+			}
+		}
+		else = { # Check for noble dwarf in BM
+			if = {
+				limit = {
+					title:e_blue_mountains = {
+						any_in_de_jure_hierarchy = {
+							tier = tier_duchy
+							holder = { culture = { is_dwarf_culture = yes } }
+							holder = { save_temporary_scope_as = dwarf_in_moria }
+						}	
+					}
+				}
+				custom_tooltip = { # Works
+					text = "decision_reclamation_of_moria_tt.4"
+					transfer_central_moria_effect = yes
+				}
+			}
+		}
 
 		trigger_event = {
 			id = elven.1816

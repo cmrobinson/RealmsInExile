@@ -904,7 +904,6 @@ elven.1601 = { # Shield of the Free Peoples starting event | Go to Eregion
 			on_arrival_event = elven.1605
 			return_trip = no
 			players_use_planner = no
-			on_arrival_on_action = maglor_khazad_dum_on_action
 			on_arrival_destinations = all
 		}
 	}
@@ -2538,12 +2537,12 @@ elven.1810 = { # Maglor goes to Rivendell to seek Elrond and Glorfindel's aid
 	theme = family
 	right_portrait = {
 		character = scope:elf_1
-		animation = marshal
+		animation = personality_honorable
 	}
 
 	left_portrait = {
 		character = scope:elf_2
-		animation = personality_bold
+		animation = marshal
 	}
 
 	override_background = {
@@ -2585,7 +2584,7 @@ elven.1810 = { # Maglor goes to Rivendell to seek Elrond and Glorfindel's aid
 	}
 }
 
-elven.1811 = { # ROYAL COURT EVENT  | Elrond recieves Maglor in his court
+ elven.1811  = { # ROYAL COURT EVENT | Elrond recieves Maglor in his court
 	content_source = realms
 	type = character_event
 	title = elven.1811.t
@@ -2638,9 +2637,27 @@ elven.1811 = { # ROYAL COURT EVENT  | Elrond recieves Maglor in his court
 			add_companion = scope:elf_2
 		}
 	}
-	option = { 		
+	option = { # Go with Maglor to face Balrog
 		name = elven.1811.a
-		show_as_tooltip = {
+
+		ai_chance = {
+			base = 100
+		}
+	}
+	option = { # Choose to send another elf
+		name = elven.1811.b
+		create_character = {
+			template = noldor_feanorian
+			employer = title:c_imladris.holder
+			save_scope_as = elf_1
+		}
+		current_travel_plan = { save_scope_as = travel_to_balrog }
+		scope:travel_to_balrog = { add_companion = scope:elf_1 }
+		scope:travel_to_balrog = { cancel_travel_plan = yes }
+	
+
+		ai_chance = {
+			base = 0
 		}
 	}
 }
@@ -2648,48 +2665,44 @@ elven.1811 = { # ROYAL COURT EVENT  | Elrond recieves Maglor in his court
 elven.1812 = { # NON-ROYAL COURT EVENT | Elrond recieves Maglor in his court
 	content_source = realms
 	type = character_event
-	title = elven.1812.t
-	desc = elven.1812.desc
+	title = elven.1811.t
+	desc = elven.1811.desc
 	type = court_event
 	theme = realm
 	override_sound = { reference = event:/SFX/Events/Themes/sfx_event_theme_type_generic }
 	immediate = {
-		if = {
-			limit = { character:linefinwe27 = { is_alive = yes } }
-			character:linefinwe27 = { save_scope_as = elf_1 }
-		}
-		else = {
-			create_character = {
-				template = noldor_feanorian
-				employer = title:c_imladris.holder
-				save_scope_as = elf_1
-			}
-		}
-		if = {
-			limit = { character:lineofglorfindel = { is_alive = yes } }
-			character:lineofglorfindel = { save_scope_as = elf_2 }
-		}
-		else = {
-			create_character = {
-				template = noldor_feanorian
-				employer = title:c_imladris.holder
-				save_scope_as = elf_2
-			}
-		}
-		
-		root.current_travel_plan ?= {
-			add_companion = scope:elf_1
-			add_companion = scope:elf_2
+		create_character = {
+			template = noldor_feanorian
+			employer = title:c_imladris.holder
+			save_scope_as = elf_1
 		}
 	}
-	option = { 		
-		name = elven.1812.a
-		
+	option = { # Go with Maglor to face Balrog
+		name = elven.1811.a
+
+		ai_chance = {
+			base = 100
+		}
+	}
+	option = { # Choose to send another elf
+		name = elven.1811.b
+		current_travel_plan = { save_scope_as = travel_to_balrog }
+		scope:travel_to_balrog = { add_companion = scope:elf_1 }
+		start_travel_plan = {
+			destination = capital_province
+			return_trip = no
+			players_use_planner = no
+			save_scope_as = return_trip
+		}
+		ai_chance = {
+			base = 0
+		}
 	}
 }
 
 scripted_effect maglor_wins_balrog = {
 	set_variable = unlock_underground_cb
+	custom_tooltip = elven.1815.cb_unlock
 	send_interface_toast = {
 		title = elven.1815.toast
 
@@ -2772,7 +2785,6 @@ elven.1815 = { # Fight Balrog
 						list = elf_characters
 						death = { death_reason = death_durins_bane }
 					}
-					root = { death = { death_reason = death_durins_bane } }
 				}
 			}
 			title:c_ost_in_edhil.holder = {
@@ -2820,7 +2832,6 @@ elven.1815 = { # Fight Balrog
 						list = elf_characters
 						death = { death_reason = death_durins_bane }
 					}
-					root = { death = { death_reason = death_durins_bane } }
 				}
 			}
 			title:c_ost_in_edhil.holder = {
@@ -2840,7 +2851,6 @@ elven.1815 = { # Fight Balrog
 						list = elf_characters
 						death = { death_reason = death_durins_bane }
 					}
-					root = { death = { death_reason = death_durins_bane } }
 				}
 			}
 			title:c_ost_in_edhil.holder = {
@@ -2868,29 +2878,20 @@ elven.1816 = { # Hidden Event to recieve dwarven troops
 	}
 
 	immediate = {
-
-		if = {
-			limit = { 
-				NOT = { has_variable = maglor_khazad_dum_event_troops }
-			}
-			set_variable = {
-				name = maglor_khazad_dum_event_troops
-				value = 1
-			}
-		}
-		else = {
-			change_variable = {
-				name = maglor_khazad_dum_event_troops
-				add = 1
-			}
+		increase_variable = {
+			NAME = maglor_khazad_dum_event_troops
+			AMOUNT = 1
 		}
 
 		send_interface_toast = {
 			title = elven.1816.toast
 
-			if = { # Check if Longbeard
+			if = { # Longbeard
 				limit = {
-					title:k_khazad_dum.holder.culture = culture:longbeards 
+					OR = {
+						title:k_khazad_dum.holder.culture = culture:longbeards
+						title:k_khazad_dum.holder.culture = { any_parent_culture_or_above = { this = culture:longbeards } }
+					}
 					title:k_khazad_dum.holder = { is_dwarf = yes }
 				}
 				random_list = {
@@ -2953,66 +2954,138 @@ elven.1816 = { # Hidden Event to recieve dwarven troops
 					}
 				}
 			}
-			else = { # Otherwise has to be Broadbeam
-				if = {
-					limit = { title:k_khazad_dum.holder = { is_dwarf = yes } }
-					random_list = {
-						1 = { # Special Firebeard unit
-							spawn_army = {
-								name = elven.1816.toast
-								men_at_arms = {
-									type = firebeard_monsters
-									stacks = 1
-								}
-								location = root.capital_province
+			else_if = { # Broadbeam
+				limit = {
+					OR = {
+						title:k_khazad_dum.holder.culture = culture:broadbeams
+						title:k_khazad_dum.holder.culture = { any_parent_culture_or_above = { this = culture:broadbeams } }
+					}
+					title:k_khazad_dum.holder = { is_dwarf = yes }
+				}
+				random_list = {
+					1 = { # Special Firebeard unit
+						spawn_army = {
+							name = elven.1816.toast
+							men_at_arms = {
+								type = firebeard_monsters
+								stacks = 1
 							}
+							location = root.capital_province
 						}
-						5 = { # Skirmishers
-							spawn_army = {
-								name = elven.1816.toast
-								men_at_arms = {
-									type = firebeard_skirmishers
-									stacks = 1
-								}
-								location = root.capital_province
+					}
+					5 = { # Skirmishers
+						spawn_army = {
+							name = elven.1816.toast
+							men_at_arms = {
+								type = firebeard_skirmishers
+								stacks = 1
 							}
+							location = root.capital_province
 						}
-						5 = { # Archers
-							spawn_army = {
-								name = elven.1816.toast
-								men_at_arms = {
-									type = firebeard_archers
-									stacks = 1
-								}
-								location = root.capital_province
+					}
+					5 = { # Archers
+						spawn_army = {
+							name = elven.1816.toast
+							men_at_arms = {
+								type = firebeard_archers
+								stacks = 1
 							}
+							location = root.capital_province
 						}
-						5 = { # Heavy Infantry
-							spawn_army = {
-								name = elven.1816.toast
-								men_at_arms = {
-									type = firebeard_heavy_infantry
-									stacks = 1
-								}
-								location = root.capital_province
+					}
+					5 = { # Heavy Infantry
+						spawn_army = {
+						name = elven.1816.toast
+							men_at_arms = {
+								type = firebeard_heavy_infantry
+								stacks = 1
 							}
+							location = root.capital_province
 						}
-						5 = { # Pikemen
-							spawn_army = {
-								name = elven.1816.toast
-								men_at_arms = {
-									type = firebeard_pikemen
-									stacks = 1
-								}
-								location = root.capital_province
+					}
+					5 = { # Pikemen
+						spawn_army = {
+							name = elven.1816.toast
+							men_at_arms = {
+								type = firebeard_pikemen
+								stacks = 1
 							}
+							location = root.capital_province
 						}
-						25 = { # Levies
-							spawn_army = {
-								name = elven.1816.toast
-								levies = 100
-								location = root.capital_province
+					}
+					25 = { # Levies
+						spawn_army = {
+							name = elven.1816.toast
+							levies = 100
+							location = root.capital_province
+						}
+					}
+				}
+			}
+			else_if = { # Firebeard
+				limit = {
+					OR = {
+						title:k_khazad_dum.holder.culture = culture:firebeards
+						title:k_khazad_dum.holder.culture = { any_parent_culture_or_above = { this = culture:firebeards } }
+					}
+					title:k_khazad_dum.holder = { is_dwarf = yes }
+				}
+				random_list = {
+					1 = { # Special Firebeard unit
+						spawn_army = {
+							name = elven.1816.toast
+							men_at_arms = {
+								type = firebeard_monsters
+								stacks = 1
 							}
+							location = root.capital_province
+						}
+					}
+					5 = { # Skirmishers
+						spawn_army = {
+							name = elven.1816.toast
+							men_at_arms = {
+								type = firebeard_skirmishers
+								stacks = 1
+							}
+							location = root.capital_province
+						}
+					}
+					5 = { # Archers
+						spawn_army = {
+							name = elven.1816.toast
+							men_at_arms = {
+								type = firebeard_archers
+								stacks = 1
+							}
+							location = root.capital_province
+						}
+					}
+					5 = { # Heavy Infantry
+						spawn_army = {
+						name = elven.1816.toast
+							men_at_arms = {
+								type = firebeard_heavy_infantry
+								stacks = 1
+							}
+							location = root.capital_province
+						}
+					}
+					5 = { # Pikemen
+						spawn_army = {
+							name = elven.1816.toast
+							men_at_arms = {
+								type = firebeard_pikemen
+								stacks = 1
+							}
+							location = root.capital_province
+						}
+					}
+					25 = { # Levies
+						spawn_army = {
+							name = elven.1816.toast
+							levies = 100
+							location = root.capital_province
 						}
 					}
 				}
@@ -3045,6 +3118,30 @@ elven.1817 = { # Event if Maglor dies
 				}
 			}
 			resolve_title_and_vassal_change = scope:change
+		}
+	}
+}
+
+elven.1820 = {
+	content_source = realms
+	type = character_event
+	title = elven.1820.t
+	desc = elven.1820.desc
+	type = court_event
+	theme = realm
+	override_sound = { reference = event:/SFX/Events/Themes/sfx_event_theme_type_generic }
+	immediate = {
+		create_character = {
+			template = noldor_feanorian
+			employer = title:c_imladris.holder
+			save_scope_as = elf_1
+		}
+	}
+	option = { # event to highlight CB unlocked
+		name = elven.1820.a
+
+		ai_chance = {
+			base = 100
 		}
 	}
 }

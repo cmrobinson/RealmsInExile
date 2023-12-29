@@ -1,6 +1,6 @@
 ﻿### DWARVEN EFFECTS ###
 
-### Reincarnation Effects
+## Reincarnation Effects
 
 create_possible_dorfdad_effect = {
 	dynasty.var:dorfdad ?= { save_scope_as = my_dorfdad }
@@ -324,4 +324,70 @@ dorfdad_personality_effect = { # Add personality traits (based on scope:my_dorfd
 		limit = { scope:my_dorfdad = { has_trait = eccentric } }
 		add_trait = eccentric
 	}
+}
+
+transfer_moria_duchy_titles_effect = {
+	
+
+	if = {
+		limit = { $TITLE$.holder = { is_dwarf = yes } }
+		create_title_and_vassal_change = {
+			type = swear_fealty
+			save_scope_as = change
+			add_claim_on_loss = no
+		}
+		$TITLE$.holder = {
+			change_liege = {
+				liege = scope:dwarf_in_moria
+				change = scope:change
+			}
+		}
+	}
+	else = {
+		create_title_and_vassal_change = {
+			type = granted
+			save_scope_as = change
+			add_claim_on_loss = no
+		}
+		$TITLE$ = {
+			change_title_holder = {
+				holder = scope:dwarf_in_moria
+				change = scope:change
+			}
+		}
+	}
+
+	resolve_title_and_vassal_change = scope:change
+}
+
+transfer_central_moria_effect = {
+	title:d_zirakzigil = { moria_wastelands_to_delvings_effect = yes }
+	title:d_barazinbar = { moria_wastelands_to_delvings_effect = yes }
+	title:d_bundushathur = { moria_wastelands_to_delvings_effect = yes }
+	title:k_khazad_dum = { transfer_moria_if_cleansed_effect = { TITLE = this } }
+}
+
+moria_wastelands_to_delvings_effect = {
+	every_de_jure_county = {
+		transfer_moria_if_cleansed_effect = { TITLE = this }
+		every_county_province = { set_holding_type = dwarven_holding }
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						culture = { has_cultural_pillar = heritage_longbeard }
+						culture = { has_cultural_pillar = heritage_firebeard }
+						culture = { has_cultural_pillar = heritage_broadbeam }
+						culture = { has_cultural_pillar = heritage_ironfist }
+						culture = { has_cultural_pillar = heritage_stiffbeard }
+						culture = { has_cultural_pillar = heritage_blacklock }
+						culture = { has_cultural_pillar = heritage_stonefoot }
+					}
+				}
+			}
+			set_county_culture = scope:dwarf_in_moria.culture
+		}
+		set_county_faith = scope:dwarf_in_moria.faith
+	}
+	transfer_moria_if_cleansed_effect = { TITLE = this }
 }

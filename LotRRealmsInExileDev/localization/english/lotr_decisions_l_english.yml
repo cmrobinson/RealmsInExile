@@ -118,12 +118,15 @@
 
   decision_reclamation_of_moria:0 "Reclamation of Khazad-dum"
   decision_reclamation_of_moria_tooltip:0 "Tooltip"
+  decision_reclamation_of_moria_valid_tt:0 "There are no [goblins|E] or [orcs|E] left in either the [GetTitleByKey('k_khazad_dum').GetName] or [GetTitleByKey('k_high_pass').GetName]"
   decision_reclamation_of_moria_desc:0 "Description"
   decision_reclamation_of_moria_confirm:0 "Confirm"
-  decision_reclamation_of_moria_tt.1:0 "[new_moria_ruler.GetNameNoTooltip] recieves the duchies of \n$BULLET_WITH_TAB$[GetTitleByKey('d_zirakzigil').GetName]\n$BULLET_WITH_TAB$[GetTitleByKey('d_barazinbar').GetName]\n$BULLET_WITH_TAB$[GetTitleByKey('d_bundushathur').GetName]"
-  decision_reclamation_of_moria_tt.2:0 "A family member of the Durin dynasty, [new_moria_ruler.GetNameNoTooltip], recieves \n$BULLET_WITH_TAB$[GetTitleByKey('d_zirakzigil').GetName]\n$BULLET_WITH_TAB$[GetTitleByKey('d_barazinbar').GetName]\n$BULLET_WITH_TAB$[GetTitleByKey('d_bundushathur').GetName]"
-  decision_reclamation_of_moria_tt.3:0 "[new_moria_ruler.GetName], a dwarf from the reputed dynasty of [new_moria_ruler.GetDynastyName] in the Iron Mountains recieves\n$BULLET_WITH_TAB$[GetTitleByKey('d_zirakzigil').GetName]\n$BULLET_WITH_TAB$[GetTitleByKey('d_barazinbar').GetName]\n$BULLET_WITH_TAB$[GetTitleByKey('d_bundushathur').GetName]"
-  decision_reclamation_of_moria_tt.4:0 "[new_moria_ruler.GetName], a dwarf from the reputed dynasty of [new_moria_ruler.GetDynastyName] in the Blue Mountains recieves\n$BULLET_WITH_TAB$[GetTitleByKey('d_zirakzigil').GetName]\n$BULLET_WITH_TAB$[GetTitleByKey('d_barazinbar').GetName]\n$BULLET_WITH_TAB$[GetTitleByKey('d_bundushathur').GetName]"
+  decision_reclamation_of_moria_title_tt:0 "\n$BULLET_WITH_TAB$[GetTitleByKey('k_khazad_dum').GetName]\n$BULLET_WITH_TAB$[GetTitleByKey('d_zirakzigil').GetName]\n$BULLET_WITH_TAB$[GetTitleByKey('d_barazinbar').GetName]\n$BULLET_WITH_TAB$[GetTitleByKey('d_bundushathur').GetName]"
+  decision_reclamation_of_moria_troops_tt:0 "You forge an [alliance|E] with the [dwarves|E] for the [battle|E] against [sauroncharacter|E] while periodically recieving troops associated with the [dwarf_in_moria.GetCulture.GetName] [culture|E]\n"
+  decision_reclamation_of_moria_tt.1:0 "$decision_reclamation_of_moria_troops_tt$[dwarf_in_moria.GetName] recieves the duchies of $decision_reclamation_of_moria_title_tt$"
+  decision_reclamation_of_moria_tt.2:0 "$decision_reclamation_of_moria_troops_tt$A family member of the [dwarf_in_moria.GetDynastyName] dynasty, [dwarf_in_moria.GetName], recieves $decision_reclamation_of_moria_title_tt$"
+  decision_reclamation_of_moria_tt.3:0 "$decision_reclamation_of_moria_troops_tt$[dwarf_in_moria.GetName], a dwarf from the reputed dynasty of [dwarf_in_moria.GetDynastyName] in the Iron Mountains recieves$decision_reclamation_of_moria_title_tt$"
+  decision_reclamation_of_moria_tt.4:0 "$decision_reclamation_of_moria_troops_tt$[dwarf_in_moria.GetName], a dwarf from the reputed dynasty of [dwarf_in_moria.GetDynastyName] in the Blue Mountains recieves$decision_reclamation_of_moria_title_tt$"
 
 
  ###########################

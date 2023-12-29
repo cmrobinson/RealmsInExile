@@ -194,12 +194,22 @@
   elven.1810.desc:0 "VECTOR - Placeholder"
   elven.1810.a:0 "Maglor seeks help from Elrond/Glorfindel"
 
+  elven.1811.t:0 "VECTOR - Placeholder"
+  elven.1811.desc:0 "VECTOR - Placeholder"
+  elven.1811.a:0 "VECTOR - Placeholder"
+  elven.1811.b:0 "VECTOR - Placeholder"
+
   elven.1815.t:0 "VECTOR - Placeholder"
   elven.1815.desc:0 "VECTOR - Placeholder"
   elven.1815.a:0 "Maglor fights the Balrog"
   elven.1815.toast:0 "You slay Durin's Bane."
+  elven.1815.cb_unlock:0 "Unlock the 'Purge Underground Regions' [casus_belli|E]"
 
   elven.1816.toast:0 "Dwarven troops from Khazad-dum"
+
+  elven.1820.t:0 "VECTOR - Placeholder"
+  elven.1820.desc:0 "VECTOR - Placeholder"
+  elven.1820.a:0 "VECTOR - Placeholder"
 
  ### Elven artifact burns evil characters
  
