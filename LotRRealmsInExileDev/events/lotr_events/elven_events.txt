@@ -1941,16 +1941,19 @@ elven.1735 = { # Dynasty Rises in Amrun | Demands sent to current Amrun ruler
 	}
 
 	immediate = {
+		# Adding all county tier titles to list
 		every_held_title = {
 			limit = { tier = tier_county }
 			add_to_list = target_titles_county
 		}
 
+		# Adding all duchy tier titles to a list (if any exist)
 		every_held_title = {	
 			limit = { tier = tier_duchy }
 			add_to_list = target_titles_duchy
 		}
 
+		# Creating Nadi-Manye peasant leader
 		create_character = {
 			template = maglor_nadi_manye_leader
 			location = root.capital_province
@@ -1958,26 +1961,29 @@ elven.1735 = { # Dynasty Rises in Amrun | Demands sent to current Amrun ruler
 		}
 		scope:nadi_manye_leader = { set_variable = nadi_manye_war_leader }
 
-		title:c_amrun = {
-			change_county_control = medium_county_control_loss
-			title_create_faction = {
-				type = peasant_faction
-				target = title:c_amrun.holder
-			}
-			holder = {
-				every_targeting_faction = {  # go through all existing factions
-					if = {
-						limit = { any_faction_county_member = { this = title:c_amrun } }
-						save_scope_as = amrun_peasant_faction
+		
+		hidden_effect = {
+			title:c_amrun = {
+				change_county_control = medium_county_control_loss
+				title_create_faction = {
+					type = peasant_faction
+					target = title:c_amrun.holder
+				}
+				holder = {
+					every_targeting_faction = {  # go through all existing factions
+						if = {
+							limit = { any_faction_county_member = { this = title:c_amrun } }
+							save_scope_as = amrun_peasant_faction
+						}
 					}
 				}
 			}
-		}
-
-		scope:amrun_peasant_faction = {
-			title:c_amrun = { save_scope_as = peasant_county }
-			scope:nadi_manye_leader = { save_scope_as = peasant_leader }
-			setup_nadi_manye_leader_effect = yes
+			scope:amrun_peasant_faction = {
+				title:c_amrun = { save_scope_as = peasant_county }
+				scope:nadi_manye_leader = { save_scope_as = peasant_leader }
+				setup_nadi_manye_leader_effect = yes
+				add_faction_discontent = 100
+			}
 		}
 	}
 
@@ -2077,12 +2083,15 @@ elven.1735 = { # Dynasty Rises in Amrun | Demands sent to current Amrun ruler
 	option = { # Resist against dynasty
 		name = elven.1735.c
 
+		# Make the faction declare war on the person holding c_amrun
 		if = {
 			limit = { exists = scope:amrun_peasant_faction }
 			title:c_amrun = { save_scope_as = peasant_county }
 			scope:nadi_manye_leader = { save_scope_as = peasant_leader }
+
 			scope:amrun_peasant_faction = {
 				faction_start_war = { title = scope:peasant_county }
+				
 				faction_spawn_member_county_armies_effect = {
 					FACTION = scope:amrun_peasant_faction
 					ARMY_OWNER = scope:nadi_manye_leader
@@ -2091,8 +2100,10 @@ elven.1735 = { # Dynasty Rises in Amrun | Demands sent to current Amrun ruler
 			}
 		}
 
+		# For use in later events
 		scope:nadi_manye_leader = { random_character_war = { save_scope_as = harad_special_war } }
 
+		# Call Maglor to war
 		character:linefinwe11 = {
 			trigger_event = {
 				id = elven.1740
