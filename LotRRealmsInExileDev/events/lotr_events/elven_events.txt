@@ -1069,6 +1069,8 @@ elven.1605 = { # Hidden event | Swap titles for Eregion
 				holder = root
 				change = scope:title_change
 			}
+			set_county_culture = root.culture
+			set_county_faith = root.faith
 		}
 
 		if = {
@@ -1093,6 +1095,8 @@ elven.1605 = { # Hidden event | Swap titles for Eregion
 					holder = root
 					change = scope:title_change
 				}
+				set_county_culture = root.culture
+				set_county_faith = root.faith
 			}
 		}
 
@@ -1120,6 +1124,8 @@ elven.1605 = { # Hidden event | Swap titles for Eregion
 					holder = root
 					change = scope:title_change
 				}
+				set_county_culture = root.culture
+				set_county_faith = root.faith
 			}
 			get_title = title:d_eregion
 		}
@@ -1127,20 +1133,7 @@ elven.1605 = { # Hidden event | Swap titles for Eregion
 		becomes_independent = { change = scope:title_change }
 
 		resolve_title_and_vassal_change = scope:title_change
-
-		title:c_ost_in_edhil = {
-			set_county_culture = root.culture
-			set_county_faith = root.faith
-		}
-		title:c_arabrand = {
-			set_county_culture = root.culture
-			set_county_faith = root.faith
-		}
-		title:c_sirannon = {
-			set_county_culture = root.culture
-			set_county_faith = root.faith
-		}
-
+		
 		## Grant Himring to Maglor Friend
 
 		create_title_and_vassal_change = {
