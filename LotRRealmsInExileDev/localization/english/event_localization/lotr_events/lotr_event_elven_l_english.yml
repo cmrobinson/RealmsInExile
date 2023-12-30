@@ -211,6 +211,16 @@
   elven.1820.desc:0 "VECTOR - Placeholder"
   elven.1820.a:0 "VECTOR - Placeholder"
 
+  elven.1830.t:0 "VECTOR - Placeholder"
+  elven.1830.desc:0 "VECTOR - Placeholder"
+  elven.1830.a:0 "VECTOR - Placeholder"
+  elven.1830.b:0 "VECTOR - Placeholder"
+  elven.1830.c:0 "VECTOR - Placeholder"
+  elven.1830.a.tt:0 "Give the titles in [GetTitleByKey('k_amon_lanc').GetNameNoTier] to [GetTitleByKey('k_lothlorien').GetHolder.GetName]"
+  elven.1830.b.tt:0 "Give the titles in [GetTitleByKey('k_amon_lanc').GetNameNoTier] to [GetTitleByKey('k_lasgalen').GetHolder.GetName]"
+  elven.1830.c.tt:0 "Keep the titles in [GetTitleByKey('k_amon_lanc').GetNameNoTier] to yourself"
+  
+
  ### Elven artifact burns evil characters
  
  elven.9999.t:0 "The Work of the Elves"

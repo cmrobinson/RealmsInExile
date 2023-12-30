@@ -327,8 +327,6 @@ dorfdad_personality_effect = { # Add personality traits (based on scope:my_dorfd
 }
 
 transfer_moria_duchy_titles_effect = {
-	
-
 	if = {
 		limit = { $TITLE$.holder = { is_dwarf = yes } }
 		create_title_and_vassal_change = {
@@ -364,12 +362,12 @@ transfer_central_moria_effect = {
 	title:d_zirakzigil = { moria_wastelands_to_delvings_effect = yes }
 	title:d_barazinbar = { moria_wastelands_to_delvings_effect = yes }
 	title:d_bundushathur = { moria_wastelands_to_delvings_effect = yes }
-	title:k_khazad_dum = { transfer_moria_if_cleansed_effect = { TITLE = this } }
+	title:k_khazad_dum = { transfer_moria_duchy_titles_effect = { TITLE = this } }
 }
 
 moria_wastelands_to_delvings_effect = {
 	every_de_jure_county = {
-		transfer_moria_if_cleansed_effect = { TITLE = this }
+		transfer_moria_duchy_titles_effect = { TITLE = this }
 		every_county_province = { set_holding_type = dwarven_holding }
 		if = {
 			limit = {
@@ -389,5 +387,5 @@ moria_wastelands_to_delvings_effect = {
 		}
 		set_county_faith = scope:dwarf_in_moria.faith
 	}
-	transfer_moria_if_cleansed_effect = { TITLE = this }
+	transfer_moria_duchy_titles_effect = { TITLE = this }
 }

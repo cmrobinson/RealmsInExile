@@ -3544,6 +3544,12 @@ destroy_dol_guldur_cb = {
 			}
 			set_employer = character:lineofsauron
 		}
+
+		if = { # Check if its maglor 
+			limit = { scope:attacker = { has_variable = war_against_DG } }
+			scope:attacker = { remove_variable = war_against_DG }
+			scope:attacker = { trigger_event = elven.1830 }
+		}
 	}
 
 	on_white_peace_desc = {

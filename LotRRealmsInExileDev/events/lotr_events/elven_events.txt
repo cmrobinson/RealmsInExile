@@ -682,7 +682,7 @@ elven.1000 = { # Maglor Introduction
 	theme = stewardship_wealth_focus
 	right_portrait = {
 		character = root
-		animation = disgust
+		animation = personality_proud
 	}
 	override_background = { reference = elven_town }
 
@@ -727,6 +727,16 @@ elven.1000 = { # Maglor Introduction
 			modifier = { # Game Rule
 				has_game_rule = random_ai_behavior
 				add = 50
+			}
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			add_truce_both_ways = { 
+				character = character:lineofcirdan
+				years = 3
+				name = TRUCE_GRANT_INDEPENDENCE
 			}
 		}
 	}
@@ -2945,7 +2955,7 @@ elven.1816 = { # Hidden Event to recieve dwarven troops
 							location = root.capital_province
 						}
 					}
-					25 = { # Levies
+					5 = { # Levies
 						spawn_army = {
 							name = elven.1816.toast
 							levies = 100
@@ -3013,7 +3023,7 @@ elven.1816 = { # Hidden Event to recieve dwarven troops
 							location = root.capital_province
 						}
 					}
-					25 = { # Levies
+					5 = { # Levies
 						spawn_army = {
 							name = elven.1816.toast
 							levies = 100
@@ -3081,7 +3091,7 @@ elven.1816 = { # Hidden Event to recieve dwarven troops
 							location = root.capital_province
 						}
 					}
-					25 = { # Levies
+					5 = { # Levies
 						spawn_army = {
 							name = elven.1816.toast
 							levies = 100
@@ -3142,6 +3152,186 @@ elven.1820 = {
 
 		ai_chance = {
 			base = 100
+		}
+	}
+}
+
+scripted_effect give_amon_lanc_to_elf = {
+	create_title_and_vassal_change = {
+		type = granted
+		save_scope_as = title_change
+		add_claim_on_loss = no
+	}
+
+	$TITLE$ = {
+		change_title_holder = {
+			holder = $HOLDER$
+			change = scope:title_change
+		}
+	}
+	
+	resolve_title_and_vassal_change = scope:title_change
+}
+
+elven.1830 = {
+	content_source = realms
+	type = character_event
+	title = elven.1830.t
+	desc = elven.1830.desc
+	theme = realm
+
+	override_sound = { reference = event:/SFX/Events/Themes/sfx_event_theme_type_generic }
+
+	right_portrait = {
+		character = title:k_lasgalen.holder
+		animation = personality_bold
+	}
+
+	left_portrait = {
+		character = title:k_lothlorien.holder
+		animation = personality_honorable
+	}
+
+	immediate = {
+		title:k_amon_lanc = {
+			every_de_jure_county = {
+				limit = { holder = root }
+				add_to_list = titles_in_amon_lanc
+			}
+		}
+	}
+
+	option = { # Give lands to Lothlorien ruler
+		name = elven.1830.a
+		custom_tooltip = {
+			text = elven.1830.a.tt
+			every_in_list = {
+				list = titles_in_amon_lanc
+				give_amon_lanc_to_elf = { TITLE = this HOLDER = title:k_lothlorien.holder }
+			}
+		}
+		
+		title:k_lothlorien.holder = {
+			add_opinion = {
+				modifier = respect_opinion
+				target = root 
+				opinion = 30
+			}
+		}
+		title:k_lasgalen.holder = {
+			add_opinion = {
+				modifier = disappointed_opinion
+				target = root 
+				opinion = -15
+			}
+		}
+
+		ai_chance = { base = 50 }
+	}
+	option = { # Give lands to Lasgalen ruler
+		name = elven.1830.b
+		custom_tooltip = {
+			text = elven.1830.b.tt
+			every_in_list = {
+				list = titles_in_amon_lanc
+				give_amon_lanc_to_elf = { TITLE = this HOLDER = title:k_lasgalen.holder }
+			}
+		}
+		title:k_lasgalen.holder = {
+			add_opinion = {
+				modifier = respect_opinion
+				target = root
+				opinion = 30
+			}
+		}
+		title:k_lothlorien.holder = {
+			add_opinion = {
+				modifier = disappointed_opinion
+				target = root 
+				opinion = -15
+			}
+		}
+
+		ai_chance = { base = 50 }
+	}
+
+	option = { # keep lands to self
+		name = elven.1830.c
+		custom_tooltip = elven.1830.c.tt
+
+		title:k_lasgalen.holder = {
+			add_opinion = {
+				modifier = disappointed_opinion
+				target = root 
+				opinion = -15
+			}
+		}
+
+		title:k_lothlorien.holder = {
+			add_opinion = {
+				modifier = disappointed_opinion
+				target = root 
+				opinion = -15
+			}
+		}
+		
+
+		ai_chance = { base = 0 }
+	}
+}
+
+elven.1840 = {
+	content_source = realms
+	type = character_event
+	title = elven.1840.t
+	desc = elven.1840.desc
+	theme = realm
+	override_sound = { reference = event:/SFX/Events/Themes/sfx_event_theme_type_generic }
+	right_portrait = {
+		character = title:k_lasgalen.holder
+		animation = personality_bold
+		trigger = { exists = title:k_lasgalen.holder }
+	}
+	left_portrait = {
+		character = title:k_lothlorien.holder
+		animation = personality_honorable
+		trigger = { exists = title:k_lothlorien.holder }
+	}
+	lower_center_portrait = {
+		character = title:k_khazad_dum.holder
+		animation = personality_honorable
+		trigger = { exists = title:k_khazad_dum.holder }
+	}
+
+	immediate = {
+		if = {
+			limit = { exists = title:k_lasgalen.holder }
+			title:k_lasgalen.holder = { add_to_list = northern_alliance }
+		}
+		if = {
+			limit = { exists = title:k_lothlorien.holder }
+			title:k_lothlorien.holder = { add_to_list = northern_alliance }
+		}
+		if = {
+			limit = { exists = title:k_khazad_dum.holder }
+			title:k_khazad_dum.holder = { add_to_list = northern_alliance }
+		}
+
+		
+	}
+
+	option = {
+		name = elven.1840.a
+		every_in_list = {
+			list = northern_alliance 
+			save_temporary_scope_as = current_char
+			root = {
+				random_character_war = {
+					limit = { using_cb = final_battle_gondor_cb }
+					add_attacker = scope:current_char
+				}
+			}
+			
 		}
 	}
 }

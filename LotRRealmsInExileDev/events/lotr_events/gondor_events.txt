@@ -5540,17 +5540,20 @@ gondor.2102 = { # Victory, Mordor Shattered
 	theme = war
 	left_portrait = {
 		character = root
-		animation = bold
+		animation = personality_bold
 	}
 	override_background = {
 		reference = barad_dur
 	}
 	option = {
 		name = gondor.2102.a
-		dynasty = { 
-			add_dynasty_modifier = {
-				modifier = easy_arnor_settle
-				years = 30
+		if = {
+			limit = { is_human = yes }
+			dynasty = { 
+				add_dynasty_modifier = {
+					modifier = easy_arnor_settle
+					years = 30
+				}
 			}
 		}
 	}
