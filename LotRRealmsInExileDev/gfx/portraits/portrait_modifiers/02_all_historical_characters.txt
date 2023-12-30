@@ -5943,12 +5943,6 @@
 			}
 			accessory = {
 				mode = add	
-				gene = clothes
-				template = fp3_iranian_war_nobility_clothes
-				accessory = m_clothes_sec_northern_war_nob_01_lo
-			}
-			accessory = {
-				mode = add	
 				gene = legwear
 				template = uruk_soldier_legwear
 				accessory = male_legwear_uruk_soldier
