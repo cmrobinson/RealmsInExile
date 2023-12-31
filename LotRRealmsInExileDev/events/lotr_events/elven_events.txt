@@ -1071,6 +1071,7 @@ elven.1605 = { # Hidden event | Swap titles for Eregion
 			}
 			set_county_culture = root.culture
 			set_county_faith = root.faith
+			change_development_level = 5
 		}
 
 		if = {
@@ -1097,6 +1098,7 @@ elven.1605 = { # Hidden event | Swap titles for Eregion
 				}
 				set_county_culture = root.culture
 				set_county_faith = root.faith
+				change_development_level = 5
 			}
 		}
 
@@ -1126,6 +1128,7 @@ elven.1605 = { # Hidden event | Swap titles for Eregion
 				}
 				set_county_culture = root.culture
 				set_county_faith = root.faith
+				change_development_level = 5
 			}
 			get_title = title:d_eregion
 		}
@@ -2867,6 +2870,18 @@ elven.1815 = { # Fight Balrog
 
 	after = {
 		remove_variable = searched_khazad_dum
+		if = {
+			limit = {
+				any_in_list = {
+					list = elf_characters
+					this = title:k_imladris.holder
+				}
+			}
+			trigger_event = {
+				id = elven.1818
+				days = { 15 30 }
+			}
+		}
 	}
 }
 
@@ -3125,6 +3140,90 @@ elven.1817 = { # Event if Maglor dies
 	}
 }
 
+elven.1818 = { # Recieve Noldor elves from Rivendell
+	hidden = yes
+
+	trigger = {
+		trigger_if = {
+			limit = { has_variable = rivendell_troops }
+			var:rivendell_troops < 3
+		}
+	}
+
+	immediate = {
+		increase_variable = {
+			NAME = rivendell_troops
+			AMOUNT = 1
+		}
+
+		if = {
+			limit = { has_variable = lothlorien_given_title }
+			random_list = {
+				1 = {
+					spawn_army = {
+						name = elven.1705.event_troops
+						men_at_arms = {
+							type = noldor_swordsmen
+							stacks = 1
+						}
+						location = root.capital_county.title_province
+						origin = scope:gondor_ruler.capital_county.title_province
+					}
+				}
+				1 = {
+					spawn_army = {
+						name = elven.1705.event_troops
+						men_at_arms = {
+							type = noldor_glaivesmen
+							stacks = 1
+						}
+						location = root.capital_county.title_province
+						origin = scope:gondor_ruler.capital_county.title_province
+					}
+				}
+				1 = {
+					spawn_army = {
+						name = elven.1705.event_troops
+						men_at_arms = {
+							type = noldor_cavalry
+							stacks = 1
+						}
+						location = root.capital_county.title_province
+						origin = scope:gondor_ruler.capital_county.title_province
+					}
+				}
+				1 = {
+					spawn_army = {
+						name = elven.1705.event_troops
+						men_at_arms = {
+							type = noldor_archers
+							stacks = 1
+						}
+						location = root.capital_county.title_province
+						origin = scope:gondor_ruler.capital_county.title_province
+					}
+				}
+				1 = {
+					spawn_army = {
+						name = elven.1705.event_troops
+						men_at_arms = {
+							type = noldor_veterans
+							stacks = 1
+						}
+						location = root.capital_county.title_province
+						origin = scope:gondor_ruler.capital_county.title_province
+					}
+				}
+			}
+		}
+
+		trigger_event = {
+			id = elven.1831
+			days = { 15 30 }
+		}
+	}
+}
+
 elven.1820 = {
 	content_source = realms
 	type = character_event
@@ -3166,7 +3265,7 @@ scripted_effect give_amon_lanc_to_elf = {
 	resolve_title_and_vassal_change = scope:title_change
 }
 
-elven.1830 = {
+elven.1830 = { # Event to give Lothlorien/Lasgalen elf Amon Lanc
 	content_source = realms
 	type = character_event
 	title = elven.1830.t
@@ -3219,6 +3318,8 @@ elven.1830 = {
 			}
 		}
 
+		set_variable = lothlorien_given_title
+
 		ai_chance = { base = 50 }
 	}
 	option = { # Give lands to Lasgalen ruler
@@ -3244,6 +3345,8 @@ elven.1830 = {
 				opinion = -15
 			}
 		}
+
+		set_variable = lasgalen_given_title
 
 		ai_chance = { base = 50 }
 	}
@@ -3271,9 +3374,176 @@ elven.1830 = {
 
 		ai_chance = { base = 0 }
 	}
+
+	after = {
+		if = {
+			limit = { 
+				OR = {
+					has_variable = lothlorien_given_title
+					has_variable = lasgalen_given_title
+				}
+			}
+			trigger_event = elven.1831
+		}
+	}
 }
 
-elven.1840 = {
+elven.1831 = { # Hidden event to give elven MaA event troops to Maglor
+	hidden = yes
+
+	trigger = {
+		trigger_if = {
+			limit = { has_variable = amon_lanc_troops }
+			var:amon_lanc_troops < 5
+		}
+	}
+
+	immediate = {
+		increase_variable = {
+			NAME = amon_lanc_troops
+			AMOUNT = 1
+		}
+
+		if = {
+			limit = { has_variable = lothlorien_given_title }
+			random_list = {
+				1 = {
+					spawn_army = {
+						name = elven.1705.event_troops
+						men_at_arms = {
+							type = galadhrim_warriors
+							stacks = 1
+						}
+						location = root.capital_county.title_province
+						origin = scope:gondor_ruler.capital_county.title_province
+					}
+				}
+				1 = {
+					spawn_army = {
+						name = elven.1705.event_troops
+						men_at_arms = {
+							type = knights_of_amroth
+							stacks = 1
+						}
+						location = root.capital_county.title_province
+						origin = scope:gondor_ruler.capital_county.title_province
+					}
+				}
+				1 = {
+					spawn_army = {
+						name = elven.1705.event_troops
+						men_at_arms = {
+							type = galadhrim_wardens
+							stacks = 1
+						}
+						location = root.capital_county.title_province
+						origin = scope:gondor_ruler.capital_county.title_province
+					}
+				}
+				1 = {
+					spawn_army = {
+						name = elven.1705.event_troops
+						men_at_arms = {
+							type = galadhrim_archers
+							stacks = 1
+						}
+						location = root.capital_county.title_province
+						origin = scope:gondor_ruler.capital_county.title_province
+					}
+				}
+				1 = {
+					spawn_army = {
+						name = elven.1705.event_troops
+						men_at_arms = {
+							type = galadhrim_sentinels
+							stacks = 1
+						}
+						location = root.capital_county.title_province
+						origin = scope:gondor_ruler.capital_county.title_province
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = { has_variable = lasgalen_given_title }
+			random_list = {
+				1 = {
+					spawn_army = {
+						name = elven.1705.event_troops
+						men_at_arms = {
+							type = gilded_guard
+							stacks = 1
+						}
+						location = root.capital_county.title_province
+						origin = scope:gondor_ruler.capital_county.title_province
+					}
+				}
+				1 = {
+					spawn_army = {
+						name = elven.1705.event_troops
+						men_at_arms = {
+							type = greenwood_swordsmen
+							stacks = 1
+						}
+						location = root.capital_county.title_province
+						origin = scope:gondor_ruler.capital_county.title_province
+					}
+				}
+				1 = {
+					spawn_army = {
+						name = elven.1705.event_troops
+						men_at_arms = {
+							type = greenwood_archers
+							stacks = 1
+						}
+						location = root.capital_county.title_province
+						origin = scope:gondor_ruler.capital_county.title_province
+					}
+				}
+				1 = {
+					spawn_army = {
+						name = elven.1705.event_troops
+						men_at_arms = {
+							type = silvan_rangers
+							stacks = 1
+						}
+						location = root.capital_county.title_province
+						origin = scope:gondor_ruler.capital_county.title_province
+					}
+				}
+				1 = {
+					spawn_army = {
+						name = elven.1705.event_troops
+						men_at_arms = {
+							type = royal_elk_riders
+							stacks = 1
+						}
+						location = root.capital_county.title_province
+						origin = scope:gondor_ruler.capital_county.title_province
+					}
+				}
+				1 = {
+					spawn_army = {
+						name = elven.1705.event_troops
+						men_at_arms = {
+							type = theladagnyr
+							stacks = 1
+						}
+						location = root.capital_county.title_province
+						origin = scope:gondor_ruler.capital_county.title_province
+					}
+				}
+			}
+		}
+
+		trigger_event = {
+			id = elven.1831
+			days = { 45 90 }
+		}
+	}
+}
+
+elven.1840 = { # Call in members of northern alliance into destroy Mordor  war
 	content_source = realms
 	type = character_event
 	title = elven.1840.t
@@ -3309,8 +3579,6 @@ elven.1840 = {
 			limit = { exists = title:k_khazad_dum.holder }
 			title:k_khazad_dum.holder = { add_to_list = northern_alliance }
 		}
-
-		
 	}
 
 	option = {
@@ -3327,4 +3595,163 @@ elven.1840 = {
 			
 		}
 	}
+}
+
+elven.1850 = { # Event to notify of clearing high pass
+	content_source = realms
+	type = character_event
+	title = elven.1850.t
+	desc = elven.1850.desc
+	theme = realm
+
+	right_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	left_portrait = {
+		character = title:d_carrock_vale.holder
+		animation = personality_honorable
+	}
+
+	option = {
+		name = elven.1850.a
+
+		trigger_event = elven.1851
+	}
+}
+
+elven.1851 = { # Hidden event to recieve Beorning event MaA
+	hidden = yes
+
+	trigger = {
+		trigger_if = {
+			limit = { has_variable = beorning_event_troops }
+			var:beorning_event_troops < 6
+		}
+	}
+
+	immediate = {
+		increase_variable = { NAME = beorning_event_troops	AMOUNT = 1 }
+
+		random_list = {
+			1 = { # Special Longbeard unit
+				spawn_army = {
+					name = elven.1851.toast
+					men_at_arms = {
+						type = vale_nenedain_pikemen
+						stacks = 1
+					}
+					location = root.capital_province
+				}
+			}
+			1 = { # Special Longbeard unit
+				spawn_army = {
+					name = elven.1851.toast
+					men_at_arms = {
+						type = woodmen_huntsmen
+						stacks = 1
+					}
+					location = root.capital_province
+				}
+			}
+			1 = { # Special Longbeard unit
+				spawn_army = {
+					name = elven.1851.toast
+					men_at_arms = {
+						type = woodmen_widulingas
+						stacks = 1
+					}
+					location = root.capital_province
+				}
+			}
+		}
+
+		trigger_event = {
+			id = elven.1851
+			days = { 60 90 }
+		}
+	}
+}
+
+elven.2000 = { # Sauron is attacked by Maglor
+	content_source = realms
+	type = character_event
+	title = elven.2000.t
+	desc = elven.2000.desc
+	theme = realm
+
+	right_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	left_portrait = {
+		character = character:linefinwe11
+		animation = aggressive_sword
+	}
+
+	option = { name = elven.2000.a }
+}
+
+elven.2001 = { # Start the song battle between Sauron/Maglor
+	hidden = yes
+
+	immediate = {
+		# configure_start_single_combat_effect = {
+		# 	SC_INITIATOR = root
+		# 	SC_ATTACKER = root
+		# 	SC_DEFENDER = character:lineofsauron
+		# 	FATALITY = no
+		# 	FIXED = scope:sc_attacker
+		# 	LOCALE = terrain_scope
+		# 	OUTPUT_EVENT = artifact.2001
+		# 	INVALIDATION_EVENT = fp1_tbc.0021
+		# }
+		# configure_start_song_battle_effect = {
+		# 	SB_INITIATOR = root
+		# 	SB_ATTACKER = root
+		# 	SB_DEFENDER = character:lineofsauron
+		# 	LOCALE = random_nice_day
+		# 	OUTPUT_EVENT = elven.2002
+		# 	INVALIDATION_EVENT = song_battle.0021
+		# 	FIXED = scope:sb_attacker
+		# }
+	}
+}
+
+elven.2002 = { # Maglor receives Saurons palantir/relics when he wins the song battle
+	content_source = realms
+	type = character_event
+	title = elven.2002.t
+	desc = elven.2002.desc
+	theme = realm
+
+	immediate = {
+		character:lineofsauron = {
+			every_character_artifact = {
+				limit = { 
+					OR = {
+						has_variable = palantir 
+						has_variable = relic
+					}
+				}
+				set_owner = {
+					target = root
+					history = {
+						type = inherited
+						recipient = root
+					}
+				}
+			}
+			death = { death_reason = death_sauron }
+		}
+	}
+
+	right_portrait = {
+		character = character:linefinwe11
+		animation = aggressive_sword
+	}
+
+	option = { name = elven.2002.a }
 }

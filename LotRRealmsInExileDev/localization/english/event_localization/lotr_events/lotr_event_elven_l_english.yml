@@ -219,7 +219,16 @@
   elven.1830.a.tt:0 "Give the titles in [GetTitleByKey('k_amon_lanc').GetNameNoTier] to [GetTitleByKey('k_lothlorien').GetHolder.GetName]"
   elven.1830.b.tt:0 "Give the titles in [GetTitleByKey('k_amon_lanc').GetNameNoTier] to [GetTitleByKey('k_lasgalen').GetHolder.GetName]"
   elven.1830.c.tt:0 "Keep the titles in [GetTitleByKey('k_amon_lanc').GetNameNoTier] to yourself"
+
+  elven.1850.t:0 "VECTOR - Placeholder"
+  elven.1850.desc:0 "VECTOR - Placeholder"
+  elven.1850.a:0 "VECTOR - Placeholder"
   
+	elven.1851.toast:0 "Elven troops from Rivendell"
+
+  elven.2002.t:0 "VECTOR - Placeholder"
+  elven.2002.desc:0 "VECTOR - Placeholder"
+  elven.2002.a:0 "VECTOR - Placeholder"
 
  ### Elven artifact burns evil characters
  

@@ -1035,11 +1035,6 @@ decision_annihilate_abhorred = { # Starts war against Sauron
 		}
 
 		trigger_event = elven.1840
-		## Move this to the "on_victory" effect
-		# add_to_global_variable_list = {
-		# 	name = unavailable_unique_decisions
-		# 	target = flag:decision_annihilate_abhorred
-		# }
 	}
 
 	# AI
@@ -1181,7 +1176,25 @@ decision_annihilate_dol_guldur = { # Starts war against Dol Guldur
 	
 	# IS_VALID
 	is_valid = {
-		custom_tooltip = { text = "decision_annihilate_dol_guldur_is_valid_tt" }
+		custom_tooltip = {
+			text = "decision_annihilate_dol_guldur_is_valid_tt"
+			OR = {
+				is_target_in_global_variable_list = {
+					name = unavailable_unique_decisions
+					target = flag:decision_reclamation_of_moria
+				}
+				AND = {
+					is_target_in_global_variable_list = {
+						name = unavailable_unique_decisions
+						target = flag:decision_reclamation_of_moria
+					}
+					is_target_in_global_variable_list = {
+						name = unavailable_unique_decisions
+						target = flag:decision_cleanse_the_high_pass
+					}
+				}
+			}
+		}
 	}
 	is_valid_showing_failures_only = {
 		is_imprisoned = no
@@ -1625,16 +1638,9 @@ decision_reclamation_of_moria = {
 	# IS_VALID
 	is_valid = {
 		custom_tooltip = {
-			text = decision_reclamation_of_moria_valid_tt
-			NOR = {
+			text = "decision_reclamation_of_moria_valid_tt"
+			NOT = {
 				title:k_khazad_dum = {
-					any_in_de_jure_hierarchy = {
-						culture = {
-							is_orc_culture = yes
-						}
-					}	
-				}
-				title:k_high_pass = {
 					any_in_de_jure_hierarchy = {
 						culture = {
 							is_orc_culture = yes
@@ -1741,22 +1747,65 @@ decision_reclamation_of_moria = {
 				transfer_central_moria_effect = yes
 			}
 		}
-		else = { # Check for noble dwarf in BM
-			if = {
-				limit = {
-					title:e_blue_mountains = {
-						any_in_de_jure_hierarchy = {
-							tier = tier_duchy
-							holder = { culture = { is_dwarf_culture = yes } }
-							holder = { save_temporary_scope_as = dwarf_in_moria }
-						}	
+		else_if = { # Check for noble dwarf in BM
+			limit = {
+				title:e_blue_mountains = {
+					any_in_de_jure_hierarchy = {
+						tier = tier_duchy
+						holder = { culture = { is_dwarf_culture = yes } }
+						holder = { save_temporary_scope_as = dwarf_in_moria }
+					}	
+				}
+			}
+			custom_tooltip = "decision_reclamation_of_moria_troops_tt"
+			custom_tooltip = {
+				text = "decision_reclamation_of_moria_tt.4"
+				transfer_central_moria_effect = yes
+			}
+		}
+		else = {
+			hidden_effect = {
+				create_character = {
+					age = { 70 250 }
+					culture = culture:longbeards
+					faith = faith:faith_khazad
+					dynasty = none
+					gender_female_chance = 50
+					# Traits.
+					## Education.
+					random_traits_list = {
+						count = 1
+						education_diplomacy_1 = {}
+						education_martial_1 = {}
+						education_stewardship_1 = {}
+						education_intrigue_1 = {}
+						education_learning_1 = {}
 					}
+					## Plus a little bit of variety is nice.
+					random_traits_list = {
+						count = 1
+						stubborn = {}
+						impatient = {}
+						humble = {}
+						wrathful = {}
+					}
+					# Skills.
+					martial = {
+						min_template_decent_skill
+						max_template_decent_skill
+					}
+					prowess = {
+						min_template_decent_skill
+						max_template_decent_skill
+					}
+					employer = root
+					save_scope_as = dwarf_in_moria
 				}
-				custom_tooltip = "decision_reclamation_of_moria_troops_tt"
-				custom_tooltip = { # Works
-					text = "decision_reclamation_of_moria_tt.4"
-					transfer_central_moria_effect = yes
-				}
+			}
+			custom_tooltip = "decision_reclamation_of_moria_troops_tt"
+			custom_tooltip = {
+				text = "decision_reclamation_of_moria_tt.4"
+				transfer_central_moria_effect = yes
 			}
 		}
 
@@ -1768,6 +1817,68 @@ decision_reclamation_of_moria = {
 		add_to_global_variable_list = {
 			name = unavailable_unique_decisions
 			target = flag:decision_reclamation_of_moria
+		}
+	}
+
+	# AI
+	ai_goal = yes
+	ai_potential = { always = yes }
+	ai_will_do = { base = 100 }
+}
+
+##################################################
+# Reclamation of Khazad-dum
+# Coding by Jaco_Daan
+# Localization by VectorMaximus
+##################################################
+
+decision_cleanse_the_high_pass = {
+	# TEXT
+	title = decision_cleanse_the_high_pass
+	picture = "gfx/interface/illustrations/decisions/decision_fornost_02.dds"
+	selection_tooltip = decision_cleanse_the_high_pass_tooltip
+	desc = decision_cleanse_the_high_pass_desc
+	confirm_text = decision_cleanse_the_high_pass_confirm
+	major = yes
+
+	# IS_SHOWN
+	is_shown = {
+		root = character:linefinwe11
+		has_variable = unlock_underground_cb
+		faith_is_good = yes
+
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:decision_cleanse_the_high_pass
+			}
+		}
+	}
+	
+	# IS_VALID
+	is_valid = {
+		custom_tooltip = {
+			text = "decision_cleanse_the_high_pass_valid_tt"
+			NOT = {
+				title:k_high_pass = {
+					any_in_de_jure_hierarchy = { culture = { is_orc_culture = yes } }	
+				}
+			}
+		}
+	}
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_available_adult = yes
+		is_at_war = no
+	}
+	
+	# EFFECT 
+	effect = { # Give
+		trigger_event = elven.1850
+
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:decision_cleanse_the_high_pass
 		}
 	}
 

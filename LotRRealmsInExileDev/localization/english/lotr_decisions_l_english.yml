@@ -81,7 +81,7 @@
   decision_annihilate_dol_guldur_tooltip:0 "Wipe out the stain of Sauron in southern Greenwood" 
   decision_annihilate_dol_guldur_desc:0 "Since the retreat of Oropher northward, his people slowly abandoned the southern lands of Greenwood. In their wake, darkness crept in, until the forest was a place of dread and terror. A dread fortress was raised on the former spot of Amon Lanc, now known as Dol Guldur, the Hill of Sorcery. A twisted echo of Tol-in-Gaurhoth, it spreads a blight that stains all of Rhovanion, threating all who dwell therein.\n\nWe shall wipe out this bastion of the Dark, and make safe the lands of Rhovanion."
   decision_annihilate_dol_guldur_confirm:0 "We have no Luthien, but this is no Tol-in-Gaurhoth." 
-  decision_annihilate_dol_guldur_is_valid_tt:0 "You have repayed the debt of Azaghal." 
+  decision_annihilate_dol_guldur_is_valid_tt:0 "  You have repayed the debt of Azaghal.\n$BULLET_WITH_TAB$You have cleansed the [GetTitleByKey('k_high_pass').GetHolder]" 
   decision_annihilate_dol_guldur_effect_tt:0 "Start a [war|E] against [GetTitleByKey('k_amon_lanc').GetHolder.GetName] for [GetTitleByKey('k_amon_lanc').GetName]"
 
   decision_umbar_burns:0 "Destroy the City of Corsairs"
@@ -120,7 +120,7 @@
 
   decision_reclamation_of_moria:0 "Reclamation of Khazad-dum"
   decision_reclamation_of_moria_tooltip:0 "Tooltip"
-  decision_reclamation_of_moria_valid_tt:0 "There are no [goblins|E] or [orcs|E] left in either the [GetTitleByKey('k_khazad_dum').GetName] or [GetTitleByKey('k_high_pass').GetName]"
+  decision_reclamation_of_moria_valid_tt:0 "There are no [goblins|E] or [orcs|E] left in [GetTitleByKey('k_khazad_dum').GetName]"
   decision_reclamation_of_moria_desc:0 "Description"
   decision_reclamation_of_moria_confirm:0 "Confirm"
   decision_reclamation_of_moria_title_tt:0 "\n$BULLET_WITH_TAB$[GetTitleByKey('k_khazad_dum').GetName]\n$BULLET_WITH_TAB$[GetTitleByKey('d_zirakzigil').GetName]\n$BULLET_WITH_TAB$[GetTitleByKey('d_barazinbar').GetName]\n$BULLET_WITH_TAB$[GetTitleByKey('d_bundushathur').GetName]"
@@ -130,6 +130,11 @@
   decision_reclamation_of_moria_tt.3:0 "[dwarf_in_moria.GetName], a dwarf from the reputed dynasty of [dwarf_in_moria.GetDynastyName] in the Iron Mountains recieves$decision_reclamation_of_moria_title_tt$"
   decision_reclamation_of_moria_tt.4:0 "[dwarf_in_moria.GetName], a dwarf from the reputed dynasty of [dwarf_in_moria.GetDynastyName] in the Blue Mountains recieves$decision_reclamation_of_moria_title_tt$"
 
+  decision_cleanse_the_high_pass:0 "VECTOR - PLACEHOLDER"
+  decision_cleanse_the_high_pass_tooltip:0 "VECTOR - PLACEHOLDER"
+  decision_cleanse_the_high_pass_desc:0 "VECTOR - PLACEHOLDER"
+  decision_cleanse_the_high_pass_confirm:0 "VECTOR - PLACEHOLDER"
+  decision_cleanse_the_high_pass_valid_tt:0 "VECTOR - PLACEHOLDER"
 
  ###########################
  ### Dorwinion Decisions ###
