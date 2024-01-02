@@ -3303,6 +3303,7 @@ elven.1830 = { # Event to give Lothlorien/Lasgalen elf Amon Lanc
 			text = elven.1830.a.tt
 			every_in_list = {
 				list = titles_in_amon_lanc
+				limit = { holder = root }
 				give_amon_lanc_to_elf = { TITLE = this HOLDER = title:k_lothlorien.holder }
 			}
 		}
@@ -3332,6 +3333,7 @@ elven.1830 = { # Event to give Lothlorien/Lasgalen elf Amon Lanc
 			text = elven.1830.b.tt
 			every_in_list = {
 				list = titles_in_amon_lanc
+				limit = { holder = root }
 				give_amon_lanc_to_elf = { TITLE = this HOLDER = title:k_lasgalen.holder }
 			}
 		}
