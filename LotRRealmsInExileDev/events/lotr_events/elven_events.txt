@@ -3223,7 +3223,7 @@ elven.1818 = { # Recieve Noldor elves from Rivendell
 
 		trigger_event = {
 			id = elven.1831
-			days = { 15 30 }
+			days = { 10 20 }
 		}
 	}
 }
@@ -3631,42 +3631,46 @@ elven.1851 = { # Hidden event to recieve Beorning event MaA
 	trigger = {
 		trigger_if = {
 			limit = { has_variable = beorning_event_troops }
-			var:beorning_event_troops < 6
+			var:beorning_event_troops < 7
 		}
 	}
 
 	immediate = {
 		increase_variable = { NAME = beorning_event_troops	AMOUNT = 1 }
 
-		random_list = {
-			1 = { # Special Longbeard unit
-				spawn_army = {
-					name = elven.1851.toast
-					men_at_arms = {
-						type = vale_nenedain_pikemen
-						stacks = 1
+		send_interface_toast = {
+			title = elven.1606.toast_full.t
+
+			random_list = {
+				1 = { # Special Longbeard unit
+					spawn_army = {
+						name = elven.1851.toast
+						men_at_arms = {
+							type = vale_nenedain_pikemen
+							stacks = 1
+						}
+						location = root.capital_province
 					}
-					location = root.capital_province
 				}
-			}
-			1 = { # Special Longbeard unit
-				spawn_army = {
-					name = elven.1851.toast
-					men_at_arms = {
-						type = woodmen_huntsmen
-						stacks = 1
+				1 = { # Special Longbeard unit
+					spawn_army = {
+						name = elven.1851.toast
+						men_at_arms = {
+							type = woodmen_huntsmen
+							stacks = 1
+						}
+						location = root.capital_province
 					}
-					location = root.capital_province
 				}
-			}
-			1 = { # Special Longbeard unit
-				spawn_army = {
-					name = elven.1851.toast
-					men_at_arms = {
-						type = woodmen_widulingas
-						stacks = 1
+				1 = { # Special Longbeard unit
+					spawn_army = {
+						name = elven.1851.toast
+						men_at_arms = {
+							type = woodmen_widulingas
+							stacks = 1
+						}
+						location = root.capital_province
 					}
-					location = root.capital_province
 				}
 			}
 		}
