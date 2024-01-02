@@ -1928,20 +1928,3 @@ laegrist_template = {
 	}
 	unique = yes
 }
-
-artifact_crafting_dummy_template = {
-	can_equip = {
-		always = no
-	}
-
-	can_benefit = {
-	}
-	
-	can_reforge = {
-		always = no
-	}
-
-	fallback = {
-	}
-	unique = yes
-}

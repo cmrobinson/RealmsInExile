@@ -10,15 +10,14 @@
 
 can_do_sorcery = {
 	is_shown = {
-		always = yes
-	}
-	is_valid = {
 		OR = {
 			is_sorcerer = yes
 			has_trait = nazgul
 			is_evil_istari = yes
 			has_trait = maiar
 		}
+	}
+	is_valid = {
 		NOT = {
 			has_character_modifier = practiced_sorcery_recently
 		}
@@ -260,9 +259,20 @@ select_location = {
 	effect = {
 		trigger_event = evil.0001
 	}
+
 }
 
+
 ########################### CASTING EFFECTS #######################
+#
+#modifier = {
+#					add = {
+#						value = success_shapeshifting
+#						multiply = -1
+#					}
+#				}
+#
+
 
 cast_call_the_horde = {
 	is_valid = {
@@ -305,7 +315,7 @@ cast_call_the_horde = {
 			}
 		}
 
-		switch = {
+		  switch = {
 			trigger = var:ritual_location
 			
 			flag:sacred_place = {
@@ -798,7 +808,7 @@ cast_call_the_horde = {
 							id = evil.0123
 							days = { 15 30 }
 						}
-							if = {
+						if = {
 								limit = {root.faith = faith:melkorite}
 								spawn_army = {
 									men_at_arms = {
@@ -2284,6 +2294,7 @@ cast_invoke_watchers = {
 	}
 }
 
+
 cast_summon_being_of_darkness = {
 	is_valid = {
 		NOT = { var:ritual_location = flag:no_location }
@@ -3441,6 +3452,7 @@ cast_words_of_power = {
 	}
 }
 
+
 cast_forge_morgul_weapons = {
 	is_valid = {
 		NOT = { var:ritual_location = flag:no_location }
@@ -3581,7 +3593,6 @@ cast_forge_morgul_weapons = {
 			}	
 	}
 }
-
 cast_purse_them_relentlessly = {
 	is_valid = {
 		NOT = { var:ritual_location = flag:no_location }
@@ -4181,7 +4192,6 @@ cast_nazgul_restoration = {
 			}
 	}
 }
-
 cast_ambassador_of_darkness = {
 	is_valid = {
 		NOT = { var:ritual_location = flag:no_location }
@@ -4327,6 +4337,8 @@ cast_ambassador_of_darkness = {
 			}
 	}
 }
+
+ 
 
 cast_shapeshifting = {
 	is_valid = {
@@ -4972,7 +4984,6 @@ cast_cast_the_darkness = {
 			}
 	}
 }
-
 cast_abnormal_winter = {
 	is_valid = {
 		NOT = { var:ritual_location = flag:no_location }
