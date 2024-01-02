@@ -5071,6 +5071,8 @@ lineofmenelrana1 = {
 	trait = brave
 	trait = compassionate
 	trait = calm
+
+	stewardship = 6
 	
 	1132.11.12 = {
 		birth = yes
@@ -6231,6 +6233,8 @@ lineofbornmir4 = { # Warden of the Tower Hills, Lord of the Sîrrandrai, son of 
 
 	father = lineofbornmir2
 	mother = lineofbornmir3
+
+	# dna = bornmir4_dna
 	
 	trait = education_stewardship_4
 	
