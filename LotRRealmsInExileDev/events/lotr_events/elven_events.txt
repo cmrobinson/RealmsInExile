@@ -3156,8 +3156,10 @@ elven.1818 = { # Recieve Noldor elves from Rivendell
 			AMOUNT = 1
 		}
 
-		if = {
-			limit = { has_variable = lothlorien_given_title }
+		
+		send_interface_toast = {
+			title = elven.1816.toast
+
 			random_list = {
 				1 = {
 					spawn_army = {
