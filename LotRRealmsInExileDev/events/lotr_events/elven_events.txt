@@ -2425,9 +2425,6 @@ elven.1806 = { # Generic event while searching Khazad-dum as Maglor
 	left_portrait = {
 		character = scope:dwarven_leader
 		animation = sick
-		# triggered_outfit = { # Figure this out later
-		# 	outfit_tags = { dwarf_war_steel }
-		# }
 	}
 
 	override_background = {
@@ -2962,13 +2959,6 @@ elven.1816 = { # Hidden Event to recieve dwarven troops
 								type = longbeard_pikemen
 								stacks = 1
 							}
-							location = root.capital_province
-						}
-					}
-					5 = { # Levies
-						spawn_army = {
-							name = elven.1816.toast
-							levies = 100
 							location = root.capital_province
 						}
 					}

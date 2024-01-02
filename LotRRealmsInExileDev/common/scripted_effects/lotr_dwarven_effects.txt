@@ -386,6 +386,11 @@ moria_wastelands_to_delvings_effect = {
 			set_county_culture = scope:dwarf_in_moria.culture
 		}
 		set_county_faith = scope:dwarf_in_moria.faith
+		random_list = {
+			1 = { change_development_level = 3 }
+			1 = { change_development_level = 4 }
+			1 = { change_development_level = 5 }
+		}
 	}
 	transfer_moria_duchy_titles_effect = { TITLE = this }
 }
