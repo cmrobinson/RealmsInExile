@@ -3158,7 +3158,7 @@ elven.1818 = { # Recieve Noldor elves from Rivendell
 
 		
 		send_interface_toast = {
-			title = elven.1816.toast
+			title = elven.1606.toast_full.t
 
 			random_list = {
 				1 = {
