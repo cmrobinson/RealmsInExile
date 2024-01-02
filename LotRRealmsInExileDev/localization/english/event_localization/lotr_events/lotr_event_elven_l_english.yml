@@ -109,8 +109,6 @@
   elven.1606.a:0 "VECTOR - Placeholder" 
   elven.1606.b:0 "VECTOR - Placeholder" 
   elven.1606.c:0 "VECTOR - Placeholder" 
-  elven.1606.toast_full.t:0 "VECTOR - Placeholder" # Ruler supported Maglor | Toast Title
-  elven.1606.toast_half.t:0 "VECTOR - Placeholder" # Ruler doesn't care | Toast Title
   elven.1606.toast:0 "Volunteers from [elven_ruler_title.GetNameNoTierNoTooltip]" # Ruler doesn't care | MaA name
   elven.maglor_help_songsmiths:0 "Volunteers from Helevorn"
   
@@ -206,6 +204,7 @@
   elven.1815.cb_unlock:0 "Unlock the 'Purge Underground Regions' [casus_belli|E]"
 
   elven.1816.toast:0 "Dwarven troops from Khazad-dum"
+	elven.1818.toast:0 "Elven soldiers from Rivendell"
 
   elven.1820.t:0 "VECTOR - Placeholder"
   elven.1820.desc:0 "VECTOR - Placeholder"
@@ -220,11 +219,15 @@
   elven.1830.b.tt:0 "Give the titles in [GetTitleByKey('k_amon_lanc').GetNameNoTier] to [GetTitleByKey('k_lasgalen').GetHolder.GetName]"
   elven.1830.c.tt:0 "Keep the titles in [GetTitleByKey('k_amon_lanc').GetNameNoTier] to yourself"
 
+  
+	elven.1818.lothlorien:0 "Elven soldiers from [GetTitleByKey('k_lothlorien').GetNameNoTier]"
+	elven.1818.lasgalen:0 "Elven soldiers from [GetTitleByKey('k_lasgalen').GetNameNoTier]"
+
   elven.1850.t:0 "VECTOR - Placeholder"
   elven.1850.desc:0 "VECTOR - Placeholder"
   elven.1850.a:0 "VECTOR - Placeholder"
   
-	elven.1851.toast:0 "Elven troops from Rivendell"
+	elven.1851.toast:0 " Volunteers from the Vale"
 
   elven.2002.t:0 "VECTOR - Placeholder"
   elven.2002.desc:0 "VECTOR - Placeholder"

@@ -1190,7 +1190,7 @@ elven.1606 = { # Letter Event, Request troops from Lindon
 
 		character:linefinwe11 = {
 			send_interface_toast = {
-				title = elven.1606.toast_full.t
+				title = elven.1606.toast
 
 				maglor_crusade_elven_warriors = { SUPPORT = 2 }
 			}
@@ -1211,7 +1211,7 @@ elven.1606 = { # Letter Event, Request troops from Lindon
 
 		character:linefinwe11 = {
 			send_interface_toast = {
-				title = elven.1606.toast_half.t
+				title = elven.1606.toast
 
 				maglor_crusade_elven_warriors = { SUPPORT = 1 }
 			}
@@ -1246,7 +1246,7 @@ elven.1607 = {
 	immediate = {
 		
 		send_interface_toast = {
-			title = elven.1606.toast_full.t
+			title = elven.1606.toast
 			random_list = {
 				5 = {
 					spawn_army = {
@@ -2388,7 +2388,7 @@ elven.1805 = { # Maglor senses the Balrog
 	theme = skull
 	right_portrait = {
 		character = root
-		animation = personality_proud
+		animation = personality_bold
 	}
 
 	override_background = {
@@ -2592,7 +2592,7 @@ elven.1810 = { # Maglor goes to Rivendell to seek Elrond and Glorfindel's aid
 	}
 }
 
- elven.1811  = { # ROYAL COURT EVENT | Elrond recieves Maglor in his court
+elven.1811  = { # ROYAL COURT EVENT | Elrond recieves Maglor in his court
 	content_source = realms
 	type = character_event
 	title = elven.1811.t
@@ -2647,7 +2647,7 @@ elven.1810 = { # Maglor goes to Rivendell to seek Elrond and Glorfindel's aid
 	}
 	option = { # Go with Maglor to face Balrog
 		name = elven.1811.a
-
+		character:linefinwe11 = { set_variable = elrond_on_journey }
 		ai_chance = {
 			base = 100
 		}
@@ -2661,8 +2661,12 @@ elven.1810 = { # Maglor goes to Rivendell to seek Elrond and Glorfindel's aid
 		}
 		current_travel_plan = { save_scope_as = travel_to_balrog }
 		scope:travel_to_balrog = { add_companion = scope:elf_1 }
-		scope:travel_to_balrog = { cancel_travel_plan = yes }
-	
+		start_travel_plan = {
+			destination = capital_province
+			return_trip = no
+			players_use_planner = no
+			save_scope_as = return_trip
+		}
 
 		ai_chance = {
 			base = 0
@@ -2687,7 +2691,7 @@ elven.1812 = { # NON-ROYAL COURT EVENT | Elrond recieves Maglor in his court
 	}
 	option = { # Go with Maglor to face Balrog
 		name = elven.1811.a
-
+		character:linefinwe11 = { set_variable = elrond_on_journey }
 		ai_chance = {
 			base = 100
 		}
@@ -2873,16 +2877,12 @@ elven.1815 = { # Fight Balrog
 	after = {
 		remove_variable = searched_khazad_dum
 		if = {
-			limit = {
-				any_in_list = {
-					list = elf_characters
-					this = title:k_imladris.holder
-				}
-			}
+			limit = { has_variable = elrond_on_journey }
 			trigger_event = {
 				id = elven.1818
 				days = { 15 30 }
 			}
+			remove_variable = elrond_on_journey
 		}
 	}
 }
@@ -3157,15 +3157,13 @@ elven.1818 = { # Recieve Noldor elves from Rivendell
 			NAME = rivendell_troops
 			AMOUNT = 1
 		}
-
 		
 		send_interface_toast = {
-			title = elven.1606.toast_full.t
-
+			title = elven.1818.toast
 			random_list = {
 				1 = {
 					spawn_army = {
-						name = elven.1705.event_troops
+						name = elven.1818.toast
 						men_at_arms = {
 							type = noldor_swordsmen
 							stacks = 1
@@ -3176,7 +3174,7 @@ elven.1818 = { # Recieve Noldor elves from Rivendell
 				}
 				1 = {
 					spawn_army = {
-						name = elven.1705.event_troops
+						name = elven.1818.toast
 						men_at_arms = {
 							type = noldor_glaivesmen
 							stacks = 1
@@ -3187,7 +3185,7 @@ elven.1818 = { # Recieve Noldor elves from Rivendell
 				}
 				1 = {
 					spawn_army = {
-						name = elven.1705.event_troops
+						name = elven.1818.toast
 						men_at_arms = {
 							type = noldor_cavalry
 							stacks = 1
@@ -3198,7 +3196,7 @@ elven.1818 = { # Recieve Noldor elves from Rivendell
 				}
 				1 = {
 					spawn_army = {
-						name = elven.1705.event_troops
+						name = elven.1818.toast
 						men_at_arms = {
 							type = noldor_archers
 							stacks = 1
@@ -3209,7 +3207,7 @@ elven.1818 = { # Recieve Noldor elves from Rivendell
 				}
 				1 = {
 					spawn_army = {
-						name = elven.1705.event_troops
+						name = elven.1818.toast
 						men_at_arms = {
 							type = noldor_veterans
 							stacks = 1
@@ -3228,12 +3226,11 @@ elven.1818 = { # Recieve Noldor elves from Rivendell
 	}
 }
 
-elven.1820 = {
+elven.1820 = { # Event to highlight CB unlocked
 	content_source = realms
 	type = character_event
 	title = elven.1820.t
 	desc = elven.1820.desc
-	type = court_event
 	theme = realm
 	override_sound = { reference = event:/SFX/Events/Themes/sfx_event_theme_type_generic }
 	immediate = {
@@ -3243,7 +3240,7 @@ elven.1820 = {
 			save_scope_as = elf_1
 		}
 	}
-	option = { # event to highlight CB unlocked
+	option = { 
 		name = elven.1820.a
 
 		ai_chance = {
@@ -3415,7 +3412,7 @@ elven.1831 = { # Hidden event to give elven MaA event troops to Maglor
 			random_list = {
 				1 = {
 					spawn_army = {
-						name = elven.1705.event_troops
+						name = elven.1818.lothlorien
 						men_at_arms = {
 							type = galadhrim_warriors
 							stacks = 1
@@ -3426,7 +3423,7 @@ elven.1831 = { # Hidden event to give elven MaA event troops to Maglor
 				}
 				1 = {
 					spawn_army = {
-						name = elven.1705.event_troops
+						name = elven.1818.lothlorien
 						men_at_arms = {
 							type = knights_of_amroth
 							stacks = 1
@@ -3437,7 +3434,7 @@ elven.1831 = { # Hidden event to give elven MaA event troops to Maglor
 				}
 				1 = {
 					spawn_army = {
-						name = elven.1705.event_troops
+						name = elven.1818.lothlorien
 						men_at_arms = {
 							type = galadhrim_wardens
 							stacks = 1
@@ -3448,7 +3445,7 @@ elven.1831 = { # Hidden event to give elven MaA event troops to Maglor
 				}
 				1 = {
 					spawn_army = {
-						name = elven.1705.event_troops
+						name = elven.1818.lothlorien
 						men_at_arms = {
 							type = galadhrim_archers
 							stacks = 1
@@ -3459,7 +3456,7 @@ elven.1831 = { # Hidden event to give elven MaA event troops to Maglor
 				}
 				1 = {
 					spawn_army = {
-						name = elven.1705.event_troops
+						name = elven.1818.lothlorien
 						men_at_arms = {
 							type = galadhrim_sentinels
 							stacks = 1
@@ -3475,7 +3472,7 @@ elven.1831 = { # Hidden event to give elven MaA event troops to Maglor
 			random_list = {
 				1 = {
 					spawn_army = {
-						name = elven.1705.event_troops
+						name = elven.1818.lasgalen
 						men_at_arms = {
 							type = gilded_guard
 							stacks = 1
@@ -3486,7 +3483,7 @@ elven.1831 = { # Hidden event to give elven MaA event troops to Maglor
 				}
 				1 = {
 					spawn_army = {
-						name = elven.1705.event_troops
+						name = elven.1818.lasgalen
 						men_at_arms = {
 							type = greenwood_swordsmen
 							stacks = 1
@@ -3497,7 +3494,7 @@ elven.1831 = { # Hidden event to give elven MaA event troops to Maglor
 				}
 				1 = {
 					spawn_army = {
-						name = elven.1705.event_troops
+						name = elven.1818.lasgalen
 						men_at_arms = {
 							type = greenwood_archers
 							stacks = 1
@@ -3508,7 +3505,7 @@ elven.1831 = { # Hidden event to give elven MaA event troops to Maglor
 				}
 				1 = {
 					spawn_army = {
-						name = elven.1705.event_troops
+						name = elven.1818.lasgalen
 						men_at_arms = {
 							type = silvan_rangers
 							stacks = 1
@@ -3519,7 +3516,7 @@ elven.1831 = { # Hidden event to give elven MaA event troops to Maglor
 				}
 				1 = {
 					spawn_army = {
-						name = elven.1705.event_troops
+						name = elven.1818.lasgalen
 						men_at_arms = {
 							type = royal_elk_riders
 							stacks = 1
@@ -3530,7 +3527,7 @@ elven.1831 = { # Hidden event to give elven MaA event troops to Maglor
 				}
 				1 = {
 					spawn_army = {
-						name = elven.1705.event_troops
+						name = elven.1818.lasgalen
 						men_at_arms = {
 							type = theladagnyr
 							stacks = 1
@@ -3641,7 +3638,7 @@ elven.1851 = { # Hidden event to recieve Beorning event MaA
 		increase_variable = { NAME = beorning_event_troops	AMOUNT = 1 }
 
 		send_interface_toast = {
-			title = elven.1606.toast_full.t
+			title = elven.1606.toast
 
 			random_list = {
 				1 = { # Special Longbeard unit
