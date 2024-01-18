@@ -147,11 +147,6 @@
   decision_cleanse_the_high_pass_desc:0 "VECTOR - PLACEHOLDER"
   decision_cleanse_the_high_pass_confirm:0 "VECTOR - PLACEHOLDER"
   decision_cleanse_the_high_pass_valid_tt:0 "VECTOR - PLACEHOLDER"
-  
-  decision_rebuild_ost_in_edhil:0 "Rebuild Ost-in-Edhil"
-  decision_rebuild_ost_in_edhil_desc:0 "Once the jewel of eastern [eriador|E], [ostinedheil|E] was sacked and destroyed by [sauroncharacter|E] in the [waroftheelvesandsauron|E]. The land has sat abandoned since then, with none willing to approach the ancient ruins. Now that the land is once more under Elven control, the restoration of the city is within our grasp.\n\nIt will take much labor and treasure, but with effort Eregion may yet rise anew." 
-  decision_rebuild_ost_in_edhil_tooltip:0 "Restore the capital of Eregion"
-  decision_rebuild_ost_in_edhil_confirm:0 "We have endured the Shadow, and risen anew."
 
  ###########################
  ### Dorwinion Decisions ###
