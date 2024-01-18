@@ -432,7 +432,15 @@ activity_explore_history = {
 			add = 150
 		}
 		if = {
-			limit = { has_building = wonder_minas_ithil_03 }
+			limit = { 
+				county = {
+					NOR = { 
+						has_county_modifier = morgul_corruption_modifier
+						has_county_modifier = fading_morgul_corruption_modifier
+					}
+				}
+				has_building = wonder_minas_ithil_03 
+			}
 			add = 150
 		}
 		if = {

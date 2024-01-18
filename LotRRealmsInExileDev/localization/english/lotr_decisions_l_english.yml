@@ -51,7 +51,7 @@
  decision_make_edhellond_kingdom_confirm:0 "Proclaim the Kingdom of Edhellond"
 
  decision_reclaim_sirgala:0 "Restore the Realm of Sîrgala"
- decision_reclaim_sirgala_desc:0 "Sîrgala was once elven realm ceded peacefully to Elendil of the Dúnedain by its last rulers, Merethorn & Eliniel, following its depopulation in the War of Sauron and the Elves and subsequent encroachment of Dúnedain settlers.\n\nThose times have long passed however, and the waning of the Dúnedain caused them to abandon ancient Sîrgala long ago, even before the Fall of Arnor. Longing to return to their ancient homes, the Sirrandrai finally push towards restoring their realm of yore."
+ decision_reclaim_sirgala_desc:0 "Sîrgala was once a Nandorin elven realm that existed in [eriador|E], vassal to [lindon|E] and the High-King of the Noldor. Populated by the $sirrandrai$ Elves, it was ravaged during the [waroftheelvesandsauron|E], with only a few returning to those lands after its conclusion. Subsequent settlement by Dúnedain settlers meant that the country had only a small Elven population by the end of the [secondage|E]. With the coming of Elendil of the Dúnedain, its last rulers, Merethorn & Eliniel ceded the land and their Dúnedain subjects to him.\n\nThose times have long passed however, and the waning of the Dúnedain caused them to abandon ancient Sîrgala long ago, even before the Fall of Arnor. Should we regain control over the region, the Sirrandrai could be restored to their realm of yore."
  decision_reclaim_sirgala_confirm:0 "Restore the Realm of Sîrgala"
  decision_reclaim_sirgala_tooltip:0 "Restore the Realm of Sîrgala"
  effect_replace_sirgalan_exiles:0 "Your [culture|E] will replace the [GetCultureTradition('tradition_sirgalan_exiles').GetName] [tradition|E] with [GetCultureTradition('tradition_sirgala_renewed').GetName]."
@@ -68,6 +68,18 @@
  decision_return_cuind_get_innovations:0 "The Cuind [culture|E] gains all Penni [innovations|E]"
  decision_return_cuind_vassals_custom:1 "Every $penni$ and $avari$ [vassal|E]"
  decision_return_cuind_counties_custom:1 "Every $penni$ and $avari$ [county|e] in your [realm|E]"
+ 
+ decision_rebuild_ost_in_edhil:0 "Rebuild Ost-in-Edhil"
+ decision_rebuild_ost_in_edhil_desc:0 "Once the jewel of eastern [eriador|E], [ostinedhil|E] was sacked and destroyed by [sauroncharacter|E] in the [waroftheelvesandsauron|E]. The land has sat abandoned since then, with none willing to approach the ancient ruins. Now that the land is once more under Elven control, the restoration of the city is within our grasp.\n\nIt will take much labor and treasure, but with effort Eregion may yet rise anew." 
+ decision_rebuild_ost_in_edhil_tooltip:0 "Restore the capital of Eregion"
+ decision_rebuild_ost_in_edhil_confirm:0 "We have endured the Shadow, and risen anew."
+ ost_in_edhil_upgrade_holding:0 "The [elven_refuge|E] in [GetTitleByKey('b_ost_in_edhil').GetNameNoTier] will be upgraded two levels. If it cannot be upgraded two levels, for every level it would otherwise have upgraded [GetTitleByKey('c_ost_in_edhil').GetNameNoTier] will recieve 10 [development|E]."
+
+ decision_claim_high_kingship:0 "Claim the Title of High-King of the Noldor"
+ decision_claim_high_kingship_desc:0 "Since the fall of Gil-galad in the [lastalliance|E], there has been no High-King of the Noldor. The Noldor did not need a King anymore, and by leaving it vacant I would honor my liege and dear friend. Furthermore, I had no desire for the title.\n\nYet perhaps I was wrong. In these waning days, as the shadow lengthens and the light dims, perhaps the Eldar need the High-Kings now more than ever."
+ decision_claim_high_kingship_tooltip:0 "Claim the title of the High-King of the Noldor"
+ decision_claim_high_kingship_confirm:0 "Let the High-Kings once more oppose the Shadow."
+ decision_claim_high_kingship_effect_tooltip:0 "Every [elf|E] in Lindon vassalizes themselves to you."
 
   decision_annihilate_abhorred:0 "Annihilate Sauron the Abhorred"
   decision_annihilate_abhorred_tooltip:0 "Destroy Morgoth's lieutenant once and for all" 
@@ -690,10 +702,11 @@
  #############################################
  ####### Angmar & Forodwaith Decisions #######
  #############################################
- decision_adopt_angmarrin_culture:0 "Resurrect Angmarrin Ways"
- decision_adopt_angmarrin_culture_tooltip:0 "Adopt Angmarrin Culture"
- decision_adopt_angmarrin_culture_desc:0 "Our distant kin, the Angmarrin were like us and not. But none can debate that they grew to be powerful indeed, capable of rivaling even the great Kings of the South. Having moved into Angmar ourselves, we could perhaps revive their ways?"
- decision_adopt_angmarrin_culture_confirm:0 "Let the world know Angmar lives!"
+ decision_adopt_angmarrin_ways:0 "Resurrect Angmarrim Ways"
+ decision_adopt_angmarrin_ways_tooltip:0 "Adopt Angmarrim Culture"
+ decision_adopt_angmarrin_ways_desc:0 "Our distant kin, the Angmarrim were both like us and not. But none can debate that they grew to be powerful indeed, capable of rivaling even the great Kings of the South. Having moved into Angmar ourselves, we could perhaps revive their ways?"
+ decision_adopt_angmarrin_ways_confirm:0 "Let the world know Angmar lives!"
+ decision_adopt_angmarrim_counties_custom:0 "Every [county|e] with $baradhrim$ [heritage|E] in your [domain|E]"
 
  decision_empire_angmar_restore:0 "Restore the Empire of Angmar"
  decision_empire_angmar_restore_tooltip:0 "Restore the lost Witch-Realm of Angmar"
@@ -1119,3 +1132,20 @@
  decision_restore_thorins_tomb_desc:0 "Thorin has rested under the Mountain since his death in the Battle of Five Armies, clutching the Arkestone and the sword Orcrist against his breath. Until his rest was troubled and his tomb desecrated. We should return the artifacts to his tomb and restore it to its former solemnity."
  HAS_THORINS_ARTIFACT:0 "You are in possession of one of Thorin's artifacts"
  decision_restore_thorins_tomb_confirm:0 "Restore the tomb"
+
+ decision_unify_durins_folk:0 "Unify Durin's Folk"
+ decision_unify_durins_folk_desc:0 "Ever since [durindeathless|E] founded Khazad-Dum, his descendents have claimed the mantle of lordship over all the [longbeards|E]. However, it was not practical for them to directly rule the far flung realms of their people, and as such left them to their own devices on a day to day basis. Only when there was great need would they gather and act under the direct command of the King.\n\nThe [longbeards|E] settled many areas throughout the ages, such as the Iron Hills, the Grey Mountains, and even as far as Thorin's Halls. If these distant regions could all be brought under one banner, the Dwarves of Durin's Folk would not only match their Forefathers, but surpass them."
+ decision_unify_durins_folk_tooltip:0 "Our Glory is Deathless!"
+ decision_unify_durins_folk_confirm:0 "Our Glory is Deathless!"
+ control_percentage_of_misty_desc:1 "Control at least #V 90%#! of the [counties|E] of the [GetTitleByKey('e_misty_mountains').GetName]"
+ control_percentage_of_iron_desc:1 "Control at least #V 90%#! of the [counties|E] of the [GetTitleByKey('e_iron_mountains').GetName]"
+
+ #####################################
+ #### Artifact Crafting Decisions ####
+ #####################################
+
+ transmute_metal_decision:0 "Transmutation"
+ transmute_metal_decision_desc:0 "VECTOR - PLACEHOLDER"
+ transmute_metal_decision_effect_tt:0 "VECTOR - PLACEHOLDER"
+ transmute_metal_decision_confirm:0 "VECTOR - PLACEHOLDER"
+ transmute_metal_decision_valid_tt:0 "You either possess a material of metal origin or it can be found in your realm."

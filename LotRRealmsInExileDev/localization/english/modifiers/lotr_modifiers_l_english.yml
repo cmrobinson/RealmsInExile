@@ -156,7 +156,7 @@
  valar_ban_modifier:0 "Ban of the Valar"
  valar_ban_modifier_desc:0 "Due to their acts of rebellion, pride, or refusal to repent, this character is under the ban of the Valar, denied the right to sail to Valinor."
 
- hidden_elven_refugees_modifier:0 "Hidden Elven Refugees"
+ hidden_elven_refugees_modifier:0 "Hidden Elven Refuges"
  hidden_elven_refugees_modifier_desc:0 "Though the vast majority of the Elves who once dwelt here have fled, there remain some stubborn holdouts, striking against the occupiers of their land from hidden refuges"
 
  marauding_orc_drags_modifier:0 "Marauding Orc Drags"
@@ -420,8 +420,15 @@
  warlord_modifier:0 "Hérohta of the Eldar"
  warlord_modifier_desc:0 "No king, but a master of war. Though the Eldar days pass, the mighty of the Eldar Days will not pass silently, but blaze against the night - to victory or ruin."
  
+ unifier_durins_folk:0 "High Kings of Durin's Folk"
+ unifier_durins_folk_desc:0 "The line of Durin has unified the disparate groups of Longbeards under one High King, and has ushered in an age of unparalleled prosperity for their people."
+
+
  ## Faith conversion modifier
  faith_conversion_cost_slave_to_saurons_will:0 "Slave to Sauron's will"
  
  lotr_munchies_sated_modifier:0 "Overate"
  lotr_munchies_sated_modifier_desc:0 "This character overindulged after being overcome by a sudden hunger."
+
+ lotr_vanquished_modifier:0 "Vanquished"
+ lotr_vanquished_modifier_desc:0 "This character has been vanquished and will take some time before they can manage their own realm again"

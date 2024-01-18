@@ -475,9 +475,9 @@ sailing.1007 = {
 		root = {
 			has_variable_list = potential_sailing_participants
 			any_in_list = {
-					variable = potential_sailing_participants
-					is_alive = yes
-					count >= 1
+				variable = potential_sailing_participants
+				is_alive = yes
+				count >= 1
 			}
 		}
 	}
@@ -607,10 +607,10 @@ sailing.1008 = {
 		root = {
 			has_variable_list = potential_sailing_participants
 			any_in_list = {
-					variable = potential_sailing_participants
-					is_alive = yes
-					is_ai = yes
-					count >= 1
+				variable = potential_sailing_participants
+				is_alive = yes
+				is_ai = yes
+				count >= 1
 			}
 		}
 	}
@@ -783,10 +783,10 @@ sailing.1009 = {
 		root = {
 			has_variable_list = potential_sailing_participants
 			any_in_list = {
-					variable = potential_sailing_participants
-					is_alive = yes
-					is_ai = yes
-					count >= 1
+				variable = potential_sailing_participants
+				is_alive = yes
+				is_ai = yes
+				count >= 1
 			}
 		}
 	}
@@ -1018,9 +1018,9 @@ sailing.1011 = {
 		root = {
 			has_variable_list = potential_sailing_participants
 			any_in_list = {
-					variable = potential_sailing_participants
-					is_alive = yes
-					count >= 1
+				variable = potential_sailing_participants
+				is_alive = yes
+				count >= 1
 			}
 		}
 	}
@@ -1187,9 +1187,9 @@ sailing.1012 = {
 		root = {
 			has_variable_list = potential_sailing_participants
 			any_in_list = {
-					variable = potential_sailing_participants
-					is_alive = yes
-					count >= 1
+				variable = potential_sailing_participants
+				is_alive = yes
+				count >= 1
 			}
 		}
 	}
@@ -1694,9 +1694,9 @@ sailing.2001 = {
 		root = {
 			has_variable_list = potential_sailing_participants
 			any_in_list = {
-					variable = potential_sailing_participants
-					is_alive = yes
-					count >= 1
+				variable = potential_sailing_participants
+				is_alive = yes
+				count >= 1
 			}
 		}
 	}
@@ -4355,9 +4355,14 @@ sailing.3502 = {
 		death = { death_reason = death_drowned }
 		every_in_list = {
 			variable = potential_sailing_participants
-			limit = { is_ai = yes cannot_be_killed = no }
-			death = { death_reason = death_drowned }
-		}		
+			if = {
+				limit = { 
+					is_ai = yes 
+					cannot_be_killed = no
+				}
+				death = { death_reason = death_drowned }
+			}
+		}
 	}
 }
 
@@ -10099,13 +10104,13 @@ sailing.9110 = {
 			limit = {
 				is_coastal = yes
 				NOR = {
-					culture =  root.location.culture					
+					culture = root.location.culture
 					#culture_group = root.location.culture_group
 					culture = root.culture
 					#culture_group = root.culture_group
 					empire = root.location.empire
 					kingdom = root.location.kingdom
-				}				
+				}
 			}
 			save_scope_as = piracy_destination_1
 		}
@@ -10114,10 +10119,10 @@ sailing.9110 = {
 				is_coastal = yes
 				NOR = {
 					this = scope:piracy_destination_1
-					culture =  root.location.culture
+					culture = root.location.culture
 					#culture_group = root.location.culture_group
 					culture = root.culture
-					#culture_group = root.culture_group					
+					#culture_group = root.culture_group
 					empire = root.location.empire
 					kingdom = root.location.kingdom
 				}
@@ -10130,14 +10135,14 @@ sailing.9110 = {
 				NOR = {
 					this = scope:piracy_destination_1
 					this = scope:piracy_destination_2
-					culture =  root.culture
+					culture = root.culture
 					#culture_group = root.culture.culture_group
 					empire = root.location.empire
 					kingdom = root.location.kingdom
 				}
 			}
 			save_scope_as = piracy_destination_3
-		}				
+		}
 	}
 
 	option = {
@@ -11087,7 +11092,7 @@ sailing.9130 = {
 			limit = {
 				is_coastal = yes
 				NOT = {
-					culture =  root.location.culture					
+					culture = root.location.culture					
 					#culture_group = root.location.culture_group
 					culture = root.culture
 					#culture_group = root.culture_group

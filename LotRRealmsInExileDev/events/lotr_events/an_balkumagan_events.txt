@@ -79,3 +79,28 @@ anbalkumagan.0200 = { # Introduction to the Storm-host
 		}
 	}
 }
+
+
+###############################
+###Kathuphazganioni Info Event#
+
+anbalkumagan.0300 = { # Abrazan starting event
+	content_source = realms
+	type = character_event
+	title = anbalkumagan.0300.t
+	desc = anbalkumagan.0300.desc
+	theme = stewardship_duty_focus
+	override_background = { reference = docks_adunai }
+	left_portrait = {
+		character = root
+		animation = worry
+	}
+	right_portrait = {
+		character = character:lotr_vanity_jerman
+		animation = ambitious
+	}
+
+	option = { # So it begins
+		name = anbalkumagan.0300.a
+	}
+}

@@ -1,3 +1,15 @@
+### Durin's Folk ###
+e_durins_folk = {
+	pattern="pattern_solid.dds"
+	color1=rgb { 6 0 78 }
+	colored_emblem={
+		color1=yellow_light
+		color2=blue_light
+		texture="ce_khazad_dum_01.dds"
+	}
+}
+
+
 ### Misty Mountains ###
 e_misty_mountains = {
 	pattern="pattern_solid.dds"
@@ -81,6 +93,128 @@ k_high_pass = {
 	}
 }
 
+d_high_pass = {
+	pattern="pattern_solid.dds"
+	color1=rgb { 16 77 134 }
+	color2=white
+	color3=red
+	colored_emblem={
+		color1=rgb { 159 152 152 }
+		color2=white
+		texture="ce_cc_mountains_02.dds"
+		instance={
+			position={ 0.500000 0.285000 }
+			depth=3.010000
+		}
+
+	}
+
+	colored_emblem={
+		color1=yellow
+		texture="ce_crescent_mask_02.dds"
+		instance={
+			position={ 0.500000 0.105000 }
+			scale={ 0.210000 0.210000 }
+		}
+
+	}
+
+	colored_emblem={
+		color1=green_light
+		texture="cat_grass.dds"
+		instance={
+			position={ 0.500000 0.665000 }
+			scale={ 0.980000 0.980000 }
+			depth=1.010000
+		}
+
+	}
+
+	colored_emblem={
+		color1=grey
+		texture="ce_cc_river_01.dds"
+		instance={
+			position={ 0.365000 1.000000 }
+			scale={ 0.940000 0.940000 }
+			depth=2.010000
+			rotation=145
+		}
+
+	}
+
+}
+
+d_zandith_dum = {
+	pattern="pattern_solid.dds"
+	color1=rgb { 53 51 51 }
+	color2=white
+	color3=red
+	colored_emblem={
+		color1=yellow
+		color2=blue_light
+		texture="ce_dwarf_01.dds"
+		instance={
+			depth=5.010000
+		}
+
+		instance={
+			depth=6.010000
+			rotation=90
+		}
+
+	}
+
+	colored_emblem={
+		color1=yellow
+		texture="ce_cc_edain_border_09.dds"
+		instance={
+			scale={ 0.635000 0.635000 }
+			depth=3.010000
+		}
+
+	}
+
+	colored_emblem={
+		color1=grey
+		color2=black
+		color3=blue
+		texture="ce_dwarf_05.dds"
+		instance={
+			scale={ 0.155000 0.155000 }
+		}
+
+	}
+
+	colored_emblem={
+		color1=grey
+		texture="ce_dwarf_19.dds"
+		instance={
+			scale={ 0.415000 0.415000 }
+			depth=1.010000
+			rotation=90
+		}
+
+		instance={
+			scale={ 0.415000 0.415000 }
+			depth=2.010000
+			rotation=180
+		}
+
+	}
+
+	colored_emblem={
+		color1=brown
+		texture="ce_square_kaaba.dds"
+		instance={
+			position={ 0.500000 0.495000 }
+			scale={ 0.700000 1.000000 }
+			depth=4.010000
+		}
+
+	}
+
+}
+
 k_khazad_dum = {
 	pattern="pattern_solid.dds"
 	color1=rgb { 26 37 48 }
@@ -92,6 +226,16 @@ k_khazad_dum = {
 }
 
 d_zirakzigil = {
+	pattern="pattern_solid.dds"
+	color1=rgb { 12 35 58 }
+	colored_emblem={
+		color1=rgb { 145 145 145 }
+		color2=rgb { 86 134 191 }
+		texture="ce_khazad_dum_01.dds"
+	}
+}
+
+d_fuhmdusha = {
 	pattern="pattern_solid.dds"
 	color1=blue
 	color2=white
@@ -126,85 +270,86 @@ d_zirakzigil = {
 		}
 
 	}
-
 }
 
 d_foundations_of_stone = {
-	pattern="pattern_solid.dds"
-	color1=rgb { 40 40 41 }
-	color2=white
-	color3=red
+	pattern="pattern_waves_01.dds"
+	color1=rgb { 58 54 54 }
+	color2=rgb { 28 39 29 }
+	color3=rgb { 37 47 38 }
 	colored_emblem={
-		color1=rgb { 28 67 102 }
-		texture="ce_column.dds"
+		color1=rgb { 37 46 39 }
+		texture="ce_vair_single.dds"
 		instance={
-			position={ 0.760000 0.420000 }
-			scale={ 0.850000 0.850000 }
+			position={ 0.500000 0.695000 }
+			scale={ 0.400000 0.595000 }
 			depth=5.010000
 		}
 
 	}
 
 	colored_emblem={
-		color1=rgb { 113 113 113 }
-		color2=rgb { 154 154 154 }
-		color3=rgb { 58 34 3 }
-		texture="dwarven_sword_00.dds"
+		color1=rgb { 39 46 39 }
+		color2=rgb { 28 39 30 }
+		texture="ce_edain_waves_02.dds"
 		instance={
-			position={ 0.510000 0.390000 }
-			scale={ 0.630000 0.630000 }
-			depth=2.010000
-		}
-
-	}
-
-	colored_emblem={
-		color1=rgb { 23 65 103 }
-		color2=blue
-		texture="ce_column.dds"
-		instance={
-			position={ 0.240000 0.420000 }
-			scale={ 0.840000 0.840000 }
 			depth=4.010000
 		}
 
 	}
 
 	colored_emblem={
-		color1=rgb { 86 86 86 }
-		color2=rgb { 70 70 70 }
-		texture="ce_cc_mountains_01.dds"
+		color1=grey
+		texture="ce_dwarf_23.dds"
 		instance={
-			position={ 0.500000 0.550000 }
-		}
-
-	}
-
-	colored_emblem={
-		color1=rgb { 93 93 93 }
-		color2=black
-		texture="ce_cc_mountains_07.dds"
-		instance={
-			position={ 0.500000 0.460000 }
-			scale={ 0.780000 0.780000 }
-			depth=1.010000
-		}
-
-	}
-
-	colored_emblem={
-		color1=rgb { 90 90 90 }
-		color2=black
-		texture="ce_cc_mountains_03.dds"
-		instance={
-			position={ 0.500000 0.360000 }
+			position={ 0.500000 0.285000 }
+			scale={ 0.420000 0.290000 }
 			depth=3.010000
 		}
 
 	}
 
-}
+	colored_emblem={
+		color1=grey
+		texture="ce_square_kaaba.dds"
+		instance={
+			position={ 1.000000 0.000000 }
+			rotation=45
+		}
 
+		instance={
+			position={ 0.000000 0.000000 }
+			depth=1.010000
+			rotation=45
+		}
+
+	}
+
+	colored_emblem={
+		color1=grey
+		color2=black
+		texture="ce_african_frame_02.dds"
+		instance={
+			position={ 0.500000 0.290000 }
+			scale={ 0.490000 0.490000 }
+			depth=2.010000
+		}
+
+	}
+
+	colored_emblem={
+		color1=black
+		color2=grey
+		texture="ce_doted_roundel_frame.dds"
+		instance={
+			position={ 0.500000 0.275000 }
+			scale={ 0.300000 0.300000 }
+			depth=6.010000
+		}
+
+	}
+
+}
 d_barazinbar = {
 	pattern="pattern_solid.dds"
 	color1=blue
@@ -239,14 +384,13 @@ d_barazinbar = {
 		color1=yellow_light
 		color2=rgb { 136 101 11 }
 		color3=rgb { 98 65 16 }
-		texture="dwarven_star_00.dds"
+		texture="ce_dwarven_star_00.dds"
 		instance={
 			position={ 0.500000 0.170000 }
 			scale={ 0.440000 0.440000 }
 		}
 
 	}
-
 }
 
 d_balins_expedition={
@@ -369,3 +513,323 @@ d_mazogs_host={
 
 }
 
+k_southern_misties = {
+	pattern="pattern_horizontal_split_02.dds"
+	color1=black
+	color2=black
+	color3=black
+	colored_emblem={
+		color1=orange
+		texture="ce_ragged_staff.dds"
+		instance={
+			position={ 0.500000 0.315000 }
+			scale={ 0.425000 0.425000 }
+			depth=6.010000
+			rotation=89
+		}
+
+	}
+
+	colored_emblem={
+		color1=white
+		texture="ce_star_22.dds"
+		instance={
+			scale={ 0.360000 0.360000 }
+			rotation=67
+		}
+
+	}
+
+	colored_emblem={
+		color1=orange
+		texture="ce_african_star_gurma.dds"
+		instance={
+			scale={ 0.415000 0.415000 }
+			depth=1.010000
+			rotation=45
+		}
+
+	}
+
+	colored_emblem={
+		color1=rgb { 45 60 47 }
+		color2=rgb { 40 53 41 }
+		texture="ce_cc_river_03.dds"
+		instance={
+			depth=2.010000
+		}
+
+	}
+
+	colored_emblem={
+		color1=grey
+		texture="ce_lozenge.dds"
+		instance={
+			position={ 0.500000 0.000000 }
+			depth=3.010000
+			rotation=90
+		}
+
+	}
+
+	colored_emblem={
+		color1=grey
+		texture="ce_square_kaaba.dds"
+		instance={
+			position={ 0.055000 0.000000 }
+			depth=4.010000
+			rotation=45
+		}
+
+		instance={
+			position={ 0.935000 0.000000 }
+			depth=5.010000
+			rotation=45
+		}
+
+	}
+
+}
+
+d_furkabbad={
+	pattern="pattern_horizontal_split_01.dds"
+	color1=black
+	color2=rgb { 42 59 44 }
+	color3=blue
+	colored_emblem={
+		color1=rgb { 54 79 57 }
+		texture="ce_lozenge.dds"
+		instance={
+			position={ 0.665000 0.580000 }
+			scale={ 0.250000 0.250000 }
+			rotation=90
+		}
+
+	}
+
+	colored_emblem={
+		color1=rgb { 56 82 59 }
+		texture="ce_lozenge.dds"
+		instance={
+			position={ 0.500000 0.605000 }
+			scale={ 0.390000 0.390000 }
+			depth=5.010000
+			rotation=90
+		}
+
+	}
+
+	colored_emblem={
+		color1=grey
+		texture="ce_vair_single.dds"
+		instance={
+			position={ 0.500000 0.275000 }
+			scale={ 0.333000 0.333000 }
+			depth=7.010000
+		}
+
+	}
+
+	colored_emblem={
+		color1=yellow
+		color2=orange
+		texture="ce_fire.dds"
+		instance={
+			position={ 0.500000 0.095000 }
+			scale={ 0.200000 0.200000 }
+			depth=2.010000
+		}
+
+	}
+
+	colored_emblem={
+		color1=black
+		texture="ce_lozenge.dds"
+		instance={
+			position={ 0.665000 0.135000 }
+			scale={ 0.415000 0.415000 }
+			depth=3.010000
+			rotation=110
+		}
+
+		instance={
+			position={ 0.360000 0.090000 }
+			scale={ 0.415000 0.415000 }
+			depth=4.010000
+			rotation=73
+		}
+
+	}
+
+	colored_emblem={
+		color1=rgb { 46 66 48 }
+		texture="ce_lozenge.dds"
+		instance={
+			position={ 0.320000 0.575000 }
+			scale={ 0.250000 0.250000 }
+			depth=1.010000
+			rotation=90
+		}
+
+	}
+
+	colored_emblem={
+		color1=grey
+		texture="ce_diamond_01.dds"
+		instance={
+			scale={ 0.750000 0.750000 }
+			depth=6.010000
+			rotation=90
+		}
+
+	}
+
+}
+
+k_gunduzbad = {
+	pattern="pattern_solid.dds"
+	color1=black
+	color2=white
+	color3=blue
+	colored_emblem={
+		color1=yellow
+		color2=white
+		color3=white
+		texture="ce_khazad_dum_02.dds"
+		instance={
+			position={ 0.500000 0.325000 }
+			scale={ 0.666000 0.650000 }
+			depth=5.010000
+		}
+
+	}
+
+	colored_emblem={
+		color1=rgb { 124 121 121 }
+		texture="ce_cc_mountains_01.dds"
+		instance={
+			position={ 0.500000 0.250000 }
+			depth=2.010000
+		}
+
+	}
+
+	colored_emblem={
+		color1=yellow_light
+		color2=yellow_light
+		texture="frame_dwarf_01.dds"
+	}
+
+	colored_emblem={
+		color1=grey
+		texture="ce_block_02.dds"
+		instance={
+			position={ 0.500000 1.000000 }
+			scale={ 1.000000 0.630000 }
+			depth=1.010000
+		}
+
+	}
+
+	colored_emblem={
+		color1=black
+		texture="ce_block_02.dds"
+		instance={
+			scale={ 0.380000 0.495000 }
+			depth=3.010000
+		}
+
+		instance={
+			position={ 0.510000 0.390000 }
+			scale={ 0.255000 0.255000 }
+			depth=4.010000
+			rotation=45
+		}
+
+	}
+
+}
+
+d_gunduzbad = {
+	pattern="pattern_solid.dds"
+	color1=rgb { 68 18 12 }
+	color2=white
+	colored_emblem={
+		color1=rgb { 129 127 127 }
+		color2=white
+		texture="ce_cc_mountains_01.dds"
+		instance={
+			position={ 0.500000 0.235000 }
+			depth=4.010000
+		}
+
+	}
+
+	colored_emblem={
+		color1=rgb { 68 18 12 }
+		texture="ce_block_02.dds"
+		instance={
+			position={ 0.500000 0.560000 }
+			scale={ 0.500000 0.500000 }
+			depth=5.010000
+			rotation=45
+		}
+
+		instance={
+			scale={ 0.465000 0.465000 }
+			depth=6.010000
+		}
+
+	}
+
+	colored_emblem={
+		color1=yellow
+		texture="frame_dwarf_01.dds"
+	}
+
+	colored_emblem={
+		color1=white
+		color2=black
+		texture="ce_d_dwarven_face.dds"
+		instance={
+			position={ 0.510000 0.715000 }
+			scale={ 0.435000 0.435000 }
+			depth=2.010000
+		}
+
+	}
+
+	colored_emblem={
+		color1=yellow
+		texture="ce_dwarven_shield_01.dds"
+		instance={
+			position={ 0.505000 0.775000 }
+			scale={ 0.333000 0.333000 }
+			depth=1.010000
+		}
+
+	}
+
+	colored_emblem={
+		color1=rgb { 136 134 134 }
+		texture="ce_block_02.dds"
+		instance={
+			position={ 0.500000 1.000000 }
+			scale={ 1.000000 0.660000 }
+			depth=3.010000
+		}
+
+	}
+
+	colored_emblem={
+		color1=yellow
+		texture="ce_khazad_dum_02.dds"
+		instance={
+			position={ 0.490000 0.315000 }
+			scale={ 0.885000 0.600000 }
+			depth=7.010000
+		}
+
+	}
+
+}

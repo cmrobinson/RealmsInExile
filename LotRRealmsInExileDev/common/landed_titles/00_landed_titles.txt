@@ -106,6 +106,19 @@ e_isengard_unleashed = {
 	capital = c_isengard
 }
 
+# High Kingdom of Durin's Folk (empire title)
+e_durins_folk = {
+	color = { 0 62 211 }
+	definite_form = yes
+	capital = c_durins_hall
+	landless = yes
+	ignore_titularity_for_title_weighting = yes
+
+	ai_primary_priority = {
+		add = @always_primary_score #1000
+	}
+}
+
 # The Stewards of Gondor (empire title)
 e_gondor_steward = {
 	color = { 245 245 247 }
@@ -11513,9 +11526,8 @@ e_mordor = {
 				}
 				
 			}
-			
 		}
-		
+
 		d_ephel_duath = {
 			color = { 177 75 59 }
 			
@@ -14412,7 +14424,7 @@ e_haradwaith = {
 }
 
 e_umbar = {
-	color = { 213 230 110 }
+	color = { 110 100 30 }
 	capital = c_umbar
 	
 	k_umbar = {
@@ -41044,97 +41056,6 @@ e_misty_mountains = {
 			
 		}
 		
-		d_foundations_of_stone = {
-			color = { 60 89 126 }
-				
-			cultural_names = {
-				name_list_orc = cn_foundations_of_stone_orc
-				name_list_mountain_orc = cn_foundations_of_stone_orc
-				name_list_goblin = cn_foundations_of_stone_orc
-			}
-			
-			capital = c_amrad_azahal
-			
-			c_amrad_azahal = {
-				color = { 1 78 179 }
-				
-				cultural_names = {
-					name_list_orc = cn_amrad_azahal_orc
-					name_list_mountain_orc = cn_amrad_azahal_orc
-					name_list_goblin = cn_amrad_azahal_orc
-					name_list_wastelands = cn_amrad_azahal_orc
-				}
-				
-				b_amrad_azahal = {
-					province = 4937
-					
-					color = { 67 195 111 }
-				
-					cultural_names = {
-						name_list_orc = cn_amrad_azahal_orc
-						name_list_mountain_orc = cn_amrad_azahal_orc
-						name_list_goblin = cn_amrad_azahal_orc
-						name_list_wastelands = cn_amrad_azahal_orc
-					}
-					
-				}
-				
-			}
-			
-			c_dar_narbugud = {
-				color = { 80 89 140 }
-				
-				cultural_names = {
-					name_list_orc = cn_dar_narbugud_orc
-					name_list_mountain_orc = cn_dar_narbugud_orc
-					name_list_goblin = cn_dar_narbugud_orc
-					name_list_wastelands = cn_dar_narbugud_orc
-				}
-				
-				b_dar_narbugud = {
-					province = 4938
-					
-					color = { 49 58 226 }
-				
-					cultural_names = {
-						name_list_orc = cn_dar_narbugud_orc
-						name_list_mountain_orc = cn_dar_narbugud_orc
-						name_list_goblin = cn_dar_narbugud_orc
-						name_list_wastelands = cn_dar_narbugud_orc
-					}
-					
-				}
-				
-			}
-			
-			c_mainthiri_ikrihi = {
-				color = { 79 94 111 }
-				
-				cultural_names = {
-					name_list_orc = cn_mainthiri_ikrihi_orc
-					name_list_mountain_orc = cn_mainthiri_ikrihi_orc
-					name_list_goblin = cn_mainthiri_ikrihi_orc
-					name_list_wastelands = cn_mainthiri_ikrihi_orc
-				}
-				
-				b_mainthiri_ikrihi = {
-					province = 4939
-					
-					color = { 15 68 119 }
-				
-					cultural_names = {
-						name_list_orc = cn_mainthiri_ikrihi_orc
-						name_list_mountain_orc = cn_mainthiri_ikrihi_orc
-						name_list_goblin = cn_mainthiri_ikrihi_orc
-						name_list_wastelands = cn_mainthiri_ikrihi_orc
-					}
-					
-				}
-				
-			}
-			
-		}
-
 		d_fuhmdusha = {
 			color = { 78 64 70 }
 			
@@ -41234,6 +41155,245 @@ e_misty_mountains = {
 		
 	}
 
+	k_southern_misties = {
+		color = { 130 111 123 }
+
+		capital = c_amrad_azahal
+
+		d_foundations_of_stone = {
+			color = { 60 89 126 }
+				
+			cultural_names = {
+				name_list_dwarven = cn_foundations_of_stone_dwarven
+				name_list_firebeards = cn_foundations_of_stone_dwarven
+				name_list_blacklocks = cn_foundations_of_stone_dwarven
+			}
+			
+			capital = c_amrad_azahal
+			
+			c_amrad_azahal = {
+				color = { 1 78 179 }
+				
+				cultural_names = {
+					name_list_orc = cn_amrad_azahal_orc
+					name_list_mountain_orc = cn_amrad_azahal_orc
+					name_list_goblin = cn_amrad_azahal_orc
+					name_list_wastelands = cn_amrad_azahal_orc
+				}
+				
+				b_amrad_azahal = {
+					province = 4937
+					
+					color = { 67 195 111 }
+				
+					cultural_names = {
+						name_list_orc = cn_amrad_azahal_orc
+						name_list_mountain_orc = cn_amrad_azahal_orc
+						name_list_goblin = cn_amrad_azahal_orc
+						name_list_wastelands = cn_amrad_azahal_orc
+					}
+					
+				}
+				
+			}
+			
+			c_dar_narbugud = {
+				color = { 80 89 140 }
+				
+				cultural_names = {
+					name_list_orc = cn_dar_narbugud_orc
+					name_list_mountain_orc = cn_dar_narbugud_orc
+					name_list_goblin = cn_dar_narbugud_orc
+					name_list_wastelands = cn_dar_narbugud_orc
+				}
+				
+				b_dar_narbugud = {
+					province = 4938
+					
+					color = { 49 58 226 }
+				
+					cultural_names = {
+						name_list_orc = cn_dar_narbugud_orc
+						name_list_mountain_orc = cn_dar_narbugud_orc
+						name_list_goblin = cn_dar_narbugud_orc
+						name_list_wastelands = cn_dar_narbugud_orc
+					}
+					
+				}
+				
+			}
+			
+			c_mainthiri_ikrihi = {
+				color = { 79 94 111 }
+				
+				cultural_names = {
+					name_list_orc = cn_mainthiri_ikrihi_orc
+					name_list_mountain_orc = cn_mainthiri_ikrihi_orc
+					name_list_goblin = cn_mainthiri_ikrihi_orc
+					name_list_wastelands = cn_mainthiri_ikrihi_orc
+				}
+				
+				b_mainthiri_ikrihi = {
+					province = 4939
+					
+					color = { 15 68 119 }
+				
+					cultural_names = {
+						name_list_orc = cn_mainthiri_ikrihi_orc
+						name_list_mountain_orc = cn_mainthiri_ikrihi_orc
+						name_list_goblin = cn_mainthiri_ikrihi_orc
+						name_list_wastelands = cn_mainthiri_ikrihi_orc
+					}
+					
+				}
+				
+			}
+
+			c_abanathkul = {
+				color = { 92 82 101 }
+
+				cultural_names = {
+					name_list_orc = cn_abanathkul_orc
+					name_list_mountain_orc = cn_abanathkul_orc
+					name_list_goblin = cn_abanathkul_orc
+					name_list_wastelands = cn_abanathkul_orc
+				}
+				
+				b_abanathkul = {
+					province = 5297
+					
+					color = { 150 196 230 }
+
+					cultural_names = {
+						name_list_orc = cn_abanathkul_orc
+						name_list_mountain_orc = cn_abanathkul_orc
+						name_list_goblin = cn_abanathkul_orc
+						name_list_wastelands = cn_abanathkul_orc
+					}
+					
+				}
+				
+			}
+			
+		}
+
+		d_furkabbad = {
+			color = { 130 100 133 }
+
+			capital = c_buzradusha
+
+			#cultural_names = {
+			#	name_list_orc = cn_furkabbad_orc
+			#	name_list_mountain_orc = cn_furkabbad_orc
+			#	name_list_goblin = cn_furkabbad_orc
+			#}
+			
+			c_buzradusha = {
+				color = { 192 82 101 }
+
+				cultural_names = {
+					name_list_orc = cn_buzradusha_orc
+					name_list_mountain_orc = cn_buzradusha_orc
+					name_list_goblin = cn_buzradusha_orc
+					name_list_wastelands = cn_buzradusha_orc
+				}
+								
+				b_buzradusha = {
+					province = 5298
+					
+					color = { 42 238 114 }
+
+					cultural_names = {
+						name_list_orc = cn_buzradusha_orc
+						name_list_mountain_orc = cn_buzradusha_orc
+						name_list_goblin = cn_buzradusha_orc
+						name_list_wastelands = cn_buzradusha_orc
+					}
+
+				}
+				
+			}
+
+			c_humutasadul = {
+				color = { 92 182 101 }
+
+				cultural_names = {
+					name_list_orc = cn_humutasadul_orc
+					name_list_mountain_orc = cn_humutasadul_orc
+					name_list_goblin = cn_humutasadul_orc
+					name_list_wastelands = cn_humutasadul_orc
+				}
+								
+				b_humutasadul = {
+					province = 5299
+					
+					color = { 165 249 194 }
+
+					cultural_names = {
+						name_list_orc = cn_humutasadul_orc
+						name_list_mountain_orc = cn_humutasadul_orc
+						name_list_goblin = cn_humutasadul_orc
+						name_list_wastelands = cn_humutasadul_orc
+					}
+
+				}
+				
+			}
+
+			c_agarudlag = {
+				color = { 92 82 201 }
+
+				cultural_names = {
+					name_list_orc = cn_agarudlag_orc
+					name_list_mountain_orc = cn_agarudlag_orc
+					name_list_goblin = cn_agarudlag_orc
+					name_list_wastelands = cn_agarudlag_orc
+				}
+								
+				b_agarudlag = {
+					province = 5300
+					
+					color = { 179 79 146 }
+
+					cultural_names = {
+						name_list_orc = cn_agarudlag_orc
+						name_list_mountain_orc = cn_agarudlag_orc
+						name_list_goblin = cn_agarudlag_orc
+						name_list_wastelands = cn_agarudlag_orc
+					}
+
+				}
+				
+			}
+
+			c_abanutut = {
+				color = { 92 82 1 }
+
+				cultural_names = {
+					name_list_orc = cn_abanutut_orc
+					name_list_mountain_orc = cn_abanutut_orc
+					name_list_goblin = cn_abanutut_orc
+					name_list_wastelands = cn_abanutut_orc
+				}
+								
+				b_abanutut = {
+					province = 5301
+					
+					color = { 100 3 191 }
+
+					cultural_names = {
+						name_list_orc = cn_abanutut_orc
+						name_list_mountain_orc = cn_abanutut_orc
+						name_list_goblin = cn_abanutut_orc
+						name_list_wastelands = cn_abanutut_orc
+					}
+
+				}
+				
+			}
+		}
+	}
+
 	k_gundabad = {
 		color = { 150 125 110 }
 		
@@ -41250,6 +41410,8 @@ e_misty_mountains = {
 
 			cultural_names = {
 				name_list_dwarven = cn_gundubad_dwarven
+				name_list_firebeards = cn_gundubad_dwarven
+				name_list_blacklocks = cn_gundubad_dwarven
 			}
 			
 			c_mattugard = {
@@ -44199,3 +44361,217 @@ e_forodwaith = {
     }
     
 }
+
+e_yellow_mountains = {
+	color = { 150 120 0 }
+	capital = c_nar_agathol 
+
+	k_barazimab_ul = {
+		color = { 150 120 0 }
+		capital = c_nar_agathol 
+
+		d_markhu_khazad = {
+			capital = c_nar_agathol 
+
+			color = { 136 95 1 }
+
+			c_tuktazn_an = {
+				color = { 155 113 18 }
+				
+				b_tuktazn_an = {
+					province = 5284
+					color = { 140 177 167 }
+				}
+			}
+			c_gabilzirak = {
+				color = { 141 105 50 }
+				
+				b_gabilzirak = {
+					province = 5282
+					color = { 127 21 21 }
+				}
+			}
+			c_baraz_arum  = {
+				color = { 126 95 1 }
+				
+				b_baraz_arum = {
+					province = 5250
+					color = { 81 146 42 }
+				}
+			}
+			c_kurdaban = {
+				color = { 126 105 1 }
+				
+				b_kurdaban = {
+					province = 5251
+					color = { 218 65 143 }
+				}
+			}
+			c_nar_agathol  = {
+				color = { 140 86 1 }
+				
+				b_nar_agathol = {
+					province = 5249
+					color = { 179 47 246 }
+				}
+			}
+			c_gundadarf = {
+				color = { 115 90 33 }
+				
+				b_gundadarf = {
+					province = 5281
+					color = { 157 30 87 }
+				}
+			}
+			c_ukrati_d_um = {
+				color = { 144 107 38 }
+				
+				b_ukrati_d_um = {
+					province = 5283
+					color = { 36 216 102 }
+				}
+			}
+		}
+		d_duban_urd = {
+			capital = c_ky_asatal
+
+			color = { 184 149 28 }
+
+			c_ky_asatal = {
+				color = { 167 141 31 }
+
+				b_bakoya = {
+					province = 1038
+					color = { 99 69 1 }
+				}
+				b_ky_asatal = {
+					province = 1151
+					color = { 120 80 91 }
+				}
+			}
+			c_dubanar_ag = {
+				color = { 194 137 1 }
+
+				b_karabizar = {
+					province = 5287
+					color = { 137 191 185 }
+				}
+				b_atamabad = {
+					province = 5288
+					color = { 195 133 204 }
+				}
+				b_bund_ul = {
+					province = 5286
+					color = { 52 78 15 }
+				}
+			}
+		}
+		d_maibrik_zudnu = {
+			capital = c_shath_urgathol
+
+			color = { 163 135 1 }
+
+			c_shath_urgathol = {
+				color = { 140 127 40 }
+				
+				b_shath_urgathol = {
+					province = 5295
+					color = { 22 215 99 }
+				}
+			}
+			c_buzrurus = {
+				color = { 144 126 1 }
+				
+				b_buzrurus = {
+					province = 5294
+					color = { 214 46 179 }
+				}
+			}
+			c_taklutatk_at = {
+				color = { 172 155 56 }
+				
+				b_taklutatk_at = {
+					province = 5293
+					color = { 108 106 176 }
+				}
+			}
+			c_urku_n_ala = {
+				color = { 152 138 70 }
+				
+				b_urku_n_ala = {
+					province = 5292
+					color = { 138 125 111 }
+				}
+			}
+		}
+		d_kudmu_fakk = {
+			capital = c_sullun_ad
+
+			color = { 156 99 1 }
+
+			c_sullun_ad = {
+				color = { 177 93 1 }
+				
+				b_sullun_ad = {
+					province = 5291
+					color = { 113 80 205 }
+				}
+			}
+			c_sakhurkhas = {
+				color = { 142 91 1 }
+				
+				b_sakhurkhas = {
+					province = 5290
+					color = { 84 55 8 }
+				}
+			}
+			c_gamilkazl_in = {
+				color = { 165 91 1 }
+				
+				b_gamilkazl_in = {
+					province = 5289
+					color = { 29 40 95 }
+				}
+			}
+			c_ubrazirkat = {
+				color = { 137 101 40 }
+				
+				b_ubrazirkat = {
+					province = 5285
+					color = { 116 219 53 }
+				}
+			}
+		}
+		d_furuk_urd = {
+			capital = c_azand_um
+
+			color = { 175 149 9 }
+
+			c_azand_um = {
+				color = { 172 153 1 }
+				
+				b_azand_um = {
+					province = 5279
+					color = { 207 76 11 }
+				}
+			}
+			c_zahargathol = {
+				color = { 195 148 1 }
+				
+				b_zahargathol = {
+					province = 5280
+					color = { 24 197 131 }
+				}
+			}
+			c_kalilzeleg = {
+				color = { 173 149 1 }
+
+				b_kalilzeleg = {
+					province = 5296
+					color = { 124 223 153 }
+				}
+			}
+		}
+	}
+}
+

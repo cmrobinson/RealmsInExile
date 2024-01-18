@@ -429,22 +429,21 @@ strongorc9 = {
 	}			
 }				
 				
-strongorc10 = {		#Gothmog, Lieutenant of Morgul, Lead the forces of Morgul after the Witch King was slain. Books never specify wether he was an orc, black numenorean, or something else entirely
+strongorc10 = {		#Gothmog, Lieutenant of Morgul, Lead the forces of Morgul after the Witch King was slain. Books never specify whether he was an orc, black numenorean, or something else entirely
 	name = Gothmog			
 	dynasty = dynasty_ob_morgul
 	religion = lidless_eye			
 	culture = ungurhai
 	dna = strongorc10_dna
 					
-	trait = education_stewardship_4	
+	trait = education_martial_3
 	trait = deceitful
 	trait = greedy			
-	trait = patient
+	trait = impatient
 
 	trait = military_engineer
 	trait = banner_orc
 	trait = maimed
-	trait = leper			
 	trait = physique_good_1
 	
 	diplomacy = 6

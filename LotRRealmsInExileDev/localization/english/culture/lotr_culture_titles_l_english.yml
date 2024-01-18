@@ -32,12 +32,16 @@
 
  count_goblin_male:0 "Boss"
  count_goblin_female:0 "Boss"
+ county_goblin:0 "Burrow"
  duke_goblin_male:0 "Big Boss"
  duke_goblin_female:0 "Big Boss"
+ duchy_goblin:0 "Warrens"
  king_goblin_male:0 "Overboss"
  king_goblin_female:0 "Overboss"
+ kingdom_goblin:0 "Vast Nest"
  emperor_goblin_male:0 "Great Goblin"
  emperor_goblin_female:0 "Great Goblin"
+ empire_goblin:0 "Immense Hives"
  duke_goblin_town:0 "Goblin King"
  duchy_goblin_town:0 "Kingdom"
 
@@ -151,17 +155,60 @@
  county_republic_dunedain:0 "Shire"
  
  ## BLACK NUMENOREAN ## 
- count_feudal_corsair:0 "Captain"
- county_feudal_corsair:0 "Command"
- duke_feudal_male_corsair:0 "Legate"
- duke_feudal_female_corsair:0 "Legate"
- duchy_feudal_corsair:0 "Haven"
- kingdom_feudal_corsair:0 "Great Haven"
- emperor_feudal_male_black_numenorean:0 "Ar"
- emperor_feudal_female_black_numenorean:0 "Ar"
- emperor_feudal_female_black_numenorean_nonholder:0 "High Consort"
+
+ # Adunaic
+
+ count_feudal_adunaic:0 "Khôr"
+ count_feudal_female_adunaic:0 "Khôr"
+ county_feudal_adunaic:0 "Khôrthâni"
+ duke_feudal_male_adunaic:0 "Bārunkhôr"
+ duke_feudal_female_adunaic:0 "Bārunkhôr"
+ duchy_feudal_adunaic:0 "Bāruthâni"
+ kingdom_feudal_adunaic:0 "thâni"
+ king_feudal_female_adunaic:0 "Arkhôr"
+ king_feudal_male_adunaic:0 "Arkhôr"
  emperor_feudal_male_adunaic:0 "Ar"
  emperor_feudal_female_adunaic:0 "Ar"
+ emperor_feudal_female_adunaic_nonholder:0 "Âri"
+ empire_feudal_adunaic:0 "Ârûi-Thani"
+
+ # Bellakar
+ emperor_feudal_male_adunaic_bellakar:0 "Ârû" 
+ emperor_feudal_female_adunaic_bellakar:0 "Âri"
+
+ # Umbarean
+ count_feudal_umbarean:0 "Lord"
+ county_feudal_umbarean:0 "Lordship"
+ duke_feudal_male_umbarean:0 "High Lord"
+ duke_feudal_female_umbarean:0 "High Lady"
+ duchy_feudal_umbarean:0 "High Lordship"
+ kingdom_feudal_umbarean:0 "Great Haven"
+ 
+ # Corsair
+ count_feudal_corsair:0 "Captain"
+ county_feudal_corsair:0 "Captaincy"
+ duke_feudal_male_corsair:0 "Corsair-Lord"
+ duke_feudal_female_corsair:0 "Corsair-Lady"
+ duchy_feudal_corsair:0 "Haven"
+ king_feudal_corsair:0 "Sea King"
+ king_feudal_female_corsair:0 "Sea Queen"
+ kingdom_feudal_corsair:0 "Great Haven"
+ emperor_feudal_male_corsair:0 "Great Sea King"
+ emperor_feudal_female_corsair:0 "Great Sea Queen"
+ emperor_feudal_female_corsair_nonholder:0 "High Consort"
+ empire_feudal_corsair:0 "Thalassocracy"
+
+ # Corrupt Adunaic
+ count_feudal_corrupt_adunaic:0 "Bârb"
+ county_feudal_corrupt_adunaic:0 "Thârba"
+ duke_feudal_male_corrupt_adunaic:0 "Bārtarb"
+ duke_feudal_female_corrupt_adunaic:0 "Bārubah"
+ duchy_feudal_corrupt_adunaic:0 "Thâutara"
+ king_feudal_corrupt_adunaic:0 "Taskar"
+ kingdom_feudal_corrupt_adunaic:0 "Thâkralan"
+ emperor_feudal_female_corrupt_adunaic_nonholder:0 "High Consort"
+ emperor_feudal_male_corrupt_adunaic:0 "Chár Taskar"
+ emperor_feudal_female_corrupt_adunaic:0 "Chár Taskar"
  
  ## FELAYAN ##
  king_male_felayan:0 "First Lord"
@@ -339,13 +386,34 @@
  duke_feudal_female_haradrim:0 "Autarbah"
  duchy_feudal_haradrim:0 "Autara"
  king_feudal_male_haradrim:0 "Taskral"
+ kingdom_feudal_haradrim:0 "Taskralan"
  king_feudal_female_haradrim:0 "Taskralah"
+ emperor_haradrim_male:0 "Chák Taskral"
+ emperor_haradrim_female:0 "Chák Taskralah"
  queen_mother_vassal_harad:0 "Khôrammê" 
  kingdom_feudal_vassal_harad:0 "Grand Viziership"
  king_feudal_male_vassal_harad:0 "Grand Vizier"
  king_feudal_female_vassal_harad:0 "High Nebet"
  prince_male_vassal_harad:0 "Bârun"
  prince_female_vassal_harad:0 "Bârin"
+ 
+ count_feudal_male_southern_apysaic:0 "Takûr"
+ count_feudal_female_southern_apysaic:0 "Takûrah"
+ county_feudal_southern_apysaic:0 "Takûralan"
+ duke_feudal_male_southern_apysaic:0 "Rîwa"
+ duke_feudal_female_southern_apysaic:0 "Rîwala"
+ duchy_feudal_southern_apysaic:0 "Rîwadhir"
+ king_feudal_male_southern_apysaic:0 "Şasak"
+ kingdom_feudal_southern_apysaic:0 "Şasakahr"
+ king_feudal_female_southern_apysaic:0 "Şasakal"
+ emperor_southern_apysaic_male:0 "Chákralyi"
+ emperor_southern_apysaic_female:0 "Chákralyi"
+ empire_feudal_southern_apysaic:0 "Chásakahr"
+
+ emperor_bozisha_miraz_male:0 "Kralyi"
+ emperor_bozisha_miraz_female:0 "Kralyi"
+ king_ray_male:0 "Kralyi"
+ king_ray_female:0 "Kralyi
 
  ## Oligarchy ##
  baron_oligarchy_male:0 "Councilman"
@@ -410,6 +478,19 @@
  duchy_dwarf:0 "Hold"
  kingdom_dwarf:0 "Mansion"
  empire_dwarf:0 "Great Mansions"
+ 
+ # Firebeards
+ emperor_dwarf_male_firebeards:0 "'Irsîn Zabadu"
+ emperor_dwarf_female_firebeards:0 "'Irsîn Zabadu"
+ 
+ # Broadbeams
+ emperor_dwarf_male_broadbeams:0 "'Uhfât Azbad"
+ emperor_dwarf_female_broadbeams:0 "'Uhfât Azbad"
+
+ # Mount Dolmed
+ mount_dolmed_dwarf_female:0 "High Stone Caller"
+ mount_dolmed_dwarf_male:0 "Grand Stone Caller"
+ mount_dolmed_dwarf:0 "Yindîn"
 
  #### ELVES ####
  
@@ -427,8 +508,8 @@
  duke_female_quenya:0 "Cáne"
  king_male_quenya:0 "Aran"
  king_female_quenya:0 "Tári"
- emperor_male_quenya:0 "Tar"
- emperor_female_quenya:0 "Tartári"
+ emperor_male_quenya:0 "Ingaran"
+ emperor_female_quenya:0 "Ingatári"
  prince_male_quenya:0 "Aranion"
  prince_female_quenya:0 "Aranel"
  

@@ -114,7 +114,7 @@
  dynn_pickthorn:0 "Pickthorn"
 
  ### BOMBADIL ###
- dynn_bombadil:0 "Bombadil"
+ dynn_bombadil:0 "" # So that he doesn't show up on the dynasty map. 'Bombadil' implemented as a nickname
  
  ### DWARVES ###
  dynn_durin:0 "Durin"
@@ -138,7 +138,7 @@
  dynn_theklel:0 "Theklêl"
  dynn_snail:0 "Rathkh-Biraimzirî"
  dynn_thrar:0 "Thrár"
- dynn_hebnar:0 "Hebnâr"
+ dynn_argan:0 "Argân"
  dynn_sindri:0 "Sindri"
  dynn_thulin:0 "Thúlin"
  dynn_bavor:0 "Bavór"
@@ -693,6 +693,7 @@
  dynn_medjanom:0 "Medjanomä"
  dynn_ayerikka:0 "Ayerikkä"
  dynn_ziyalokka:0 "Ziyalokkä"
+ dynn_khadnomian:0 "Khadnomiän"
  dynn_umbarnom:0 "Umbarnomä"
  dynn_tirsakounika:0 "Tirsakounin"
  dynn_melenkoud:0 "Mêlênkoudin"
@@ -838,6 +839,7 @@
  dynn_lauriel:0 "Nos Lauriel"
  dynn_sarisse:0 "Nos Sarissë"
  dynn_inglor:0 "Nos Inglor"
+ dynn_inglorion:0 "Nos Inglorion"
  
   ### MORDOR ###
  dynn_melkondili:0 "Melkondili"

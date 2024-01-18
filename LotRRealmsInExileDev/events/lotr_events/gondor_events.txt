@@ -1054,7 +1054,6 @@ gondor.0502 = { # Aragorn is allowed into Minas Tirith and is coronated
 			years = 5
 		}
 		create_artifact_crown_of_gondor_effect = { OWNER = this }
-		create_artifact_anduril_effect = { OWNER = this }
 		root = { # Give Aragorn his banners!
             save_scope_as = banner_ruler
             # House Banner
@@ -1200,7 +1199,7 @@ gondor.0502 = { # Aragorn is allowed into Minas Tirith and is coronated
 			house = {
 				add_house_modifier = {
 					modifier = unity_house_organized_for_war_modifier
-					years = 50
+					years = 150
 				}
 			}
 			if = {
@@ -1342,6 +1341,10 @@ gondor.0502 = { # Aragorn is allowed into Minas Tirith and is coronated
 		trigger_event = {
 			id = gondor.0504 
 			days = 90
+		}
+		trigger_event = {
+			id = lotr_artifact.0005
+			days = 3
 		}
 		if = {
 			limit = { # Major News
@@ -1719,7 +1722,7 @@ gondor.0505 = { # A new house for a new age?
 			house = {
 				add_house_modifier = {
 					modifier = unity_house_organized_for_war_modifier
-					years = 50
+					years = 150
 				}
 			}
 		}
@@ -6015,7 +6018,7 @@ gondor.2400 = { # Reclaim Calenardhon
 	desc = gondor.2400.desc
 	theme = war
 	override_background = {     
-      reference = edoras
+    	reference = edoras
 	}
 	
 	left_portrait = {
@@ -6075,7 +6078,7 @@ gondor.2401 = { # Reclaim Calenardhon - Rohan event
 	desc = gondor.2401.desc
 	theme = war
 	override_background = {     
-      reference = edoras
+    	reference = edoras
 	}
 	left_portrait = {
 		character = root
@@ -6097,7 +6100,7 @@ gondor.2500 = { # Integrate Calenardhon
 	desc = gondor.2500.desc
 	theme = stewardship_duty_focus
 	override_background = {     
-      reference = edoras
+    	reference = edoras
 	}
 	right_portrait = {
 		character = root
@@ -6106,7 +6109,7 @@ gondor.2500 = { # Integrate Calenardhon
 
 	option = {
 		name = gondor.2500.a
-			}
+	}
 }
 
 gondor.2501 = { # Integrate Calenardhon reaction
@@ -6116,7 +6119,7 @@ gondor.2501 = { # Integrate Calenardhon reaction
 	desc = gondor.2501.desc
 	theme = stewardship_duty_focus
 	override_background = {     
-      reference = edoras
+    	reference = edoras
 	}
 	right_portrait = {
 		character = root
@@ -6125,6 +6128,56 @@ gondor.2501 = { # Integrate Calenardhon reaction
 
 	option = {
 		name = gondor.2501.a
+	}
+}
+
+gondor.2502 = { # Vassalization offers to independent rulers in rohan
+	type = letter_event
+	sender = scope:sender
+	opening = {
+		desc = gondor.0521.opening
+	}
+	desc = gondor.2502.desc
+	on_trigger_fail = { #Trigger invitation again if it was blocked because the character was handling another invitation
+		trigger_event = {
+			id = gondor.2502
+			days = 1
+		}
+	}
+	immediate = {
+		title:c_minas_tirith.holder = {
+			save_scope_as = sender
+		}
+		ROOT = {
+			save_scope_as = recipient
+		}
+	}
+	override_background = {     
+    	reference = edoras
+	}
+	right_portrait = {
+		character = root
+		animation = personality_honorable
+	}
+
+	option = {
+		name = gondor.2502.a
+		create_title_and_vassal_change = {
+			type = swear_fealty
+			save_scope_as = change
+			add_claim_on_loss = no
+		}
+		change_liege = {
+			liege = scope:sender
+			change = scope:change
+		}
+		resolve_title_and_vassal_change = scope:change
+	}
+	option = {
+		name = gondor.2502.b
+		trigger = {
+			is_ai = no
+		}
 	}
 }
 
@@ -7869,7 +7922,7 @@ gondor.2800 = { # Invite elves to Edhellond
 		name = gondor.2800.d
 		custom_tooltip = gondor.2800.d_tt
 		trigger = {
-			title:k_nelornieth.holder = {
+			title:k_imladris.holder = {
 				has_relation_friend = root
 			}
 		}

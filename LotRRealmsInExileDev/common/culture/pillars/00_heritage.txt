@@ -249,6 +249,7 @@ heritage_orc = {
 	type = heritage
 	character_modifier = {
 		life_expectancy = 200
+		years_of_fertility = 160
 		fertility = 0.5
 		health = 1
 		negate_health_penalty_add = 1
@@ -271,6 +272,7 @@ heritage_goblin = { #juke note: boni should be adjusted later
 	type = heritage
 	character_modifier = {
 		life_expectancy = 200
+		years_of_fertility = 160
 		fertility = 0.5
 		health = 1
 		negate_health_penalty_add = 1
@@ -348,12 +350,15 @@ heritage_longbeard = {
 	}
 
 	character_modifier = {
-		life_expectancy = 200
-		years_of_fertility = 160
+		life_expectancy = 190
+		years_of_fertility = 150
 		fertility = -0.1
 		prowess = 3
 		health = 0.5
 		negate_health_penalty_add = 7
+		army_damage_mult = 1
+		army_toughness_mult = 1
+		levy_size = -0.5
 		monthly_lifestyle_xp_gain_mult = -0.2
 		halls_travel_danger = halls_high_danger_reduction
 		mountains_travel_danger = mountains_high_danger_reduction
@@ -372,12 +377,15 @@ heritage_firebeard = {
 	}
 
 	character_modifier = {
-		life_expectancy = 200
-		years_of_fertility = 160
+		life_expectancy = 170
+		years_of_fertility = 130
 		fertility = -0.1
 		prowess = 3
 		health = 0.5
 		negate_health_penalty_add = 7
+		army_damage_mult = 1
+		army_toughness_mult = 1
+		levy_size = -0.5
 		monthly_lifestyle_xp_gain_mult = -0.2
 		halls_travel_danger = halls_high_danger_reduction
 		mountains_travel_danger = mountains_high_danger_reduction
@@ -396,12 +404,15 @@ heritage_broadbeam = {
 	}
 
 	character_modifier = {
-		life_expectancy = 200
-		years_of_fertility = 160
+		life_expectancy = 170
+		years_of_fertility = 130
 		fertility = -0.1
 		prowess = 3
 		health = 0.5
 		negate_health_penalty_add = 7
+		army_damage_mult = 1
+		army_toughness_mult = 1
+		levy_size = -0.5
 		monthly_lifestyle_xp_gain_mult = -0.2
 		halls_travel_danger = halls_high_danger_reduction
 		mountains_travel_danger = mountains_high_danger_reduction
@@ -420,12 +431,15 @@ heritage_ironfist = {
 	}
 
 	character_modifier = {
-		life_expectancy = 200
-		years_of_fertility = 160
+		life_expectancy = 170
+		years_of_fertility = 130
 		fertility = -0.1
 		prowess = 3
 		health = 0.5
 		negate_health_penalty_add = 7
+		army_damage_mult = 1
+		army_toughness_mult = 1
+		levy_size = -0.5
 		monthly_lifestyle_xp_gain_mult = -0.2
 		halls_travel_danger = halls_high_danger_reduction
 		mountains_travel_danger = mountains_high_danger_reduction
@@ -444,12 +458,15 @@ heritage_stiffbeard = {
 	}
 
 	character_modifier = {
-		life_expectancy = 200
-		years_of_fertility = 160
+		life_expectancy = 170
+		years_of_fertility = 130
 		fertility = -0.1
 		prowess = 3
 		health = 0.5
 		negate_health_penalty_add = 7
+		army_damage_mult = 1
+		army_toughness_mult = 1
+		levy_size = -0.5
 		monthly_lifestyle_xp_gain_mult = -0.2
 		halls_travel_danger = halls_high_danger_reduction
 		mountains_travel_danger = mountains_high_danger_reduction
@@ -468,19 +485,22 @@ heritage_blacklock = {
 	}
 
 	character_modifier = {
-		life_expectancy = 200
-		years_of_fertility = 160
+		life_expectancy = 170
+		years_of_fertility = 130
 		fertility = -0.1
 		prowess = 3
 		health = 0.5
 		negate_health_penalty_add = 7
+		army_damage_mult = 1
+		army_toughness_mult = 1
+		levy_size = -0.5
 		monthly_lifestyle_xp_gain_mult = -0.2
 		halls_travel_danger = halls_high_danger_reduction
 		mountains_travel_danger = mountains_high_danger_reduction
 		hills_travel_danger = hills_high_danger_reduction
 	}
 	culture_modifier = {
-		mercenary_count_mult = -10
+		#mercenary_count_mult = -10
 	}
 }
 
@@ -492,12 +512,15 @@ heritage_stonefoot = {
 	}
 
 	character_modifier = {
-		life_expectancy = 200
-		years_of_fertility = 160
+		life_expectancy = 170
+		years_of_fertility = 130
 		fertility = -0.1
 		prowess = 3
 		health = 0.5
 		negate_health_penalty_add = 7
+		army_damage_mult = 1
+		army_toughness_mult = 1
+		levy_size = -0.5
 		monthly_lifestyle_xp_gain_mult = -0.2
 		halls_travel_danger = halls_high_danger_reduction
 		mountains_travel_danger = mountains_high_danger_reduction

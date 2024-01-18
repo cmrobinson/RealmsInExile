@@ -477,10 +477,15 @@ scripted_trigger hold_court_1011_valid_neighbour_claimant_trigger = {
 	NOT = { is_courtier_of = root }
 	NOR = {
 		has_culture = culture:wastelands
+		is_elf = yes
 		AND = {
 		    exists = primary_title.empire
 		    primary_title.empire = title:e_valinor
 		}
+	}
+	trigger_if = {
+		limit = { root = { is_underground_race = no } }
+		is_underground_race = no
 	}
 }
 
@@ -3480,6 +3485,8 @@ hold_court.3070 = {
 		trigger = {
 			NOT = { any_child = { is_alive = yes count = 0 } }
 			cannot_be_killed = no
+			same_race = { TARGET = scope:mystery_baby }
+			NOT = { has_trait = cannot_marry }
 		}
 
 		#One shiny new child for you!
@@ -19976,7 +19983,7 @@ hold_court.6210 = {
 			limit = { is_elf = yes }
 			scope:steward = {
 				set_council_task = {
-					task_type = task_ravage_the_land
+					task_type = task_elven_settlement
 					target = scope:6210_main_county
 				}
 			}
@@ -19985,7 +19992,7 @@ hold_court.6210 = {
 			limit = { is_orc = yes }
 			scope:steward = {
 				set_council_task = {
-					task_type = task_elven_settlement
+					task_type = task_ravage_the_land
 					target = scope:6210_main_county
 				}
 			}
@@ -31444,6 +31451,9 @@ hold_court.8100 = {
 		name = hold_court.8100.c
 		trigger = {
 			scope:ward = { is_lowborn = yes }
+			cannot_be_killed = no
+			same_race = { TARGET = scope:ward }
+			NOT = { has_trait = cannot_marry }
 		}
 		scope:ward = {
 			if = {

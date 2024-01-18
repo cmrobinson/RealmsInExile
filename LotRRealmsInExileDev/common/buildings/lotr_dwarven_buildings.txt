@@ -47,7 +47,7 @@ dwarven_ale_house_01 = {
 	
  	next_building = dwarven_ale_house_02
 	
- 	type_icon = "icon_building_longhouses.dds"
+ 	type_icon = "icon_building_beer.dds"
 	
  	ai_value = {
  		base = 15 # Significantly higher than normal, they're just that good
@@ -91,7 +91,7 @@ dwarven_ale_house_02 = {
 	
  	next_building = dwarven_ale_house_03
 	
- 	type_icon = "icon_building_longhouses.dds"
+ 	type_icon = "icon_building_beer.dds"
 	
  	ai_value = {
  		base = 15 # Significantly higher than normal, they're just that good
@@ -135,7 +135,7 @@ dwarven_ale_house_03 = {
 	
  	next_building = dwarven_ale_house_04
 	
- 	type_icon = "icon_building_longhouses.dds"
+ 	type_icon = "icon_building_beer.dds"
 	
  	ai_value = {
  		base = 15 # Significantly higher than normal, they're just that good
@@ -179,7 +179,7 @@ dwarven_ale_house_04 = {
 	
  	next_building = dwarven_ale_house_05
 	
- 	type_icon = "icon_building_longhouses.dds"
+ 	type_icon = "icon_building_beer.dds"
 	
  	ai_value = {
  		base = 15 # Significantly higher than normal, they're just that good
@@ -223,7 +223,7 @@ dwarven_ale_house_05 = {
 	
  	next_building = dwarven_ale_house_06
 	
- 	type_icon = "icon_building_longhouses.dds"
+ 	type_icon = "icon_building_beer.dds"
 	
  	ai_value = {
  		base = 15 # Significantly higher than normal, they're just that good
@@ -267,7 +267,7 @@ dwarven_ale_house_06 = {
 	
  	next_building = dwarven_ale_house_07
 	
- 	type_icon = "icon_building_longhouses.dds"
+ 	type_icon = "icon_building_beer.dds"
 	
  	ai_value = {
  		base = 15 # Significantly higher than normal, they're just that good
@@ -311,7 +311,7 @@ dwarven_ale_house_07 = {
 	
  	next_building = dwarven_ale_house_08
 	
- 	type_icon = "icon_building_longhouses.dds"
+ 	type_icon = "icon_building_beer.dds"
 	
  	ai_value = {
  		base = 15 # Significantly higher than normal, they're just that good
@@ -355,7 +355,7 @@ dwarven_ale_house_08 = {
 	
  	next_building = dwarven_ale_house_09
 	
- 	type_icon = "icon_building_longhouses.dds"
+ 	type_icon = "icon_building_beer.dds"
 	
  	ai_value = {
  		base = 15 # Significantly higher than normal, they're just that good
@@ -399,7 +399,7 @@ dwarven_ale_house_09 = {
 	
  	next_building = dwarven_ale_house_10
 	
- 	type_icon = "icon_building_longhouses.dds"
+ 	type_icon = "icon_building_beer.dds"
 	
  	ai_value = {
  		base = 15 # Significantly higher than normal, they're just that good
@@ -441,7 +441,7 @@ dwarven_ale_house_10 = {
 		county_opinion_add = 120
 	}
 	
- 	type_icon = "icon_building_longhouses.dds"
+ 	type_icon = "icon_building_beer.dds"
 	
  	ai_value = {
  		base = 15 # Significantly higher than normal, they're just that good
@@ -1177,354 +1177,354 @@ dwarven_terrace_farm_10 = {
 	}
 }
 
-#dwarven mine
-dwarven_mine_01 = {
-	construction_time = slow_construction_time
+#dwarven mine - replaced with prospecting driven mines
+# dwarven_mine_01 = {
+# 	construction_time = slow_construction_time
 
-	is_enabled = {
-		scope:holder = { is_dwarf = yes }
-	}
+# 	is_enabled = {
+# 		scope:holder = { is_dwarf = yes }
+# 	}
 
-	can_construct_potential = {
-		scope:holder = { is_dwarf = yes }
-		has_building_or_higher = dwarven_depths_01
-	    lotr_dwarven_underground_buildings_requirement_terrain = yes
-	}
+# 	can_construct_potential = {
+# 		scope:holder = { is_dwarf = yes }
+# 		has_building_or_higher = dwarven_depths_01
+# 	    lotr_dwarven_underground_buildings_requirement_terrain = yes
+# 	}
 	
-	cost_gold = 200
+# 	cost_gold = 200
 	
-	province_modifier = {
-		monthly_income = 0.8
-	}
+# 	province_modifier = {
+# 		monthly_income = 0.8
+# 	}
 
-	county_modifier = {
-		development_growth_factor = 0.01
-		travel_danger = 5
-	}
+# 	county_modifier = {
+# 		development_growth_factor = 0.01
+# 		travel_danger = 5
+# 	}
 	
-	next_building = dwarven_mine_02
+# 	next_building = dwarven_mine_02
 	
-	type_icon = "icon_building_quarries.dds"
+# 	type_icon = "icon_building_mining.dds"
 	
-	ai_value = {
-		base = 100
-	}
-}
+# 	ai_value = {
+# 		base = 100
+# 	}
+# }
 
-dwarven_mine_02 = {
-	construction_time = slow_construction_time
+# dwarven_mine_02 = {
+# 	construction_time = slow_construction_time
 
-	is_enabled = {
-		scope:holder = { is_dwarf = yes }
-	}
+# 	is_enabled = {
+# 		scope:holder = { is_dwarf = yes }
+# 	}
 
-	can_construct_potential = {
-		scope:holder = { is_dwarf = yes }
-		has_building_or_higher = dwarven_depths_01
-	    lotr_dwarven_underground_buildings_requirement_terrain = yes
-	}
+# 	can_construct_potential = {
+# 		scope:holder = { is_dwarf = yes }
+# 		has_building_or_higher = dwarven_depths_01
+# 	    lotr_dwarven_underground_buildings_requirement_terrain = yes
+# 	}
 	
-	cost_gold = 350
+# 	cost_gold = 350
 	
-	province_modifier = {
-		monthly_income = 1.6
-	}
+# 	province_modifier = {
+# 		monthly_income = 1.6
+# 	}
 
-	county_modifier = {
-		development_growth_factor = 0.01
-		travel_danger = 10
-	}
+# 	county_modifier = {
+# 		development_growth_factor = 0.01
+# 		travel_danger = 10
+# 	}
 
-	character_modifier = {
-	}
+# 	character_modifier = {
+# 	}
 	
-	next_building = dwarven_mine_03
+# 	next_building = dwarven_mine_03
 	
-	ai_value = {
-		base = 80
-	}
-}
+# 	ai_value = {
+# 		base = 80
+# 	}
+# }
 
-dwarven_mine_03 = {
-	construction_time = slow_construction_time
+# dwarven_mine_03 = {
+# 	construction_time = slow_construction_time
 
-	is_enabled = {
-		scope:holder = { is_dwarf = yes }
-	}
+# 	is_enabled = {
+# 		scope:holder = { is_dwarf = yes }
+# 	}
 
-	can_construct_potential = {
-		scope:holder = { is_dwarf = yes }
-		has_building_or_higher = dwarven_depths_02
-	    lotr_dwarven_underground_buildings_requirement_terrain = yes
-	}
+# 	can_construct_potential = {
+# 		scope:holder = { is_dwarf = yes }
+# 		has_building_or_higher = dwarven_depths_02
+# 	    lotr_dwarven_underground_buildings_requirement_terrain = yes
+# 	}
 	
-	cost_gold = 600
+# 	cost_gold = 600
 	
-	province_modifier = {
-		monthly_income = 2.4
-	}
+# 	province_modifier = {
+# 		monthly_income = 2.4
+# 	}
 
-	county_modifier = {
-		development_growth_factor = 0.01
-		travel_danger = 15
-	}
+# 	county_modifier = {
+# 		development_growth_factor = 0.01
+# 		travel_danger = 15
+# 	}
 
-	character_modifier = {
-		monthly_prestige = 0.1
-	}
+# 	character_modifier = {
+# 		monthly_prestige = 0.1
+# 	}
 	
-	next_building = dwarven_mine_04
+# 	next_building = dwarven_mine_04
 	
-	ai_value = {
-		base = 80
-	}
-}
+# 	ai_value = {
+# 		base = 80
+# 	}
+# }
 
-dwarven_mine_04 = {
-	construction_time = slow_construction_time
+# dwarven_mine_04 = {
+# 	construction_time = slow_construction_time
 
-	is_enabled = {
-		scope:holder = { is_dwarf = yes }
-	}
+# 	is_enabled = {
+# 		scope:holder = { is_dwarf = yes }
+# 	}
 
-	can_construct_potential = {
-		scope:holder = { is_dwarf = yes }
-		has_building_or_higher = dwarven_depths_03
-	    lotr_dwarven_underground_buildings_requirement_terrain = yes
-	}
+# 	can_construct_potential = {
+# 		scope:holder = { is_dwarf = yes }
+# 		has_building_or_higher = dwarven_depths_03
+# 	    lotr_dwarven_underground_buildings_requirement_terrain = yes
+# 	}
 	
-	cost_gold = 1200
+# 	cost_gold = 1200
 	
-	province_modifier = {
-		monthly_income = 3.2
-	}
+# 	province_modifier = {
+# 		monthly_income = 3.2
+# 	}
 
-	county_modifier = {
-		development_growth_factor = 0.02
-		travel_danger = 20
-	}
+# 	county_modifier = {
+# 		development_growth_factor = 0.02
+# 		travel_danger = 20
+# 	}
 
-	character_modifier = {
-		monthly_prestige = 0.2
-	}
+# 	character_modifier = {
+# 		monthly_prestige = 0.2
+# 	}
 	
-	next_building = dwarven_mine_05
+# 	next_building = dwarven_mine_05
 	
-	ai_value = {
-		base = 35
-	}
-}
+# 	ai_value = {
+# 		base = 35
+# 	}
+# }
 
-dwarven_mine_05 = {
-	construction_time = slow_construction_time
+# dwarven_mine_05 = {
+# 	construction_time = slow_construction_time
 
-	is_enabled = {
-		scope:holder = { is_dwarf = yes }
-	}
+# 	is_enabled = {
+# 		scope:holder = { is_dwarf = yes }
+# 	}
 
-	can_construct_potential = {
-		scope:holder = { is_dwarf = yes }
-		has_building_or_higher = dwarven_depths_04
-	    lotr_dwarven_underground_buildings_requirement_terrain = yes
-	}
+# 	can_construct_potential = {
+# 		scope:holder = { is_dwarf = yes }
+# 		has_building_or_higher = dwarven_depths_04
+# 	    lotr_dwarven_underground_buildings_requirement_terrain = yes
+# 	}
 	
-	cost_gold = 1600
+# 	cost_gold = 1600
 	
-	province_modifier = {
-		monthly_income = 4.0
-	}
+# 	province_modifier = {
+# 		monthly_income = 4.0
+# 	}
 
-	county_modifier = {
-		development_growth_factor = 0.04
-		travel_danger = 25
-	}
+# 	county_modifier = {
+# 		development_growth_factor = 0.04
+# 		travel_danger = 25
+# 	}
 
-	character_modifier = {
-		monthly_prestige = 0.2
-	}
+# 	character_modifier = {
+# 		monthly_prestige = 0.2
+# 	}
 	
-	next_building = dwarven_mine_06
+# 	next_building = dwarven_mine_06
 	
-	ai_value = {
-		base = 35
-	}
-}
+# 	ai_value = {
+# 		base = 35
+# 	}
+# }
 
-dwarven_mine_06 = {
-	construction_time = slow_construction_time
+# dwarven_mine_06 = {
+# 	construction_time = slow_construction_time
 
-	is_enabled = {
-		scope:holder = { is_dwarf = yes }
-	}
+# 	is_enabled = {
+# 		scope:holder = { is_dwarf = yes }
+# 	}
 
-	can_construct_potential = {
-		scope:holder = { is_dwarf = yes }
-		has_building_or_higher = dwarven_depths_05
-	    lotr_dwarven_underground_buildings_requirement_terrain = yes
-	}
+# 	can_construct_potential = {
+# 		scope:holder = { is_dwarf = yes }
+# 		has_building_or_higher = dwarven_depths_05
+# 	    lotr_dwarven_underground_buildings_requirement_terrain = yes
+# 	}
 	
-	cost_gold = 2050
+# 	cost_gold = 2050
 	
-	province_modifier = {
-		monthly_income = 4.4
-	}
+# 	province_modifier = {
+# 		monthly_income = 4.4
+# 	}
 
-	county_modifier = {
-		development_growth_factor = 0.06
-		travel_danger = 30
-	}
+# 	county_modifier = {
+# 		development_growth_factor = 0.06
+# 		travel_danger = 30
+# 	}
 
-	character_modifier = {
-		monthly_prestige = 0.3
-	}
+# 	character_modifier = {
+# 		monthly_prestige = 0.3
+# 	}
 	
-	next_building = dwarven_mine_07
+# 	next_building = dwarven_mine_07
 	
-	ai_value = {
-		base = 35
-	}
-}
+# 	ai_value = {
+# 		base = 35
+# 	}
+# }
 
-dwarven_mine_07 = {
-	construction_time = slow_construction_time
+# dwarven_mine_07 = {
+# 	construction_time = slow_construction_time
 
-	is_enabled = {
-		scope:holder = { is_dwarf = yes }
-	}
+# 	is_enabled = {
+# 		scope:holder = { is_dwarf = yes }
+# 	}
 
-	can_construct_potential = {
-		scope:holder = { is_dwarf = yes }
-		has_building_or_higher = dwarven_depths_06
-	    lotr_dwarven_underground_buildings_requirement_terrain = yes
-	}
+# 	can_construct_potential = {
+# 		scope:holder = { is_dwarf = yes }
+# 		has_building_or_higher = dwarven_depths_06
+# 	    lotr_dwarven_underground_buildings_requirement_terrain = yes
+# 	}
 	
-	cost_gold = 2300
+# 	cost_gold = 2300
 	
-	province_modifier = {
-		monthly_income = 4.8
-	}
+# 	province_modifier = {
+# 		monthly_income = 4.8
+# 	}
 
-	county_modifier = {
-		development_growth_factor = 0.08
-		travel_danger = 35
-	}
+# 	county_modifier = {
+# 		development_growth_factor = 0.08
+# 		travel_danger = 35
+# 	}
 
-	character_modifier = {
-		monthly_prestige = 0.3
-	}
+# 	character_modifier = {
+# 		monthly_prestige = 0.3
+# 	}
 	
-	next_building = dwarven_mine_08
+# 	next_building = dwarven_mine_08
 	
-	ai_value = {
-		base = 35
-	}
-}
+# 	ai_value = {
+# 		base = 35
+# 	}
+# }
 
-dwarven_mine_08 = {
-	construction_time = slow_construction_time
+# dwarven_mine_08 = {
+# 	construction_time = slow_construction_time
 
-	is_enabled = {
-		scope:holder = { is_dwarf = yes }
-	}
+# 	is_enabled = {
+# 		scope:holder = { is_dwarf = yes }
+# 	}
 
-	can_construct_potential = {
-		scope:holder = { is_dwarf = yes }
-		has_building_or_higher = dwarven_depths_07
-	    lotr_dwarven_underground_buildings_requirement_terrain = yes
-	}
+# 	can_construct_potential = {
+# 		scope:holder = { is_dwarf = yes }
+# 		has_building_or_higher = dwarven_depths_07
+# 	    lotr_dwarven_underground_buildings_requirement_terrain = yes
+# 	}
 	
-	cost_gold = 2800
+# 	cost_gold = 2800
 	
-	province_modifier = {
-		monthly_income = 5.2
-	}
+# 	province_modifier = {
+# 		monthly_income = 5.2
+# 	}
 
-	county_modifier = {
-		development_growth_factor = 0.1
-		travel_danger = 40
-	}
+# 	county_modifier = {
+# 		development_growth_factor = 0.1
+# 		travel_danger = 40
+# 	}
 
-	character_modifier = {
-		monthly_prestige = 0.4
-	}
+# 	character_modifier = {
+# 		monthly_prestige = 0.4
+# 	}
 	
-	next_building = dwarven_mine_09
+# 	next_building = dwarven_mine_09
 
-	ai_value = {
-		base = 1
-	}
-}
+# 	ai_value = {
+# 		base = 1
+# 	}
+# }
 
-dwarven_mine_09 = {
-	construction_time = slow_construction_time
+# dwarven_mine_09 = {
+# 	construction_time = slow_construction_time
 
-	is_enabled = {
-		scope:holder = { is_dwarf = yes }
-	}
+# 	is_enabled = {
+# 		scope:holder = { is_dwarf = yes }
+# 	}
 
-	can_construct_potential = {
-		scope:holder = { is_dwarf = yes }
-		has_building_or_higher = dwarven_depths_08
-	    lotr_dwarven_underground_buildings_requirement_terrain = yes
-	}
+# 	can_construct_potential = {
+# 		scope:holder = { is_dwarf = yes }
+# 		has_building_or_higher = dwarven_depths_08
+# 	    lotr_dwarven_underground_buildings_requirement_terrain = yes
+# 	}
 	
-	cost_gold = 3350
+# 	cost_gold = 3350
 	
-	province_modifier = {
-		monthly_income = 5.6
-	}
+# 	province_modifier = {
+# 		monthly_income = 5.6
+# 	}
 
-	county_modifier = {
-		development_growth_factor = 0.1
-		travel_danger = 45
-	}
+# 	county_modifier = {
+# 		development_growth_factor = 0.1
+# 		travel_danger = 45
+# 	}
 
-	character_modifier = {
-		monthly_prestige = 0.4
-	}
+# 	character_modifier = {
+# 		monthly_prestige = 0.4
+# 	}
 	
-	next_building = dwarven_mine_10
+# 	next_building = dwarven_mine_10
 
-	ai_value = {
-		base = 1
-	}
-}
+# 	ai_value = {
+# 		base = 1
+# 	}
+# }
 
-dwarven_mine_10 = {
-	construction_time = slow_construction_time
+# dwarven_mine_10 = {
+# 	construction_time = slow_construction_time
 
-	is_enabled = {
-		scope:holder = { is_dwarf = yes }
-	}
+# 	is_enabled = {
+# 		scope:holder = { is_dwarf = yes }
+# 	}
 
-	can_construct_potential = {
-		scope:holder = { is_dwarf = yes }
-		has_building_or_higher = dwarven_depths_09
-	    lotr_dwarven_underground_buildings_requirement_terrain = yes
-	}
+# 	can_construct_potential = {
+# 		scope:holder = { is_dwarf = yes }
+# 		has_building_or_higher = dwarven_depths_09
+# 	    lotr_dwarven_underground_buildings_requirement_terrain = yes
+# 	}
 	
-	cost_gold = 4000
+# 	cost_gold = 4000
 	
-	province_modifier = {
-		monthly_income = 6.0
-	}
+# 	province_modifier = {
+# 		monthly_income = 6.0
+# 	}
 
-	county_modifier = {
-		development_growth_factor = 0.1
-		travel_danger = 50
-	}
+# 	county_modifier = {
+# 		development_growth_factor = 0.1
+# 		travel_danger = 50
+# 	}
 
-	character_modifier = {
-		monthly_prestige = 0.4
-		monthly_dynasty_prestige = 0.1
-	}
+# 	character_modifier = {
+# 		monthly_prestige = 0.4
+# 		monthly_dynasty_prestige = 0.1
+# 	}
 	
-	#next_building = dwarven_mine_10
+# 	#next_building = dwarven_mine_10
 
-	ai_value = {
-		base = 1
-	}
-}
+# 	ai_value = {
+# 		base = 1
+# 	}
+# }
 
 #dwarven quarry
 dwarven_quarry_01 = {
@@ -1549,7 +1549,7 @@ dwarven_quarry_01 = {
    
 	next_building = dwarven_quarry_02
    
-	type_icon = "icon_building_hill_farms.dds"
+	type_icon = "icon_building_quarries.dds"
    
 	ai_value = {
 		base = 100 # Significantly higher than normal, they're just that good
@@ -1582,7 +1582,7 @@ dwarven_quarry_02 = {
    
 	next_building = dwarven_quarry_03
    
-	type_icon = "icon_building_hill_farms.dds"
+	type_icon = "icon_building_quarries.dds"
    
 	ai_value = {
 		base = 100 # Significantly higher than normal, they're just that good
@@ -1615,7 +1615,7 @@ dwarven_quarry_03 = {
    
 	next_building = dwarven_quarry_04
    
-	type_icon = "icon_building_hill_farms.dds"
+	type_icon = "icon_building_quarries.dds"
    
 	ai_value = {
 		base = 100 # Significantly higher than normal, they're just that good
@@ -1648,7 +1648,7 @@ dwarven_quarry_04 = {
    
 	next_building = dwarven_quarry_05
    
-	type_icon = "icon_building_hill_farms.dds"
+	type_icon = "icon_building_quarries.dds"
    
 	ai_value = {
 		base = 100 # Significantly higher than normal, they're just that good
@@ -1681,7 +1681,7 @@ dwarven_quarry_05 = {
    
 	next_building = dwarven_quarry_06
    
-	type_icon = "icon_building_hill_farms.dds"
+	type_icon = "icon_building_quarries.dds"
    
 	ai_value = {
 		base = 100 # Significantly higher than normal, they're just that good
@@ -1714,7 +1714,7 @@ dwarven_quarry_06 = {
    
 	next_building = dwarven_quarry_07
    
-	type_icon = "icon_building_hill_farms.dds"
+	type_icon = "icon_building_quarries.dds"
    
 	ai_value = {
 		base = 100 # Significantly higher than normal, they're just that good
@@ -1747,7 +1747,7 @@ dwarven_quarry_07 = {
    
 	next_building = dwarven_quarry_08
    
-	type_icon = "icon_building_hill_farms.dds"
+	type_icon = "icon_building_quarries.dds"
    
 	ai_value = {
 		base = 100 # Significantly higher than normal, they're just that good
@@ -1780,7 +1780,7 @@ dwarven_quarry_08 = {
    
 	next_building = dwarven_quarry_09
    
-	type_icon = "icon_building_hill_farms.dds"
+	type_icon = "icon_building_quarries.dds"
    
 	ai_value = {
 		base = 100 # Significantly higher than normal, they're just that good
@@ -1813,7 +1813,7 @@ dwarven_quarry_09 = {
    
 	next_building = dwarven_quarry_10
    
-	type_icon = "icon_building_hill_farms.dds"
+	type_icon = "icon_building_quarries.dds"
    
 	ai_value = {
 		base = 100 # Significantly higher than normal, they're just that good
@@ -1846,7 +1846,7 @@ dwarven_quarry_10 = {
    
 	#next_building = dwarven_quarry_10
    
-	type_icon = "icon_building_hill_farms.dds"
+	type_icon = "icon_building_quarries.dds"
    
 	ai_value = {
 		base = 100 # Significantly higher than normal, they're just that good
@@ -1884,7 +1884,7 @@ dwarven_crafts_01 = {
 
 	next_building = dwarven_crafts_02
 	
-	type_icon = "icon_building_dormitory.dds"
+	type_icon = "icon_building_pendant.dds"
 	
 	ai_value = {
 		base = 1
@@ -1917,7 +1917,7 @@ dwarven_crafts_02 = {
 	
 	next_building = dwarven_crafts_03
 	
-	type_icon = "icon_building_dormitory.dds"
+	type_icon = "icon_building_pendant.dds"
 	
 	ai_value = {
 		base = 1
@@ -1950,7 +1950,7 @@ dwarven_crafts_03 = {
 	
 	next_building = dwarven_crafts_04
 	
-	type_icon = "icon_building_dormitory.dds"
+	type_icon = "icon_building_pendant.dds"
 	
 	ai_value = {
 		base = 1
@@ -1983,7 +1983,7 @@ dwarven_crafts_04 = {
 	
 	next_building = dwarven_crafts_05
 	
-	type_icon = "icon_building_dormitory.dds"
+	type_icon = "icon_building_pendant.dds"
 	
 	ai_value = {
 		base = 1
@@ -2016,7 +2016,7 @@ dwarven_crafts_05 = {
 	
 	next_building = dwarven_crafts_06
 
-	type_icon = "icon_building_dormitory.dds"
+	type_icon = "icon_building_pendant.dds"
 	
 	ai_value = {
 		base = 1
@@ -2049,7 +2049,7 @@ dwarven_crafts_06 = {
 	
 	next_building = dwarven_crafts_07
 
-	type_icon = "icon_building_dormitory.dds"
+	type_icon = "icon_building_pendant.dds"
 	
 	ai_value = {
 		base = 1
@@ -2082,7 +2082,7 @@ dwarven_crafts_07 = {
 	
 	next_building = dwarven_crafts_08
 
-	type_icon = "icon_building_dormitory.dds"
+	type_icon = "icon_building_pendant.dds"
 	
 	ai_value = {
 		base = 1
@@ -2115,7 +2115,7 @@ dwarven_crafts_08 = {
 	
 	next_building = dwarven_crafts_09
 
-	type_icon = "icon_building_dormitory.dds"
+	type_icon = "icon_building_pendant.dds"
 	
 	ai_value = {
 		base = 1
@@ -2148,7 +2148,7 @@ dwarven_crafts_09 = {
 	
 	next_building = dwarven_crafts_10
 
-	type_icon = "icon_building_dormitory.dds"
+	type_icon = "icon_building_pendant.dds"
 	
 	ai_value = {
 		base = 1
@@ -2181,7 +2181,7 @@ dwarven_crafts_10 = {
 	
 	#next_building = dwarven_crafts_10
 
-	type_icon = "icon_building_dormitory.dds"
+	type_icon = "icon_building_pendant.dds"
 	
 	ai_value = {
 		base = 1
@@ -2215,7 +2215,7 @@ dwarven_toolmaker_guild_01 = {
 	
 	next_building = dwarven_toolmaker_guild_02
 	
-	type_icon = "icon_building_dormitory.dds"
+	type_icon = "icon_building_tools.dds"
 	
 	ai_value = {
 		base = 25
@@ -2248,7 +2248,7 @@ dwarven_toolmaker_guild_02 = {
 	
 	next_building = dwarven_toolmaker_guild_03
 	
-	type_icon = "icon_building_dormitory.dds"
+	type_icon = "icon_building_tools.dds"
 	
 	ai_value = {
 		base = 25
@@ -2281,7 +2281,7 @@ dwarven_toolmaker_guild_03 = {
 	
 	next_building = dwarven_toolmaker_guild_04
 	
-	type_icon = "icon_building_dormitory.dds"
+	type_icon = "icon_building_tools.dds"
 	
 	ai_value = {
 		base = 25
@@ -2314,7 +2314,7 @@ dwarven_toolmaker_guild_04 = {
 	
 	next_building = dwarven_toolmaker_guild_05
 	
-	type_icon = "icon_building_dormitory.dds"
+	type_icon = "icon_building_tools.dds"
 	
 	ai_value = {
 		base = 25
@@ -2347,7 +2347,7 @@ dwarven_toolmaker_guild_05 = {
 	
 	next_building = dwarven_toolmaker_guild_06
 
-	type_icon = "icon_building_dormitory.dds"
+	type_icon = "icon_building_tools.dds"
 	
 	ai_value = {
 		base = 25
@@ -2384,7 +2384,7 @@ dwarven_toolmaker_guild_06 = {
 	
 	next_building = dwarven_toolmaker_guild_07
 	
-	type_icon = "icon_building_dormitory.dds"
+	type_icon = "icon_building_tools.dds"
 	
 	ai_value = {
 		base = 25
@@ -2421,7 +2421,7 @@ dwarven_toolmaker_guild_07 = {
 	
 	next_building = dwarven_toolmaker_guild_08
 	
-	type_icon = "icon_building_dormitory.dds"
+	type_icon = "icon_building_tools.dds"
 	
 	ai_value = {
 		base = 25
@@ -2458,7 +2458,7 @@ dwarven_toolmaker_guild_08 = {
 	
 	next_building = dwarven_toolmaker_guild_09
 	
-	type_icon = "icon_building_dormitory.dds"
+	type_icon = "icon_building_tools.dds"
 	
 	ai_value = {
 		base = 25
@@ -2495,7 +2495,7 @@ dwarven_toolmaker_guild_09 = {
 	
 	next_building = dwarven_toolmaker_guild_10
 	
-	type_icon = "icon_building_dormitory.dds"
+	type_icon = "icon_building_tools.dds"
 	
 	ai_value = {
 		base = 25
@@ -2530,7 +2530,7 @@ dwarven_toolmaker_guild_10 = {
 		tax_mult = 0.20
 	}
 	
-	type_icon = "icon_building_dormitory.dds"
+	type_icon = "icon_building_tools.dds"
 	
 	ai_value = {
 		base = 25
@@ -3491,7 +3491,7 @@ dwarven_roads_01 = {
 	
 	next_building = dwarven_roads_02
 
-	type_icon = "icon_building_horse_pastures.dds"
+	type_icon = "icon_building_archway.dds"
 	
 	ai_value = {
 		base = 20
@@ -3535,6 +3535,8 @@ dwarven_roads_02 = {
 	}
 	
 	next_building = dwarven_roads_03
+
+	type_icon = "icon_building_archway.dds"
 	
 	ai_value = {
 		base = 20
@@ -3577,6 +3579,8 @@ dwarven_roads_03 = {
 	}
 	
 	next_building = dwarven_roads_04
+
+	type_icon = "icon_building_archway.dds"
 	
 	ai_value = {
 		base = 20
@@ -3615,6 +3619,8 @@ dwarven_roads_04 = {
 	}
 	
 	next_building = dwarven_roads_05
+
+	type_icon = "icon_building_archway.dds"
 	
 	ai_value = {
 		base = 20
@@ -3653,6 +3659,8 @@ dwarven_roads_05 = {
 	}
 	
 	next_building = dwarven_roads_06
+
+	type_icon = "icon_building_archway.dds"
 	
 	ai_value = {
 		base = 20
@@ -3696,6 +3704,8 @@ dwarven_roads_06 = {
 	}
 	
 	next_building = dwarven_roads_07
+
+	type_icon = "icon_building_archway.dds"
 	
 	ai_value = {
 		base = 20
@@ -3739,6 +3749,8 @@ dwarven_roads_07 = {
 	}
 	
 	next_building = dwarven_roads_08
+
+	type_icon = "icon_building_archway.dds"
 	
 	ai_value = {
 		base = 20
@@ -3782,6 +3794,8 @@ dwarven_roads_08 = {
 	}
 	
 	next_building = dwarven_roads_09
+
+	type_icon = "icon_building_archway.dds"
 
 	ai_value = {
 		base = 20
@@ -3827,6 +3841,8 @@ dwarven_roads_09 = {
 	
 	next_building = dwarven_roads_10
 
+	type_icon = "icon_building_archway.dds"
+
 	ai_value = {
 		base = 20
 		ai_general_building_modifier = yes
@@ -3867,8 +3883,8 @@ dwarven_roads_10 = {
 		travel_danger = -50
 		supply_limit_mult = 0.30
 	}
-	
-	#next_building = dwarven_roads_10
+
+	type_icon = "icon_building_archway.dds"
 
 	ai_value = {
 		base = 20
@@ -3890,7 +3906,27 @@ dwarven_hoard_01 = {
 
 	can_construct_showing_failures_only = {
 		has_building_or_higher = dwarven_depths_06
-		has_building_or_higher = dwarven_mine_06
+		# has_building_or_higher = dwarven_mine_06
+		custom_tooltip = {
+			text = has_mines_06_or_higher
+			OR = {
+				has_building_or_higher = iron_mines_06
+				has_building_or_higher = tin_mines_06
+				has_building_or_higher = copper_mines_06
+				has_building_or_higher = lead_mines_06
+				has_building_or_higher = silver_mines_06
+				has_building_or_higher = gold_mines_06
+				has_building_or_higher = mithril_mines_06
+				has_building_or_higher = quartz_mines_06
+				has_building_or_higher = peridot_mines_06
+				has_building_or_higher = onyx_mines_06
+				has_building_or_higher = amethyst_mines_06
+				has_building_or_higher = ruby_mines_06
+				has_building_or_higher = sapphire_mines_06
+				has_building_or_higher = emerald_mines_06
+				has_building_or_higher = diamond_mines_06
+			}
+		}
 	}
 	
 	cost_gold = 2000
@@ -3912,9 +3948,9 @@ dwarven_hoard_01 = {
 	}
 	
 	next_building = dwarven_hoard_02
-	
-	type_icon = "icon_building_university.dds"
-	
+
+	type_icon = "icon_building_coin_pile.dds"
+
 	ai_value = {
 		base = 100 # Dwarves love piles of money
 		ai_tier_1_building_modifier = yes
@@ -3937,7 +3973,27 @@ dwarven_hoard_02 = {
 
 	can_construct_showing_failures_only = {
 		has_building_or_higher = dwarven_depths_07
-		has_building_or_higher = dwarven_mine_07
+		# has_building_or_higher = dwarven_mine_07
+		custom_tooltip = {
+			text = has_mines_07_or_higher
+			OR = {
+				has_building_or_higher = iron_mines_07
+				has_building_or_higher = tin_mines_07
+				has_building_or_higher = copper_mines_07
+				has_building_or_higher = lead_mines_07
+				has_building_or_higher = silver_mines_07
+				has_building_or_higher = gold_mines_07
+				has_building_or_higher = mithril_mines_07
+				has_building_or_higher = quartz_mines_07
+				has_building_or_higher = peridot_mines_07
+				has_building_or_higher = onyx_mines_07
+				has_building_or_higher = amethyst_mines_07
+				has_building_or_higher = ruby_mines_07
+				has_building_or_higher = sapphire_mines_07
+				has_building_or_higher = emerald_mines_07
+				has_building_or_higher = diamond_mines_07
+			}
+		}
 	}
 	
 	cost_gold = 4000
@@ -3959,9 +4015,9 @@ dwarven_hoard_02 = {
 	}
 	
 	next_building = dwarven_hoard_03
-	
-	type_icon = "icon_building_university.dds"
-	
+
+	type_icon = "icon_building_coin_pile.dds"
+
 	ai_value = {
 		base = 100 # Dwarves love piles of money
 		ai_tier_1_building_modifier = yes
@@ -3984,7 +4040,27 @@ dwarven_hoard_03 = {
 
 	can_construct_showing_failures_only = {
 		has_building_or_higher = dwarven_depths_08
-		has_building_or_higher = dwarven_mine_08
+		# has_building_or_higher = dwarven_mine_08
+		custom_tooltip = {
+			text = has_mines_08_or_higher
+			OR = {
+				has_building_or_higher = iron_mines_08
+				has_building_or_higher = tin_mines_08
+				has_building_or_higher = copper_mines_08
+				has_building_or_higher = lead_mines_08
+				has_building_or_higher = silver_mines_08
+				has_building_or_higher = gold_mines_08
+				has_building_or_higher = mithril_mines_08
+				has_building_or_higher = quartz_mines_08
+				has_building_or_higher = peridot_mines_08
+				has_building_or_higher = onyx_mines_08
+				has_building_or_higher = amethyst_mines_08
+				has_building_or_higher = ruby_mines_08
+				has_building_or_higher = sapphire_mines_08
+				has_building_or_higher = emerald_mines_08
+				has_building_or_higher = diamond_mines_08
+			}
+		}
 	}
 	
 	cost_gold = 6000
@@ -4007,7 +4083,7 @@ dwarven_hoard_03 = {
 
 	next_building = dwarven_hoard_04
 	
-	type_icon = "icon_building_university.dds"
+	type_icon = "icon_building_coin_pile.dds"
 	
 	ai_value = {
 		base = 100 # Dwarves love piles of money
@@ -4031,7 +4107,27 @@ dwarven_hoard_04 = {
 
 	can_construct_showing_failures_only = {
 		has_building_or_higher = dwarven_depths_08
-		has_building_or_higher = dwarven_mine_08
+		# has_building_or_higher = dwarven_mine_08
+		custom_tooltip = {
+			text = has_mines_08_or_higher
+			OR = {
+				has_building_or_higher = iron_mines_08
+				has_building_or_higher = tin_mines_08
+				has_building_or_higher = copper_mines_08
+				has_building_or_higher = lead_mines_08
+				has_building_or_higher = silver_mines_08
+				has_building_or_higher = gold_mines_08
+				has_building_or_higher = mithril_mines_08
+				has_building_or_higher = quartz_mines_08
+				has_building_or_higher = peridot_mines_08
+				has_building_or_higher = onyx_mines_08
+				has_building_or_higher = amethyst_mines_08
+				has_building_or_higher = ruby_mines_08
+				has_building_or_higher = sapphire_mines_08
+				has_building_or_higher = emerald_mines_08
+				has_building_or_higher = diamond_mines_08
+			}
+		}
 	}
 	
 	cost_gold = 8000
@@ -4054,7 +4150,7 @@ dwarven_hoard_04 = {
 	
 	next_building = dwarven_hoard_05
 
-	type_icon = "icon_building_university.dds"
+	type_icon = "icon_building_coin_pile.dds"
 
 	ai_value = {
 		base = 100 # Dwarves love piles of money
@@ -4078,7 +4174,27 @@ dwarven_hoard_05 = {
 
 	can_construct_showing_failures_only = {
 		has_building_or_higher = dwarven_depths_08
-		has_building_or_higher = dwarven_mine_08
+		# has_building_or_higher = dwarven_mine_08
+		custom_tooltip = {
+			text = has_mines_08_or_higher
+			OR = {
+				has_building_or_higher = iron_mines_08
+				has_building_or_higher = tin_mines_08
+				has_building_or_higher = copper_mines_08
+				has_building_or_higher = lead_mines_08
+				has_building_or_higher = silver_mines_08
+				has_building_or_higher = gold_mines_08
+				has_building_or_higher = mithril_mines_08
+				has_building_or_higher = quartz_mines_08
+				has_building_or_higher = peridot_mines_08
+				has_building_or_higher = onyx_mines_08
+				has_building_or_higher = amethyst_mines_08
+				has_building_or_higher = ruby_mines_08
+				has_building_or_higher = sapphire_mines_08
+				has_building_or_higher = emerald_mines_08
+				has_building_or_higher = diamond_mines_08
+			}
+		}
 	}
 	
 	cost_gold = 10000
@@ -4101,7 +4217,7 @@ dwarven_hoard_05 = {
 	
 	#next_building = dwarven_hoard_05
 
-	type_icon = "icon_building_university.dds"
+	type_icon = "icon_building_coin_pile.dds"
 
 	ai_value = {
 		base = 100 # Dwarves love piles of money
@@ -4147,7 +4263,7 @@ dwarven_armory_01 = {
 	
  	next_building = dwarven_armory_02
 	
- 	type_icon = "icon_building_regimental_grounds.dds"
+ 	type_icon = "icon_building_banner.dds"
 	
  	ai_value = {
  		base = 15 # Significantly higher than normal, they're just that good
@@ -4188,7 +4304,7 @@ dwarven_armory_02 = {
 	
  	next_building = dwarven_armory_03
 	
- 	type_icon = "icon_building_regimental_grounds.dds"
+ 	type_icon = "icon_building_banner.dds"
 	
  	ai_value = {
  		base = 15 # Significantly higher than normal, they're just that good
@@ -4229,7 +4345,7 @@ dwarven_armory_03 = {
 	
  	next_building = dwarven_armory_04
 	
- 	type_icon = "icon_building_regimental_grounds.dds"
+ 	type_icon = "icon_building_banner.dds"
 	
  	ai_value = {
  		base = 15 # Significantly higher than normal, they're just that good
@@ -4240,7 +4356,7 @@ dwarven_armory_03 = {
  	}
 }
  
- dwarven_armory_04 = {
+dwarven_armory_04 = {
  	construction_time = very_slow_construction_time
 
  	is_enabled = {
@@ -4270,7 +4386,7 @@ dwarven_armory_03 = {
 	
  	next_building = dwarven_armory_05
 	
- 	type_icon = "icon_building_regimental_grounds.dds"
+ 	type_icon = "icon_building_banner.dds"
 	
  	ai_value = {
  		base = 15 # Significantly higher than normal, they're just that good
@@ -4279,7 +4395,7 @@ dwarven_armory_03 = {
  		ai_farm_estate_improvement_from_culture_modifier = yes
  		ai_general_building_modifier = yes
  	}
- }
+}
  
  dwarven_armory_05 = {
  	construction_time = very_slow_construction_time
@@ -4311,7 +4427,7 @@ dwarven_armory_03 = {
 	
  	next_building = dwarven_armory_06
 	
- 	type_icon = "icon_building_regimental_grounds.dds"
+ 	type_icon = "icon_building_banner.dds"
 	
  	ai_value = {
  		base = 15 # Significantly higher than normal, they're just that good
@@ -4352,7 +4468,7 @@ dwarven_armory_03 = {
 	
  	next_building = dwarven_armory_07
 	
- 	type_icon = "icon_building_regimental_grounds.dds"
+ 	type_icon = "icon_building_banner.dds"
 	
  	ai_value = {
  		base = 15 # Significantly higher than normal, they're just that good
@@ -4363,7 +4479,7 @@ dwarven_armory_03 = {
  	}
  }
  
- dwarven_armory_07 = {
+dwarven_armory_07 = {
  	construction_time = very_slow_construction_time
 
  	is_enabled = {
@@ -4393,7 +4509,7 @@ dwarven_armory_03 = {
 	
  	next_building = dwarven_armory_08
 	
- 	type_icon = "icon_building_regimental_grounds.dds"
+ 	type_icon = "icon_building_banner.dds"
 	
  	ai_value = {
  		base = 15 # Significantly higher than normal, they're just that good
@@ -4402,9 +4518,9 @@ dwarven_armory_03 = {
  		ai_farm_estate_improvement_from_culture_modifier = yes
  		ai_general_building_modifier = yes
  	}
- }
+}
  
- dwarven_armory_08 = {
+dwarven_armory_08 = {
  	construction_time = very_slow_construction_time
 
  	is_enabled = {
@@ -4434,7 +4550,7 @@ dwarven_armory_03 = {
 	
  	next_building = dwarven_armory_09
 	
- 	type_icon = "icon_building_regimental_grounds.dds"
+ 	type_icon = "icon_building_banner.dds"
 	
  	ai_value = {
  		base = 15 # Significantly higher than normal, they're just that good
@@ -4443,9 +4559,9 @@ dwarven_armory_03 = {
  		ai_farm_estate_improvement_from_culture_modifier = yes
  		ai_general_building_modifier = yes
  	}
- }
+}
  
- dwarven_armory_09 = {
+dwarven_armory_09 = {
  	construction_time = very_slow_construction_time
 
  	is_enabled = {
@@ -4475,7 +4591,7 @@ dwarven_armory_03 = {
 	
  	next_building = dwarven_armory_10
 	
- 	type_icon = "icon_building_regimental_grounds.dds"
+ 	type_icon = "icon_building_banner.dds"
 	
  	ai_value = {
  		base = 15 # Significantly higher than normal, they're just that good
@@ -4484,9 +4600,9 @@ dwarven_armory_03 = {
  		ai_farm_estate_improvement_from_culture_modifier = yes
  		ai_general_building_modifier = yes
  	}
- }
+}
  
- dwarven_armory_10 = {
+dwarven_armory_10 = {
  	construction_time = very_slow_construction_time
 
  	is_enabled = {
@@ -4516,7 +4632,7 @@ dwarven_armory_03 = {
 	
  	#next_building = dwarven_armory_10
 	
- 	type_icon = "icon_building_regimental_grounds.dds"
+ 	type_icon = "icon_building_banner.dds"
 	
  	ai_value = {
  		base = 15 # Significantly higher than normal, they're just that good
@@ -4525,7 +4641,7 @@ dwarven_armory_03 = {
  		ai_farm_estate_improvement_from_culture_modifier = yes
  		ai_general_building_modifier = yes
  	}
- }
+}
  
  #dwarven heavy infantry barracks
  dwarven_hi_barracks_01 = {
@@ -4559,7 +4675,7 @@ dwarven_armory_03 = {
 	
  	next_building = dwarven_hi_barracks_02
 	
- 	type_icon = "icon_building_regimental_grounds.dds"
+ 	type_icon = "icon_building_war_axe.dds"
 	
  	ai_value = {
  		base = 15 # Significantly higher than normal, they're just that good
@@ -4601,7 +4717,7 @@ dwarven_armory_03 = {
 	
  	next_building = dwarven_hi_barracks_03
 	
- 	type_icon = "icon_building_regimental_grounds.dds"
+ 	type_icon = "icon_building_war_axe.dds"
 	
  	ai_value = {
  		base = 15 # Significantly higher than normal, they're just that good
@@ -4643,7 +4759,7 @@ dwarven_armory_03 = {
 	
  	next_building = dwarven_hi_barracks_04
 	
- 	type_icon = "icon_building_regimental_grounds.dds"
+ 	type_icon = "icon_building_war_axe.dds"
 	
  	ai_value = {
  		base = 15 # Significantly higher than normal, they're just that good
@@ -4685,7 +4801,7 @@ dwarven_armory_03 = {
 	
  	next_building = dwarven_hi_barracks_05
 	
- 	type_icon = "icon_building_regimental_grounds.dds"
+ 	type_icon = "icon_building_war_axe.dds"
 	
  	ai_value = {
  		base = 15 # Significantly higher than normal, they're just that good
@@ -4727,7 +4843,7 @@ dwarven_armory_03 = {
 	
  	next_building = dwarven_hi_barracks_06
 	
- 	type_icon = "icon_building_regimental_grounds.dds"
+ 	type_icon = "icon_building_war_axe.dds"
 	
  	ai_value = {
  		base = 15 # Significantly higher than normal, they're just that good
@@ -4769,7 +4885,7 @@ dwarven_armory_03 = {
 	
  	next_building = dwarven_hi_barracks_07
 	
- 	type_icon = "icon_building_regimental_grounds.dds"
+ 	type_icon = "icon_building_war_axe.dds"
 	
  	ai_value = {
  		base = 15 # Significantly higher than normal, they're just that good
@@ -4811,7 +4927,7 @@ dwarven_armory_03 = {
 	
  	next_building = dwarven_hi_barracks_08
 	
- 	type_icon = "icon_building_regimental_grounds.dds"
+ 	type_icon = "icon_building_war_axe.dds"
 	
  	ai_value = {
  		base = 15 # Significantly higher than normal, they're just that good
@@ -4853,7 +4969,7 @@ dwarven_armory_03 = {
 	
  	next_building = dwarven_hi_barracks_09
 	
- 	type_icon = "icon_building_regimental_grounds.dds"
+ 	type_icon = "icon_building_war_axe.dds"
 	
  	ai_value = {
  		base = 15 # Significantly higher than normal, they're just that good
@@ -4895,7 +5011,7 @@ dwarven_armory_03 = {
 	
  	next_building = dwarven_hi_barracks_10
 	
- 	type_icon = "icon_building_regimental_grounds.dds"
+ 	type_icon = "icon_building_war_axe.dds"
 	
  	ai_value = {
  		base = 15 # Significantly higher than normal, they're just that good
@@ -4937,7 +5053,7 @@ dwarven_armory_03 = {
 	
  	#next_building = dwarven_hi_barracks_10
 	
- 	type_icon = "icon_building_regimental_grounds.dds"
+ 	type_icon = "icon_building_war_axe.dds"
 	
  	ai_value = {
  		base = 15 # Significantly higher than normal, they're just that good
@@ -4980,7 +5096,7 @@ dwarven_armory_03 = {
 	
  	next_building = dwarven_pike_barracks_02
 	
- 	type_icon = "icon_building_regimental_grounds.dds"
+ 	type_icon = "icon_building_spears.dds"
 	
  	ai_value = {
  		base = 15 # Significantly higher than normal, they're just that good
@@ -5022,7 +5138,7 @@ dwarven_armory_03 = {
 	
  	next_building = dwarven_pike_barracks_03
 	
- 	type_icon = "icon_building_regimental_grounds.dds"
+ 	type_icon = "icon_building_spears.dds"
 	
  	ai_value = {
  		base = 15 # Significantly higher than normal, they're just that good
@@ -5064,7 +5180,7 @@ dwarven_armory_03 = {
 	
  	next_building = dwarven_pike_barracks_04
 	
- 	type_icon = "icon_building_regimental_grounds.dds"
+ 	type_icon = "icon_building_spears.dds"
 	
  	ai_value = {
  		base = 15 # Significantly higher than normal, they're just that good
@@ -5106,7 +5222,7 @@ dwarven_armory_03 = {
 	
  	next_building = dwarven_pike_barracks_05
 	
- 	type_icon = "icon_building_regimental_grounds.dds"
+ 	type_icon = "icon_building_spears.dds"
 	
  	ai_value = {
  		base = 15 # Significantly higher than normal, they're just that good
@@ -5148,7 +5264,7 @@ dwarven_armory_03 = {
 	
  	next_building = dwarven_pike_barracks_06
 	
- 	type_icon = "icon_building_regimental_grounds.dds"
+ 	type_icon = "icon_building_spears.dds"
 	
  	ai_value = {
  		base = 15 # Significantly higher than normal, they're just that good
@@ -5190,7 +5306,7 @@ dwarven_armory_03 = {
 	
  	next_building = dwarven_pike_barracks_07
 	
- 	type_icon = "icon_building_regimental_grounds.dds"
+ 	type_icon = "icon_building_spears.dds"
 	
  	ai_value = {
  		base = 15 # Significantly higher than normal, they're just that good
@@ -5232,7 +5348,7 @@ dwarven_armory_03 = {
 	
  	next_building = dwarven_pike_barracks_08
 	
- 	type_icon = "icon_building_regimental_grounds.dds"
+ 	type_icon = "icon_building_spears.dds"
 	
  	ai_value = {
  		base = 15 # Significantly higher than normal, they're just that good
@@ -5274,7 +5390,7 @@ dwarven_armory_03 = {
 	
  	next_building = dwarven_pike_barracks_09
 	
- 	type_icon = "icon_building_regimental_grounds.dds"
+ 	type_icon = "icon_building_spears.dds"
 	
  	ai_value = {
  		base = 15 # Significantly higher than normal, they're just that good
@@ -5316,7 +5432,7 @@ dwarven_armory_03 = {
 	
  	next_building = dwarven_pike_barracks_10
 	
- 	type_icon = "icon_building_regimental_grounds.dds"
+ 	type_icon = "icon_building_spears.dds"
 	
  	ai_value = {
  		base = 15 # Significantly higher than normal, they're just that good
@@ -5358,7 +5474,7 @@ dwarven_armory_03 = {
 	
  	#next_building = dwarven_pike_barracks_10
 	
- 	type_icon = "icon_building_regimental_grounds.dds"
+ 	type_icon = "icon_building_spears.dds"
 	
  	ai_value = {
  		base = 15 # Significantly higher than normal, they're just that good
@@ -5401,7 +5517,7 @@ dwarven_armory_03 = {
 	
  	next_building = dwarven_archer_barracks_02
 	
- 	type_icon = "icon_building_regimental_grounds.dds"
+ 	type_icon = "icon_building_crossbow.dds"
 	
  	ai_value = {
  		base = 15 # Significantly higher than normal, they're just that good
@@ -5443,7 +5559,7 @@ dwarven_armory_03 = {
 	
  	next_building = dwarven_archer_barracks_03
 	
- 	type_icon = "icon_building_regimental_grounds.dds"
+ 	type_icon = "icon_building_crossbow.dds"
 	
  	ai_value = {
  		base = 15 # Significantly higher than normal, they're just that good
@@ -5485,7 +5601,7 @@ dwarven_armory_03 = {
 	
  	next_building = dwarven_archer_barracks_04
 	
- 	type_icon = "icon_building_regimental_grounds.dds"
+ 	type_icon = "icon_building_crossbow.dds"
 	
  	ai_value = {
  		base = 15 # Significantly higher than normal, they're just that good
@@ -5527,7 +5643,7 @@ dwarven_armory_03 = {
 	
  	next_building = dwarven_archer_barracks_05
 	
- 	type_icon = "icon_building_regimental_grounds.dds"
+ 	type_icon = "icon_building_crossbow.dds"
 	
  	ai_value = {
  		base = 15 # Significantly higher than normal, they're just that good
@@ -5569,7 +5685,7 @@ dwarven_armory_03 = {
 	
  	next_building = dwarven_archer_barracks_06
 	
- 	type_icon = "icon_building_regimental_grounds.dds"
+ 	type_icon = "icon_building_crossbow.dds"
 	
  	ai_value = {
  		base = 15 # Significantly higher than normal, they're just that good
@@ -5611,7 +5727,7 @@ dwarven_armory_03 = {
 	
  	next_building = dwarven_archer_barracks_07
 	
- 	type_icon = "icon_building_regimental_grounds.dds"
+ 	type_icon = "icon_building_crossbow.dds"
 	
  	ai_value = {
  		base = 15 # Significantly higher than normal, they're just that good
@@ -5653,7 +5769,7 @@ dwarven_armory_03 = {
 	
  	next_building = dwarven_archer_barracks_08
 	
- 	type_icon = "icon_building_regimental_grounds.dds"
+ 	type_icon = "icon_building_crossbow.dds"
 	
  	ai_value = {
  		base = 15 # Significantly higher than normal, they're just that good
@@ -5695,7 +5811,7 @@ dwarven_armory_03 = {
 	
  	next_building = dwarven_archer_barracks_09
 	
- 	type_icon = "icon_building_regimental_grounds.dds"
+ 	type_icon = "icon_building_crossbow.dds"
 	
  	ai_value = {
  		base = 15 # Significantly higher than normal, they're just that good
@@ -5737,7 +5853,7 @@ dwarven_armory_03 = {
 	
  	next_building = dwarven_archer_barracks_10
 	
- 	type_icon = "icon_building_regimental_grounds.dds"
+ 	type_icon = "icon_building_crossbow.dds"
 	
  	ai_value = {
  		base = 15 # Significantly higher than normal, they're just that good
@@ -5779,7 +5895,7 @@ dwarven_armory_03 = {
 	
  	#next_building = dwarven_archer_barracks_10
 	
- 	type_icon = "icon_building_regimental_grounds.dds"
+ 	type_icon = "icon_building_crossbow.dds"
 	
  	ai_value = {
  		base = 15 # Significantly higher than normal, they're just that good
@@ -5822,7 +5938,7 @@ dwarven_skirmisher_barracks_01 = {
 	
  	next_building = dwarven_skirmisher_barracks_02
 	
- 	type_icon = "icon_building_regimental_grounds.dds"
+ 	type_icon = "icon_building_javelin.dds"
 	
  	ai_value = {
  		base = 15 # Significantly higher than normal, they're just that good
@@ -5864,7 +5980,7 @@ dwarven_skirmisher_barracks_02 = {
 	
  	next_building = dwarven_skirmisher_barracks_03
 	
- 	type_icon = "icon_building_regimental_grounds.dds"
+ 	type_icon = "icon_building_javelin.dds"
 	
  	ai_value = {
  		base = 15 # Significantly higher than normal, they're just that good
@@ -5906,7 +6022,7 @@ dwarven_skirmisher_barracks_03 = {
 	
  	next_building = dwarven_skirmisher_barracks_04
 	
- 	type_icon = "icon_building_regimental_grounds.dds"
+ 	type_icon = "icon_building_javelin.dds"
 	
  	ai_value = {
  		base = 15 # Significantly higher than normal, they're just that good
@@ -5948,7 +6064,7 @@ dwarven_skirmisher_barracks_04 = {
 	
  	next_building = dwarven_skirmisher_barracks_05
 	
- 	type_icon = "icon_building_regimental_grounds.dds"
+ 	type_icon = "icon_building_javelin.dds"
 	
  	ai_value = {
  		base = 15 # Significantly higher than normal, they're just that good
@@ -5990,7 +6106,7 @@ dwarven_skirmisher_barracks_05 = {
 	
  	next_building = dwarven_skirmisher_barracks_06
 	
- 	type_icon = "icon_building_regimental_grounds.dds"
+ 	type_icon = "icon_building_javelin.dds"
 	
  	ai_value = {
  		base = 15 # Significantly higher than normal, they're just that good
@@ -6032,7 +6148,7 @@ dwarven_skirmisher_barracks_06 = {
 	
  	next_building = dwarven_skirmisher_barracks_07
 	
- 	type_icon = "icon_building_regimental_grounds.dds"
+ 	type_icon = "icon_building_javelin.dds"
 	
  	ai_value = {
  		base = 15 # Significantly higher than normal, they're just that good
@@ -6074,7 +6190,7 @@ dwarven_skirmisher_barracks_07 = {
 	
  	next_building = dwarven_skirmisher_barracks_08
 	
- 	type_icon = "icon_building_regimental_grounds.dds"
+ 	type_icon = "icon_building_javelin.dds"
 	
  	ai_value = {
  		base = 15 # Significantly higher than normal, they're just that good
@@ -6116,7 +6232,7 @@ dwarven_skirmisher_barracks_08 = {
 	
  	next_building = dwarven_skirmisher_barracks_09
 	
- 	type_icon = "icon_building_regimental_grounds.dds"
+ 	type_icon = "icon_building_javelin.dds"
 	
  	ai_value = {
  		base = 15 # Significantly higher than normal, they're just that good
@@ -6158,7 +6274,7 @@ dwarven_skirmisher_barracks_09 = {
 	
  	next_building = dwarven_skirmisher_barracks_10
 	
- 	type_icon = "icon_building_regimental_grounds.dds"
+ 	type_icon = "icon_building_javelin.dds"
 	
  	ai_value = {
  		base = 15 # Significantly higher than normal, they're just that good
@@ -6198,9 +6314,7 @@ dwarven_skirmisher_barracks_10 = {
 		defender_holding_advantage = 20
  	}
 	
- 	#next_building = dwarven_skirmisher_barracks_10
-	
- 	type_icon = "icon_building_regimental_grounds.dds"
+ 	type_icon = "icon_building_javelin.dds"
 	
  	ai_value = {
  		base = 15 # Significantly higher than normal, they're just that good
@@ -6245,7 +6359,7 @@ dwarven_siege_workshop_01 = {
 	
  	next_building = dwarven_siege_workshop_02
 	
- 	type_icon = "icon_building_regimental_grounds.dds"
+ 	type_icon = "icon_building_ballista.dds"
 	
  	ai_value = {
  		base = 15 # Significantly higher than normal, they're just that good
@@ -6289,7 +6403,7 @@ dwarven_siege_workshop_02 = {
 	
  	next_building = dwarven_siege_workshop_03
 	
- 	type_icon = "icon_building_regimental_grounds.dds"
+ 	type_icon = "icon_building_ballista.dds"
 	
  	ai_value = {
  		base = 15 # Significantly higher than normal, they're just that good
@@ -6333,7 +6447,7 @@ dwarven_siege_workshop_03 = {
 	
  	next_building = dwarven_siege_workshop_04
 	
- 	type_icon = "icon_building_regimental_grounds.dds"
+ 	type_icon = "icon_building_ballista.dds"
 	
  	ai_value = {
  		base = 15 # Significantly higher than normal, they're just that good
@@ -6378,7 +6492,7 @@ dwarven_siege_workshop_04 = {
 	
  	next_building = dwarven_siege_workshop_05
 	
- 	type_icon = "icon_building_regimental_grounds.dds"
+ 	type_icon = "icon_building_ballista.dds"
 	
  	ai_value = {
  		base = 15 # Significantly higher than normal, they're just that good
@@ -6423,7 +6537,7 @@ dwarven_siege_workshop_05 = {
 	
  	#next_building = dwarven_siege_workshop_05
 	
- 	type_icon = "icon_building_regimental_grounds.dds"
+ 	type_icon = "icon_building_ballista.dds"
 	
  	ai_value = {
  		base = 15 # Significantly higher than normal, they're just that good
@@ -6460,7 +6574,7 @@ military_specialization_01 = {
 
 	duchy_capital_county_modifier = {
 		additional_fort_level = normal_building_fort_level_tier_2
-		levy_size = 0.2
+		levy_size = 0.05
 	}
 	
 	province_modifier = {
@@ -6474,7 +6588,7 @@ military_specialization_01 = {
 	
 	next_building = military_specialization_02
 	
-	type_icon = "icon_building_generic_04.dds"
+	type_icon = "icon_building_dwarf.dds"
 	
 	ai_value = {
 		base = 20
@@ -6508,7 +6622,7 @@ military_specialization_02 = {
 
 	duchy_capital_county_modifier = {
 		additional_fort_level = normal_building_fort_level_tier_4
-		levy_size = 0.4
+		levy_size = 0.1
 	}
 	
 	province_modifier = {
@@ -6554,7 +6668,7 @@ military_specialization_03 = {
 
 	duchy_capital_county_modifier = {
 		additional_fort_level = normal_building_fort_level_tier_6
-		levy_size = 0.6
+		levy_size = 0.15
 	}
 	
 	province_modifier = {
@@ -6610,7 +6724,7 @@ economic_specialization_01 = {
 	
 	next_building = economic_specialization_02
 	
-	type_icon = "icon_building_generic_04.dds"
+	type_icon = "icon_building_chest.dds"
 	
 	ai_value = {
 		base = 20
@@ -6731,7 +6845,7 @@ glory_specialization_01 = {
 	
 	character_modifier = {
 		knight_limit = 2
-		knight_effectiveness_mult = 0.25
+		knight_effectiveness_mult = 0.35
 		diplomatic_range_mult = 0.25
 		court_grandeur_baseline_add = 5
 		monthly_prestige_gain_mult = 0.1
@@ -6739,7 +6853,7 @@ glory_specialization_01 = {
 	
 	next_building = glory_specialization_02
 	
-	type_icon = "icon_building_generic_04.dds"
+	type_icon = "icon_building_dwarf_crown.dds"
 	
 	ai_value = {
 		base = 20
@@ -6779,7 +6893,7 @@ glory_specialization_02 = {
 	
 	character_modifier = {
 		knight_limit = 4
-		knight_effectiveness_mult = 0.50
+		knight_effectiveness_mult = 0.70
 		diplomatic_range_mult = 0.25
 		general_opinion = 5
 		court_grandeur_baseline_add = 10
@@ -6826,7 +6940,7 @@ glory_specialization_03 = {
 	
 	character_modifier = {
 		knight_limit = 6
-		knight_effectiveness_mult = 0.75
+		knight_effectiveness_mult = 1.0
 		diplomatic_range_mult = 0.25
 		monthly_prestige_gain_mult = 0.5
 		general_opinion = 10
@@ -6875,7 +6989,7 @@ dwarven_bank_economic_01 = {
 	
 	next_building = dwarven_bank_economic_02
 
-	type_icon = "icon_building_ramparts.dds"
+	type_icon = "icon_building_pouch.dds"
 	
 	ai_value = {
 		base = 10
@@ -6898,7 +7012,7 @@ dwarven_bank_economic_01 = {
 	}
 }
 
-dwarven_bank_economic_02 {
+dwarven_bank_economic_02 = {
 	construction_time = slow_construction_time
 
 	can_construct_potential = {
@@ -6924,7 +7038,7 @@ dwarven_bank_economic_02 {
 	
 	next_building = dwarven_bank_economic_03
 
-	type_icon = "icon_building_ramparts.dds"
+	type_icon = "icon_building_pouch.dds"
 	
 	ai_value = {
 		base = 10
@@ -6947,7 +7061,7 @@ dwarven_bank_economic_02 {
 	}
 }
 
-dwarven_bank_economic_03 {
+dwarven_bank_economic_03 = {
 	construction_time = slow_construction_time
 
 	can_construct_potential = {
@@ -6973,7 +7087,7 @@ dwarven_bank_economic_03 {
 	
 	#next_building = dwarven_bank_economic_03
 
-	type_icon = "icon_building_ramparts.dds"
+	type_icon = "icon_building_pouch.dds"
 	
 	ai_value = {
 		base = 10
@@ -7024,7 +7138,7 @@ dwarven_kings_armory_military_01 = {
 	
 	next_building = dwarven_kings_armory_military_02
 
-	type_icon = "icon_building_ramparts.dds"
+	type_icon = "icon_building_dwarf_helm.dds"
 	
 	ai_value = {
 		base = 10
@@ -7074,7 +7188,7 @@ dwarven_kings_armory_military_02 = {
 	
 	next_building = dwarven_kings_armory_military_03
 
-	type_icon = "icon_building_ramparts.dds"
+	type_icon = "icon_building_dwarf_helm.dds"
 	
 	ai_value = {
 		base = 10
@@ -7124,7 +7238,7 @@ dwarven_kings_armory_military_03 = {
 	
 	#next_building = dwarven_kings_armory_military_03
 
-	type_icon = "icon_building_ramparts.dds"
+	type_icon = "icon_building_dwarf_helm.dds"
 	
 	ai_value = {
 		base = 10
@@ -7174,7 +7288,7 @@ dwarven_grand_library_01 = {
 	
 	next_building = dwarven_grand_library_02
 
-	type_icon = "icon_building_observatory.dds"
+	type_icon = "icon_building_books.dds"
 	
 	ai_value = {
 		base = 10
@@ -7223,7 +7337,7 @@ dwarven_grand_library_02 = {
 	
 	next_building = dwarven_grand_library_03
 
-	type_icon = "icon_building_observatory.dds"
+	type_icon = "icon_building_books.dds"
 	
 	ai_value = {
 		base = 10
@@ -7272,7 +7386,7 @@ dwarven_grand_library_03 = {
 	
 	#next_building = dwarven_grand_library_03
 
-	type_icon = "icon_building_observatory.dds"
+	type_icon = "icon_building_books.dds"
 	
 	ai_value = {
 		base = 10
@@ -7325,7 +7439,7 @@ dwarven_outpost_01 = {
 	
 	next_building = dwarven_outpost_02
 
-	type_icon = "icon_building_ramparts.dds"
+	type_icon = "icon_building_palisades.dds"
 	
 	ai_value = {
 		base = 10
@@ -7459,7 +7573,7 @@ dwarven_surface_farm_01 = {
 	
 	next_building = dwarven_surface_farm_02
 
-	type_icon = "icon_building_ramparts.dds"
+	type_icon = "icon_building_hill_farms.dds"
 	
 	ai_value = {
 		base = 10
@@ -7582,7 +7696,7 @@ dwarven_market_01 = {
 	
 	next_building = dwarven_market_02
 
-	type_icon = "icon_building_ramparts.dds"
+	type_icon = "icon_building_market_villages.dds"
 	
 	ai_value = {
 		base = 10

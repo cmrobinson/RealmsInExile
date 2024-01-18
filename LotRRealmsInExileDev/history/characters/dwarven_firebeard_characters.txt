@@ -23,6 +23,7 @@ lineofuri0 = { # Úri the Scarred
     dynasty = dynasty_uri
     religion = faith_firebeards
     culture = firebeards
+	dna = lineofuri0_dna
 	
     trait = education_stewardship_5
 	trait = dwarf_father
@@ -2924,7 +2925,6 @@ lineofuri88 = {
 lineofuriVI = {
     name = _Uri
 
-
     dynasty = dynasty_uri
     religion = faith_broadbeams
     culture = firebeards
@@ -2942,6 +2942,8 @@ lineofuriVI = {
     trait = twin
     trait = intellect_good_3
 
+    dna = uri_dna
+
     diplomacy = 3
     martial = 6
     stewardship = 2
@@ -2949,18 +2951,18 @@ lineofuriVI = {
     learning = 3
     prowess = 6
 
-    6711.4.23 = {
+    6751.4.22 = {
         birth = yes
         add_character_flag = scripted_appearance_uri
         add_character_flag = no_headgear
         give_nickname = nick_the_generous_unique
     }
 
-    6900.10.11 = {
+    6900.10.11 = { # Uri VI married late, by Dwarven standards, and had his children even later
         add_spouse = lineofuri89
     }
 
-    7100.2.21 = {
+    7054.2.21 = {
         death = { death_reason = death_natural_causes }
     }
 }
@@ -3022,7 +3024,7 @@ lineofuri90 = {
 
     #trait = education_diplomacy_2
 
-    6937.5.4 = {
+    6927.5.4 = {
         birth = yes
     }
 
@@ -3056,7 +3058,7 @@ lineofuri91 = {
 
     trait = education_martial_4
 
-    6942.8.25 = {
+    6932.8.25 = {
         birth = yes
     }
 
@@ -3789,7 +3791,7 @@ lineofuri116 = {
 
     trait = stubborn
     trait = wrathful
-    trait = lazy
+    trait = diligent
 
     diplomacy = 2
     martial = 5
@@ -3802,17 +3804,17 @@ lineofuri116 = {
     trait = intellect_good_2
     trait = twin
 
-    6711.4.22 = {
+    6751.4.23 = {
         birth = yes
         add_character_flag = scripted_appearance_uri
         add_character_flag = no_headgear
     }
 
-    6835.2.28 = {
+    6810.2.28 = {
         add_spouse = lineofuri117
     }
 
-    6907.5.19 = {
+    6832.5.19 = { # Died at the Battle of Azanulbizar, a Burned Dwarf
         death = { death_reason = death_wounds }
     }
 }
@@ -3877,7 +3879,7 @@ lineofuri118 = {
     trait = beauty_good_1
     trait = disinherited
 
-    6868.6.19 = {
+    6820.6.19 = {
         birth = yes
     }
 
@@ -3910,7 +3912,7 @@ lineofuri119 = {
 
     trait = education_martial_3
 
-    6869.8.5 = {
+    6839.8.5 = {
         birth = yes
     }
 
@@ -3943,7 +3945,7 @@ lineofuri121 = {
     trait = education_diplomacy_4
     trait = beauty_good_2
 
-    6863.3.14 = {
+    6817.3.14 = {
         birth = yes
     }
 
@@ -3981,20 +3983,19 @@ lineofuri122 = {
     trait = adventurer
 	trait = confider
 
-    6853.1.1 = {
+    6813.1.1 = {
         birth = yes
     }
 
-    6943.10.3 = {
+    6927.10.3 = {
         effect = {
             set_relation_rival = {
                 target = character:lineofuriVI
-                reason = rival_usurper
             }
         }
     }
 
-    6949.5.8 = {
+    6919.5.8 = {
         add_spouse = lineofdwalin94
     }
 
@@ -4038,6 +4039,7 @@ lineofuri124 = {
 
     religion = faith_broadbeams
     culture = firebeards
+    dynasty = dynasty_uri
 
     father = lineofuri122
     mother = lineofdwalin94
@@ -4056,7 +4058,7 @@ lineofuri124 = {
     trait = education_diplomacy_3
     trait = giant
 
-    7000.8.9 = {
+    6950.8.9 = {
         birth = yes
     }
 
@@ -4123,7 +4125,7 @@ lineofuri126 = {
     #trait = giant
     trait = intellect_good_1
 
-    7008.5.25 = {
+    6958.5.25 = {
         birth = yes
 		add_unpressed_claim = title:k_belegost
     }
@@ -7264,14 +7266,13 @@ lineofkhathzaibriz95 = {
     trait = brave
 
     diplomacy = 3
-    martial = 14
-    stewardship = 12
+    martial = 8
+    stewardship = 8
     intrigue = 3
     learning = 3
     prowess = 7
 
     trait = education_stewardship_4
-    trait = reincarnation
     trait = intellect_good_2
     trait = beauty_good_1
     #trait = physique_bad_1
@@ -22037,6 +22038,35 @@ lineofhersarbinshmur84 = {
     }
 
     7227.8.7 = {
+        death = { death_reason = death_natural_causes }
+    }
+}
+
+lineoftelchar1 = {
+    name = Telchar
+    female = yes
+
+    religion = faith_firebeards
+    culture = firebeards
+
+    trait = diligent
+    trait = stubborn
+    trait = patient
+
+    diplomacy = 4
+    martial = 3
+    stewardship = 6
+    intrigue = 1
+    learning = 10
+    prowess = 5
+
+    trait = education_learning_3
+
+    202.2.2 = {
+        birth = yes
+    }
+
+    444.4.4 = {
         death = { death_reason = death_natural_causes }
     }
 }

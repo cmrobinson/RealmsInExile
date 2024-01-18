@@ -12,6 +12,8 @@
 ### MALE NAMES
 Abb:0 "Abb" # Hillmen Male
 Abhean:0 "Abhean" # Hillmen Male
+Abnan:0 "Abnân" # Dwarven Khuzdul Hidden Wealth
+Ablakh:0 "Ablâkh" # Dwarven Khuzdul Power
 Acair:0 "Acair" # Hillmen Male
 Adeyn:0 "Adeyn" # Hillmen Male
 Aed:0 "Aed" # Hillmen Male
@@ -21,6 +23,7 @@ Amergin:0 "Amergin" # Hillmen Male
 Aodha:0 "Aodha" # Hillmen Male
 Aonghas:0 "Aonghas" # Hillmen Male
 Artrach:0 "Artrach" # Hillmen Male
+Argan:0 "Argân" # Dwarven Khuzdul Pride
 At_ihair:0 "Atíhair" # Hillmen Male
 B_air:0 "Báir" # Hillmen Male
 Balfor:0 "Balfor" # Hillmen Male
@@ -603,7 +606,6 @@ Uirne:0 "Uirne" # Hillmen Female
  _Irith:0 "Írith" # Sindarin Female
  _Iulun:0 "Íulun" # Gwathiurim Unsorted
  _Iwaldi:0 "Íwaldi" # Dwarven Unsorted
- Nirnadel:0 "Nirnadel" # Unsorted Unsorted
  _Odhel:0 "Ódhel" # Sindarin Male
  _Oin:0 "Óin" # Dwarven Unsorted
  _Oldenad:0 "Óldenad" # Gwathiurim Unsorted
@@ -6212,6 +6214,7 @@ Uirne:0 "Uirne" # Hillmen Female
  Idh:0 "Idh" # Sindarin Female
  Idhrien:0 "Idhrien" # Sindarin Female
  Idhril:0 "Idhril" # Sindarin Female
+ Idmisi:0 "Idmîsî" #Dwarven Khuzdul Judge
  Idis:0 "Idis" # Unsorted Unsorted
  Idrial:0 "Idrial" #Q # Legacy Elves Unsorted
  Idrien:0 "Idrien" # Dunedain Unsorted
@@ -8853,6 +8856,7 @@ Uirne:0 "Uirne" # Hillmen Female
  Nevirn:0 "Nevirn" # Gwathiurim Unsorted
  Neya:0 "Neya" # New Apysaic Female
  Nezhat:0 "Nezhat" # Khyan Female
+ Nirnadel:0 "Nirnadel" # Unsorted Unsorted
  Nh_a_k:0 "Nhâk" # Unsorted Unsorted
  Nha_a_k:0 "Nhâk" # Orc Unsorted
  Nheo_o_erna_a_:0 "Nheôernâ" # Womarin Female
@@ -11294,7 +11298,7 @@ Uirne:0 "Uirne" # Hillmen Female
  Thrakuth:0 "Thrakuth" # Orc Unsorted
  Thralug:0 "Thralug" # Orc Unsorted
  Thranduil:0 "Thranduil" # Nandorin Male
- Thr_ar:0 "Thrár # Dwarven Male
+ Thr_ar:0 "Thrár" # Dwarven Male
  Threda_a_ni:0 "Thredâni" # Igath Female
  Thredin:0 "Thredin" # Igath Male
  Threlin:0 "Threlin" # Igath Male

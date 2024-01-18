@@ -5,6 +5,8 @@
 #			lotr_artifact.0002		Elven artifact burns evil characters
 #			lotr_artifact.0003		Plundering Thorin's tomb
 #			lotr_artifact.0004		Returning Thorin's artifacts
+#			lotr_artifact.0005		Aragorn receives Arnor's regalia
+#			lotr_artifact.0006		Aragorn recives Anduril
 
 lotr_artifact.0001 = { #Morgul knife self-destruct
 	content_source = realms
@@ -135,7 +137,6 @@ lotr_artifact.0003 = { #Thorin's tomb plunder event
 			title:c_throne_of_erebor = {
 				add_county_modifier = plundered_thorins_tomb_orcrist_modifier
 			}
-			create_artifact_orcrist_effect = { OWNER = this }
 		}
 		else_if = {
 			limit = { title:c_throne_of_erebor = { has_county_modifier = plundered_thorins_tomb_orcrist_modifier } }
@@ -154,6 +155,7 @@ lotr_artifact.0003 = { #Thorin's tomb plunder event
 				create_artifact_arkenstone_effect = { OWNER = this }
 			}
 			else = { create_artifact_arkenstone_backup_effect = { OWNER = this } }
+			create_artifact_orcrist_effect = { OWNER = this }
 			title:c_throne_of_erebor = {
 				remove_county_modifier = thorins_tomb_modifier
 				add_county_modifier = plundered_thorins_tomb_orcrist_modifier
@@ -529,3 +531,236 @@ lotr_artifact.0004 = { #Return the Artifacts
 		}
 	}
 }
+
+lotr_artifact.0005 = { #Aragorn receives the regalia of Arnor
+	content_source = realms
+	type = character_event
+	title = lotr_artifact.0005.t
+	desc = {
+		desc = lotr_artifact.0005.desc.intro
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					has_character_flag = is_aragorn
+					title:k_imladris.holder = character:linefinwe27 #Elrond
+					character:linefinwe28 = { is_alive = yes } #Elladan
+					character:linefinwe29 = { is_alive = yes } #Elrohir
+				}
+				desc = lotr_artifact.0005.desc.default
+			}
+			desc = lotr_artifact.0005.desc.alt
+		}
+		triggered_desc = {
+			trigger = {
+				title:k_imladris.holder.culture = { has_cultural_tradition = tradition_legendary_artisans }
+				any_character_artifact = {
+					has_variable = shards_of_narsil
+				}
+			}
+			desc = lotr_artifact.0005.desc.narsil
+		}
+	}
+	
+	theme = diplomacy
+	left_portrait = {
+		character = root
+		animation = happiness
+	}
+	right_portrait = {
+		character = scope:messenger #Elladan
+		animation = personality_honorable
+	}
+	lower_center_portrait = {
+		character = title:k_imladris.holder #Elrond
+	}
+	artifact = {
+		target = scope:scepter
+		position = lower_left_portrait
+	}
+	artifact = {
+		target = scope:elendilmir
+		position = lower_right_portrait
+	}
+	
+	trigger = {
+		has_title = title:e_arnor
+		dynasty = dynasty:dynasty_elros
+		title:k_imladris.holder = {
+			any_character_artifact = {
+				OR = {
+					has_variable = sceptre_of_annuminas
+					has_variable = elendilmir_valandil
+				}
+			}
+		}
+	}
+	
+	cooldown = { years = 10 }
+
+	immediate = {
+		title:k_imladris.holder = { # Aragorn receives the regalia of Arnor from Elrond or any other ruler of Imladris
+			save_scope_as = elrond_substitute
+			every_character_artifact = {
+				limit = {
+					has_variable = sceptre_of_annuminas
+				}
+				save_scope_as = scepter
+				set_owner = {
+					target = root
+					history = {
+						type = given
+						recipient = root
+					}
+				}
+			}
+			every_character_artifact = {
+				limit = {
+					has_variable = elendilmir_valandil
+				}
+				save_scope_as = elendilmir
+				set_owner = {
+					target = root
+					history = {
+						type = given
+						recipient = root
+					}
+				}
+			}
+		}
+		if = {
+			limit = { title:k_imladris.holder = character:linefinwe27 } #Elrond 
+			if = {
+				limit = { character:linefinwe28 = { is_alive = yes } }
+				character:linefinwe28 = { save_scope_as = messenger }
+			}
+			else_if = {
+				limit = { character:linefinwe29 = { is_alive = yes } }
+				character:linefinwe29 = { save_scope_as = messenger }
+			}
+			else = {
+				random_knight = { save_scope_as = messenger }
+			}
+		}
+		else = {
+			random_knight = { save_scope_as = messenger }
+		}
+	}
+	
+	option = { #Please take the shards
+		name = lotr_artifact.0005.a
+		trigger = {
+			title:k_imladris.holder.culture = { has_cultural_tradition = tradition_legendary_artisans }
+			any_character_artifact = {
+				has_variable = shards_of_narsil
+			}
+		}	
+	
+		every_character_artifact = {
+			limit = { has_variable = shards_of_narsil }
+			set_owner = {
+				target = scope:messenger #Elladan
+				history = {
+					type = given
+					recipient = scope:messenger #Elladan
+				}
+			}
+		}
+		
+		trigger_event = {
+			id = lotr_artifact.0006
+			months = 6
+		}
+		
+		ai_chance = 100
+	}
+	
+	option = { #I'll keep them, thanks
+		name = {
+			trigger = { 
+				title:k_imladris.holder.culture = { has_cultural_tradition = tradition_legendary_artisans }
+				any_character_artifact = {
+					has_variable = shards_of_narsil
+				}
+			}
+			text = lotr_artifact.0005.b.narsil_kept
+		}
+		name = lotr_artifact.0005.b
+		
+		ai_chance = 0
+	}
+}
+
+lotr_artifact.0006 = { #Elladan returns with Anduril reforged
+	content_source = realms
+	type = character_event
+	title = lotr_artifact.0006.t
+	desc = {
+		desc = lotr_artifact.0006.desc
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					has_character_flag = is_aragorn
+					title:k_imladris.holder = character:linefinwe27 #Elrond
+					character:linefinwe28 = { is_alive = yes } #Elladan
+					character:linefinwe29 = { is_alive = yes } #Elrohir
+				}
+				desc = lotr_artifact.0006.desc.default_outro
+			}
+			desc = lotr_artifact.0006.desc.alt_outro
+		}
+	}
+	theme = diplomacy
+	left_portrait = {
+		character = root
+		animation = happiness
+	}
+	right_portrait = {
+		character = scope:messenger #Elladan
+		animation = personality_honorable
+	}
+	lower_center_portrait = {
+		character = title:k_imladris.holder #Elrond
+	}
+	artifact = {
+		target = scope:anduril
+		position = lower_left_portrait
+	}
+	
+	immediate = {
+		scope:messenger = {
+			every_character_artifact = {
+				limit = { has_variable = shards_of_narsil }
+				destroy_artifact = this
+			}
+		}
+		create_artifact_anduril_effect = { OWNER = title:k_imladris.holder }
+		scope:newly_created_artifact = {
+			add_artifact_history = {
+				location = province:4337 #Rivendell
+				actor = title:k_imladris.holder #Elrond
+				recipient = title:k_imladris.holder #Elrond
+				type = reforged
+			}
+			save_scope_as = anduril
+		}
+	}
+	
+	option = {
+		name = lotr_artifact.0006.a
+		
+		title:k_imladris.holder = {
+			every_character_artifact = {
+				limit = { has_variable = anduril }
+				set_owner = {
+					target = root
+					history = {
+						type = given
+						recipient = root
+					}
+				}
+			}
+		}
+	}
+}
+
+		

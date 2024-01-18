@@ -366,7 +366,7 @@ subjugation_mardruak_modifier = {
 subjugation_umbar_modifier = {
 	icon = compass_dark
 	intrigue = minor_skill_bonus
-	men_at_arms_maintenance = 0.1
+	men_at_arms_maintenance = -0.1
 	embarkation_cost_mult = -0.3
 }
 subjugation_near_harad_modifier = {
@@ -925,4 +925,8 @@ lotr_munchies_sated_modifier = { # Overate
 	health = -0.15
 	prowess = -8
 	
+}
+
+lotr_vanquished_modifier = {
+	icon = martial_negative
 }

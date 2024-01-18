@@ -407,7 +407,14 @@
 ### MORDOR ###
  innovation_dark_servants:0 "Dark Servants"
  innovation_dark_servants_desc:0 "Dark Servants from every corner of Middle Earth."
- 
+
+ ## Goblins ##
+ innovation_goblin_warfare:0 "Goblin Tactics"
+ innovation_goblin_warfare_desc:0 "Goblins, or "Snagga" as they are often called by the larger orcs. Are a breed of small and gangly orcs. Often requiring guile and tact not seen in those of larger stature to win battles... Guile and numbers beyond counting."
+ goblin_skirmishers:0 "Snaga Stalkers"
+ goblin_skirmishers_flavor:0 "Quick, quiet and plentiful. The best and only good qualities of a Goblin. Quick enough to chase down any foe, quiet enough to slink through the dark with excellence and plentiful enough for there to always be more when failure befalls them."
+ goblin_warg_riders:0 "Warg Riders"
+ goblin_warg_riders_flavor:0 "Some Goblins are determined and reckless enough to convince Wargs to act as their mounts. A fair arangement. If the Goblins win, the Wargs have foes to eat. If the Goblins fail, no one will complain about a missing goblin body."
 ### BELLAKAR ###
 #  innovation_bellakarean_warfare:0 "Bellakarean Warfare"
 #  innovation_bellakarean_warfare_desc:0 "Drawing upon Númenórean and indigenous military traditions, the Bellakari employ well-rounded armies drawing from every part of their multi-cultural society."
@@ -420,7 +427,7 @@
  culture_parameter_unlock_maa_bellanarud_auxiliaries:0 "Can recruit [GetMaA('bellanarud_auxiliaries').GetName] as [men_at_arms|E]"
  bellanarud_auxiliaries:0 "Bellanarûd Auxilliaries"
  bellanarud_auxiliaries_flavor:0 "The rural Bellanarûd of Bellakar often serve in a wide variety of auxiliary roles supplementing the primary professional forces, with different communities serving according to what their own martial traditions and skills are."
- 
+ culture_parameter_can_make_oligarch_vassals:0 "Can turn Counts into Oligarch Vassals"
 ### TEDJIN ###
  innovation_tedjin_warfare:0 "Tedjin Warfare"
  innovation_tedjin_warfare_desc:0 "The Tedjin draw greatly upon their ancient Easterling and mercenary heritage in combat, favouring wearing down their enemies via attrition and hit-and-run strategies."
@@ -483,9 +490,9 @@
  druedain_oku_tori:0 "Oku-Tori"
  druedain_oku_tori_flavor:0 "The Oku-Tori of the Suza Sumar are cruel and cunning predators. Ever hungering for heads, they venture across the vast jungle mimicking the sounds of creatures they hear to attract prey. They often fight alongside Honin willing to offer the skulls of the fallen. Their intelect and capacity for broken speach has led to many of the Honin that the Oku-Tori are divine fuzions of Honin and bird. Worshiping them as any divine being deserves."
  druedain_beffraen_skirmishers:0 "Beffraen Clansmen"
- druedain_beffraen_skirmishers_flavor:0 "Violence is nearly always just around the corner in Eryn Vorn. Wether infighting amongst the clans, or slaying encroaching outsiders. The clans of the Beffraen are ever prepared for war."
+ druedain_beffraen_skirmishers_flavor:0 "Violence is nearly always just around the corner in Eryn Vorn. Whether infighting amongst the clans, or slaying encroaching outsiders. The clans of the Beffraen are ever prepared for war."
  druedain_beffraen_pikemen:0 "Beffraen Lurkers"
- druedain_beffraen_pikemen_flavor:0 "Pioneered by the more dubious clans of the Beffraen. The Lurkers, called such by those foes lucky enough to survive. Wield wicked glaives, while concealed into their surroundings. Wether lone outrider, or noble knight. Any rider would do well to watch themselves near Beffraen lands"
+ druedain_beffraen_pikemen_flavor:0 "Pioneered by the more dubious clans of the Beffraen, the Lurkers are called such by those foes lucky enough to survive. They wield wicked glaives, while concealed into their surroundings. Whether lone outrider, or noble knight, any rider would do well to watch themselves near Beffraen lands."
  druedain_beffraen_heavy_infantry:0 "Eryn Vorn Champions"
  druedain_beffraen_heavy_infantry_flavor:0 "Mixing with larger folk made the Beffraen large among Druedain. Those clansmen who live long enough, are tall enought and strong enough have been known to wield the weapons of their Gwathuirim neighbors. Claymores deadly enough when used by Saralain mercenaries and raiders, put to use by the best the Beffraen have to offer. Few see their approach and few who do fare any better."
 

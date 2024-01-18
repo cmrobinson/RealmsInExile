@@ -2559,6 +2559,34 @@
 			}
 		}
 	}
+	
+	lineofuri0_portrait = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = hairstyles
+				template = all_hairstyles
+				accessory = male_hair_mena_02
+			}
+			accessory = {
+				mode = add
+				gene = beards
+				template = all_beards
+				accessory = male_beard_northern_01
+			}
+		}   
+		weight = {
+			base = 0
+			modifier = {
+				add = 999
+				exists = this
+				exists = character:lineofuri0
+				this = character:lineofuri0
+			}
+		}
+	}
+	
+	
 
 	## Blacklocks ##
 	axe_that_walks_portrait = {
@@ -2588,8 +2616,8 @@
 			modifier = {
 				add = 999
 				exists = this
-				exists = character:lineofhebnar2
-				this = character:lineofhebnar2
+				exists = character:lineofargan2
+				this = character:lineofargan2
 			}
 		}
 	}
@@ -2874,13 +2902,13 @@
 				mode = add
 				gene = hairstyles
 				template = all_hairstyles
-				accessory = male_hair_fp1_08
+				accessory = m_hair_ep2_western_01
 			}
 			accessory = {
 				mode = add
 				gene = beards
 				template = all_beards
-				accessory = male_beard_northern_02
+				accessory = m_beard_fp3_iranian_03
 			}
 		}   
 		weight = {
@@ -5628,6 +5656,12 @@
 				template = all_hairstyles
 				accessory = male_hair_mountain_orc_01
 			}
+			morph = {
+				mode = add
+				gene = gene_leprosy
+				template = leprosy
+				value = 0.5
+			}
 			accessory = {
 				mode = add
 				gene = beards
@@ -5720,6 +5754,43 @@
 			}
 		}
 	}
+	gazmog_portrait = { 
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = hairstyles
+				template = all_hairstyles
+				accessory = male_hair_mountain_orc_01
+			}
+			accessory = {
+				mode = add
+				gene = beards
+				template = all_beards
+				accessory = male_beard_mountain_orc_01
+			}
+			accessory = {
+				mode = add
+				gene = legwear
+				template = generic_legwear
+				accessory = male_legwear_generic
+			}
+			accessory = {
+				mode = add	
+				gene = cloaks
+				template = fp1_cloak
+				accessory = male_furs_secular_fp1_nobility_03
+			}
+		}   
+		weight = {
+			base = 0
+			modifier = {
+				add = 999
+				exists = this
+				exists = character:lineofmaghaz1
+				this = character:lineofmaghaz1
+			}
+		}
+	}	
 	maghaz_portrait = { 
 		dna_modifiers = {
 			accessory = {
@@ -5734,6 +5805,12 @@
 				template = all_beards
 				value = 0.0
 			}
+			accessory = {
+				mode = add	
+				gene = cloaks
+				template = fp1_cloak
+				accessory = male_furs_secular_fp1_nobility_02
+			}
 		}   
 		weight = {
 			base = 0
@@ -5742,6 +5819,37 @@
 				exists = this
 				exists = character:lineofmaghaz3
 				this = character:lineofmaghaz3
+			}
+		}
+	}
+	orgol_portrait = { 
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = gene_scars_disease
+				template = scars_disease
+				value = 0.5
+			}
+			accessory = {
+				mode = add
+				gene = hairstyles
+				template = all_hairstyles
+				accessory = male_hair_fp2_iberian_muslim_03
+			}
+			accessory = {
+				mode = add
+				gene = beards
+				template = all_beards
+				value = 0.0
+			}
+		}   
+		weight = {
+			base = 0
+			modifier = {
+				add = 999
+				exists = this
+				exists = character:lineofmaghaz4
+				this = character:lineofmaghaz4
 			}
 		}
 	}
@@ -5764,13 +5872,106 @@
 			}
 		}
 	}
+	grizz = {
+		dna_modifiers = {
+			accessory = {
+				mode = add	
+				gene = cloaks
+				template = fp1_cloak
+				accessory = male_furs_secular_fp1_nobility_03
+			}
+			accessory = {
+				mode = add	
+				gene = legwear
+				template = uruk_berserker_legwear
+				accessory = male_legwear_uruk_beserker_2
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 999
+				exists = this
+				exists = character:linehidesprouter
+				this = character:linehidesprouter
+			}
+		}
+	}
+	gashbuz = {
+		dna_modifiers = {
+			accessory = {
+				mode = add	
+				gene = clothes
+				template = mountain_orc
+				accessory = male_clothes_uruk_isengard_soldier_1
+			}
+			accessory = {
+				mode = add	
+				gene = legwear
+				template = uruk_soldier_legwear
+				accessory = male_legwear_uruk_soldier
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 999
+				exists = this
+				exists = character:linemaskbearer2
+				this = character:linemaskbearer2
+			}
+		}
+	}
+	hukor = {
+		dna_modifiers = {
+			accessory = {
+				mode = add	
+				gene = clothes
+				template = western_prison
+				accessory = male_clothes_situational_western_prison_01_common
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 999
+				exists = this
+				exists = character:linegloomdrinker
+				this = character:linegloomdrinker
+			}
+		}
+	}
 	kalmog = {
 		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = hairstyles
+				template = no_hairstyles
+				accessory = bald
+			}
 			accessory = {
 				mode = add	
 				gene = headgear
 				template = uruk_war
 				accessory = male_headgear_uruk_isengard_2
+			}
+			accessory = {
+				mode = modify				
+				gene = eye_accessory
+				template = goblin_eyes
+				value = 1.0
+			}
+			accessory = {
+				mode = add	
+				gene = clothes
+				template = no_clothes
+				accessory = male_clothes_secular_western_nudity_01
+			}
+			accessory = {
+				mode = add	
+				gene = legwear
+				template = uruk_berserker_legwear
+				accessory = male_legwear_uruk_beserker_2
 			}
 		}
 		weight = {
@@ -5780,6 +5981,81 @@
 				exists = this
 				exists = character:linehallroamer1
 				this = character:linehallroamer1
+			}
+		}	
+	}
+	garg = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = hairstyles
+				template = all_hairstyles
+				accessory = male_hair_northern_02
+			}
+			accessory = {
+				mode = add	
+				gene = headgear
+				template = western_war
+				accessory = m_headgear_sec_western_war_nob_01
+			}
+			accessory = {
+				mode = add	
+				gene = clothes
+				template = mountain_orc
+				accessory = male_clothes_uruk_isengard_soldier_1
+			}
+			accessory = {
+				mode = add	
+				gene = legwear
+				template = plate_war_01_legwear
+				accessory = male_legwear_secular_plate_war_01
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 999
+				exists = this
+				exists = character:linefangstealer3
+				this = character:linefangstealer3
+			}
+		}	
+	}
+	ulthug = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = hairstyles
+				template = all_hairstyles
+				accessory = m_hair_fp3_iranian_01
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 999
+				exists = this
+				exists = character:linebellbreaker
+				this = character:linebellbreaker
+			}
+		}	
+	}
+	yarnaghk = {
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = gene_scars_disease
+				template = scars_disease
+				value = 0.5
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 999
+				exists = this
+				exists = character:linenapekindler
+				this = character:linenapekindler
 			}
 		}	
 	}
@@ -5952,13 +6228,138 @@
 			}
 		}
 	}
-	lurtz = {
+	gorshag = {
 		dna_modifiers = {
 			accessory = {
 				mode = add
 				gene = hairstyles
 				template = all_hairstyles
-				accessory = m_hair_fp3_iranian_02
+				accessory = male_hair_indian_03
+			}
+			accessory = {
+				mode = add	
+				gene = clothes
+				template = nazgul_clothes
+				accessory = male_clothes_nazgul
+			}
+			accessory = {
+				mode = add	
+				gene = legwear
+				template = mena_war_legwear
+				accessory = male_legwear_secular_mena_war_nobility_01
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 999
+				exists = this
+				exists = character:strongorc1
+				this = character:strongorc1
+			}
+		}
+	}
+	ugmuz = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = hairstyles
+				template = all_hairstyles
+				accessory = male_hair_fp2_iberian_christian_03
+			}
+			accessory = {
+				mode = add	
+				gene = clothes
+				template = nazgul_clothes
+				accessory = male_clothes_nazgul
+			}
+			accessory = {
+				mode = add	
+				gene = legwear
+				template = mena_war_legwear
+				accessory = male_legwear_secular_mena_war_nobility_01
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 999
+				exists = this
+				exists = character:weakorc1
+				this = character:weakorc1
+			}
+		}
+	}
+	tharzog = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = hairstyles
+				template = scripted_custom_hairstyles
+				accessory = male_hair_uruk_01
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 999
+				exists = this
+				exists = character:lineoftharzog1
+				this = character:lineoftharzog1
+			}
+		}
+	}
+	savgak = {
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = gene_smallpox
+				template = smallpox
+				value = 0.5
+			}
+			accessory = {
+				mode = add		
+				gene = headgear
+				template = lotr_unique_headgear
+				range = { 0.40 0.41 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 999
+				exists = this
+				exists = character:linekorgar
+				this = character:linekorgar
+			}
+		}	
+	}
+	agrolg = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = hairstyles
+				template = all_hairstyles
+				accessory = m_hair_fp3_iranian_01
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 999
+				exists = this
+				exists = character:linehrekker2
+				this = character:linehrekker2
+			}
+		}	
+	}
+	lurtz = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = hairstyles
+				template = scripted_custom_hairstyles
+				accessory = male_hair_uruk_01
 			}
 		}
 		weight = {

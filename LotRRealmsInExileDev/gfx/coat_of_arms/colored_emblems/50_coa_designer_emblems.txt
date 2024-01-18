@@ -1763,443 +1763,452 @@ ce_elwe_01.dds { colors = 2 category = title_elvish }
 ce_elwe_02.dds { colors = 2 category = title_elvish }
 ce_emyn_beraid.dds { colors = 2 category = title_elvish }
 ce_poppies.dds{ colors = 3 category = title_elvish }
-ce_poppies_01.dds { colors = 3 category = title_elvish }
-ce_poppies_02.dds { colors = 3 category = title_elvish }
-ce_poppies_03.dds { colors = 3 category = title_elvish }
-ce_poppies_04.dds { colors = 3 category = title_elvish }
-ce_poppies_05.dds { colors = 1 category = title_elvish }
-ce_vanyar_green.dds { colors = 3 category = title_elvish }
-ce_vanyar_green_01.dds { colors = 3 category = title_elvish }
-ce_vanyar_green_02.dds { colors = 2 category = title_elvish }
-ce_vanyar_green_03.dds { colors = 1 category = title_elvish }
-ce_erebor_01.dds { colors = 2 category = title_dwarven }
-#ce_falmer_a.dds { colors = 1 category = letters }
-#ce_falmer_b.dds { colors = 1 category = letters }
-#ce_falmer_c.dds { colors = 1 category = letters }
-#ce_falmer_d.dds { colors = 1 category = letters }
-#ce_falmer_e.dds { colors = 1 category = letters }
-#ce_falmer_f.dds { colors = 1 category = letters }
-#ce_falmer_g.dds { colors = 1 category = letters }
-#ce_falmer_h.dds { colors = 1 category = letters }
-ce_fish_01.dds { colors = 1 category = animals }
-ce_germanic_pattern_01.dds { colors = 2 category = patterns }
-ce_germanic_pattern_02.dds { colors = 2 category = patterns }
-ce_gondor_01.dds { colors = 1 category = title_dunedain }
-ce_gondor_02.dds { colors = 1 category = title_dunedain }
-ce_gondor_03.dds { colors = 1 category = title_dunedain }
-ce_gondor_04.dds { colors = 1 category = title_dunedain }
-ce_gondor_05.dds { colors = 1 category = title_dunedain }
-ce_gondor_06.dds { colors = 1 category = title_dunedain }
-ce_gondor_stewards.dds { colors = 1 category = title_dunedain }
-ce_great_orc_horde.dds { colors = 2 category = title_evil }
-ce_gundabad_01.dds { colors = 2 category = title_evil }
-ce_gundabad_hunter_orcs_01.dds { colors = 2 category = title_evil }
-ce_gundabad_hunter_orcs_02.dds { colors = 1 category = title_evil }
-ce_haleth_01.dds { colors = 1 category = abstract }
-ce_haleth_02.dds { colors = 1 category = abstract }
-ce_haleth_03.dds { colors = 2 category = abstract }
-ce_haleth_04.dds { colors = 1 category = abstract }
-ce_haleth_05.dds { colors = 1 category = abstract }
-ce_haleth_06.dds { colors = 1 category = abstract }
-ce_haleth_07.dds { colors = 1 category = abstract }
-ce_haleth_08.dds { colors = 1 category = abstract }
-ce_haleth_09.dds { colors = 1 category = abstract }
-ce_haleth_10.dds { colors = 1 category = abstract }
-ce_halfalas.dds { colors = 2 category = title_elvish }
-ce_harad_01.dds { colors = 1 category = abstract }
-ce_harad_pattern_01.dds { colors = 1 category = patterns }
-ce_harad_pattern_02.dds { colors = 1 category = patterns }
-ce_harad_pattern_03.dds { colors = 1 category = patterns }
-ce_harad_rays_01.dds { colors = 1 category = nature }
-ce_harad_snake_01.dds { colors = 1 category = animals }
-ce_harad_snake_02.dds { colors = 1 category = animals }
-ce_harad_snake_03.dds { colors = 1 category = animals }
-ce_harad.dds { colors = 2 category = title }
-ce_havens_of_numenor_01.dds { colors = 1 category = title_dunedain }
-ce_havens_of_numenor.dds { colors = 2 category = title_dunedain }
-ce_horse_01.dds { colors = 1 category = animals }
-ce_iron_hills_01.dds { colors = 2 category = title }
-ce_iron_hills_02.dds { colors = 2 category = title }
-ce_isengard_01.dds { colors = 1 category = title }
-ce_isengard_saruman_rune.dds { colors = 1 category = title_istari }
-ce_isengard_white_hand_01.dds { colors = 1 category = title_evil }
-ce_isengard_white_hand_02.dds { colors = 1 category = title_evil }
-ce_isengard_white_hand_03.dds { colors = 1 category = title_evil }
-ce_isle_of_numenor_01.dds { colors = 1 category = title_dunedain }
-ce_ithilien_01.dds { colors = 1 category = title_dunedain }
-ce_lamedon_01.dds { colors = 2 category = title_dunedain }
-ce_lamedon_02.dds { colors = 1 category = title_dunedain }
-ce_league_of_pelargir.dds { colors = 2 category = title_dunedain }
-ce_lebennin_01.dds { colors = 2 category = title_dunedain }
-ce_leofrings_01.dds { colors = 2 category = animals }
-ce_leofrings_02.dds { colors = 2 category = animals }
-ce_lhun_riverfolk.dds { colors = 2 category = title }
-ce_lindon_01.dds { colors = 1 category = title_elvish }
-ce_lindon_02.dds { colors = 2 category = title_elvish }
-ce_lindon.dds { colors = 2 category = title_elvish }
-ce_linhir_01.dds { colors = 2 category = title_dunedain }
-ce_linhir_02.dds { colors = 1 category = title_dunedain }
-ce_linhir_03.dds { colors = 1 category = title_dunedain }
-ce_linhir_04.dds { colors = 2 category = title_dunedain }
-ce_linhir_05.dds { colors = 1 category = title_dunedain }
-ce_lossarnach_01.dds { colors = 1 category = title_dunedain }
-ce_lossoth.dds { colors = 2 category = title }
-ce_minas_ithil_01.dds { colors = 2 category = title_dunedain }
-ce_minas_morgul.dds { colors = 1 category = title_evil }
-ce_minas_morgul_skull.dds { colors = 1 category = title_evil }
-ce_mithlond_01.dds { colors = 2 category = title_elvish }
-ce_mithlond_02.dds { colors = 2 category = title_elvish }
-ce_moon_crescent.dds { colors = 1 category = nature }
-ce_mordor_01.dds { colors = 1 category = title_evil }
-ce_mordor_eye_01.dds { colors = 1 category = title_evil }
-ce_mordor_eye_02.dds { colors = 1 category = title_evil }
-ce_mordor_eye_03.dds { colors = 1 category = title_evil }
-ce_mordor_eye_04.dds { colors = 1 category = title_evil }
-ce_mordor_eye_05.dds { colors = 1 category = title_evil }
-ce_mordor_eye_06.dds { colors = 1 category = title_evil }
-ce_mordor_numenorean_01.dds { colors = 1 category = title_evil }
-ce_mordor_numenorean_02.dds { colors = 1 category = title_evil }
-ce_mordor_numenorean_03.dds { colors = 1 category = title_evil }
-ce_moria_01.dds { colors = 2 category = title }
-ce_nordic_01.dds { colors = 1 category = patterns }
-ce_nordic_02.dds { colors = 2 category = patterns }
-ce_nordic_03.dds { colors = 1 category = patterns }
-ce_nordic_04.dds { colors = 2 category = patterns }
-ce_nordic_05.dds { colors = 2 category = patterns }
-ce_norse_tree_01.dds { colors = 1 category = crosses_and_knots }
-ce_norse_tree_02.dds { colors = 1 category = crosses_and_knots }
-ce_norse_tree_03.dds { colors = 1 category = crosses_and_knots }
-ce_norse_tree_04.dds { colors = 1 category = crosses_and_knots }
-ce_norse_tree_05.dds { colors = 1 category = crosses_and_knots }
-ce_norse_tree_06.dds { colors = 1 category = crosses_and_knots }
-ce_norse_tree_07.dds { colors = 1 category = crosses_and_knots }
-ce_norse_tree_08.dds { colors = 1 category = crosses_and_knots }
-ce_norse_tree_09.dds { colors = 1 category = crosses_and_knots }
-ce_norse_tree_10.dds { colors = 1 category = crosses_and_knots }
-ce_norse_tree_11.dds { colors = 1 category = crosses_and_knots }
-ce_norse_tree_12.dds { colors = 1 category = crosses_and_knots }
-ce_norse_tree_13.dds { colors = 1 category = crosses_and_knots }
-ce_norse_tree_14.dds { colors = 1 category = crosses_and_knots }
-ce_norse_tree_15.dds { colors = 1 category = crosses_and_knots }
-ce_norse_tree_16.dds { colors = 1 category = crosses_and_knots }
-ce_nuragic_01.dds { colors = 1 category = abstract }
-ce_nuragic_02.dds { colors = 2 category = manmade }
-ce_nuragic_03.dds { colors = 1 category = abstract }
-ce_nuragic_04.dds { colors = 1 category = manmade }
-ce_nuragic_05.dds { colors = 1 category = manmade }
-ce_olwe.dds { colors = 2 category = title_elvish }
-ce_orc_helmet_01.dds { colors = 2 category = title_evil }
-ce_orc_helmet_02.dds { colors = 2 category = title_evil }
-ce_orc_helmet_03.dds { colors = 2 category = title_evil }
-ce_orc_helmet_04.dds { colors = 2 category = title_evil }
-ce_orc_helmet_05.dds { colors = 2 category = title_evil }
-ce_orc_helmet_06.dds { colors = 2 category = title_evil }
-ce_orc_helmet_07.dds { colors = 2 category = title_evil }
-ce_orc_helmet_08.dds { colors = 2 category = title_evil }
-ce_orc_helmet_09.dds { colors = 2 category = title_evil }
-ce_orc_helmet_10.dds { colors = 2 category = title_evil }
-ce_orc_helmet_11.dds { colors = 2 category = title_evil }
-ce_orc_helmet_12.dds { colors = 2 category = title_evil }
-ce_orc_helmet_13.dds { colors = 2 category = title_evil }
-ce_orc_helmet_14.dds { colors = 2 category = title_evil }
-ce_orc_helmet_15.dds { colors = 2 category = title_evil }
-ce_orc_helmet_16.dds { colors = 2 category = title_evil }
-ce_pattern_diamond_00.dds { colors = 1 category = lotr_frames }
-ce_pattern_diamond_01.dds { colors = 2 category = lotr_frames }
-ce_pattern_diamond_02.dds { colors = 2 category = lotr_frames }
-ce_pattern_diamond_03.dds { colors = 2 category = lotr_frames }
-ce_pattern_diamond_04.dds { colors = 2 category = lotr_frames }
-ce_pattern_diamond_frame_01.dds { colors = 2 category = lotr_frames }
-ce_pattern_diamond_frame_02.dds { colors = 2 category = lotr_frames }
-ce_pattern_diamond_frame_03.dds { colors = 2 category = lotr_frames }
-ce_pattern_diamond_gondor_01.dds { colors = 2 category = lotr_frames }
-ce_pattern_diamond_gondor_02.dds { colors = 2 category = lotr_frames }
-ce_pattern_diamond_gondor_03.dds { colors = 2 category = lotr_frames }
-ce_pattern_diamond_gondor_04.dds { colors = 2 category = lotr_frames }
-ce_pattern_diamond_gondor_05.dds { colors = 2 category = lotr_frames }
-ce_pattern_diamond_gondor_06.dds { colors = 2 category = lotr_frames }
-ce_pattern_islamic_round_01.dds { colors = 1 category = lotr_frames }
-ce_pattern_islamic_round_02.dds { colors = 1 category = lotr_frames }
-ce_pattern_islamic_round_03.dds { colors = 1 category = lotr_frames }
-ce_pattern_islamic_round_04.dds { colors = 1 category = lotr_frames }
-ce_pattern_islamic_round_05.dds { colors = 1 category = lotr_frames }
-ce_pattern_islamic_round_06_a.dds { colors = 2 category = lotr_frames }
-ce_pattern_islamic_round_06.dds { colors = 1 category = lotr_frames }
-ce_pattern_numenorean_detail_01.dds { colors = 2 category = lotr_frames }
-ce_pattern_numenorean_detail_03.dds { colors = 3 category = lotr_frames }
-ce_pattern_square_00.dds { colors = 1 category = lotr_frames }
-ce_pattern_square_01.dds { colors = 2 category = lotr_frames }
-ce_pattern_square_02.dds { colors = 2 category = lotr_frames }
-ce_pattern_square_03.dds { colors = 2 category = lotr_frames }
-ce_pattern_square_04.dds { colors = 2 category = lotr_frames }
-ce_pattern_square_frame_01.dds { colors = 2 category = lotr_frames }
-ce_pattern_square_frame_02.dds { colors = 2 category = lotr_frames }
-ce_pattern_square_frame_03.dds { colors = 2 category = lotr_frames }
-ce_pattern_square_frame_04.dds { colors = 1 category = lotr_frames }
-ce_pattern_square_gondor_01.dds { colors = 2 category = lotr_frames }
-ce_pattern_square_gondor_02.dds { colors = 2 category = lotr_frames }
-ce_pattern_square_gondor_03.dds { colors = 2 category = lotr_frames }
-ce_pattern_square_gondor_04.dds { colors = 2 category = lotr_frames }
-ce_pattern_square_gondor_05.dds { colors = 2 category = lotr_frames }
-ce_pattern_square_gondor_06.dds { colors = 2 category = lotr_frames }
-ce_pattern_uruk_1.dds { colors = 2 category = patterns }
-ce_pattern_uruk_2.dds { colors = 2 category = patterns }
-ce_pattern_uruk_3.dds { colors = 2 category = patterns }
-ce_pattern_uruk_4.dds { colors = 2 category = patterns }
-ce_pelargir_01.dds { colors = 2 category = title_dunedain }
-ce_pelargir_02.dds { colors = 1 category = title_dunedain }
-ce_pelargir_03.dds { colors = 2 category = title_dunedain }
-ce_pennant.dds { colors = 2 category = manmade }
-ce_pict_05.dds { colors = 1 category = animals }
-ce_pict_06.dds { colors = 2 category = manmade }
-ce_pict_07.dds { colors = 1 category = animals }
-ce_pinnath_gelin_01.dds { colors = 2 category = title_dunedain }
-ce_pinnath_gelin_02.dds { colors = 1 category = title_dunedain }
-ce_pinnath_gelin_03.dds { colors = 1 category = nature }
-ce_pinnath_gelin_04.dds { colors = 1 category = title_dunedain }
-ce_ras_morthil_01.dds { colors = 1 category = title_dunedain }
-ce_rhudaur_01.dds { colors = 1 category = title_dunedain }
-ce_rhudaur_02.dds { colors = 1 category = manmade }
-ce_rhudaur_03.dds { colors = 1 category = manmade }
-ce_rhudaur_04.dds { colors = 2 category = title_dunedain }
-ce_rhudaur_05.dds { colors = 1 category = animals }
-ce_rhun_01.dds { colors = 2 category = title_easterling }
-ce_rhun_02.dds { colors = 1 category = title_easterling }
-ce_rhun_03_a.dds { colors = 1 category = title_easterling }
-ce_rhun_03_b.dds { colors = 2 category = title_easterling }
-ce_rhun_04.dds { colors = 2 category = title_easterling } 
-ce_rhun_05.dds { colors = 1 category = title_easterling }
-ce_rhun_06.dds { colors = 3 category = title_easterling }
-ce_rhun_06_a.dds { colors = 1 category = title_easterling }
-ce_rhun_06_a2.dds { colors = 1 category = title_easterling }
-ce_rhun_06_a3.dds { colors = 1 category = title_easterling }
-ce_rhun_06_a4.dds { colors = 1 category = title_easterling }
-ce_rhun_06_b.dds { colors = 1 category = title_easterling }
-ce_rhun_07.dds { colors = 1 category = title_easterling }
-ce_rhun_08.dds { colors = 1 category = title_easterling }
-ce_rhun_09_a.dds { colors = 2 category = title_easterling }
-ce_rhun_09_b.dds { colors = 3 category = title_easterling }
-ce_rhun_10.dds { colors = 2 category = title_easterling }
-ce_rhun_11.dds { colors = 2 category = title_easterling }
-ce_rhun_12.dds { colors = 2 category = title_easterling }
-ce_rhun_13_a.dds { colors = 1 category = title_easterling }
-ce_rhun_13_b.dds { colors = 2 category = title_easterling }
-ce_rhun_14.dds { colors = 1 category = title_easterling }
-ce_rhun_14_a.dds { colors = 1 category = title_easterling }
-ce_rhun_14_b.dds { colors = 1 category = title_easterling }
-ce_rhun_border_01.dds { colors = 1 category = title_easterling }
-ce_rhun_border_02.dds { colors = 1 category = title_easterling }
-ce_rhun_border_03.dds { colors = 1 category = title_easterling }
-ce_rhun_border_04.dds { colors = 1 category = title_easterling }
-ce_rhun_border_05.dds { colors = 1 category = title_easterling }
-ce_rhun_border_06.dds { colors = 1 category = title_easterling }
-ce_rhun_border_07.dds { colors = 1 category = title_easterling }
-ce_rhun_border_08.dds { colors = 1 category = title_easterling }
-ce_rhun_border_09.dds { colors = 1 category = title_easterling }
-ce_rhun_magriag_capricorn_coa_01.dds { colors = 2 category = title_easterling }
-ce_rohan_01.dds { colors = 2 category = animals }
-ce_rohan_02.dds { colors = 2 category = animals }
-ce_rohan_03.dds { colors = 1 category = animals }
-ce_rohan_04.dds { colors = 2 category = animals }
-ce_rohan_05.dds { colors = 1 category = animals }
-ce_rohan_06.dds { colors = 2 category = animals }
-ce_rohan_07.dds { colors = 1 category = animals }
-ce_rohan_08.dds { colors = 2 category = animals }
-ce_rohan_09.dds { colors = 2 category = animals }
-ce_rohan_10.dds { colors = 1 category = animals }
-ce_rohan_11.dds { colors = 1 category = animals }
-ce_rohan_12.dds { colors = 2 category = animals }
-ce_rohan_border_01.dds { colors = 2 category = title }
-ce_rohan_border_02.dds { colors = 1 category = title }
-ce_rohan_sun_01.dds { colors = 1 category = title }
-ce_rohan_temp.dds { colors = 1 category = animals }
-ce_roundel.dds { colors = 1 category = abstract }
-ce_sauron_01.dds { colors = 2 category = title_evil }
-ce_shire_01.dds { colors = 1 category = nature }
-ce_spider_02.dds { colors = 1 category = animals }
-ce_spider_03.dds { colors = 1 category = animals }
-ce_spider.dds { colors = 1 category = animals }
-ce_sun_02.dds { colors = 1 category = nature }
-ce_sun_blades.dds { colors = 1 category = nature }
-ce_sun_harad.dds { colors = 1 category = nature }
-ce_tengwar_alda.dds { colors = 1 category = letters_tengwar }
-ce_tengwar_ampa.dds { colors = 1 category = letters_tengwar }
-ce_tengwar_anca.dds { colors = 1 category = letters_tengwar }
-ce_tengwar_ando.dds { colors = 1 category = letters_tengwar }
-ce_tengwar_anga.dds { colors = 1 category = letters_tengwar }
-ce_tengwar_anna.dds { colors = 1 category = letters_tengwar }
-ce_tengwar_anto.dds { colors = 1 category = letters_tengwar }
-ce_tengwar_arda.dds { colors = 1 category = letters_tengwar }
-ce_tengwar_calma.dds { colors = 1 category = letters_tengwar }
-ce_tengwar_esse_nuquerna.dds { colors = 1 category = letters_tengwar }
-ce_tengwar_esse.dds { colors = 1 category = letters_tengwar }
-ce_tengwar_formen.dds { colors = 1 category = letters_tengwar }
-ce_tengwar_gasdil.dds { colors = 1 category = letters_tengwar }
-ce_tengwar_harma.dds { colors = 1 category = letters_tengwar }
-ce_tengwar_hwesta_sindarinwa.dds { colors = 1 category = letters_tengwar }
-ce_tengwar_hwesta.dds { colors = 1 category = letters_tengwar }
-ce_tengwar_hyarnen.dds { colors = 1 category = letters_tengwar }
-ce_tengwar_lambe.dds { colors = 1 category = letters_tengwar }
-ce_tengwar_malta.dds { colors = 1 category = letters_tengwar }
-ce_tengwar_ngoldo.dds { colors = 1 category = letters_tengwar }
-ce_tengwar_ngwalme.dds { colors = 1 category = letters_tengwar }
-ce_tengwar_numen.dds { colors = 1 category = letters_tengwar }
-ce_tengwar_ore.dds { colors = 1 category = letters_tengwar }
-ce_tengwar_osse.dds { colors = 1 category = letters_tengwar }
-ce_tengwar_parma.dds { colors = 1 category = letters_tengwar }
-ce_tengwar_quesse.dds { colors = 1 category = letters_tengwar }
-ce_tengwar_romen.dds { colors = 1 category = letters_tengwar }
-ce_tengwar_silme_nuquerna.dds { colors = 1 category = letters_tengwar }
-ce_tengwar_silme.dds { colors = 1 category = letters_tengwar }
-ce_tengwar_thule.dds { colors = 1 category = letters_tengwar }
-ce_tengwar_tinco.dds { colors = 1 category = letters_tengwar }
-ce_tengwar_umbar.dds { colors = 1 category = letters_tengwar }
-ce_tengwar_ungwe.dds { colors = 1 category = letters_tengwar }
-ce_tengwar_unque.dds { colors = 1 category = letters_tengwar }
-ce_tengwar_ure.dds { colors = 1 category = letters_tengwar }
-ce_tengwar_vala.dds { colors = 1 category = letters_tengwar }
-ce_tengwar_vilya.dds { colors = 1 category = letters_tengwar }
-ce_tengwar_yanta.dds { colors = 1 category = letters_tengwar }
-ce_tengwar_ando_d.dds { colors = 1 category = letters_tengwar }
-ce_tengwar_anga_g.dds { colors = 1 category = letters_tengwar }
-ce_tengwar_calma_k.dds { colors = 1 category = letters_tengwar }
-ce_tengwar_parma_p.dds { colors = 1 category = letters_tengwar }
-ce_tengwar_quesse_kw.dds { colors = 1 category = letters_tengwar }
-ce_tengwar_tinco_t.dds { colors = 1 category = letters_tengwar }
-ce_tengwar_umbar_b.dds { colors = 1 category = letters_tengwar }
-ce_tengwar_unqwe_gw.dds { colors = 1 category = letters_tengwar }
-ce_texture_uruk_1.dds { colors = 1 category = patterns }
-ce_thani_hazad_01.dds { colors = 2 category = title_dunedain }
-ce_thani_hazad_02.dds { colors = 3 category = title_dunedain }
-ce_two_trees_of_valinor.dds { colors = 2 category = title_elvish }
-ce_umbar_01.dds { colors = 1 category = title_dunedain }
-ce_umbar_02.dds { colors = 1 category = title_dunedain }
-ce_umbar_03.dds { colors = 1 category = title_dunedain }
-ce_umbar_04.dds { colors = 1 category = title_dunedain }
-ce_umbar_05.dds { colors = 1 category = title_dunedain }
-ce_uruk_dark.dds { colors = 1 category = title_evil }
-ce_uruk_feral.dds { colors = 1 category = title_evil }
-ce_uruk_machine.dds { colors = 1 category = title_evil }
-ce_uruk_marauder_metallic.dds { colors = 1 category = title_evil }
-ce_uruk_marauder.dds { colors = 1 category = title_evil }
-ce_uruk_mess_1.dds { colors = 1 category = abstract }
-ce_uruk_mess_10.dds { colors = 2 category = abstract }
-ce_uruk_mess_11.dds { colors = 2 category = abstract }
-ce_uruk_mess_12.dds { colors = 2 category = abstract }
-ce_uruk_mess_13.dds { colors = 2 category = abstract }
-ce_uruk_mess_14.dds { colors = 2 category = abstract }
-ce_uruk_mess_2.dds { colors = 1 category = abstract }
-ce_uruk_mess_3.dds { colors = 1 category = abstract }
-ce_uruk_mess_4.dds { colors = 2 category = abstract }
-ce_uruk_mess_5.dds { colors = 2 category = abstract }
-ce_uruk_mess_6.dds { colors = 2 category = abstract }
-ce_uruk_mess_7.dds { colors = 1 category = abstract }
-ce_uruk_mess_8.dds { colors = 1 category = abstract }
-ce_uruk_mess_9.dds { colors = 1 category = abstract }
-ce_uruk_morannon.dds { colors = 1 category = title_evil }
-ce_uruk_mystic.dds { colors = 1 category = title_evil }
-ce_uruk_outlaw.dds { colors = 1 category = title_evil }
-ce_uruk_slaughter.dds { colors = 1 category = title_evil }
-ce_uruk_spear_01.dds { colors = 1 category = manmade }
-ce_uruk_spear_02.dds { colors = 1 category = manmade }
-ce_uruk_spear_03.dds { colors = 1 category = manmade }
-ce_uruk_spear_04.dds { colors = 1 category = manmade }
-ce_uruk_sword_01.dds { colors = 1 category = manmade }
-ce_uruk_sword_02.dds { colors = 1 category = manmade }
-ce_uruk_terror.dds { colors = 1 category = title_evil }
-ce_uruk_warmonger.dds { colors = 1 category = title_evil }
-ce_valinor_01.dds { colors = 1 category = title }
-ce_viking_dragon_01.dds { colors = 2 category = animals }
-ce_warg.dds { colors = 1 category = animals }
-tartan_lamedon_02.dds { colors = 2 category = patterns }
-ce_dunland_wolf.dds { colors = 1 category = animals }
+ce_poppies_01.dds = { colors = 3 category = title_elvish }
+ce_poppies_02.dds = { colors = 3 category = title_elvish }
+ce_poppies_03.dds = { colors = 3 category = title_elvish }
+ce_poppies_04.dds = { colors = 3 category = title_elvish }
+ce_poppies_05.dds = { colors = 1 category = title_elvish }
+ce_vanyar_green.dds = { colors = 3 category = title_elvish }
+ce_vanyar_green_01.dds = { colors = 3 category = title_elvish }
+ce_vanyar_green_02.dds = { colors = 2 category = title_elvish }
+ce_vanyar_green_03.dds = { colors = 1 category = title_elvish }
+ce_elven_star_of_feanor_01.dds = { colors = 1 category = title_elvish }
+ce_elven_star_of_feanor_02.dds = { colors = 2 category = title_elvish }
+ce_elven_celebrimbor_hammer.dds = { colors = 1 category = title_elvish }
+ce_erebor_01.dds = { colors = 2 category = title_dwarven }
+#ce_falmer_a.dds = { colors = 1 category = letters }
+#ce_falmer_b.dds = { colors = 1 category = letters }
+#ce_falmer_c.dds = { colors = 1 category = letters }
+#ce_falmer_d.dds = { colors = 1 category = letters }
+#ce_falmer_e.dds = { colors = 1 category = letters }
+#ce_falmer_f.dds = { colors = 1 category = letters }
+#ce_falmer_g.dds = { colors = 1 category = letters }
+#ce_falmer_h.dds = { colors = 1 category = letters }
+ce_fish_01.dds = { colors = 1 category = animals }
+ce_germanic_pattern_01.dds = { colors = 2 category = patterns }
+ce_germanic_pattern_02.dds = { colors = 2 category = patterns }
+ce_gondor_01.dds = { colors = 1 category = title_dunedain }
+ce_gondor_02.dds = { colors = 1 category = title_dunedain }
+ce_gondor_03.dds = { colors = 1 category = title_dunedain }
+ce_gondor_04.dds = { colors = 1 category = title_dunedain }
+ce_gondor_05.dds = { colors = 1 category = title_dunedain }
+ce_gondor_06.dds = { colors = 1 category = title_dunedain }
+ce_gondor_stewards.dds = { colors = 1 category = title_dunedain }
+ce_great_orc_horde.dds = { colors = 2 category = title_evil }
+ce_gundabad_01.dds = { colors = 2 category = title_evil }
+ce_gundabad_hunter_orcs_01.dds = { colors = 2 category = title_evil }
+ce_gundabad_hunter_orcs_02.dds = { colors = 1 category = title_evil }
+ce_haleth_01.dds = { colors = 1 category = abstract }
+ce_haleth_02.dds = { colors = 1 category = abstract }
+ce_haleth_03.dds = { colors = 2 category = abstract }
+ce_haleth_04.dds = { colors = 1 category = abstract }
+ce_haleth_05.dds = { colors = 1 category = abstract }
+ce_haleth_06.dds = { colors = 1 category = abstract }
+ce_haleth_07.dds = { colors = 1 category = abstract }
+ce_haleth_08.dds = { colors = 1 category = abstract }
+ce_haleth_09.dds = { colors = 1 category = abstract }
+ce_haleth_10.dds = { colors = 1 category = abstract }
+ce_halfalas.dds = { colors = 2 category = title_elvish }
+ce_harad_01.dds = { colors = 1 category = abstract }
+ce_harad_pattern_01.dds = { colors = 1 category = patterns }
+ce_harad_pattern_02.dds = { colors = 1 category = patterns }
+ce_harad_pattern_03.dds = { colors = 1 category = patterns }
+ce_harad_rays_01.dds = { colors = 1 category = nature }
+ce_harad_snake_01.dds = { colors = 1 category = animals }
+ce_harad_snake_02.dds = { colors = 1 category = animals }
+ce_harad_snake_03.dds = { colors = 1 category = animals }
+ce_harad.dds = { colors = 2 category = title }
+ce_havens_of_numenor_01.dds = { colors = 1 category = title_dunedain }
+ce_havens_of_numenor.dds = { colors = 2 category = title_dunedain }
+ce_horse_01.dds = { colors = 1 category = animals }
+ce_iron_hills_01.dds = { colors = 2 category = title }
+ce_iron_hills_02.dds = { colors = 2 category = title }
+ce_isengard_01.dds = { colors = 1 category = title }
+ce_isengard_saruman_rune.dds = { colors = 1 category = title_istari }
+ce_isengard_white_hand_01.dds = { colors = 1 category = title_evil }
+ce_isengard_white_hand_02.dds = { colors = 1 category = title_evil }
+ce_isengard_white_hand_03.dds = { colors = 1 category = title_evil }
+ce_isle_of_numenor_01.dds = { colors = 1 category = title_dunedain }
+ce_ithilien_01.dds = { colors = 1 category = title_dunedain }
+ce_lamedon_01.dds = { colors = 2 category = title_dunedain }
+ce_lamedon_02.dds = { colors = 1 category = title_dunedain }
+ce_league_of_pelargir.dds = { colors = 2 category = title_dunedain }
+ce_lebennin_01.dds = { colors = 2 category = title_dunedain }
+ce_leofrings_01.dds = { colors = 2 category = animals }
+ce_leofrings_02.dds = { colors = 2 category = animals }
+ce_lhun_riverfolk.dds = { colors = 2 category = title }
+ce_lindon_01.dds = { colors = 1 category = title_elvish }
+ce_lindon_02.dds = { colors = 2 category = title_elvish }
+ce_lindon.dds = { colors = 2 category = title_elvish }
+ce_linhir_01.dds = { colors = 2 category = title_dunedain }
+ce_linhir_02.dds = { colors = 1 category = title_dunedain }
+ce_linhir_03.dds = { colors = 1 category = title_dunedain }
+ce_linhir_04.dds = { colors = 2 category = title_dunedain }
+ce_linhir_05.dds = { colors = 1 category = title_dunedain }
+ce_lossarnach_01.dds = { colors = 1 category = title_dunedain }
+ce_lossoth.dds = { colors = 2 category = title }
+ce_minas_ithil_01.dds = { colors = 2 category = title_dunedain }
+ce_minas_morgul.dds = { colors = 1 category = title_evil }
+ce_minas_morgul_skull.dds = { colors = 1 category = title_evil }
+ce_mithlond_01.dds = { colors = 2 category = title_elvish }
+ce_mithlond_02.dds = { colors = 2 category = title_elvish }
+ce_moon_crescent.dds = { colors = 1 category = nature }
+ce_mordor_01.dds = { colors = 1 category = title_evil }
+ce_mordor_eye_01.dds = { colors = 1 category = title_evil }
+ce_mordor_eye_02.dds = { colors = 1 category = title_evil }
+ce_mordor_eye_03.dds = { colors = 1 category = title_evil }
+ce_mordor_eye_04.dds = { colors = 1 category = title_evil }
+ce_mordor_eye_05.dds = { colors = 1 category = title_evil }
+ce_mordor_eye_06.dds = { colors = 1 category = title_evil }
+ce_mordor_numenorean_01.dds = { colors = 1 category = title_evil }
+ce_mordor_numenorean_02.dds = { colors = 1 category = title_evil }
+ce_mordor_numenorean_03.dds = { colors = 1 category = title_evil }
+ce_moria_01.dds = { colors = 2 category = title }
+ce_nordic_01.dds = { colors = 1 category = patterns }
+ce_nordic_02.dds = { colors = 2 category = patterns }
+ce_nordic_03.dds = { colors = 1 category = patterns }
+ce_nordic_04.dds = { colors = 2 category = patterns }
+ce_nordic_05.dds = { colors = 2 category = patterns }
+ce_norse_tree_01.dds = { colors = 1 category = crosses_and_knots }
+ce_norse_tree_02.dds = { colors = 1 category = crosses_and_knots }
+ce_norse_tree_03.dds = { colors = 1 category = crosses_and_knots }
+ce_norse_tree_04.dds = { colors = 1 category = crosses_and_knots }
+ce_norse_tree_05.dds = { colors = 1 category = crosses_and_knots }
+ce_norse_tree_06.dds = { colors = 1 category = crosses_and_knots }
+ce_norse_tree_07.dds = { colors = 1 category = crosses_and_knots }
+ce_norse_tree_08.dds = { colors = 1 category = crosses_and_knots }
+ce_norse_tree_09.dds = { colors = 1 category = crosses_and_knots }
+ce_norse_tree_10.dds = { colors = 1 category = crosses_and_knots }
+ce_norse_tree_11.dds = { colors = 1 category = crosses_and_knots }
+ce_norse_tree_12.dds = { colors = 1 category = crosses_and_knots }
+ce_norse_tree_13.dds = { colors = 1 category = crosses_and_knots }
+ce_norse_tree_14.dds = { colors = 1 category = crosses_and_knots }
+ce_norse_tree_15.dds = { colors = 1 category = crosses_and_knots }
+ce_norse_tree_16.dds = { colors = 1 category = crosses_and_knots }
+ce_nuragic_01.dds = { colors = 1 category = abstract }
+ce_nuragic_02.dds = { colors = 2 category = manmade }
+ce_nuragic_03.dds = { colors = 1 category = abstract }
+ce_nuragic_04.dds = { colors = 1 category = manmade }
+ce_nuragic_05.dds = { colors = 1 category = manmade }
+ce_olwe.dds = { colors = 2 category = title_elvish }
+ce_orc_helmet_01.dds = { colors = 2 category = title_evil }
+ce_orc_helmet_02.dds = { colors = 2 category = title_evil }
+ce_orc_helmet_03.dds = { colors = 2 category = title_evil }
+ce_orc_helmet_04.dds = { colors = 2 category = title_evil }
+ce_orc_helmet_05.dds = { colors = 2 category = title_evil }
+ce_orc_helmet_06.dds = { colors = 2 category = title_evil }
+ce_orc_helmet_07.dds = { colors = 2 category = title_evil }
+ce_orc_helmet_08.dds = { colors = 2 category = title_evil }
+ce_orc_helmet_09.dds = { colors = 2 category = title_evil }
+ce_orc_helmet_10.dds = { colors = 2 category = title_evil }
+ce_orc_helmet_11.dds = { colors = 2 category = title_evil }
+ce_orc_helmet_12.dds = { colors = 2 category = title_evil }
+ce_orc_helmet_13.dds = { colors = 2 category = title_evil }
+ce_orc_helmet_14.dds = { colors = 2 category = title_evil }
+ce_orc_helmet_15.dds = { colors = 2 category = title_evil }
+ce_orc_helmet_16.dds = { colors = 2 category = title_evil }
+ce_pattern_diamond_00.dds = { colors = 1 category = lotr_frames }
+ce_pattern_diamond_01.dds = { colors = 2 category = lotr_frames }
+ce_pattern_diamond_02.dds = { colors = 2 category = lotr_frames }
+ce_pattern_diamond_03.dds = { colors = 2 category = lotr_frames }
+ce_pattern_diamond_04.dds = { colors = 2 category = lotr_frames }
+ce_pattern_diamond_frame_01.dds = { colors = 2 category = lotr_frames }
+ce_pattern_diamond_frame_02.dds = { colors = 2 category = lotr_frames }
+ce_pattern_diamond_frame_03.dds = { colors = 2 category = lotr_frames }
+ce_pattern_diamond_gondor_01.dds = { colors = 2 category = lotr_frames }
+ce_pattern_diamond_gondor_02.dds = { colors = 2 category = lotr_frames }
+ce_pattern_diamond_gondor_03.dds = { colors = 2 category = lotr_frames }
+ce_pattern_diamond_gondor_04.dds = { colors = 2 category = lotr_frames }
+ce_pattern_diamond_gondor_05.dds = { colors = 2 category = lotr_frames }
+ce_pattern_diamond_gondor_06.dds = { colors = 2 category = lotr_frames }
+ce_pattern_islamic_round_01.dds = { colors = 1 category = lotr_frames }
+ce_pattern_islamic_round_02.dds = { colors = 1 category = lotr_frames }
+ce_pattern_islamic_round_03.dds = { colors = 1 category = lotr_frames }
+ce_pattern_islamic_round_04.dds = { colors = 1 category = lotr_frames }
+ce_pattern_islamic_round_05.dds = { colors = 1 category = lotr_frames }
+ce_pattern_islamic_round_06_a.dds = { colors = 2 category = lotr_frames }
+ce_pattern_islamic_round_06.dds = { colors = 1 category = lotr_frames }
+ce_pattern_numenorean_detail_01.dds = { colors = 2 category = lotr_frames }
+ce_pattern_numenorean_detail_03.dds = { colors = 3 category = lotr_frames }
+ce_pattern_square_00.dds = { colors = 1 category = lotr_frames }
+ce_pattern_square_01.dds = { colors = 2 category = lotr_frames }
+ce_pattern_square_02.dds = { colors = 2 category = lotr_frames }
+ce_pattern_square_03.dds = { colors = 2 category = lotr_frames }
+ce_pattern_square_04.dds = { colors = 2 category = lotr_frames }
+ce_pattern_square_frame_01.dds = { colors = 2 category = lotr_frames }
+ce_pattern_square_frame_02.dds = { colors = 2 category = lotr_frames }
+ce_pattern_square_frame_03.dds = { colors = 2 category = lotr_frames }
+ce_pattern_square_frame_04.dds = { colors = 1 category = lotr_frames }
+ce_pattern_square_gondor_01.dds = { colors = 2 category = lotr_frames }
+ce_pattern_square_gondor_02.dds = { colors = 2 category = lotr_frames }
+ce_pattern_square_gondor_03.dds = { colors = 2 category = lotr_frames }
+ce_pattern_square_gondor_04.dds = { colors = 2 category = lotr_frames }
+ce_pattern_square_gondor_05.dds = { colors = 2 category = lotr_frames }
+ce_pattern_square_gondor_06.dds = { colors = 2 category = lotr_frames }
+ce_pattern_uruk_1.dds = { colors = 2 category = patterns }
+ce_pattern_uruk_2.dds = { colors = 2 category = patterns }
+ce_pattern_uruk_3.dds = { colors = 2 category = patterns }
+ce_pattern_uruk_4.dds = { colors = 2 category = patterns }
+ce_pelargir_01.dds = { colors = 2 category = title_dunedain }
+ce_pelargir_02.dds = { colors = 1 category = title_dunedain }
+ce_pelargir_03.dds = { colors = 2 category = title_dunedain }
+ce_pennant.dds = { colors = 2 category = manmade }
+ce_pict_05.dds = { colors = 1 category = animals }
+ce_pict_06.dds = { colors = 2 category = manmade }
+ce_pict_07.dds = { colors = 1 category = animals }
+ce_pinnath_gelin_01.dds = { colors = 2 category = title_dunedain }
+ce_pinnath_gelin_02.dds = { colors = 1 category = title_dunedain }
+ce_pinnath_gelin_03.dds = { colors = 1 category = nature }
+ce_pinnath_gelin_04.dds = { colors = 1 category = title_dunedain }
+ce_ras_morthil_01.dds = { colors = 1 category = title_dunedain }
+ce_rhudaur_01.dds = { colors = 1 category = title_dunedain }
+ce_rhudaur_02.dds = { colors = 1 category = manmade }
+ce_rhudaur_03.dds = { colors = 1 category = manmade }
+ce_rhudaur_04.dds = { colors = 2 category = title_dunedain }
+ce_rhudaur_05.dds = { colors = 1 category = animals }
+ce_rhun_01.dds = { colors = 2 category = title_easterling }
+ce_rhun_02.dds = { colors = 1 category = title_easterling }
+ce_rhun_03_a.dds = { colors = 1 category = title_easterling }
+ce_rhun_03_b.dds = { colors = 2 category = title_easterling }
+ce_rhun_04.dds = { colors = 2 category = title_easterling } 
+ce_rhun_05.dds = { colors = 1 category = title_easterling }
+ce_rhun_06.dds = { colors = 3 category = title_easterling }
+ce_rhun_06_a.dds = { colors = 1 category = title_easterling }
+ce_rhun_06_a2.dds = { colors = 1 category = title_easterling }
+ce_rhun_06_a3.dds = { colors = 1 category = title_easterling }
+ce_rhun_06_a4.dds = { colors = 1 category = title_easterling }
+ce_rhun_06_b.dds = { colors = 1 category = title_easterling }
+ce_rhun_07.dds = { colors = 1 category = title_easterling }
+ce_rhun_08.dds = { colors = 1 category = title_easterling }
+ce_rhun_09_a.dds = { colors = 2 category = title_easterling }
+ce_rhun_09_b.dds = { colors = 3 category = title_easterling }
+ce_rhun_10.dds = { colors = 2 category = title_easterling }
+ce_rhun_11.dds = { colors = 2 category = title_easterling }
+ce_rhun_12.dds = { colors = 2 category = title_easterling }
+ce_rhun_13_a.dds = { colors = 1 category = title_easterling }
+ce_rhun_13_b.dds = { colors = 2 category = title_easterling }
+ce_rhun_14.dds = { colors = 1 category = title_easterling }
+ce_rhun_14_a.dds = { colors = 1 category = title_easterling }
+ce_rhun_14_b.dds = { colors = 1 category = title_easterling }
+ce_rhun_border_01.dds = { colors = 1 category = title_easterling }
+ce_rhun_border_02.dds = { colors = 1 category = title_easterling }
+ce_rhun_border_03.dds = { colors = 1 category = title_easterling }
+ce_rhun_border_04.dds = { colors = 1 category = title_easterling }
+ce_rhun_border_05.dds = { colors = 1 category = title_easterling }
+ce_rhun_border_06.dds = { colors = 1 category = title_easterling }
+ce_rhun_border_07.dds = { colors = 1 category = title_easterling }
+ce_rhun_border_08.dds = { colors = 1 category = title_easterling }
+ce_rhun_border_09.dds = { colors = 1 category = title_easterling }
+ce_rhun_magriag_capricorn_coa_01.dds = { colors = 2 category = title_easterling }
+ce_rohan_01.dds = { colors = 2 category = animals }
+ce_rohan_02.dds = { colors = 2 category = animals }
+ce_rohan_03.dds = { colors = 1 category = animals }
+ce_rohan_04.dds = { colors = 2 category = animals }
+ce_rohan_05.dds = { colors = 1 category = animals }
+ce_rohan_06.dds = { colors = 2 category = animals }
+ce_rohan_07.dds = { colors = 1 category = animals }
+ce_rohan_08.dds = { colors = 2 category = animals }
+ce_rohan_09.dds = { colors = 2 category = animals }
+ce_rohan_10.dds = { colors = 1 category = animals }
+ce_rohan_11.dds = { colors = 1 category = animals }
+ce_rohan_12.dds = { colors = 2 category = animals }
+ce_rohan_border_01.dds = { colors = 2 category = title }
+ce_rohan_border_02.dds = { colors = 1 category = title }
+ce_rohan_sun_01.dds = { colors = 1 category = title }
+ce_rohan_temp.dds = { colors = 1 category = animals }
+ce_roundel.dds = { colors = 1 category = abstract }
+ce_sauron_01.dds = { colors = 2 category = title_evil }
+ce_shire_01.dds = { colors = 1 category = nature }
+ce_spider_02.dds = { colors = 1 category = animals }
+ce_spider_03.dds = { colors = 1 category = animals }
+ce_spider.dds = { colors = 1 category = animals }
+ce_sun_02.dds = { colors = 1 category = nature }
+ce_sun_blades.dds = { colors = 1 category = nature }
+ce_sun_harad.dds = { colors = 1 category = nature }
+ce_tengwar_alda.dds = { colors = 1 category = letters_tengwar }
+ce_tengwar_ampa.dds = { colors = 1 category = letters_tengwar }
+ce_tengwar_anca.dds = { colors = 1 category = letters_tengwar }
+ce_tengwar_ando.dds = { colors = 1 category = letters_tengwar }
+ce_tengwar_anga.dds = { colors = 1 category = letters_tengwar }
+ce_tengwar_anna.dds = { colors = 1 category = letters_tengwar }
+ce_tengwar_anto.dds = { colors = 1 category = letters_tengwar }
+ce_tengwar_arda.dds = { colors = 1 category = letters_tengwar }
+ce_tengwar_calma.dds = { colors = 1 category = letters_tengwar }
+ce_tengwar_esse_nuquerna.dds = { colors = 1 category = letters_tengwar }
+ce_tengwar_esse.dds = { colors = 1 category = letters_tengwar }
+ce_tengwar_formen.dds = { colors = 1 category = letters_tengwar }
+ce_tengwar_gasdil.dds = { colors = 1 category = letters_tengwar }
+ce_tengwar_harma.dds = { colors = 1 category = letters_tengwar }
+ce_tengwar_hwesta_sindarinwa.dds = { colors = 1 category = letters_tengwar }
+ce_tengwar_hwesta.dds = { colors = 1 category = letters_tengwar }
+ce_tengwar_hyarnen.dds = { colors = 1 category = letters_tengwar }
+ce_tengwar_lambe.dds = { colors = 1 category = letters_tengwar }
+ce_tengwar_malta.dds = { colors = 1 category = letters_tengwar }
+ce_tengwar_ngoldo.dds = { colors = 1 category = letters_tengwar }
+ce_tengwar_ngwalme.dds = { colors = 1 category = letters_tengwar }
+ce_tengwar_numen.dds = { colors = 1 category = letters_tengwar }
+ce_tengwar_ore.dds = { colors = 1 category = letters_tengwar }
+ce_tengwar_osse.dds = { colors = 1 category = letters_tengwar }
+ce_tengwar_parma.dds = { colors = 1 category = letters_tengwar }
+ce_tengwar_quesse.dds = { colors = 1 category = letters_tengwar }
+ce_tengwar_romen.dds = { colors = 1 category = letters_tengwar }
+ce_tengwar_silme_nuquerna.dds = { colors = 1 category = letters_tengwar }
+ce_tengwar_silme.dds = { colors = 1 category = letters_tengwar }
+ce_tengwar_thule.dds = { colors = 1 category = letters_tengwar }
+ce_tengwar_tinco.dds = { colors = 1 category = letters_tengwar }
+ce_tengwar_umbar.dds = { colors = 1 category = letters_tengwar }
+ce_tengwar_ungwe.dds = { colors = 1 category = letters_tengwar }
+ce_tengwar_unque.dds = { colors = 1 category = letters_tengwar }
+ce_tengwar_ure.dds = { colors = 1 category = letters_tengwar }
+ce_tengwar_vala.dds = { colors = 1 category = letters_tengwar }
+ce_tengwar_vilya.dds = { colors = 1 category = letters_tengwar }
+ce_tengwar_yanta.dds = { colors = 1 category = letters_tengwar }
+ce_tengwar_ando_d.dds = { colors = 1 category = letters_tengwar }
+ce_tengwar_anga_g.dds = { colors = 1 category = letters_tengwar }
+ce_tengwar_calma_k.dds = { colors = 1 category = letters_tengwar }
+ce_tengwar_parma_p.dds = { colors = 1 category = letters_tengwar }
+ce_tengwar_quesse_kw.dds = { colors = 1 category = letters_tengwar }
+ce_tengwar_tinco_t.dds = { colors = 1 category = letters_tengwar }
+ce_tengwar_umbar_b.dds = { colors = 1 category = letters_tengwar }
+ce_tengwar_unqwe_gw.dds = { colors = 1 category = letters_tengwar }
+ce_texture_uruk_1.dds = { colors = 1 category = patterns }
+ce_thani_hazad_01.dds = { colors = 2 category = title_dunedain }
+ce_thani_hazad_02.dds = { colors = 3 category = title_dunedain }
+ce_two_trees_of_valinor.dds = { colors = 2 category = title_elvish }
+ce_umbar_01.dds = { colors = 1 category = title_dunedain }
+ce_umbar_02.dds = { colors = 1 category = title_dunedain }
+ce_umbar_03.dds = { colors = 1 category = title_dunedain }
+ce_umbar_04.dds = { colors = 1 category = title_dunedain }
+ce_umbar_05.dds = { colors = 1 category = title_dunedain }
+ce_uruk_dark.dds = { colors = 1 category = title_evil }
+ce_uruk_feral.dds = { colors = 1 category = title_evil }
+ce_uruk_machine.dds = { colors = 1 category = title_evil }
+ce_uruk_marauder_metallic.dds = { colors = 1 category = title_evil }
+ce_uruk_marauder.dds = { colors = 1 category = title_evil }
+ce_uruk_mess_1.dds = { colors = 1 category = abstract }
+ce_uruk_mess_10.dds = { colors = 2 category = abstract }
+ce_uruk_mess_11.dds = { colors = 2 category = abstract }
+ce_uruk_mess_12.dds = { colors = 2 category = abstract }
+ce_uruk_mess_13.dds = { colors = 2 category = abstract }
+ce_uruk_mess_14.dds = { colors = 2 category = abstract }
+ce_uruk_mess_2.dds = { colors = 1 category = abstract }
+ce_uruk_mess_3.dds = { colors = 1 category = abstract }
+ce_uruk_mess_4.dds = { colors = 2 category = abstract }
+ce_uruk_mess_5.dds = { colors = 2 category = abstract }
+ce_uruk_mess_6.dds = { colors = 2 category = abstract }
+ce_uruk_mess_7.dds = { colors = 1 category = abstract }
+ce_uruk_mess_8.dds = { colors = 1 category = abstract }
+ce_uruk_mess_9.dds = { colors = 1 category = abstract }
+ce_uruk_morannon.dds = { colors = 1 category = title_evil }
+ce_uruk_mystic.dds = { colors = 1 category = title_evil }
+ce_uruk_outlaw.dds = { colors = 1 category = title_evil }
+ce_uruk_slaughter.dds = { colors = 1 category = title_evil }
+ce_uruk_spear_01.dds = { colors = 1 category = manmade }
+ce_uruk_spear_02.dds = { colors = 1 category = manmade }
+ce_uruk_spear_03.dds = { colors = 1 category = manmade }
+ce_uruk_spear_04.dds = { colors = 1 category = manmade }
+ce_uruk_sword_01.dds = { colors = 1 category = manmade }
+ce_uruk_sword_02.dds = { colors = 1 category = manmade }
+ce_uruk_terror.dds = { colors = 1 category = title_evil }
+ce_uruk_warmonger.dds = { colors = 1 category = title_evil }
+ce_valinor_01.dds = { colors = 1 category = title }
+ce_viking_dragon_01.dds = { colors = 2 category = animals }
+ce_warg.dds = { colors = 1 category = animals }
+tartan_lamedon_02.dds = { colors = 2 category = patterns }
+ce_dunland_wolf.dds = { colors = 1 category = animals }
 ce_lighthouse_00.dds = { colors = 1 category = manmade }
 ce_lighthouse_01.dds = { colors = 2 category = manmade }
 ce_edainsword.dds = { colors = 2 category = manmade }
 ce_edainsword_01.dds = { colors = 2 category = manmade }
 ce_harondorsun.dds = { colors = 1 category = nature }
-ce_edain_sun_rays_01.dds { colors = 1 category = nature }
-ce_one_ring.dds { colors = 1 category = title_evil }
-ce_edain_swan.dds { colors = 1 category = animals }
-ce_eadin_frame_plain.dds { colors = 1 category = lotr_frames }
-ce_edain_frame_multi_color.dds { colors = 3 category = lotr_frames }
-ce_d_doriant.dds { colors = 1 category = title_dunedain }
-ce_vulture.dds { colors = 1 category = animals }
-ce_pitchfork.dds { colors = 1 category = manmade }
-ce_wind_mill01.dds { colors = 1 category = manmade }
-ce_c_tirfalas.dds { colors = 1 category = title_dunedain }
-ce_khuzdul_a.dds { colors = 1 category = letters_khuzdul }
-ce_khuzdul_b.dds { colors = 1 category = letters_khuzdul }
-ce_khuzdul_c.dds { colors = 1 category = letters_khuzdul }
-ce_khuzdul_d.dds { colors = 1 category = letters_khuzdul }
-ce_khuzdul_e.dds { colors = 1 category = letters_khuzdul }
-ce_khuzdul_f.dds { colors = 1 category = letters_khuzdul }
-ce_khuzdul_g.dds { colors = 1 category = letters_khuzdul }
-ce_khuzdul_h.dds { colors = 1 category = letters_khuzdul }
-ce_khuzdul_i.dds { colors = 1 category = letters_khuzdul }
-ce_khuzdul_j.dds { colors = 1 category = letters_khuzdul }
-ce_khuzdul_k.dds { colors = 1 category = letters_khuzdul }
-ce_khuzdul_l.dds { colors = 1 category = letters_khuzdul }
-ce_khuzdul_m.dds { colors = 1 category = letters_khuzdul }
-ce_khuzdul_n.dds { colors = 1 category = letters_khuzdul }
-ce_khuzdul_o.dds { colors = 1 category = letters_khuzdul }
-ce_khuzdul_p.dds { colors = 1 category = letters_khuzdul }
-ce_khuzdul_q.dds { colors = 1 category = letters_khuzdul }
-ce_khuzdul_r.dds { colors = 1 category = letters_khuzdul }
-ce_khuzdul_s.dds { colors = 1 category = letters_khuzdul }
-ce_khuzdul_t.dds { colors = 1 category = letters_khuzdul }
-ce_khuzdul_u.dds { colors = 1 category = letters_khuzdul }
-ce_khuzdul_v.dds { colors = 1 category = letters_khuzdul }
-ce_khuzdul_w.dds { colors = 1 category = letters_khuzdul }
-ce_khuzdul_x.dds { colors = 1 category = letters_khuzdul }
-ce_khuzdul_y.dds { colors = 1 category = letters_khuzdul }
-ce_khuzdul_z.dds { colors = 1 category = letters_khuzdul }
-ce_k_arnor_1.dds { colors = 3 category = title_dunedain }
-ce_k_arnor_2.dds { colors = 3 category = title_dunedain }
-ce_elendilmir.dds { colors = 1 category = title_dunedain }
-ce_edain_sceptre.dds { colors = 1 category = title_dunedain }
-ce_ring_barahir.dds { colors = 1 category = title_dunedain }
-ce_morthond_vale.dds { colors = 3 category = title_dunedain }
-ce_edain_star_boat.dds { colors = 1 category = title_dunedain }
-ce_edain_swan_boat.dds { colors = 1 category = title_dunedain }
-ce_swanbridge.dds { colors = 1 category = title_dunedain }
-ce_edain_suncrown.dds { colors = 2 category = title_dunedain }
-ce_edain_sunray.dds { colors = 1 category = title_dunedain }
-ce_anfalas_02.dds { colors = 2 category = title_dunedain }
-ce_d_harlond.dds { colors = 1 category = title_dunedain }
-ce_c_rosuldrie.dds { colors = 2 category = title_dunedain }
-ce_c_telengaur.dds { colors = 1 category = title_dunedain }
-#ce_henneth_annun.dds { colors = 1 category = title_dunedain }
-ce_nos_palintir.dds { colors = 1 category = letters_tengwar }
-ce_edain_stars_10.dds { colors = 1 category = nature }
-cat_pelican2_wappen.dds { colors = 1 category = animals }
-cat_crane_wappen.dds { colors = 1 category = animals }
-ce_d_tarlang.dds { colors = 1 category = title_dunedain }
-ce_k_erebor.dds { colors = 3 category = title_dwarven }
-ce_d_dwarven_face.dds { colors = 2 category = title_dwarven }
-ce_dwarven_axe1.dds { colors = 1 category = title_dwarven }
-#ce_dwarven_axe2.dds { colors = 3 category = title_dwarven }
-ce_narindazdum.dds { colors = 2 category = title_dwarven }
-ce_nargubraz_dwarves.dds { colors = 2 category = title_dwarven }
-ce_nargubraz_dwarves_02.dds { colors = 1 category = title_dwarven }
-ce_khazad_dum_01.dds { colors = 2 category = title_dwarven }
-ce_khazad_dum_02.dds { colors = 2 category = title_dwarven }
-ce_blue_mountain_dwarves.dds { colors = 2 category = title_dwarven }
-ce_blue_mountain_dwarves_02.dds { colors = 1 category = title_dwarven }
-ce_iron_hills_02.dds { colors = 2 category = title_dwarven }
-ce_nordinbad.dds { colors = 1 category = title_dwarven }
-ce_tharbad.dds { colors = 3 category = title_dunedain }
-ce_orthanc.dds { colors = 1 category = title_dunedain }
-ce_crane.dds { colors = 1 category = animals }
-ce_apple01.dds { colors = 1 category = title_hobbits }
-ce_apple02.dds { colors = 3 category = title_hobbits }
-ce_feather.dds { colors = 1 category = title_hobbits }
-#ce_elven_leaf1.dds { colors = 3 category = title_elvish }
-#ce_elven_leaf2.dds { colors = 1 category = title_elvish }
-#ce_elven_leaf3.dds { colors = 2 category = title_elvish }
-dwarven_mask_00.dds = { colors = 3 category = title_dwarven }
-dwarven_star_00.dds = { colors = 3 category = title_dwarven }
-dwarven_sword_00.dds = { colors = 3 category = title_dwarven }
+ce_edain_sun_rays_01.dds = { colors = 1 category = nature }
+ce_one_ring.dds = { colors = 1 category = title_evil }
+ce_edain_swan.dds = { colors = 1 category = animals }
+ce_eadin_frame_plain.dds = { colors = 1 category = lotr_frames }
+ce_edain_frame_multi_color.dds = { colors = 3 category = lotr_frames }
+ce_d_doriant.dds = { colors = 1 category = title_dunedain }
+ce_vulture.dds = { colors = 1 category = animals }
+ce_pitchfork.dds = { colors = 1 category = manmade }
+ce_wind_mill01.dds = { colors = 1 category = manmade }
+ce_c_tirfalas.dds = { colors = 1 category = title_dunedain }
+ce_khuzdul_a.dds = { colors = 1 category = letters_khuzdul }
+ce_khuzdul_b.dds = { colors = 1 category = letters_khuzdul }
+ce_khuzdul_c.dds = { colors = 1 category = letters_khuzdul }
+ce_khuzdul_d.dds = { colors = 1 category = letters_khuzdul }
+ce_khuzdul_e.dds = { colors = 1 category = letters_khuzdul }
+ce_khuzdul_f.dds = { colors = 1 category = letters_khuzdul }
+ce_khuzdul_g.dds = { colors = 1 category = letters_khuzdul }
+ce_khuzdul_h.dds = { colors = 1 category = letters_khuzdul }
+ce_khuzdul_i.dds = { colors = 1 category = letters_khuzdul }
+ce_khuzdul_j.dds = { colors = 1 category = letters_khuzdul }
+ce_khuzdul_k.dds = { colors = 1 category = letters_khuzdul }
+ce_khuzdul_l.dds = { colors = 1 category = letters_khuzdul }
+ce_khuzdul_m.dds = { colors = 1 category = letters_khuzdul }
+ce_khuzdul_n.dds = { colors = 1 category = letters_khuzdul }
+ce_khuzdul_o.dds = { colors = 1 category = letters_khuzdul }
+ce_khuzdul_p.dds = { colors = 1 category = letters_khuzdul }
+ce_khuzdul_q.dds = { colors = 1 category = letters_khuzdul }
+ce_khuzdul_r.dds = { colors = 1 category = letters_khuzdul }
+ce_khuzdul_s.dds = { colors = 1 category = letters_khuzdul }
+ce_khuzdul_t.dds = { colors = 1 category = letters_khuzdul }
+ce_khuzdul_u.dds = { colors = 1 category = letters_khuzdul }
+ce_khuzdul_v.dds = { colors = 1 category = letters_khuzdul }
+ce_khuzdul_w.dds = { colors = 1 category = letters_khuzdul }
+ce_khuzdul_x.dds = { colors = 1 category = letters_khuzdul }
+ce_khuzdul_y.dds = { colors = 1 category = letters_khuzdul }
+ce_khuzdul_z.dds = { colors = 1 category = letters_khuzdul }
+ce_k_arnor_1.dds = { colors = 3 category = title_dunedain }
+ce_k_arnor_2.dds = { colors = 3 category = title_dunedain }
+ce_elendilmir.dds = { colors = 1 category = title_dunedain }
+ce_edain_sceptre.dds = { colors = 1 category = title_dunedain }
+ce_ring_barahir.dds = { colors = 1 category = title_dunedain }
+ce_morthond_vale.dds = { colors = 3 category = title_dunedain }
+ce_edain_star_boat.dds = { colors = 1 category = title_dunedain }
+ce_edain_swan_boat.dds = { colors = 1 category = title_dunedain }
+ce_swanbridge.dds = { colors = 1 category = title_dunedain }
+ce_edain_suncrown.dds = { colors = 2 category = title_dunedain }
+ce_edain_sunray.dds = { colors = 1 category = title_dunedain }
+ce_anfalas_02.dds = { colors = 2 category = title_dunedain }
+ce_d_harlond.dds = { colors = 1 category = title_dunedain }
+ce_c_rosuldrie.dds = { colors = 2 category = title_dunedain }
+ce_c_telengaur.dds = { colors = 1 category = title_dunedain }
+#ce_henneth_annun.dds = { colors = 1 category = title_dunedain }
+ce_nos_palintir.dds = { colors = 1 category = letters_tengwar }
+ce_edain_stars_10.dds = { colors = 1 category = nature }
+cat_pelican2_wappen.dds = { colors = 1 category = animals }
+cat_crane_wappen.dds = { colors = 1 category = animals }
+ce_d_tarlang.dds = { colors = 1 category = title_dunedain }
+ce_k_erebor.dds = { colors = 3 category = title_dwarven }
+ce_d_dwarven_face.dds = { colors = 2 category = title_dwarven }
+ce_dwarven_axe1.dds = { colors = 1 category = title_dwarven }
+#ce_dwarven_axe2.dds = { colors = 3 category = title_dwarven }
+ce_narindazdum.dds = { colors = 2 category = title_dwarven }
+ce_nargubraz_dwarves.dds = { colors = 2 category = title_dwarven }
+ce_nargubraz_dwarves_02.dds = { colors = 1 category = title_dwarven }
+ce_khazad_dum_01.dds = { colors = 2 category = title_dwarven }
+ce_khazad_dum_02.dds = { colors = 2 category = title_dwarven }
+ce_blue_mountain_dwarves.dds = { colors = 2 category = title_dwarven }
+ce_blue_mountain_dwarves_02.dds = { colors = 1 category = title_dwarven }
+ce_iron_hills_02.dds = { colors = 2 category = title_dwarven }
+ce_nordinbad.dds = { colors = 1 category = title_dwarven }
+ce_tharbad.dds = { colors = 3 category = title_dunedain }
+ce_orthanc.dds = { colors = 1 category = title_dunedain }
+ce_crane.dds = { colors = 1 category = animals }
+ce_apple01.dds = { colors = 1 category = title_hobbits }
+ce_apple02.dds = { colors = 3 category = title_hobbits }
+ce_feather.dds = { colors = 1 category = title_hobbits }
+#ce_elven_leaf1.dds = { colors = 3 category = title_elvish }
+#ce_elven_leaf2.dds = { colors = 1 category = title_elvish }
+#ce_elven_leaf3.dds = { colors = 2 category = title_elvish }
+ce_dwarven_anvil_00.dds = { colors = 3 category = title_dwarven }
+ce_dwarven_hammer_00.dds = { colors = 3 category = title_dwarven }
+ce_dwarven_mask_00.dds = { colors = 3 category = title_dwarven }
+ce_dwarven_star_00.dds = { colors = 3 category = title_dwarven }
+ce_dwarven_star_01.dds = { colors = 3 category = title_dwarven }
+ce_dwarven_star_02.dds = { colors = 3 category = title_dwarven }
+ce_dwarven_star_03.dds = { colors = 2 category = title_dwarven }
+ce_dwarven_sword_00.dds = { colors = 3 category = title_dwarven }
+ce_dwarven_crown_00.dds = { colors = 3 category = title_dwarven }
 
 
 #Imperator: Invictus

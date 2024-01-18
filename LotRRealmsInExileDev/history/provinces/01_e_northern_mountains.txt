@@ -25,7 +25,7 @@
 		holding = dwarven_holding
 		buildings = {
 			dwarven_depths_07
-			dwarven_mine_05
+			# dwarven_mine_05
 			dwarven_hoard_03
 		}
 	}
@@ -72,7 +72,7 @@
 		holding = dwarven_holding
 		buildings = {
 			dwarven_depths_03
-			dwarven_mine_04
+			gold_mines_04
 			dwarven_crafts_03
 		}
 	}
@@ -1104,8 +1104,8 @@
 	holding = wastelands_holding
 	
 	792.1.1 = { # Rough estimate, said that dwarves settle in Iron Hills sometime during F.A.
-		culture = blacklocks
-		religion = faith_khazad
+		culture = blacklocks_nargubraz
+		religion = faith_blacklocks
 		#religion = faith_blacklocks
 		holding = castle_holding
 	}

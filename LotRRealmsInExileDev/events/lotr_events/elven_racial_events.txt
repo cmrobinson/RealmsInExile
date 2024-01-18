@@ -1291,7 +1291,10 @@ elven_racial.0400 = { #Elven guest management
 elven_racial.0500 = { #Introduction to Elven characters
 	title = elven_racial.0500.t
 	desc = elven_racial.0500.desc
+	content_source = realms
 	theme = realm
+	
+	cooldown = { years = 10 }
 		
 	left_portrait = {
 		character = root
@@ -1321,7 +1324,10 @@ elven_racial.0600 = { #Elven marriage handling
 			save_scope_as = soulmate
 		}
 		if = {
-			limit = { scope:soulmate = { is_ai = yes } }
+			limit = { 
+				scope:soulmate = { is_ai = yes } 
+				lotr_marriage_to_allowed = { TARGET = scope:soulmate }
+			}
 			if = {
 				limit = {
 					has_dlc_feature = tours_and_tournaments

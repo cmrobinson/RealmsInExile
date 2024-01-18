@@ -612,3 +612,43 @@ request_easterling_invasion_troop_value_estimate = {
 	divide = 10
 	round = yes
 }
+
+tributary_gold_being_recieved = {
+	value = 0
+
+	if = {
+		limit = {
+			exists = root
+			any_in_list = {
+				variable = non_permanent_tributaries
+				exists = this
+			}
+		} 
+		every_in_list = {
+			variable = non_permanent_tributaries
+			add = var:tribute_gold_amount
+		}
+	}
+	if = {
+		limit = {
+			exists = root
+			any_in_list = {
+				variable = permanent_tributaries
+				exists = this
+			}
+		}
+		every_in_list = {
+			variable = permanent_tributaries
+			add = var:tribute_gold_amount
+		}
+	}
+}
+
+tributary_gold_being_paid = {
+	value = 0
+
+	if = {
+		limit = { is_tributary = yes } 
+		add = var:tribute_gold_amount
+	}
+}

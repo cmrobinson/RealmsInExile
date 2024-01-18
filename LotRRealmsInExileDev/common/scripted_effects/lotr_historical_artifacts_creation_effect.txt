@@ -1652,6 +1652,49 @@ create_artifact_palantir_elostirion_effect = {
 
 ## Dwarven ##
 
+create_artifact_key_of_erebor_effect = { # AKA Key to the Side-door
+	# Get the character the artifact is being made for.
+	$OWNER$ = { save_scope_as = owner }
+	# Not really used, but if we don't set the scopes we get errors in the feature selection
+	set_artifact_rarity_illustrious = yes
+
+	# Create the artifact
+	create_artifact = {
+		name = key_of_erebor_name
+		description = key_of_erebor_description
+		type = miscellaneous
+		visuals = key_of_erebor
+		wealth = scope:wealth
+		quality = scope:quality
+		history = {
+			type = created
+			date = 6133.1.1
+			recipient = character:lineofdurin82 #Thráin II, King under the Mountain aka King of Erebor
+		}
+		modifier = key_of_erebor_modifier
+		save_scope_as = newly_created_artifact
+		decaying = no
+	}
+
+	scope:newly_created_artifact = {
+		set_variable = { name = historical_unique_artifact value = yes }
+		set_variable = key_of_erebor
+		#set_variable = Dwarven
+		save_scope_as = epic
+		
+		add_artifact_history = { # Gandalf
+			type = given
+			date = 6883.1.1
+			recipient = character:lineofgandalf
+		}
+		add_artifact_history = { # Thorin II Oakenshield
+			type = given
+			date = 6974.1.1
+			recipient = character:lineofdurin83
+		}
+	}
+}
+
 create_artifact_arkenstone_effect = {
     # Get the character the artifact is being made for.
     $OWNER$ = { save_scope_as = owner }
@@ -1670,7 +1713,7 @@ create_artifact_arkenstone_effect = {
         history = {
             type = created
             date = 6032.1.1
-            recipient = character:lineofdurin74 #Thráin I, King under the Mountain aka King of Erebor
+            recipient = character:lineofdurin75
             location = province:4408 #Throne of Erebor
         }
         modifier = arkenstone_modifier
@@ -1705,7 +1748,7 @@ create_artifact_arkenstone_effect = {
 			date = 6521.3.30
 			recipient = character:lineofdurin78
 		}
-		add_artifact_history = {
+		add_artifact_history = { # Dáin I
 			type = inherited
 			date = 6618.1.8
 			recipient = character:lineofdurin79
@@ -1748,7 +1791,7 @@ create_artifact_arkenstone_backup_effect = {
         history = {
             type = created
             date = 6032.1.1
-            recipient = character:lineofdurin74 #Thráin I, King under the Mountain aka King of Erebor
+            recipient = character:lineofdurin82 #Thráin II, King under the Mountain aka King of Erebor
             location = province:4408 #Throne of Erebor
         }
         modifier = arkenstone_modifier
@@ -1783,7 +1826,7 @@ create_artifact_arkenstone_backup_effect = {
 			date = 6521.3.30
 			recipient = character:lineofdurin78
 		}
-		add_artifact_history = {
+		add_artifact_history = { # Dáin I
 			type = inherited
 			date = 6618.1.8
 			recipient = character:lineofdurin79
@@ -1825,7 +1868,7 @@ create_artifact_barazanthual_effect = { # Dáin's Red Axe
 		history = {
 			type = created
 			date = 6838.1.1
-			recipient = character:lineofdurin90 #Dáin
+			recipient = character:lineofdurin90 #Dáin II
 		}
 		modifier = barazanthual_modifier
 		save_scope_as = newly_created_artifact
@@ -3641,14 +3684,16 @@ create_artifact_shards_of_narsil_effect = {
 		name = shards_of_narsil_name
 		description = shards_of_narsil_description
 		creator = character:lineofelwe3 #Thingol
-		type = pedestal
+		type = regalia
 		visuals = shards_of_narsil
 		wealth = scope:wealth
 		quality = scope:quality
 		history = {
 			type = created
-			date = 2.1.1
+			date = 262.1.1
+			actor = character:lineoftelchar1  #Telchar	
 			recipient = character:lineofelwe3 #Thingol
+			location = province:4869 #Nogrod
 		}
 		modifier = shards_of_narsil_modifier
 		save_scope_as = newly_created_artifact
@@ -4193,17 +4238,6 @@ create_artifact_anduril_effect = {
 			target = title:d_northern_dunedain
 			date = 6008.1.1
 		}
-		add_artifact_history = { # Elrond reforges Anduril
-			type = reforged
-			date = 7021.12.1
-			recipient = character:linefinwe27
-			location = province:4337 #Rivendell
-		}
-		add_artifact_history = { # Elrond gives Anduril to Aragorn II
-			type = given
-			date = 7021.12.1
-			recipient = character:lineisildur42
-		}
 	}
 }
 
@@ -4238,6 +4272,10 @@ create_artifact_sceptre_of_annuminas_effect = {
 		set_variable = sceptre_of_annuminas
 		set_variable = relic
 		save_scope_as = epic
+		set_variable = {
+			name = artifact_succession_title
+			value = title:e_arnor
+		}
 		
 		add_artifact_history = {
 			type = inherited
@@ -4488,6 +4526,10 @@ create_artifact_elendilmir_elendil_effect = {
 		set_variable = elendilmir_elendil
 		set_variable = relic
 		save_scope_as = epic
+		set_variable = {
+			name = artifact_succession_title
+			value = title:e_arnor
+		}
 		
 		add_artifact_history = {
 			type = given
@@ -4629,6 +4671,10 @@ create_artifact_elendilmir_valandil_effect = {
 		set_variable = elendilmir_valandil
 		set_variable = relic
 		save_scope_as = epic
+		set_variable = {
+			name = artifact_succession_title
+			value = title:e_arnor
+		}
 		
 		add_artifact_history = { # Eldacar
 			type = inherited
@@ -5729,7 +5775,7 @@ create_artifact_numenorean_figurine_effect = {
 		quality = scope:quality
 		modifier = numenorean_figurine_modifier
 		save_scope_as = newly_created_artifact
-		decaying = no
+		decaying = yes
 	}
 
 	scope:newly_created_artifact = {
@@ -5784,7 +5830,7 @@ create_artifact_numenorean_shield_effect = {
 		quality = scope:quality
 		modifier = numenorean_shield_modifier
 		save_scope_as = newly_created_artifact
-		decaying = no
+		decaying = yes
 	}
 
 	scope:newly_created_artifact = {
@@ -5810,7 +5856,7 @@ create_artifact_numenorean_steelbow_effect = {
 		quality = scope:quality
 		modifier = numenorean_steelbow_modifier
 		save_scope_as = newly_created_artifact
-		decaying = no
+		decaying = yes
 	}
 
 	scope:newly_created_artifact = {
@@ -5878,6 +5924,63 @@ create_artifact_white_tree_branch_effect = {
 	}
 }
 
+# Arnorian common #
+
+create_artifact_dagger_westernesse_effect = {
+	# Get the character the artifact is being made for.
+	$OWNER$ = { save_scope_as = owner }
+	# Not really used, but if we don't set the scopes we get errors in the feature selection
+	set_artifact_rarity_illustrious = yes
+
+	# Create the artifact
+	create_artifact = {
+		name = dagger_westernesse_name
+		description = dagger_westernesse_description
+		type = dagger
+		visuals = dagger_westernesse
+		template = general_unique_template
+		wealth = scope:wealth
+		quality = scope:quality
+		modifier = dagger_westernesse_modifier
+		template = dagger_westernesse_template
+		save_scope_as = newly_created_artifact
+		decaying = no
+	}
+
+	scope:newly_created_artifact = {
+		set_variable = { name = historical_unique_artifact value = yes }
+		set_variable = dagger_westernesse
+		save_scope_as = epic
+	}
+}
+
+create_artifact_ranger_star_effect = {
+	# Get the character the artifact is being made for.
+	$OWNER$ = { save_scope_as = owner }
+	# Not really used, but if we don't set the scopes we get errors in the feature selection
+	set_artifact_rarity_famed = yes
+
+	# Create the artifact
+	create_artifact = {
+		name = ranger_star_name
+		description = ranger_star_description
+		type = brooch
+		visuals = ranger_star
+		template = general_unique_template
+		wealth = scope:wealth
+		quality = scope:quality
+		modifier = northron_fibula_modifier
+		save_scope_as = newly_created_artifact
+		decaying = no
+	}
+
+	scope:newly_created_artifact = {
+		set_variable = { name = historical_unique_artifact value = yes }
+		set_variable = ranger_star
+		save_scope_as = epic
+	}
+}
+
 # Northron common #
 
 create_artifact_northron_horn_effect = {
@@ -5897,7 +6000,7 @@ create_artifact_northron_horn_effect = {
 		quality = scope:quality
 		modifier = northron_horn_modifier
 		save_scope_as = newly_created_artifact
-		decaying = no
+		decaying = yes
 	}
 
 	scope:newly_created_artifact = {
@@ -5917,14 +6020,14 @@ create_artifact_northron_fibula_effect = {
 	create_artifact = {
 		name = northron_fibula_name
 		description = northron_fibula_description
-		type = miscellaneous
+		type = brooch
 		visuals = northron_fibula
 		template = general_unique_template
 		wealth = scope:wealth
 		quality = scope:quality
 		modifier = northron_fibula_modifier
 		save_scope_as = newly_created_artifact
-		decaying = no
+		decaying = yes
 	}
 
 	scope:newly_created_artifact = {
@@ -5944,14 +6047,14 @@ create_artifact_mundburgian_shield_effect = {
 	create_artifact = {
 		name = mundburgian_shield_name
 		description = mundburgian_shield_description
-		type = miscellaneous
+		type = brooch
 		visuals = mundburgian_shield
 		template = general_unique_template
 		wealth = scope:wealth
 		quality = scope:quality
 		modifier = mundburgian_shield_modifier
 		save_scope_as = newly_created_artifact
-		decaying = no
+		decaying = yes
 	}
 
 	scope:newly_created_artifact = {
@@ -6001,14 +6104,14 @@ create_artifact_elven_brooch_effect = {
 	create_artifact = {
 		name = elven_brooch_name
 		description = elven_brooch_description
-		type = miscellaneous
+		type = brooch
 		visuals = elven_brooch
 		template = elven_relic_misc_template
 		wealth = scope:wealth
 		quality = scope:quality
 		modifier = elven_brooch_modifier
 		save_scope_as = newly_created_artifact
-		decaying = no
+		decaying = yes
 	}
 
 	scope:newly_created_artifact = {
@@ -6064,7 +6167,7 @@ create_artifact_elven_cape_effect = {
 		quality = scope:quality
 		modifier = elven_cape_modifier
 		save_scope_as = newly_created_artifact
-		decaying = no
+		decaying = yes
 	}
 
 	scope:newly_created_artifact = {
@@ -6093,7 +6196,7 @@ create_artifact_miruvor_effect = {
 		quality = scope:quality
 		modifier = miruvor_modifier
 		save_scope_as = newly_created_artifact
-		decaying = no
+		decaying = yes
 	}
 
 	scope:newly_created_artifact = {
@@ -6103,6 +6206,146 @@ create_artifact_miruvor_effect = {
 		save_scope_as = epic
 	}
 }
+
+create_artifact_noldorin_tools_effect = {
+	# Get the character the artifact is being made for.
+	$OWNER$ = { save_scope_as = owner }
+	# Not really used, but if we don't set the scopes we get errors in the feature selection
+	set_artifact_rarity_illustrious = yes
+
+	# Create the artifact
+	create_artifact = {
+		name = noldorin_tools_name
+		description = noldorin_tools_description
+		type = crafting_tools
+		visuals = noldorin_tools
+		wealth = scope:wealth
+		quality = scope:quality
+		modifier = noldorin_tools_modifier
+		save_scope_as = newly_created_artifact
+		decaying = yes
+	}
+
+	scope:newly_created_artifact = {
+		set_variable = { name = historical_unique_artifact value = yes }
+		set_variable = noldorin_tools
+		set_variable = elven
+		save_scope_as = epic
+	}
+}
+
+create_artifact_eregion_gem_effect = {
+	# Get the character the artifact is being made for.
+	$OWNER$ = { save_scope_as = owner }
+	# Not really used, but if we don't set the scopes we get errors in the feature selection
+	set_artifact_rarity_famed = yes
+
+	# Create the artifact
+	create_artifact = {
+		name = eregion_gem_name
+		description = eregion_gem_description
+		type = pedestal
+		visuals = eregion_gem
+		wealth = scope:wealth
+		quality = scope:quality
+		modifier = eregion_gem_modifier
+		template = elven_relic_pedestal_template
+		save_scope_as = newly_created_artifact
+		decaying = yes
+	}
+
+	scope:newly_created_artifact = {
+		set_variable = { name = historical_unique_artifact value = yes }
+		set_variable = eregion_gem
+		set_variable = elven
+		save_scope_as = epic
+	}
+}
+
+# Dwarven common #
+
+create_artifact_dwarven_tools_effect = {
+	# Get the character the artifact is being made for.
+	$OWNER$ = { save_scope_as = owner }
+	# Not really used, but if we don't set the scopes we get errors in the feature selection
+	set_artifact_rarity_illustrious = yes
+
+	# Create the artifact
+	create_artifact = {
+		name = dwarven_tools_name
+		description = dwarven_tools_description
+		type = crafting_tools
+		visuals = dwarven_tools
+		wealth = scope:wealth
+		quality = scope:quality
+		modifier = dwarven_tools_modifier
+		save_scope_as = newly_created_artifact
+		decaying = yes
+	}
+
+	scope:newly_created_artifact = {
+		set_variable = { name = historical_unique_artifact value = yes }
+		set_variable = dwarven_tools
+		save_scope_as = epic
+	}
+}
+
+create_artifact_mahal_figurine_effect = {
+	# Get the character the artifact is being made for.
+	$OWNER$ = { save_scope_as = owner }
+	# Not really used, but if we don't set the scopes we get errors in the feature selection
+	set_artifact_rarity_famed = yes
+
+	# Create the artifact
+	create_artifact = {
+		name = mahal_figurine_name
+		description = mahal_figurine_description
+		type = pedestal
+		visuals = mahal_figurine
+		wealth = scope:wealth
+		quality = scope:quality
+		modifier = numenorean_figurine_modifier
+		save_scope_as = newly_created_artifact
+		decaying = yes
+	}
+
+	scope:newly_created_artifact = {
+		set_variable = { name = historical_unique_artifact value = yes }
+		set_variable = mahal_figurine
+		save_scope_as = epic
+	}
+}
+
+create_artifact_stonesinger_tablet_effect = {
+	# Get the character the artifact is being made for.
+	$OWNER$ = { save_scope_as = owner }
+	# Not really used, but if we don't set the scopes we get errors in the feature selection
+	set_artifact_rarity_illustrious = yes
+
+	# Create the artifact
+	create_artifact = {
+		name = stonesinger_tablet_name
+		description = stonesinger_tablet_description
+		type = book
+		visuals = stonesinger_tablet
+		wealth = scope:wealth
+		quality = scope:quality
+		modifier = stonesinger_tablet_modifier
+		template = stonesinger_tablet_template
+		save_scope_as = newly_created_artifact
+		decaying = yes
+	}
+
+	scope:newly_created_artifact = {
+		set_variable = { name = historical_unique_artifact value = yes }
+		set_variable = stonesinger_tablet
+		set_variable = relic
+		save_scope_as = epic
+	}
+}
+
+
+
 
 # Haradrim common #
 
@@ -6123,7 +6366,7 @@ create_artifact_mumak_rider_insignia_effect = {
 		quality = scope:quality
 		modifier = mumak_rider_insignia_modifier
 		save_scope_as = newly_created_artifact
-		decaying = no
+		decaying = yes
 	}
 
 	scope:newly_created_artifact = {
@@ -6151,7 +6394,7 @@ create_artifact_emblem_of_ladnoca_effect = {
 		quality = scope:quality
 		modifier = emblem_of_ladnoca_modifier
 		save_scope_as = newly_created_artifact
-		decaying = no
+		decaying = yes
 	}
 
 	scope:newly_created_artifact = {
@@ -6181,7 +6424,7 @@ create_artifact_flask_of_grog_effect = {
 		quality = scope:quality
 		modifier = flask_of_grog_modifier
 		save_scope_as = newly_created_artifact
-		decaying = no
+		decaying = yes
 	}
 
 	scope:newly_created_artifact = {
@@ -6208,7 +6451,7 @@ create_artifact_orc_whip_effect = {
 		quality = scope:quality
 		modifier = orc_whip_modifier
 		save_scope_as = newly_created_artifact
-		decaying = no
+		decaying = yes
 	}
 
 	scope:newly_created_artifact = {
@@ -6237,7 +6480,7 @@ create_artifact_dunlending_torc_effect = {
 		quality = scope:quality
 		modifier = dunlending_torc_modifier
 		save_scope_as = newly_created_artifact
-		decaying = no
+		decaying = yes
 	}
 
 	scope:newly_created_artifact = {
@@ -6267,7 +6510,7 @@ create_artifact_dorwinrim_chalice_effect = {
 		quality = scope:quality
 		modifier = dorwinrim_chalice_modifier
 		save_scope_as = newly_created_artifact
-		decaying = no
+		decaying = yes
 	}
 
 	scope:newly_created_artifact = {
@@ -6296,7 +6539,7 @@ create_artifact_rhunic_saddle_effect = {
 		quality = scope:quality
 		modifier = rhunic_saddle_modifier
 		save_scope_as = newly_created_artifact
-		decaying = no
+		decaying = yes
 	}
 
 	scope:newly_created_artifact = {
@@ -6322,7 +6565,7 @@ create_artifact_kine_drinking_horn_effect = {
 		quality = scope:quality
 		modifier = kine_drinking_horn_modifier
 		save_scope_as = newly_created_artifact
-		decaying = no
+		decaying = yes
 	}
 
 	scope:newly_created_artifact = {
@@ -6354,7 +6597,9 @@ create_artifact_dragon_helm_of_dor_lomin_effect = {
 		history = {
 			type = created
 			date = 262.1.1
+			actor = character:lineoftelchar1  #Telchar
 			recipient = character:linefinwe10 #Maedhros
+			location = province:4869 #Nogrod
 		}
 		modifier = dragon_helm_of_dor_lomin_modifier
 		save_scope_as = newly_created_artifact
@@ -7628,6 +7873,42 @@ create_artifact_nardring_effect = { # Fëanor's Hammer
 			date = 457.1.1
 			recipient = character:linefinwe18 #Celebrimbor
 		}
+	}
+}
+
+create_artifact_azaghal_effect = {
+	# Get the character the artifact is being made for.
+	$OWNER$ = { save_scope_as = owner }
+	# Not really used, but if we don't set the scopes we get errors in the feature selection
+	set_artifact_rarity_illustrious = yes
+
+	# Create the artifact
+	create_artifact = {
+		name = azaghal_helmet_name
+		description = azaghal_helmet_description
+		# creator = character:linefinwe18  #Celebrimbor
+		type = helmet
+		visuals = azaghal_helmet
+		wealth = scope:wealth
+		quality = scope:quality
+		template = azaghal_helmet_template # Template is where you set restrictions on usability!
+		history = {
+			type = created
+			date = 363.1.1
+			actor = character:lineoftelchar1  #Telchar
+			recipient = character:lineoftelchar1  #Telchar
+			location = province:4869 #Nogrod
+		}
+		modifier = azaghal_helmet_modifier
+		save_scope_as = newly_created_artifact
+		decaying = no
+	}
+
+	scope:newly_created_artifact = {
+		set_variable = { name = historical_unique_artifact value = yes }
+		set_variable = azaghal_helmet
+		set_variable = relic
+		save_scope_as = epic
 	}
 }
 

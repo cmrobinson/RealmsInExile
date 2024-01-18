@@ -17,6 +17,7 @@
 	nick_farmer_maggot = {}
 	nick_gaffer = {}
 	nick_roper = {}
+	nick_bombadil = {}
 	
 	# Eotheod Nicknames
 	nick_the_hapless = { is_bad = yes }
@@ -90,7 +91,10 @@
 
 	# Hillmen
 	nick_chief_of_chiefs = {}
-	
+
+	# Lossoth
+	nick_assistant_unique = {}
+
 	# Istari
 	nick_the_white_istari = {}
 	nick_the_grey_istari = {}

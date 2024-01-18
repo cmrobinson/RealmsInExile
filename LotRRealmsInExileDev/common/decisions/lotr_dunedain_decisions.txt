@@ -845,7 +845,10 @@ decision_calenardhon_claim = {
 		# 	has_title = title:e_gondor_steward
 		# 	has_title = title:e_castamir
 		# }	
-		exists = title:k_rohan.holder
+		OR = {
+			exists = title:k_rohan.holder
+
+		}
 		NOR = {
 			has_title = title:k_rohan
 			is_target_in_global_variable_list = {
@@ -857,9 +860,14 @@ decision_calenardhon_claim = {
 					AND = {
 						culture = culture:rohirrim
 						faith_is_evil = no
+						is_independent_ruler = yes
 					}
 					culture = { has_cultural_pillar = heritage_dunedain }
-					dynasty = dynasty:100 # The House of Eorl still holds Rohan
+					AND = {
+						dynasty = dynasty:100 # The House of Eorl still holds Rohan
+						faith_is_evil = no
+						is_independent_ruler = yes
+					}
 				}
 			}
 		}
@@ -878,7 +886,10 @@ decision_calenardhon_claim = {
 		is_independent_ruler = yes
 		# completely_controls = title:e_gondor
 		# prestige_level >= very_high_prestige_level
-		is_gondor = yes
+		OR = {
+			is_gondor = yes
+			has_primary_title = title:e_reunitedkingdom
+		}
 		# OR = {
 		# 	has_title = title:e_gondor
 		# 	has_title = title:e_gondor_steward
@@ -949,10 +960,6 @@ decision_invite_elves_edhellond = {
 				is_elf = yes
 				is_in_valinor = no
 				highest_held_title_tier >= tier_kingdom
-				
-				NOT = { # Added this for now, as elrond isnt currently in | Meant to be removed when Rivendell is added
-					this = character:linefinwe27
-				}
 			}
 		}
 
@@ -1186,7 +1193,11 @@ decision_reunited_kingdom = {
 	is_shown = {
 		current_year >= 4035 # Is only shown if bookmark is after the two kingdoms split
 		
-		has_title = title:e_gondor
+		OR = {
+			has_title = title:e_gondor_steward
+			has_title = title:e_gondor
+			has_title = title:e_castamir
+		}
 		has_title = title:e_arnor
 		NOT = { has_title = title:e_reunitedkingdom }
 
@@ -1204,11 +1215,13 @@ decision_reunited_kingdom = {
 	
 	# IS_VALID
 	is_valid = {
-		OR = {
-			prestige_level >= very_high_prestige_level
-		}
+		prestige_level >= very_high_prestige_level
 		
-		has_title = title:e_gondor
+		OR = {
+			has_title = title:e_gondor_steward
+			has_title = title:e_gondor
+			has_title = title:e_castamir
+		}
 		has_title = title:e_arnor
 	}
 	is_valid_showing_failures_only = {
@@ -1224,7 +1237,39 @@ decision_reunited_kingdom = {
 		
 		add_prestige = 1500
 		dynasty = { add_dynasty_prestige = 1000 }
-		
+		hidden_effect = {
+			title:e_gondor_steward = {
+				every_in_de_jure_hierarchy = {
+					limit = { tier = tier_kingdom }
+					set_de_jure_liege_title = title:e_gondor
+				}
+			}
+			title:e_castamir = {
+				every_in_de_jure_hierarchy = {
+					limit = { tier = tier_kingdom }
+					set_de_jure_liege_title = title:e_gondor
+				}
+			}
+			create_title_and_vassal_change = {
+				type = returned
+				save_scope_as = change
+				add_claim_on_loss = no
+			}
+			title:e_gondor = {
+				change_title_holder = {
+					holder = root
+					change = scope:change
+				}
+			}
+			title:e_gondor.holder = {
+				every_held_title = {
+					add_title_law = male_preference_law # To stop the house of Telcontar from losing the throne immediately if Eldarion dies
+				}
+			}
+			resolve_title_and_vassal_change = scope:change
+			destroy_title = title:e_gondor_steward
+			destroy_title = title:e_castamir
+		}
 
 		add_to_global_variable_list = {
 			name = unavailable_unique_decisions
@@ -1363,11 +1408,12 @@ decision_reunify_dunedain = {
 	# EFFECT 
 	effect = {
 		culture:dunedain = {
-			custom_tooltip = decision_reunify_dunedain_get_innovations
-			hidden_effect = {
 			culture:dunedain = { save_temporary_scope_as = dunedain_culture }
 			culture:gondorian = { save_temporary_scope_as = gondorian_culture }
 			culture:arnorian = { save_temporary_scope_as = arnorian_culture }
+			# Needs to be above the 'custom_tooltip'
+			custom_tooltip = decision_reunify_dunedain_get_innovations
+			hidden_effect = {
 				reset_culture_creation_date = yes
 				get_all_innovations_from = culture:gondorian
 				get_all_innovations_from = culture:arnorian
@@ -2497,7 +2543,7 @@ decision_restore_gondor_province = {
 			}
 			trigger_if = { # Calenardhon
 				limit = { show_calenardhon_trigger = yes }
-				completely_controls = title:k_rohan
+				completely_controls_region = middleearth_west_rohan
 			}
 			trigger_if = { # Dór Rhunen
 				limit = { show_dor_rhunen_trigger = yes }
@@ -2598,7 +2644,7 @@ decision_restore_gondor_province = {
 			icon = "gfx/interface/icons/message_feed/helmingas_warriors.dds"
 			is_shown = { show_calenardhon_trigger = yes }
 			is_valid = {
-				completely_controls = title:k_rohan
+				completely_controls_region = middleearth_west_rohan
 			}
 			ai_chance = {
 				value = 100
@@ -2758,7 +2804,7 @@ decision_restore_gondor_province = {
 			}
 			add_to_global_variable_list = {
 				name = unavailable_unique_decisions
-			target = flag:integrate_calenardhon_decision
+				target = flag:integrate_calenardhon_decision
 			}
 				
 			trigger_event = gondor.2500
