@@ -56,18 +56,11 @@ k_gondolin = {
         texture = "te_turgon_valinor.dds"
 		instance = { scale = { 0.90 0.90 } }
 	}
+
+
 }
 
 d_feanorians = { # Host of Feanor, uses the same as the house
-	pattern = "pattern_solid.dds"
-    color1 = "white"
-    color2 = "white"
-    textured_emblem = {
-        texture = "te_feanor.dds"
-    }
-}
-
-k_feanor_host = { # Host of Feanor, uses the same as the house
 	pattern = "pattern_solid.dds"
     color1 = "white"
     color2 = "white"
