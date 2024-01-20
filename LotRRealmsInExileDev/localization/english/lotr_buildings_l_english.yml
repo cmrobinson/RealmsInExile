@@ -1985,7 +1985,7 @@
   building_wonder_gundabad_01:0 "Gundabad"
   building_wonder_gundabad_01_desc:0 "Once the dwarvenhold of Gunduzbad, [gundabad|E] was conquered by the notorious [orc|E] warlord Skorg, who turned it into the greatest Orc stronghold in the northern mountains. \n\nIt was Skorg who built the great "Drake Gate", a fortified entrance defending the mountain. The mountain itself has three peaks: The Cloven Spire, The Great Spire and The Twisted Spire, beneath which lie great fortified holds, caves, and winding tunnels, many of which were originally delved by the [dwarves|E]."
   building_wonder_gundabad_02:0 "Gunduzbad"
-  building_wonder_gundabad_02_desc:0 "According to the [dwarves|E], Durin the Deathless awoke inside of that Mountain which they would name Gunduzbad, "High Home". From that time forward, the mountain was revered by the Dwarves. While Durin would travel South and found [khazaddum|E] in ancient days, Gunduzbad would continue as a great assembly point for delegations from all the great houses of the Dwarves. Gunduzbad has finall been liberated after long centuries of [orc|E] occupation, and is once again a Dwarven stronghold."
+  building_wonder_gundabad_02_desc:0 "According to the [dwarves|E], Durin the Deathless awoke inside of that Mountain which they would name Gunduzbad, "High Home". From that time forward, the mountain was revered by the Dwarves. While Durin would travel South and found [khazaddum|E] in ancient days, Gunduzbad would continue as a great assembly point for delegations from all the great houses of the Dwarves. Gunduzbad has finally been liberated after long centuries of [orc|E] occupation, and is once again a Dwarven stronghold."
   
   ### Dwarven Wonders ###
   building_type_wonder_azan_zaram_01:0 "Azan-zâram"
@@ -2004,15 +2004,20 @@
   building_type_wonder_great_smials:0 "Great Smials"
   building_type_wonder_great_smials_desc:0 ""
   building_wonder_great_smials:0 "Great Smials"
-  building_wonder_great_smials_desc:0 "The ancestral home of the Took family, the many-tunnelled mansion has continuously grown over the years, sprawling in ever more tunnels and holes."
-  
+  building_wonder_great_smials_desc:0 "The ancestral home of the Took family, the excavation of the Smials began in T.A. 2683 by Thain Isengrim Took II. The many-tunnelled mansion continuously grown over the years, sprawling in ever more tunnels and holes.\n\nBy the end of the first century of the Fourth Age the Great Smials held one of the largest repositories of historical books and records in the Shire. In the library, Peregrin Took and his successors collected many manuscripts written by scribes of Gondor, including the King's Writer Findegil's important copy of the Thain's Book. Here could be found histories and legends related to Elendil and his heirs, and only here were extensive materials about the history of Númenor and the arising of Sauron."
+ 
+  building_type_wonder_brandy_hall:0 "Brandy Hall"
+  building_type_wonder_brandy_hall_desc:0 ""
+  building_wonder_brandy_hall:0 "Brandy Hall"
+  building_wonder_brandy_hall_desc:0 "The ancestral home of the Brandybuck family, founded by Gorhendad Oldbuck (Brandybuck) in T.A. 2340 by digging into Buck Hill. The Brandybucks kept making additions to Brandy Hall until it occupied the whole of the hill, had three large front doors, many side-doors, and about a hundred windows. When the Brandybucks and their numerous dependents outgrew Brandy Hall, they burrowed and built all around Buck Hill.\n\nBy the end of the first century of the Fourth Age Brandy Hall contained one of the largest collection of historical books and records in the Shire, in particular many works dealing with Eriador and the history of Rohan. Some of the works were composed or begun by Meriadoc Brandybuck and kept in the Brandy Hall library were Herblore of the Shire, the Reckoning of Years, and the short treatise Old Words and Names in the Shire."
+    
   building_type_wonder_bag_end:0 "Bag End"
   building_type_wonder_bag_end_desc:0 ""
   building_wonder_bag_end:0 "Bag End"
   building_wonder_bag_end_desc:0 "Built by Bungo Baggins for his wife Belladonna in Shire Reckoning 1280 (T.A. 2880), Bag End was an exemplar of everything [hobbit|E]-holes aspired to be. With many rooms of fine construction and a larder of near legendary status, Bag End was the perfect home for the respectable gentle-hobbit."
 
   building_type_wonder_zelemabkan:0 "Zelembkhan"
-  building_type_wonder_zelemabkan_desc:0 "Longbeards more like Greybeards! amirite?"
+  building_type_wonder_zelemabkan_desc:0 ""
   building_wonder_zelemabkan:0 "Zelembkhan"
   building_wonder_zelemabkan_desc:0 " "Zelembkhan" or "The Litany of Stone" refers to a monastery atop Mount Dolmed, the birthplace of the Broadbeams and Firebeards. Pilgrims who brave the arduous journey up the 1000 steps can pay respects to the Greybeards, Master Stone-Singers and caretakers of the holy mountain. Prospective Stone-Singers make the trek from all over Dwarfdom to learn at the feet of these masters."
 
@@ -2162,7 +2167,7 @@
  building_dwarven_ale_house_10:0 "A Hall of Revelry"
  building_dwarven_ale_house_10_desc:0 "Tales of mythic alcohols flow from this hold like a river of red ale. Travelers and adventures from all realms of Arda make the journey to this hold, hoping for but a drop of divine liquor."
  building_type_dwarven_ale_house_01:0 "Ale House"
- building_type_dwarven_ale_house_01_desc:0 "The hold doesn't have an alcohol problem perse, but instead an alcohol solution."
+ building_type_dwarven_ale_house_01_desc:0 "The hold doesn't have an alcohol problem per se, but rather an alcohol solution."
  #Mushrooms#
  building_dwarven_fungal_farm_01:0 "Mushroom Foraging Camps"
  building_dwarven_fungal_farm_01_desc:0 "Lacking the resources to develop agricultural plots, these dwarves are reduced to foraging for wild mushrooms dotting the cave walls."
@@ -2303,6 +2308,51 @@
  building_type_dwarven_mine_01:0 "Dwarven Mining"
  building_type_dwarven_mine_01_desc:0 "Miners labor day and night to extract all manner of earthly riches."
 
+ #Dwarven Hoard#
+ building_dwarven_hoard_01:0 "Hall of Ingots"
+ building_dwarven_hoard_01_desc:0 "In this initial chamber, [dwarven|E] blacksmiths proudly display freshly forged ingots of precious metal. The flickering light from the myriad metals adds a warm glow to the surroundings, signaling the beginning of the hoard's collection."
+ building_dwarven_hoard_02:0 "Gemstone Gallery"
+ building_dwarven_hoard_02_desc:0 "The hoard has expanded into vaults adorned with carefully embedded gemstones, creating a dazzling mosaic of lustre and light. Each gem tells a story of fine [dwarven|E] craftsmanship and adds a vibrant allure to the accumulating treasures."
+ building_dwarven_hoard_03:0 "Ancestral Reliquary"
+ building_dwarven_hoard_03_desc:0 "Within these hallowed halls, ancient relics and ancestral heirlooms find their place. [dwarves|E] honour their heritage, showcasing artifacts passed down through generations, each item contributing to the hoard's cultural significance."
+ building_dwarven_hoard_04:0 "Regal Treasury Chambers"
+ building_dwarven_hoard_04_desc:0 "The hoard ascends into regal treasury chambers, featuring ornate displays of crowns, scepters, and other symbols of [dwarven|E] authority. The air is thick with an aura of opulence, showcasing the Dwarves' noble heritage."
+ building_dwarven_hoard_05:0 "Citadel of Treasures"
+ building_dwarven_hoard_05_desc:0 "Reaching the zenith of [dwarven|E] opulence, this Citadel is a monumental structure carved deep into the heart of the mountain. Here, the hoard is safeguarded by formidable defenses, and its treasures beyond measure, are a source of awe and envy across [middleearth|E]."
+ building_type_dwarven_hoard_01:0 "Treasure Hoard"
+ building_type_dwarven_hoard_01_desc:0 "The [dwarven|E] Treasure Hoard stands as a majestic repository for treasures gathered from the depths of the mountain; meticulously curated and fiercely guarded."
+
+ #Dwarven Grand Library#
+ building_dwarven_grand_library_01:0 "Stone Archives"
+ building_dwarven_grand_library_01_desc:0 "The foundational level of the Grand Library houses the Stone Archives, where ancient scrolls and tomes are meticulously organized. [dwarven|E] scholars diligently record and preserve the accumulated knowledge of the hold."
+ building_dwarven_grand_library_02:0 "Halls of Lore"
+ building_dwarven_grand_library_02_desc:0 "In the Halls of Lore, the Grand Library unveils a more extensive collection of tomes, each meticulously categorized. Knowledge-seekers wander among towering bookshelves, while scribes diligently record new discoveries."
+ building_dwarven_grand_library_03:0 "Lorekeeper's Sanctum"
+ building_dwarven_grand_library_03_desc:0 "The Lorekeeper's Sanctum is adorned with intricate carvings house tomes of unparalleled insight and discovery. [dwarven|E] scholars, bathed in the iridescent light of its many crystal chandeliers, delve into the deepest recesses of accumulated wisdom, forging a legacy of enlightenment for generations to come."
+ building_type_dwarven_grand_library_01:0 "Grand Library"
+ building_type_dwarven_grand_library_01_desc:0 "The Grand Library is the paramount repository of knowledge within the hold, where the accumulated wisdom of generations is meticulously preserved and studied."
+
+ #Dwarven Bank#
+ building_dwarven_bank_economic_01:0 "Prospector's Vault"
+ building_dwarven_bank_economic_01_desc:0 "The Prospector's Vault serves as the foundational establishment of any [dwarven|E] bank, safeguarding the hard-earned treasures of miners and traders. Sturdy vaults house the initial deposits, providing a secure space to house the guild's growing reserves."
+ building_dwarven_bank_economic_02:0 "Chamber of Ledgers"
+ building_dwarven_bank_economic_02_desc:0 "In the heart of the Guildhall, the Chamber of Ledgers sits. [dwarven|E] accountants meticulously record transactions, investments and loans on stone tablets, keeping track of the Guild's many activities."
+ building_dwarven_bank_economic_03:0 "Grand Exchange"
+ building_dwarven_bank_economic_03_desc:0 "Within the Grand Exchange's walls, traders from neighbouring holds and distant realms converge to engage in prosperous exchanges, while [dwarven|E] bankers orchestrate complex transactions that shape the destiny of the hold's wealth."
+ building_type_dwarven_bank_economic_01:0 "Banker's Guildhall"
+ building_type_dwarven_bank_economic_01_desc:0 "With astute financial acumen, the Banker's Guild oversees investments and lends resources to fuel the development of the hold, fostering trade, innovation, and infrastructure."
+
+ #Dwarven King's Armoury#
+ building_dwarven_kings_armory_military_01:0 "Guardian's Arsenal"
+ building_dwarven_kings_armory_military_01_desc:0 "The Guardian's Arsenal serves as the foundational storage for the hold's weaponry and armor. Sturdy racks and shelves hold rows of meticulously organized weapons and finely crafted armor, ensuring the readiness of the dwarven warriors. The air is tinged with the scent of oiled metal, and the atmosphere resonates with the anticipation of battle."
+ building_dwarven_kings_armory_military_02:0 "Hall of Heroes"
+ building_dwarven_kings_armory_military_02_desc:0 "In the Hall of Heroes, the armory takes on a more imposing form. Here, the most exceptional pieces of weaponry and armor are displayed in custom-crafted cases, each item a testament to the dwarven dedication to craftsmanship. Banners bearing the emblems of legendary warriors hang proudly, casting a solemn air over the vault as it showcases the pride and heritage of the hold."
+ building_dwarven_kings_armory_military_03:0 "Royal Armament Chambers"
+ building_dwarven_kings_armory_military_03_desc:0 "The Royal Armament Chambers stand as a testament to the hold's martial prowess. Rare and ancient armour and weaponry are housed within fortified chambers adorned with intricate carvings depicting great victories of the [dwarven|E] people. This sacred space exudes a regal air, with the finest armor gleaming under carefully placed shafts of light, awaiting the call to defend the kingdom and uphold dwarven honour."
+ building_type_dwarven_kings_armory_military_01:0 "Great Armoury"
+ building_type_dwarven_kings_armory_military_01_desc:0 "The Great Armoury is the primary repository for the hold's weaponry and armor. Meticulously organized and well-maintained, it ensures our warriors are always ready to defend our home."
+
+
  #Fortifications#
  building_dwarven_vaults_01:0 "A Barred Door"
  building_dwarven_vaults_01_desc:0 "[dwarves|E] have begun to fortify their hold, affixing a bar across the hold's main gate."
@@ -2423,7 +2473,7 @@
  building_dwarven_pike_barracks_04:0 "Longer Pikes"
  building_dwarven_pike_barracks_04_desc:0 "[dwarves|E] have enhanced their spear hafts such that they can support a increased length."
  building_dwarven_pike_barracks_05:0 "Pike Storage"
- building_dwarven_pike_barracks_05_desc:0 "Army camps have begun organizing a central stockpile for units on campaign. This cuts down of lost or damaged weapons and improves efficency. "
+ building_dwarven_pike_barracks_05_desc:0 "Army camps have begun organizing a central stockpile for units on campaign. This cuts down of lost or damaged weapons and improves efficency."
  building_dwarven_pike_barracks_06:0 "Pike Maintenance Kits"
  building_dwarven_pike_barracks_06_desc:0 "maintenance, kits including spare spearheads, allows [dwarven|E] pikemen to remain in the fray for longer periods of time without the blade chipping or growing dull."
  building_dwarven_pike_barracks_07:0 "Spear Guards"
@@ -2505,7 +2555,21 @@
  building_dwarven_skirmisher_barracks_09:0 "Field Supplies"
  building_dwarven_skirmisher_barracks_09_desc:0 "The Quartermasters of this Hold have prepared kits for the Skirmishers, which allow them to move and fight through even the roughest of terrain."
  building_dwarven_skirmisher_barracks_10:0 "Espionage Masters"
- building_dwarven_skirmisher_barracks_10_desc:0 "These Skirmishers have become unrivaled in their understanding of terrain, and are fast enough to utilize this knowledge to the greatest advantage. It is said that any enemy who dares challenge these troops is surrounded before they have time to blink."
+ building_dwarven_skirmisher_barracks_10_desc:0 "These Skirmishers have become unrivaled in their understanding of terrain, and are fast enough to utilize this knowledge to the greatest advantage. It is said that any enemy who dares challenge these troops is surrounded before they even have time to blink."
+
+ #Dwarven Siege Engines#
+ building_type_dwarven_siege_workshop_01:0 "Siege Workshop"
+ building_type_dwarven_siege_workshop_01_desc:0 "In order to break through the immense fortifications that Delvings possess, [dwarves|E] have developed advanced Siege Engines capable of tearing down the Bastions of their foes."
+ building_dwarven_siege_workshop_01:0 "Slings"
+ building_dwarven_siege_workshop_01_desc:0 "Dwarven Engineers have devised a way to utilize slings in order to increase the length of the throwing arm, which allows for a greater range of fire."
+ building_dwarven_siege_workshop_02:0 "Iron Sights"
+ building_dwarven_siege_workshop_02_desc:0 "Two iron markers have been attached to the front and rear end of the Siege Engines. This helps the crew aim easier at longer distances."
+ building_dwarven_siege_workshop_03:0 "Specialization"  
+ building_dwarven_siege_workshop_03_desc:0 "[dwarves|E] in this Hold have created different types of ammunition, with each type serving a unique purpose. Due to this, sieges have become much faster."
+ building_dwarven_siege_workshop_04:0 "Improved Maintenance"
+ building_dwarven_siege_workshop_04_desc:0 "After many years spent training, the [dwarves|E] have become extremely efficient in disassembling and reassembling siege engines for travel. They can also find any problems and fix them before they impact the war effort."
+ building_dwarven_siege_workshop_05:0 "Controlled Demolition"
+ building_dwarven_siege_workshop_05_desc:0 "The [dwarves|E] have perfected the art of besieging to a terrifying degree. It is said that these siege engines have become so powerful that they could bring down the walls of Barad-dûr itself."
 
  #Dwarven Economic Specialization#
  building_type_economic_specialization_01:0 "O' Mountain of Plenty"

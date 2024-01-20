@@ -235,6 +235,7 @@ elven.0104 = { #Elessar as a wedding present - Recipient
 	}
 }
 
+
 elven.0150 = { # Parth Celebrant receives elven envoy
 	content_source = realms
 	type = character_event
@@ -250,7 +251,7 @@ elven.0150 = { # Parth Celebrant receives elven envoy
 		animation = personality_honorable
 	}
 	
-	option = { # We submit, thank you. This will rekindle our claim to Drownholt!
+	option = { 		#We submit, thank you. This will rekindle our claim to Drownholt!
 		name = elven.0150.a
 		custom_tooltip = elven.0150.att
 			character:linefinwe36 = {
@@ -492,6 +493,7 @@ elven.0153 = { # Parth Celebrant submits, Galadriel informed about claim RC VAR
 		}
 	}
 }
+	
 
 elven.0200 = { # Introduction to Thranduil.
 	content_source = realms
@@ -591,37 +593,96 @@ elven.0500 = { # Introduction to Sirgala
 		name = elven.0500.a
 		custom_tooltip = elven.0500.a.tt
 
+		hidden_effect = {
+			create_title_and_vassal_change = {
+				type = swear_fealty
+				save_scope_as = change
+			}
+			every_in_list = {
+				list = human_vassals
+				change_liege = {
+					liege = title:e_arnor.holder
+					change = scope:change
+				}
+			}
+			title:d_emyn_beraid = { # Merethorn gets new titles
+				change_title_holder = {
+					holder = root
+					change = scope:change
+				}
+				every_de_jure_county = {
+					change_title_holder = {
+						holder = root
+						change = scope:change
+					}
+				}
+			}
+			every_held_title = { # All personal titles go to Elendil
+				limit = { tier < tier_kingdom }
+				if = {
+					limit = { tier = tier_county }
+					title_province ?= { set_holding_type = castle_holding }
+					set_county_faith = title:e_arnor.holder.faith
+					set_county_culture = title:e_arnor.holder.culture
+				}
+				change_title_holder = {
+					holder = title:e_arnor.holder
+					change = scope:change
+				}
+			}
+			title:k_sirgala = {
+				every_in_de_jure_hierarchy = {
+					limit = { tier = tier_duchy }
+					set_de_jure_liege_title = title:k_arthedain
+				}
+			}
+			resolve_title_and_vassal_change = scope:change
+
+			destroy_title = title:k_sirgala
+		}
 		ai_chance = {
 			base = 0 # LotR: This should be tied to WotR mode.
+
 			modifier = { # Game Rule
 				has_game_rule = default_ai_behavior
 				add = 100
 			}
+
 			modifier = { # Game Rule
 				has_game_rule = weighted_ai_behavior
-				add = 70
+				add = 75
 			}
+
 			modifier = { # Game Rule
 				has_game_rule = random_ai_behavior
 				add = 50
 			}
 		}
 	}
-
-	option = { # 
+	option = { # We shall never forget our lands!
 		name = elven.0500.b
 		custom_tooltip = elven.0500.b.tt
 
+		every_vassal_or_below = {
+			limit = { is_elf = no }
+			trigger_event = {
+				id = elven.0501
+				days = 1
+			}
+		}
 		ai_chance = {
 			base = 0 # LotR: This should be tied to WotR mode.
+
 			modifier = { # Game Rule
 				has_game_rule = default_ai_behavior
 				add = 0
 			}
+
 			modifier = { # Game Rule
 				has_game_rule = weighted_ai_behavior
-				add = 30
+				add = 25
 			}
+
 			modifier = { # Game Rule
 				has_game_rule = random_ai_behavior
 				add = 50
@@ -636,11 +697,11 @@ elven.0501 = {
 	title = elven.0501.t
 	desc = elven.0501.desc
 	theme = stewardship_duty_focus
-	orphan = yes
 	right_portrait = {
 		character = root
 		animation = personality_proud
 	}
+	
 	option = { # Become vassal of Elendil
 		name = elven.0501.a
 		create_title_and_vassal_change = {

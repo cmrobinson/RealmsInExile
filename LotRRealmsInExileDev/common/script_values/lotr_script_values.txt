@@ -16,6 +16,8 @@ emporer_base_limit = 4
 
 base_colony_upkeep = 1
 
+
+
 ### COLONIZATION VALUE MODIFIERS ###
 
 mult3 = {
@@ -548,7 +550,7 @@ get_numenorean_blood_tier = {
 
 numenorean_blood_tier = { value = get_numenorean_blood_tier }
 
-### MEN-AT-ARMS VALUES ###
+## MEN-AT-ARMS VALUES ###
 culture_ai_weight_monsters = {
 	value = -10
 	

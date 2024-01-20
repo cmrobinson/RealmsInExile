@@ -2975,7 +2975,6 @@
 					male = {
 						# Isengard Uruk
 						1 = empty
-						1 = male_headgear_uruk_isengard_1
 						1 = male_headgear_uruk_isengard_1a
 						1 = male_headgear_uruk_isengard_1b
 						1 = male_headgear_uruk_isengard_1c	
@@ -2984,16 +2983,16 @@
 						1 = male_headgear_uruk_isengard_2
 						1 = male_headgear_uruk_isengard_2a
 						# Berserkers
-						5 = male_headgear_uruk_berserker_1
-						5 = male_headgear_uruk_berserker_2
+						5 = empty
+						5 = empty
 					}
 	
 					female = {
 						# Isengard / Mordor Uruk
 						15 = empty
 						# Berserkers
-						5 = female_headgear_uruk_berserker_1
-						5 = female_headgear_uruk_berserker_2
+						5 = empty
+						5 = empty
 					}
 	
 					boy = male

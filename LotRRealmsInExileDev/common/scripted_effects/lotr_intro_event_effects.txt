@@ -750,7 +750,7 @@ fire_intro_events = {
 				is_landed = yes
 			}
 			trigger_event = { 
-				id = elven.0300
+				id = elven.300
 				days = 1
 			}
 		}
@@ -769,7 +769,7 @@ fire_intro_events = {
 		}
 	}
 
-	character:lineofbornmir2 = { # Merethorn
+	character:lineofbornmir2 = {
 		if = {
 			limit = {
 				is_alive = yes

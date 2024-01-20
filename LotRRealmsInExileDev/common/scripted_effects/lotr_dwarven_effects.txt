@@ -1,6 +1,6 @@
 ﻿### DWARVEN EFFECTS ###
 
-## Reincarnation Effects
+### Reincarnation Effects
 
 create_possible_dorfdad_effect = {
 	dynasty.var:dorfdad ?= { save_scope_as = my_dorfdad }

@@ -2245,12 +2245,19 @@ final_battle_gondor_cb = {
 			}
 		}
 		
-		title:c_barad_dur.title_province = { remove_building = wonder_baraddur }
-
+		title:c_barad_dur.title_province = {
+			remove_building = wonder_baraddur	
+		}
 		title:k_nurn = {
 			if = {
-				limit = { holder = { faith_is_evil = yes } }
-				holder = { destroy_title = prev }
+				limit = {
+					holder = {
+						faith_is_evil = yes
+					}
+				}
+				holder = { # Destroy that title
+					destroy_title = prev
+				}
 			}
 		}
 		character:lineofsauron = {
@@ -2275,11 +2282,18 @@ final_battle_gondor_cb = {
 		character:mouthofsauron = {
 			hidden_effect = {
 				every_held_title = {
-					limit = { tier > tier_county }
-					holder = { destroy_title = prev }
+					limit = {
+						tier > tier_county
+					}
+					holder = { # Destroy that title
+						destroy_title = prev
+					}
 				}
-				every_held_title = { # Distribute excess non-capital counties to new characters 
-					limit = { tier = tier_county }
+				every_held_title = { # Distribute excess non-capital counties to new characters
+				
+					limit = { # For every non-capital county
+						tier = tier_county
+					}
 		
 					set_county_faith = faith:sons_of_sauron
 		
@@ -2290,7 +2304,9 @@ final_battle_gondor_cb = {
 						culture = culture:burgulhai
 						faith = faith:sons_of_sauron
 						gender_female_chance = 0
-						after_creation = { save_temporary_scope_as = new_holder }
+						after_creation = {
+							save_temporary_scope_as = new_holder
+						}
 					}
 					
 					create_title_and_vassal_change = { # Define type of title change as a granting of the title
@@ -2347,8 +2363,11 @@ final_battle_gondor_cb = {
 			}
 		}
 		
+		
 		hidden_effect = {
-            scope:attacker = {  trigger_event = gondor.2102 }
+            scope:attacker = {
+                trigger_event = gondor.2102
+            }
 			every_living_character = {
 				trigger_event = {
 					id = gondor.2103

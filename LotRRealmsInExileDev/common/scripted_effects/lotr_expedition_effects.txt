@@ -106,6 +106,7 @@
 			}
 		}
 	}
+
 	county = { generate_coa = yes }
 	county = { $RULER$ = { set_realm_capital = prev } }
 
@@ -114,9 +115,7 @@
 		limit = { scope:activity = { has_activity_option = { category = special_type option = expedition_type_standard } } }
 		scope:host = {
 			every_held_title = {
-				limit = {
-					NOT = { this = scope:activity.activity_location.county }
-				}
+				limit = { NOT = { this = scope:activity.activity_location.county } }
 				add_to_list = transfered_titles
 			}
 		}
@@ -214,6 +213,7 @@
 			}
 
 			county.title_province = { add_building = dwarven_depths_02 }
+			county = { change_development_level = 5 }
 		}
 	}
 }

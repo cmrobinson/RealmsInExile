@@ -715,7 +715,7 @@ lineofitaman5 = {
     learning = 4
     prowess = 5
 
-    trait = education_diplomacy_4
+    trait = education_martial_3
 
     6986.11.14 = {
         birth = yes
@@ -726,7 +726,7 @@ lineofitaman5 = {
     }
 
     7067.8.14 = {
-        death = { death_reason = death_natural_causes }
+        death = { death_reason = death_battle }
     }
 }
 
@@ -762,7 +762,7 @@ lineofitaman6 = {
 }
 
 lineofitaman7 = {
-    name = Ukko
+    name = Lauri
 
     dynasty = dynasty_itaman
 	religion = faith_lossoth
@@ -773,18 +773,18 @@ lineofitaman7 = {
 
     sexuality = heterosexual
 
-    trait = shy
-    trait = wrathful
-    trait = forgiving
+    trait = sadistic
+    trait = humble
+    trait = temperate
 
-    diplomacy = 8
-    martial = 11
-    stewardship = 4
-    intrigue = 1
-    learning = 5
-    prowess = 6
+    diplomacy = 7
+    martial = 7
+    stewardship = 3
+    intrigue = 7
+    learning = 4
+    prowess = 3
 
-    trait = education_martial_2
+    trait = education_diplomacy_2
 
     7007.1.1 = {
         birth = yes

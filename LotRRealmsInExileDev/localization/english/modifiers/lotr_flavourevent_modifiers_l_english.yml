@@ -48,10 +48,3 @@
  
  lotr_dwarven_steel_county_modifier:0 "Dwarven Steel"
  lotr_dwarven_steel_county_modifier_desc:0 "This county has access to Dwarven steel, making weapons of unmatched qualitys." 
-
-### Maglor Event Chain Modifiers ###
-  rebuilding_ost_in_edhil:0 "Rebuilding Ost-in-Edhil"
-  rebuilding_ost_in_edhil_desc:0 "Dwarven artisans have agreed to help rebuild Eregion."
-
-  less_levy_count_gondor_lords:0 ""
-  less_levy_count_gondor_lords_desc:0 ""

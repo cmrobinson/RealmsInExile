@@ -154,8 +154,8 @@ emperor_feudal_male_e_mordor = {
 	only_holder = no
 	titles = { e_mordor }
 	heritages = { heritage_ainur heritage_fallen_ainur }
-}
 
+}
 emperor_feudal_female_e_mordor = { 
 	type = character
 	gender = female
@@ -308,7 +308,7 @@ emperor_harad_male = {
 	only_holder = no
 	heritages = { heritage_northern_apysaic heritage_middle_apysaic heritage_southern_apysaic }
 }
-emperor_harad_female_ = {
+emperor_harad_female = {
 	type = character
 	gender = female
 	special = holder
@@ -1169,7 +1169,6 @@ county_elves = {
 	only_holder = no
 	heritages = { heritage_quendi heritage_calaquendi heritage_lomiquendi heritage_moriquendi }
 	priority = 50
-	heritages = { heritage_quendi heritage_calaquendi heritage_lomiquendi heritage_moriquendi }
 }
 duchy_elves = {
 	type = title
@@ -1178,7 +1177,6 @@ duchy_elves = {
 	only_holder = no
 	heritages = { heritage_quendi heritage_calaquendi heritage_lomiquendi heritage_moriquendi }
 	priority = 100
-	heritages = { heritage_quendi heritage_calaquendi heritage_lomiquendi heritage_moriquendi }
 }
 
 
@@ -1568,7 +1566,7 @@ count_dunedain_male = {
 	gender = male
 	special = holder
 	tier = county
-	heritages = { heritage_dunedain  }
+	heritages = { heritage_dunedain }
 	priority = 40
 }
 count_dunedain_female = {
@@ -1576,7 +1574,7 @@ count_dunedain_female = {
 	gender = female
 	special = holder
 	tier = county
-	heritages = { heritage_dunedain  }
+	heritages = { heritage_dunedain }
 	priority = 40
 }
 
@@ -1592,7 +1590,7 @@ duke_dunedain_male = {
 	gender = male
 	special = holder
 	tier = duchy
-	heritages = { heritage_dunedain }
+	heritages = { heritage_dunedain  }
 	priority = 50
 }
 
@@ -1604,31 +1602,13 @@ duke_dunedain_female = {
 	heritages = { heritage_dunedain  }
 	priority = 50
 }
+
 kingdom_dunedain = {
 	type = title
 	tier = kingdom
 	heritages = { heritage_dunedain }
 	priority = 90
 }
-
-king_dunedain_male = {
-	type = character
-	gender = male
-	special = holder
-	tier = kingdom
-	heritages = { heritage_dunedain }
-	priority = 90
-}
-
-king_dunedain_female = {
-	type = character
-	gender = female
-	special = holder
-	tier = kingdom
-	heritages = { heritage_dunedain }
-	priority = 90
-}
-
 
 high_kingdom_dunedain = {
 	type = title
@@ -1673,8 +1653,9 @@ high_king_dunedain_reunited_kingdom_female = {
 }
 
 high_kingdom_dunedain_reunited_kingdom = {
-	type = title
+	type = character
 	tier = empire
+	special = holder
 	titles = { e_reunitedkingdom e_arnor }
 	heritages = { heritage_dunedain }
 	priority = 1000
@@ -1700,7 +1681,7 @@ high_king_dunedain_numenor_in_exile_female = {
 }
 
 high_kingdom_numenor_in_exile = {
-	type = title
+	type = character
 	tier = empire
 	#special = holder
 	titles = { e_numenor_in_exile }
@@ -1708,6 +1689,23 @@ high_kingdom_numenor_in_exile = {
 	priority = 1200
 }
 
+king_dunedain_male = {
+	type = character
+	gender = male
+	special = holder
+	tier = kingdom
+	heritages = { heritage_dunedain }
+	priority = 90
+}
+
+king_dunedain_female = {
+	type = character
+	gender = female
+	special = holder
+	tier = kingdom
+	heritages = { heritage_dunedain }
+	priority = 90
+}
 
 prince_dunedain_male = {
 	type = character
@@ -1957,6 +1955,7 @@ count_feudal_male_rohirrim = {
 	top_liege = no
 	only_holder = no
 	heritages = { heritage_hadorim }
+
 }
 count_feudal_female_rohirrim = {
 	type = character

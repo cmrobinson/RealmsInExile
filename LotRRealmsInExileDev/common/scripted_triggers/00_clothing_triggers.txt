@@ -120,11 +120,9 @@ portrait_wear_armor_trigger = {
 				has_activity_type = activity_pilgrimage
 				AND = { # LotR
 					portrait_dwarf_clothing_trigger = yes
-					is_male = yes
-					involved_activity ?= { 
-						has_activity_type = activity_mining
-						activity_location = root.location
-					}
+					activity_host = { is_male = yes }
+					has_activity_type = activity_mining
+					activity_location = root.location
 				}
 			}
 		}
@@ -2613,6 +2611,22 @@ portrait_mordor_uruk_clothing_spouse_trigger = {
 
 portrait_mordor_uruk_clothing_contents_trigger = {
 	has_clothing_gfx = mordor_uruk_clothing_gfx
+}
+
+## Burgulhai ##
+
+portrait_burgulhai_clothing_trigger = {
+	scope:culture = { portrait_burgulhai_clothing_contents_trigger = yes }
+}
+
+portrait_burgulhai_clothing_spouse_trigger = {
+	culture = {
+		portrait_burgulhai_clothing_contents_trigger = yes
+	}
+}
+
+portrait_burgulhai_clothing_contents_trigger = {
+	has_clothing_gfx = burgulhai_clothing_gfx
 }
 
 ## Moria Orc ##

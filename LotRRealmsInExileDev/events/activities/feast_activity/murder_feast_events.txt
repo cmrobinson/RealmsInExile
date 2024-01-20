@@ -1093,7 +1093,6 @@ feast.2010 = {
 	title = feast.2010.t
 	desc = feast.2010.desc
 	theme = feast_activity
-	orphan = yes
 	override_icon = {
 		reference = "gfx/interface/icons/event_types/type_illness.dds"
 	}
@@ -1119,7 +1118,6 @@ feast.2011 = {
 	title = feast.2011.t
 	desc = feast.2011.desc
 	theme = feast_activity
-	orphan = yes
 	override_icon = {
 		reference = "gfx/interface/icons/event_types/type_illness.dds"
 	}
@@ -1144,7 +1142,6 @@ feast.2020 = {
 	title = feast.2020.t
 	desc = feast.2020.desc
 	theme = feast_activity
-	orphan = yes
 	override_icon = {
 		reference = "gfx/interface/icons/event_types/type_feast.dds"
 	}
@@ -1169,7 +1166,6 @@ feast.2021 = {
 	title = feast.2021.t
 	desc = feast.2021.desc
 	theme = feast_activity
-	orphan = yes
 	override_icon = {
 		reference = "gfx/interface/icons/event_types/type_feast.dds"
 	}

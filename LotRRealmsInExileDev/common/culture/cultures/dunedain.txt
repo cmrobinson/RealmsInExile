@@ -8,6 +8,8 @@
 #	Gondorian
 #	Ithilien
 #	Harondorim
+# 	Orodbedhrim
+#	Uialdain
 
 numenorean = {
 	color = { 95 71 102 }
@@ -291,7 +293,8 @@ orodbedhrim = { # The mixed people of the highlands, descended from the Men of t
 }
 
 uialdain = { #Folk of Emyn Uial (Hills of Evendim)
-	color = { 58 119 144 } 
+	#color = { 58 119 144 } 
+	color = { 38 102 158 }
 	created = 6008.1.1 # Aftermath of the Battle of Fornost
 	parents = { arnorian }
 	

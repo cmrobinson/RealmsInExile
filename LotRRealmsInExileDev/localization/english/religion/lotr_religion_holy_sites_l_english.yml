@@ -46,7 +46,14 @@
  holy_site_gundabadhallofawakening_name:0 "Mazalabkân" # Chamber of Awakening
  holy_site_dolmed_name:0 "Zelemabkân" # West-Awakening
  holy_site_erebor_name:0 "Erebor"
- 
+
+ ### Hobbit Holy Sites ###
+ holy_site_michel_delving_name:0 "Michel Delving"
+ holy_site_tookborough_name:0 "The Great Smials"
+ holy_site_buckland_name:0 "Brandy Hall"
+ holy_site_marishborough_name:0 "Marishborough"
+ holy_site_gladden_fields_name:0 "Gladden Fields"
+
  ### DUNLENDING & GWATHUIRIM HOLY SITES ###
  #holy_site_riascach_name:0 "Riascach"
  holy_site_riascach_name:0 "Loch Thiar"
@@ -217,7 +224,12 @@
  holy_site_scorched_throne_name:0 "Scorched Throne"
  holy_site_ashen_hallway_name:0 "Ashen Hallway"
  
- 
- 
- 
-
+ ### Forodwaith Holy Sites
+ holy_site_isa_point_name:0 "Isä Point"
+ holy_site_kuru_leiri_name:0 "Kuru Leiri"
+ holy_site_korkeama_name:0 "Korkeama"
+ holy_site_tor_of_thamba_name:0 "Tor of Thamba"
+ holy_site_litash_name:0 "Litash"
+ holy_site_balshas_rest_name:0 "Balsha's Rest"
+ holy_site_roakaru_name:0 "Roakaru"
+ holy_site_kolthuld_name:0 "Kolthuld"

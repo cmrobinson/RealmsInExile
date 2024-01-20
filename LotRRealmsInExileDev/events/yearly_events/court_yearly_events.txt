@@ -379,6 +379,7 @@ scripted_trigger court_1020_suitable_guest_trigger = {
 	save_temporary_scope_as = fugitive_check
 	NOT = {
 		root = { has_strong_hook = scope:fugitive_check }
+		is_wastelands = yes # LOTR
 	}
 }
 
@@ -440,6 +441,7 @@ court_yearly.1020 = {
 			save_scope_as = fugitive
 		}
 		random_neighboring_and_across_water_top_liege_realm = {
+			limit = { is_wastelands = no } # LOTR
 			holder = { save_scope_as = foreign_ruler }
 		}
 		scope:foreign_ruler = {

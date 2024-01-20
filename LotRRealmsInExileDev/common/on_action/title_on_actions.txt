@@ -68,6 +68,8 @@ on_title_destroyed = {
 			}
 		}
 		
+		correct_wastelands_tracker = yes
+
 		# if = {
 		# 	limit = {
 		# 		scope:landed_title = {
@@ -79,6 +81,11 @@ on_title_destroyed = {
 		# 		years = { 3 5 }
 		# 	}
 		# }
+		remove_upkeep_modifier = yes
+		trigger_event = {
+			id = wastelands.0007
+			days = 1
+		}
 	}
 	events = {
 	}
@@ -105,6 +112,9 @@ on_title_gain = {
 				NOR = {
 					is_dwarf = yes
 					is_orc = yes
+					is_istari = yes
+					is_nazgul = yes
+					is_sauron = yes
 				}
 			}
 			make_settlement_county_wilderness = { COUNTY = scope:title }
@@ -1057,6 +1067,9 @@ on_title_gain = {
 				}
 			}
 		}
+		
+		correct_wastelands_tracker = yes
+		scope:previous_holder ?= { correct_wastelands_tracker = yes }
 	}
 	events = {
 		orcs.0010
@@ -1360,6 +1373,9 @@ on_title_gain_inheritance = {
 				root = { destroy_title = scope:title }
 			}
 		}
+		
+		correct_wastelands_tracker = yes
+		scope:previous_holder ?= { correct_wastelands_tracker = yes }
 	}
 }
 
@@ -1488,6 +1504,9 @@ on_title_gain_usurpation = {
 			}
 			resolve_title_and_vassal_change = scope:title_change
 		}
+		
+		correct_wastelands_tracker = yes
+		scope:previous_holder ?= { correct_wastelands_tracker = yes }
 	}
 }
 
@@ -1686,6 +1705,9 @@ on_title_lost = {
 				make_settlement_county_wilderness = { COUNTY = this }
 			}
 		}
+		
+		correct_wastelands_tracker = yes
+		scope:new_holder = { correct_wastelands_tracker = yes }
 	}
 }
 
@@ -1795,6 +1817,8 @@ on_rank_up = { # Will not fire during history execution or for dying characters
 			remove_upkeep_modifier = yes
 			trigger_event = wastelands.0007
 		}
+		
+		correct_wastelands_tracker = yes
 	}
 }
 
@@ -1877,6 +1901,8 @@ on_rank_down = { # Will not fire during history execution or for dying character
 			remove_upkeep_modifier = yes
 			trigger_event = wastelands.0007
 		}
+		
+		correct_wastelands_tracker = yes
 	}
 }
 

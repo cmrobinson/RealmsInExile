@@ -297,7 +297,6 @@ request_elven_healer_decision = {
 # Establish the high kingdom of Eryn Lasgalen
 # by Fredsch
 ##################################################
-
 decision_establish_high_kingdom_of_eryn_lasgalen = {
 	picture = "gfx/interface/illustrations/decisions/decision_eryn_lasgalen.dds"
 	title = decision_establish_high_kingdom_of_eryn_lasgalen
@@ -434,7 +433,6 @@ decision_destroy_dol_guldur = {
 # Claim Amon Lanc for Laurelindorenan
 # by Fredsch
 ##################################################
-
 claim_amon_lanc_for_laurelindorenan = {
 	picture = "gfx/interface/illustrations/decisions/decision_eryn_lasgalen.dds"
 	title = claim_amon_lanc_for_laurelindorenan
@@ -522,9 +520,8 @@ claim_amon_lanc_for_laurelindorenan = {
 
 ##################################################
 # Elevate Edhellond into Kingdom
-# Coding/Localization by Jaco_Daan
+# by Jaco_Daan
 ##################################################
-
 decision_make_edhellond_kingdom = {
 	picture = "gfx/interface/illustrations/event_scenes/armenelos.dds"
 	title = decision_make_edhellond_kingdom
@@ -639,8 +636,7 @@ decision_make_edhellond_kingdom = {
 
 ##################################################
 # Reclaim Sîrgala Kingdom
-# Coding by Jaco_Daan
-# Localization by Commander Sol
+# by Jaco_Daan
 ##################################################
 
 decision_reclaim_sirgala = {

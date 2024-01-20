@@ -13,6 +13,7 @@ autoerrorfixer_variable.1 = {
 		fix_variable_error = {ERROR = achievement_bad_blood_flag}
 		fix_variable_error = {ERROR = ulukai}
 		fix_variable_error = {ERROR = holy_order_give_a_dog_a_bone_achievement}
+		fix_variable_error = {ERROR = name_spooky}
 		fix_variable_error = {ERROR = waiting}
 		fix_variable_error = {ERROR = saruman}
 		fix_variable_error = {ERROR = no_auto_family}
@@ -416,6 +417,7 @@ autoerrorfixer_variable.1 = {
 		fix_variable_error = {ERROR = rabbinicism_accepted_monogamy}
 		fix_variable_error = {ERROR = orcrist}
 		fix_variable_error = {ERROR = lotr_is_tim}
+		fix_variable_error = {ERROR = mining_invalidated}
 		fix_variable_error = {ERROR = cannot_imprison}
 		fix_variable_error = {ERROR = mining_started}
 		fix_variable_error = {ERROR = mining_outcome_random}
@@ -431,22 +433,17 @@ autoerrorfixer_variable.1 = {
 		fix_variable_error = {ERROR = cup_jamshid}
 		fix_variable_error = {ERROR = sassanian_sword}
 		fix_variable_error = {ERROR = promote_persian_scripture_piety_refund}
-		fix_variable_error = {ERROR = mining_invalidated}
-		fix_variable_error = {ERROR = mining_outcome_random}
 		fix_variable_error = {ERROR = fp3_vassalize_the_caliph_achievement_unlocked}
-		fix_variable_error = {ERROR = fungi_species}
 		fix_variable_error = {ERROR = fp3_abassid_strong_achievement_unlocked}
 		fix_variable_error = {ERROR = fp3_challenger_caliphate_achievement_unlocked}
 		fix_variable_error = {ERROR = had_event_yearly_persian_1002}
 		fix_variable_error = {ERROR = fire_recently_quenched}
 		fix_variable_error = {ERROR = fp3_assassinated_tier1}
 		fix_variable_error = {ERROR = pledged_to_not_promote_persian}
-		fix_variable_error = {ERROR = resource_map_tooltip}
 		fix_variable_error = {ERROR = pledged_to_quench_fire}
 		fix_variable_error = {ERROR = fp3_assassinated_tier2}
 		fix_variable_error = {ERROR = fp3_mulct_them_dry_achievement_flag}
 		fix_variable_error = {ERROR = fp3_assassinated_tier3}
-		fix_variable_error = {ERROR = mining_started}
 		fix_variable_error = {ERROR = fp3_rekindle_iran_achievement_unlocked}
 		fix_variable_error = {ERROR = dar_al_islam}
 		fix_variable_error = {ERROR = fp3_is_a_loyalist_puppet}

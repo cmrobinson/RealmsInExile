@@ -778,13 +778,13 @@ clan_invasion_war = {
 		}
 		
 		hidden_effect = {
-			setup_invasion_cb = {
-				titles = target_titles
-				attacker = scope:attacker
-				defender = scope:defender
-				change = scope:change
-				take_occupied = yes
-			}
+		setup_invasion_cb = {
+			titles = target_titles
+			attacker = scope:attacker
+			defender = scope:defender
+			change = scope:change
+			take_occupied = yes
+		}
 		}
 
 		show_as_tooltip = {

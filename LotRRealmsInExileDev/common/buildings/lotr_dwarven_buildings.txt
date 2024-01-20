@@ -3928,16 +3928,16 @@ dwarven_hoard_01 = {
 			}
 		}
 	}
-	
+
 	cost_gold = 2000
-	
+
 	province_modifier = {
 		monthly_income = -3.0
 	}
-	
+
 	character_modifier = {
-		monthly_dynasty_prestige = 0.05
-		monthly_prestige = 1
+		monthly_dynasty_prestige_mult = 0.04
+		monthly_prestige_gain_mult = 0.1
 		stress_gain_mult = -0.05
 		court_grandeur_baseline_add = 5
 		same_faith_opinion = 2
@@ -3946,7 +3946,7 @@ dwarven_hoard_01 = {
 	county_modifier = {
 		development_growth_factor = 0.02
 	}
-	
+
 	next_building = dwarven_hoard_02
 
 	type_icon = "icon_building_coin_pile.dds"
@@ -3959,9 +3959,9 @@ dwarven_hoard_01 = {
 		ai_general_building_modifier = yes
 	}
 }
-	
+
 dwarven_hoard_02 = {
-	construction_time = 2790
+	construction_time = very_slow_construction_time
 
 	is_enabled = {
 		scope:holder = { is_dwarf = yes }
@@ -3995,16 +3995,16 @@ dwarven_hoard_02 = {
 			}
 		}
 	}
-	
+
 	cost_gold = 4000
-	
+
 	province_modifier = {
 		monthly_income = -6.0
 	}
-	
+
 	character_modifier = {
-		monthly_dynasty_prestige = 0.10
-		monthly_prestige = 2
+		monthly_dynasty_prestige_mult = 0.08
+		monthly_prestige_gain_mult = 0.2
 		stress_gain_mult = -0.10
 		court_grandeur_baseline_add = 10
 		same_faith_opinion = 4
@@ -4013,7 +4013,7 @@ dwarven_hoard_02 = {
 	county_modifier = {
 		development_growth_factor = 0.04
 	}
-	
+
 	next_building = dwarven_hoard_03
 
 	type_icon = "icon_building_coin_pile.dds"
@@ -4028,7 +4028,7 @@ dwarven_hoard_02 = {
 }
 	
 dwarven_hoard_03 = {
-	construction_time = 2790
+	construction_time = very_slow_construction_time
 
 	is_enabled = {
 		scope:holder = { is_dwarf = yes }
@@ -4068,10 +4068,10 @@ dwarven_hoard_03 = {
 	province_modifier = {
 		monthly_income = -9.0
 	}
-	
+
 	character_modifier = {
-		monthly_dynasty_prestige = 0.15
-		monthly_prestige = 3
+		monthly_dynasty_prestige_mult = 0.12
+		monthly_prestige_gain_mult = 0.3
 		stress_gain_mult = -0.15
 		court_grandeur_baseline_add = 15
 		same_faith_opinion = 6
@@ -4080,7 +4080,7 @@ dwarven_hoard_03 = {
 	county_modifier = {
 		development_growth_factor = 0.06
 	}
-
+	
 	next_building = dwarven_hoard_04
 	
 	type_icon = "icon_building_coin_pile.dds"
@@ -4095,7 +4095,7 @@ dwarven_hoard_03 = {
 }
 	
 dwarven_hoard_04 = {
-	construction_time = 2790
+	construction_time = very_slow_construction_time
 
 	is_enabled = {
 		scope:holder = { is_dwarf = yes }
@@ -4129,16 +4129,16 @@ dwarven_hoard_04 = {
 			}
 		}
 	}
-	
+
 	cost_gold = 8000
 	
 	province_modifier = {
 		monthly_income = -12.0
 	}
-	
+
 	character_modifier = {
-		monthly_dynasty_prestige = 0.20
-		monthly_prestige = 4
+		monthly_dynasty_prestige_mult = 0.16
+		monthly_prestige_gain_mult = 0.4
 		stress_gain_mult = -0.20
 		court_grandeur_baseline_add = 20
 		same_faith_opinion = 8
@@ -4147,7 +4147,7 @@ dwarven_hoard_04 = {
 	county_modifier = {
 		development_growth_factor = 0.08
 	}
-	
+
 	next_building = dwarven_hoard_05
 
 	type_icon = "icon_building_coin_pile.dds"
@@ -4162,7 +4162,7 @@ dwarven_hoard_04 = {
 }
 
 dwarven_hoard_05 = {
-	construction_time = 2790
+	construction_time = very_slow_construction_time
 
 	is_enabled = {
 		scope:holder = { is_dwarf = yes }
@@ -4196,16 +4196,16 @@ dwarven_hoard_05 = {
 			}
 		}
 	}
-	
+
 	cost_gold = 10000
 
 	province_modifier = {
 		monthly_income = -15.0
 	}
-	
+
 	character_modifier = {
-		monthly_dynasty_prestige = 0.25
-		monthly_prestige = 5
+		monthly_dynasty_prestige_mult = 0.20
+		monthly_prestige_gain_mult = 0.5
 		stress_gain_mult = -0.25
 		court_grandeur_baseline_add = 25
 		same_faith_opinion = 10
@@ -4214,7 +4214,7 @@ dwarven_hoard_05 = {
 	county_modifier = {
 		development_growth_factor = 0.10
 	}
-	
+
 	#next_building = dwarven_hoard_05
 
 	type_icon = "icon_building_coin_pile.dds"
@@ -4227,7 +4227,6 @@ dwarven_hoard_05 = {
 		ai_general_building_modifier = yes
 	}
 }
-
 # Military #
 
 #dwarven armory
@@ -7132,7 +7131,7 @@ dwarven_kings_armory_military_01 = {
 	
 	character_modifier = {
 		prowess = 2
-		knight_effectiveness_mult = 0.15
+		knight_effectiveness_mult = 0.10
 		knight_limit = 1
 	}
 	
@@ -7182,7 +7181,7 @@ dwarven_kings_armory_military_02 = {
 	
 	character_modifier = {
 		prowess = 4
-		knight_effectiveness_mult = 0.30
+		knight_effectiveness_mult = 0.20
 		knight_limit = 2
 	}
 	
@@ -7232,7 +7231,7 @@ dwarven_kings_armory_military_03 = {
 	
 	character_modifier = {
 		prowess = 6
-		knight_effectiveness_mult = 0.45
+		knight_effectiveness_mult = 0.30
 		knight_limit = 3
 	}
 	
@@ -7284,6 +7283,7 @@ dwarven_grand_library_01 = {
 	character_modifier = {
 		monthly_lifestyle_xp_gain_mult = 0.05
 		learning = 1
+		stress_loss_mult = 0.05
 	}
 	
 	next_building = dwarven_grand_library_02
@@ -7332,7 +7332,8 @@ dwarven_grand_library_02 = {
 	
 	character_modifier = {
 		monthly_lifestyle_xp_gain_mult = 0.10
-		learning = 1
+		learning = 2
+		stress_loss_mult = 0.10
 	}
 	
 	next_building = dwarven_grand_library_03
@@ -7380,8 +7381,9 @@ dwarven_grand_library_03 = {
 	cost_gold = 8000
 	
 	character_modifier = {
-		monthly_lifestyle_xp_gain_mult = 0.15
-		learning = 2
+		monthly_lifestyle_xp_gain_mult = 0.20
+		learning = 3
+		stress_loss_mult = 0.20
 	}
 	
 	#next_building = dwarven_grand_library_03
