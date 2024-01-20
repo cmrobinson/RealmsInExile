@@ -2766,7 +2766,7 @@ county_goblin = {
 	top_liege = no
 	only_holder = yes
 	heritages = { heritage_goblin }
-	priority = 100
+	priority = 150
 }
 
 duchy_goblin = {
@@ -2775,7 +2775,7 @@ duchy_goblin = {
 	top_liege = no
 	only_holder = yes
 	heritages = { heritage_goblin }
-	priority = 100
+	priority = 150
 }
 
 kingdom_goblin = {
@@ -2784,7 +2784,7 @@ kingdom_goblin = {
 	top_liege = no
 	only_holder = yes
 	heritages = { heritage_goblin }
-	priority = 100
+	priority = 150
 }
 
 empire_goblin = {
@@ -2793,11 +2793,43 @@ empire_goblin = {
 	top_liege = no
 	only_holder = yes
 	heritages = { heritage_goblin }
-	priority = 120
+	priority = 150
+}
+king_goblin_town = {
+	type = character
+	special = holder
+	tier = kingdom
+	priority = 910
+	top_liege = no
+	only_holder = no
+	heritages = { heritage_goblin }
+	titles = { d_goblin_town }
 }
 duke_goblin_town = {
 	type = character
 	special = holder
+	tier = duchy
+	priority = 910
+	top_liege = no
+	only_holder = no
+	heritages = { heritage_goblin }
+	titles = { d_goblin_town }
+}
+king_goblin_town_female = {
+	type = character
+	special = holder
+	gender = female
+	tier = kingdom
+	priority = 910
+	top_liege = no
+	only_holder = no
+	heritages = { heritage_goblin }
+	titles = { d_goblin_town }
+}
+duke_goblin_town_female = {
+	type = character
+	special = holder
+	gender = female
 	tier = duchy
 	priority = 910
 	top_liege = no
