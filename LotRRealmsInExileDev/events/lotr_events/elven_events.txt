@@ -3448,7 +3448,7 @@ elven.1831 = { # Hidden event to give elven MaA event troops to Maglor
 	trigger = {
 		trigger_if = {
 			limit = { has_variable = amon_lanc_troops }
-			var:amon_lanc_troops < 5
+			var:amon_lanc_troops < 7
 		}
 	}
 
@@ -3752,37 +3752,89 @@ elven.2000 = { # Sauron is attacked by Maglor
 	option = { name = elven.2000.a }
 }
 
-elven.2001 = { # Start the song battle between Sauron/Maglor
-	hidden = yes
+elven.2001 = { # First Song Battle Event between Maglor/Sauron
+	content_source = realms
+	type = character_event
+	title = elven.2001.t
+	desc = elven.2001.desc
+	theme = realm
+	window = duel_event
 
-	immediate = {
-		# configure_start_single_combat_effect = {
-		# 	SC_INITIATOR = root
-		# 	SC_ATTACKER = root
-		# 	SC_DEFENDER = character:lineofsauron
-		# 	FATALITY = no
-		# 	FIXED = scope:sc_attacker
-		# 	LOCALE = terrain_scope
-		# 	OUTPUT_EVENT = artifact.2001
-		# 	INVALIDATION_EVENT = fp1_tbc.0021
-		# }
-		# configure_start_song_battle_effect = {
-		# 	SB_INITIATOR = root
-		# 	SB_ATTACKER = root
-		# 	SB_DEFENDER = character:lineofsauron
-		# 	LOCALE = random_nice_day
-		# 	OUTPUT_EVENT = elven.2002
-		# 	INVALIDATION_EVENT = song_battle.0021
-		# 	FIXED = scope:sb_attacker
-		# }
+	left_portrait = {
+		character = character:linefinwe11
+		scripted_animation = duel_wield_weapon
 	}
+	right_portrait = {
+		character = character:lineofsauron
+		scripted_animation = duel_wield_weapon
+	}
+
+	option = {
+		name = elven.2001.b
+
+		trigger_event = elven.2002
+	}
+
 }
 
-elven.2002 = { # Maglor receives Saurons palantir/relics when he wins the song battle
+elven.2002 = { # Second Song Battle Event between Maglor/Sauron
 	content_source = realms
 	type = character_event
 	title = elven.2002.t
 	desc = elven.2002.desc
+	theme = realm
+	window = duel_event
+
+	left_portrait = {
+		character = character:linefinwe11
+		scripted_animation = duel_wield_weapon
+	}
+	right_portrait = {
+		character = character:lineofsauron
+		scripted_animation = duel_wield_weapon
+	}
+
+	option = {
+		name = elven.2002.b
+		
+		trigger_event = elven.2003
+	}
+}
+
+elven.2003 = { # Third Song Battle Event between Maglor/Sauron
+	content_source = realms
+	type = character_event
+	title = elven.2003.t
+	desc = elven.2003.desc
+	theme = realm
+	window = duel_event
+
+	left_portrait = {
+		character = character:linefinwe11
+		scripted_animation = duel_wield_weapon
+	}
+	right_portrait = {
+		character = character:lineofsauron
+		scripted_animation = duel_wield_weapon
+	}
+
+	option = {
+		name = elven.2003.b
+
+		kill_nazgul_effect = yes
+
+		if = {
+			limit = { root = character:linefinwe11 }
+			character:linefinwe11 = { trigger_event = elven.2010 }
+		}
+	}
+}
+
+elven.2010 = { # Maglor receives Saurons palantir/relics when he wins the song battle
+	content_source = realms
+	type = character_event
+	title = elven.2010.t
+	desc = elven.2010.desc
 	theme = realm
 
 	immediate = {
@@ -3808,8 +3860,8 @@ elven.2002 = { # Maglor receives Saurons palantir/relics when he wins the song b
 
 	right_portrait = {
 		character = character:linefinwe11
-		animation = aggressive_sword
+		animation = personality_honorable
 	}
 
-	option = { name = elven.2002.a }
+	option = { name = elven.2010.a }
 }

@@ -124,3 +124,5 @@
   maglor_underground_cb_defeat_desc:0 "You fail to drive the orcs from the mountain holdings"
   maglor_underground_cb_name:0 "Purge underground region"
   maglor_underground_cb_effect_tt:0 "Kill all the orcs living in the targeted region, making it a [wilderness|E] county"
+
+  final_battle_maglor_cb:0 "Annihilation of the Abhorred"

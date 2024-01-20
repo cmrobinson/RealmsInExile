@@ -4618,9 +4618,7 @@ final_battle_maglor_cb = {
 		}
 		always = no
 		
-		scope:attacker = {		
-			NOT = { has_culture = culture:wastelands }
-		}
+		scope:attacker = { NOT = { has_culture = culture:wastelands } }
 	}
 	
 	target_titles = all
@@ -4884,8 +4882,6 @@ final_battle_maglor_cb = {
 			}
 		}
 		
-		#juke note: moved nazgul to scripted effect
-		kill_nazgul_effect = yes
 		
 		scope:attacker = {
 			add_prestige = 5000
@@ -4893,11 +4889,9 @@ final_battle_maglor_cb = {
 		}
 		
 		hidden_effect = {
-            scope:attacker = {  trigger_event = gondor.2102 }
 			every_living_character = {
 				trigger_event = {
-					id = gondor.2103
-					#days = 30
+					id = news_event.0025
 				}
 			}
 			faith:lidless_eye = {
@@ -4912,30 +4906,6 @@ final_battle_maglor_cb = {
 					desc = fervor_dark_lord_defeated
 				}
 			}
-			#faith:red_eye_cult = {	#causes weird heresies like pirate haradwaith
-			#	change_fervor = {
-			#		value = -30
-			#		desc = fervor_dark_lord_defeated
-			#	}
-			#}
-			#faith:faith_haruze = {
-			#	change_fervor = {
-			#		value = -30
-			#		desc = fervor_dark_lord_defeated
-			#	}
-			#}
-			#faith:faith_kerkassk = {
-			#	change_fervor = {
-			#		value = -30
-			#		desc = fervor_dark_lord_defeated
-			#	}
-			#}
-			#faith:faith_khandish_sauronic = {
-			#	change_fervor = {
-			#		value = -30
-			#		desc = fervor_dark_lord_defeated
-			#	}
-			#}
 			
 			#juke note: moved religious conversion to a scripted effect
 			lidless_eye_destroyed_effect = yes
