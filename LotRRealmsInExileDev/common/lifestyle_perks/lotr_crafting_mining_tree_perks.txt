@@ -1,4 +1,4 @@
-expedition_leader_perk = {
+﻿expedition_leader_perk = {
 	lifestyle = crafting_lifestyle
 	tree = mining
 	position = { 1 0 }

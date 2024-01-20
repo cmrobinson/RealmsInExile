@@ -1,4 +1,4 @@
-action_lifestyle_crafting = {
+﻿action_lifestyle_crafting = {
 	type = alert
 	check_create_action = {
 		

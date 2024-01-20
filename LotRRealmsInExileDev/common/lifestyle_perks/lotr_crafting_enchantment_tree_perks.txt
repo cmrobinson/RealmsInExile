@@ -1,4 +1,4 @@
-loreseeker_perk = {
+﻿loreseeker_perk = {
 	lifestyle = crafting_lifestyle
 	tree = enchantment
 	position = { 1 0 }

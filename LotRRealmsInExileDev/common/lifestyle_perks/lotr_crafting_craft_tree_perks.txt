@@ -1,4 +1,4 @@
-# material_knowledge_perk --> general increase in the XP gained when an artifact has been crafted
+﻿# material_knowledge_perk --> general increase in the XP gained when an artifact has been crafted
 material_knowledge_perk = {
 	lifestyle = crafting_lifestyle
 	tree = craft

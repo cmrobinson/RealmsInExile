@@ -1,4 +1,4 @@
-### CHOOSE LIFESTYLE
+﻿### CHOOSE LIFESTYLE
 action_can_choose_lifestyle = {
 	type = alert
 	check_create_action = {

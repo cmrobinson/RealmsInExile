@@ -1,4 +1,4 @@
-crafting_artificing_focus = {
+﻿crafting_artificing_focus = {
 	lifestyle = crafting_lifestyle
 	
 	modifier = {
