@@ -22,3 +22,13 @@ paying_tributary_gold = {
 		is_tributary = yes
 	}
 }
+
+# Checks whether the character has a flag/variable/modifier, etc. and blocks the button to stop a player from clicking the 'Return Home' button
+restrict_one_way_travel = {
+	is_valid = {
+		OR = {
+			has_variable = maglor_defensive
+			has_variable = maglor_aggresive
+		}
+	}
+}

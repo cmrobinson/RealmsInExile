@@ -1880,7 +1880,6 @@ elven.1726 = { # hidden event to recieve half troops form umbar
 	}
 
 	immediate = {
-		
 		send_interface_toast = {
 			title = elven.1725.toast
 
@@ -3770,7 +3769,7 @@ elven.2001 = { # First Song Battle Event between Maglor/Sauron
 	}
 
 	option = {
-		name = elven.2001.b
+		name = elven.2001.a
 
 		trigger_event = elven.2002
 	}
@@ -3795,7 +3794,7 @@ elven.2002 = { # Second Song Battle Event between Maglor/Sauron
 	}
 
 	option = {
-		name = elven.2002.b
+		name = elven.2002.a
 		
 		trigger_event = elven.2003
 	}
@@ -3819,8 +3818,16 @@ elven.2003 = { # Third Song Battle Event between Maglor/Sauron
 	}
 
 	option = {
-		name = elven.2003.b
+		name = elven.2003.a
 
+		character:lineofsauron = {
+			show_as_tooltip = {
+				death = {
+					killer = character:linefinwe11
+					death_reason = death_duel
+				}
+			}
+		}
 		kill_nazgul_effect = yes
 
 		if = {

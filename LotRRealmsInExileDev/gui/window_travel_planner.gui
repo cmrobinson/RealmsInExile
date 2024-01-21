@@ -1099,7 +1099,7 @@ types TravelPlannerTypes
 						visible = "[TravelPlanner.GetTravelPlan.IsValid]"
 						size = { 220 30 }
 
-						enabled = "[And(TravelPlanner.CanCancelTravelPlan,Not(GetPlayer.MakeScope.Var('cannot_cancel_travel').IsSet))]"
+						enabled = "[And(TravelPlanner.CanCancelTravelPlan,Not(GetScriptedGui('restrict_one_way_travel').IsValid( GuiScope.SetRoot(GetPlayer.MakeScope).End)))]"
 						onclick = "[TravelPlanner.CancelTravelPlan]"
 
 						text = "CANCEL_TRAVEL_PLAN"
