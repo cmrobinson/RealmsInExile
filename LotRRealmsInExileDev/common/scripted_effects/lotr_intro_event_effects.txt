@@ -834,7 +834,6 @@ fire_intro_events = {
 			}
 		}
 	}
-	
 	character:lineofdurin95 = { # Balin of Moria
 		if = {
 			limit = {
@@ -847,7 +846,6 @@ fire_intro_events = {
 			}
 		}
 	}
-	
 	character:linegorin7 = { # Gorin of Nordinbad
 		if = {
 			limit = {
@@ -895,6 +893,24 @@ fire_intro_events = {
 				days = 1
 			}
 		}
+	}
+
+	###############################
+	### Orc/Goblin Introduction ###
+	###############################
+
+	character:lineofgoblinking1 = {
+		if = {
+			limit = {
+				is_alive = yes
+				is_landed = yes
+			}
+			trigger_event = {
+				id = orcs.4105
+				days = 1
+			}
+		}
+
 	}
 }
 

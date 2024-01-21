@@ -491,6 +491,29 @@ lineofgoblinking1 = {
             }
         }
 	}
+
+	7032.1.1 = {
+		effect = {
+			# Plus a bit of spending money, so he can buy a duchy.
+			add_character_modifier = {
+				modifier = the_fat_one_well_fed_tier_2
+				years = 10
+			}
+			# And he's not on great terms with the incumbent rulers of Zaragoza.
+			set_relation_rival = {
+				target = character:lineoffrontporch1
+				reason = rival_historical
+			}
+			set_relation_rival = {
+				target = character:lineofgoblingate1
+				reason = rival_historical
+			}
+			set_relation_rival = {
+				target = character:lineofazog10
+				reason = rival_historical
+			}
+		}
+	}
 	
 	7041.1.1 = {				
 		death = { death_reason = death_battle }		
@@ -1161,4 +1184,30 @@ lineroofsleeper6 = {
 	7041.1.1 = {				
 		death = { death_reason = death_battle }		
 	}				
+}
+
+lineoffrontporch1 = {
+	name = Utor
+	dynasty = dynasty_shakrat
+	
+	religion = faith_goblin_town
+    culture = towndweller_goblin
+    dynasty = dynasty_roofsleeper
+	
+	6959.5.8 = { birth = yes }
+	
+	7041.1.1 = { death = { death_reason = death_battle } }
+}
+
+lineofgoblingate1 = {
+	name = M_u_kojkun
+	dynasty = dynasty_karmakh
+	
+	religion = faith_goblin_town
+    culture = towndweller_goblin
+    dynasty = dynasty_roofsleeper
+	
+	6968.3.12 = { birth = yes }
+	
+	7051.1.1 = { death = { death_reason = death_battle } }
 }
