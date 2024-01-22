@@ -36,10 +36,10 @@ elven.0100 = { # Introduction to Galadriel
 	option = { 		#The Shadow is rising. We must act. (Offer vassalage to Parth Celebrant)
 		name = elven.0100.a
 		custom_tooltip = elven.0100.att
-		trigger = {
-			exists = title:d_parth_celebrant
-		}
-			#character:lineofguthmunding5
+			trigger = {
+				exists = title:d_parth_celebrant.holder
+			}
+			#character:lineofguthmunding5 = {
 			title:d_parth_celebrant.holder	= {
 				if = {
 					limit = {
