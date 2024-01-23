@@ -1078,7 +1078,7 @@ elven.1604 = { # Hidden event | Swap titles for Edhellond
 			set_county_faith = root.faith
 		}
 		province:420 = {
-			add_building = elven_forges_01
+			add_building = elven_forges_02
 			add_building = wonder_edhellond_03
 			add_building = elven_settlement_02
 		}
@@ -1221,6 +1221,7 @@ elven.1605 = { # Hidden event | Swap titles for Eregion
 			id = elven.1800
 			days = { 15 30 }
 		}
+		get_title = title:k_feanor_host
 	}
 }
 
@@ -1877,6 +1878,7 @@ elven.1726 = { # hidden event to recieve half troops form umbar
 			limit = { has_variable = maglor_umbar_event_troops }
 			var:maglor_umbar_event_troops < 4
 		}
+		sauron_is_alive = yes
 	}
 
 	immediate = {
@@ -2329,6 +2331,7 @@ elven.1750 = { # Toast event to give Maglor Haruzan Event Troops
 			limit = { has_variable = maglor_haruzan_event_troops }
 			var:maglor_haruzan_event_troops < 4
 		}
+		sauron_is_alive = yes
 	}
 
 	immediate = {
@@ -2952,6 +2955,7 @@ elven.1816 = { # Hidden Event to recieve dwarven troops
 			limit = { has_variable = maglor_khazad_dum_event_troops }
 			var:maglor_khazad_dum_event_troops < 5
 		}
+		sauron_is_alive = yes
 	}
 
 	immediate = {
@@ -3200,6 +3204,7 @@ elven.1818 = { # Recieve Noldor elves from Rivendell
 			limit = { has_variable = rivendell_troops }
 			var:rivendell_troops < 3
 		}
+		sauron_is_alive = yes
 	}
 
 	immediate = {
@@ -3449,6 +3454,7 @@ elven.1831 = { # Hidden event to give elven MaA event troops to Maglor
 			limit = { has_variable = amon_lanc_troops }
 			var:amon_lanc_troops < 7
 		}
+		sauron_is_alive = yes
 	}
 
 	immediate = {
@@ -3682,6 +3688,7 @@ elven.1851 = { # Hidden event to recieve Beorning event MaA
 			limit = { has_variable = beorning_event_troops }
 			var:beorning_event_troops < 7
 		}
+		sauron_is_alive = yes
 	}
 
 	immediate = {
@@ -3838,11 +3845,7 @@ elven.2003 = { # Third Song Battle Event between Maglor/Sauron
 }
 
 elven.2010 = { # Maglor receives Saurons palantir/relics when he wins the song battle
-	content_source = realms
-	type = character_event
-	title = elven.2010.t
-	desc = elven.2010.desc
-	theme = realm
+	hidden = yes
 
 	immediate = {
 		character:lineofsauron = {
@@ -3863,12 +3866,157 @@ elven.2010 = { # Maglor receives Saurons palantir/relics when he wins the song b
 			}
 			death = { death_reason = death_sauron }
 		}
+		trigger_event = {
+			id = elven.2020
+			months = { 4 6 }
+		}
+	}
+}
+
+elven.2020 = { # Maglor recieives event to go back to Himring
+	content_source = realms
+	type = character_event
+	title = elven.2020.t
+	desc = elven.2020.desc
+	theme = realm
+
+	left_portrait = {
+		character = root
+		scripted_animation = personality_proud
 	}
 
-	right_portrait = {
-		character = character:linefinwe11
-		animation = personality_honorable
+	option = { # Stay, continouing personal conquest
+		name = elven.2020.a
+
+		set_variable = unlock_retire_to_himring_decision
 	}
 
-	option = { name = elven.2010.a }
+	option = { # Retire to Himring
+		name = elven.2020.b
+
+		trigger_event = elven.2021
+	}
+}
+
+elven.2021 = { # Travels back to Himring
+	hidden = yes
+
+	immediate = {
+		create_title_and_vassal_change = {
+			type = granted
+			save_scope_as = change
+			add_claim_on_loss = no
+		}
+		title:c_himring = {
+			change_title_holder = {
+				holder = root
+				change = scope:change
+			}
+		}
+		resolve_title_and_vassal_change = scope:change
+
+
+		# Create elf to inherit titles
+		create_character = {
+			template = noldor_feanorian
+			employer = root
+			save_scope_as = elf_1
+		}
+
+		# Add all personally held titles to list
+		every_held_title = {
+			limit = {
+				NOT = {
+					de_jure_liege = title:e_orrostar
+					de_jure_liege.de_jure_liege = title:e_orrostar
+					de_jure_liege.de_jure_liege.de_jure_liege = title:e_orrostar
+					this = title:c_edhellond
+				}
+			}
+			add_to_list = targeted_titles
+		}
+
+		create_title_and_vassal_change = {
+			type = granted
+			save_scope_as = title_change
+			add_claim_on_loss = no
+		}
+		every_in_list = {
+			list = targeted_titles
+			change_title_holder = {
+				holder = scope:elf_1
+				change = scope:change
+			}
+		}
+		resolve_title_and_vassal_change = scope:change
+
+		### Freeing every vassal
+		every_vassal = {
+			limit = { 
+				NOT = {
+					any_held_title = {
+						OR = {
+							de_jure_liege = title:e_orrostar
+							de_jure_liege.de_jure_liege = title:e_orrostar
+							de_jure_liege.de_jure_liege.de_jure_liege = title:e_orrostar
+							this = title:c_edhellond
+						}
+					}
+				}
+			}
+			add_to_list = targeted_vassals
+		}
+
+		create_title_and_vassal_change = {
+			type = independency
+			save_scope_as = change
+			add_claim_on_loss = no
+		}
+		every_in_list = {
+			list = targeted_vassals
+			becomes_independent = { change = scope:change }
+		}
+		resolve_title_and_vassal_change = scope:change
+		
+		start_travel_plan = {
+			destination = province:4265
+			on_arrival_event = elven.2030
+			return_trip = no
+			players_use_planner = no
+			on_arrival_destinations = last
+		}
+		add_truce_both_ways = { 
+			character = character:lineofcirdan
+			years = 3
+			name = TRUCE_GRANT_INDEPENDENCE
+		}
+		set_variable = cannot_cancel_travel
+	}
+}
+
+elven.2030 = { # DUN DUN DUN, Maglor recieves Silmaril
+	content_source = realms
+	type = character_event
+	title = elven.2030.t
+	desc = elven.2030.desc
+	theme = realm
+
+	left_portrait = {
+		character = root
+		scripted_animation = personality_proud
+	}
+
+	immediate = {
+		if = {
+			limit = { has_variable = cannot_cancel_travel }
+			remove_variable = cannot_cancel_travel
+		}
+		set_realm_capital = title:c_himring
+	}
+
+	option = { # Stay, continouing personal conquest
+		name = elven.2030.a
+
+		create_artifact_silmaril_effect = { OWNER = root }
+	}
 }

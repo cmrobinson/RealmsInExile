@@ -153,6 +153,12 @@
   decision_cleanse_the_high_pass_effect:0 "[vale_men.GetName] will recieve:\n$BULLET_WITH_TAB$[GetTitleByKey('c_central_high_pass').GetName]\n$BULLET_WITH_TAB$[GetTitleByKey('c_western_high_pass').GetName]\n$BULLET_WITH_TAB$[GetTitleByKey('c_eastern_high_pass').GetName]"
   decision_cleanse_the_high_pass_valid_tt:0 "There are no [goblins|E] or [orcs|E] left in the [GetTitleByKey('k_high_pass').GetName]"
 
+  decision_retire_to_himring:0 "Return to Himring"
+  decision_retire_to_himring_tooltip:0 "VECTOR - PLACEHOLDER"
+  decision_retire_to_himring_desc:0 "VECTOR - PLACEHOLDER"
+  decision_retire_to_himring_confirm:0 "VECTOR - PLACEHOLDER"
+
+
  ###########################
  ### Dorwinion Decisions ###
  ###########################

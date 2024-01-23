@@ -212,9 +212,9 @@
 
   elven.1830.t:0 "VECTOR - Placeholder"
   elven.1830.desc:0 "VECTOR - Placeholder"
-  elven.1830.a:0 "VECTOR - Placeholder"
-  elven.1830.b:0 "VECTOR - Placeholder"
-  elven.1830.c:0 "VECTOR - Placeholder"
+  elven.1830.a:0 "Galadriel gets titles"
+  elven.1830.b:0 "Thranduil gets titles"
+  elven.1830.c:0 "Keep titles"
   elven.1830.a.tt:0 "Give the titles in [GetTitleByKey('k_amon_lanc').GetNameNoTier] to [GetTitleByKey('k_lothlorien').GetHolder.GetName]"
   elven.1830.b.tt:0 "Give the titles in [GetTitleByKey('k_amon_lanc').GetNameNoTier] to [GetTitleByKey('k_lasgalen').GetHolder.GetName]"
   elven.1830.c.tt:0 "Keep the titles in [GetTitleByKey('k_amon_lanc').GetNameNoTier] to yourself"
@@ -249,9 +249,10 @@
   elven.2003.desc:0 "VECTOR - Placeholder"
   elven.2003.a:0 "Attaboy!"
 
-  elven.2010.t:0 "VECTOR - Placeholder"
-  elven.2010.desc:0 "Giveth Stuff to Maglor"
-  elven.2010.a:0 "Give my powerball!"
+  elven.2020.t:0 "VECTOR - Placeholder"
+  elven.2020.desc:0 "VECTOR - Placeholder"
+  elven.2020.a:0 "Continue my conquest"
+  elven.2020.b:0 "Retire to Himring"
 
  ### Elven artifact burns evil characters
  

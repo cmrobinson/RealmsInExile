@@ -738,6 +738,7 @@ decision_reclaim_sirgala = {
 # Rebuild Ost-in-Edhil
 # by VectorMaximus
 ##################################################
+
 decision_rebuild_ost_in_edhil= {
 	title = decision_rebuild_ost_in_edhil
 	desc = decision_rebuild_ost_in_edhil_desc
@@ -2226,6 +2227,60 @@ decision_cleanse_the_high_pass = {
 		add_to_global_variable_list = {
 			name = unavailable_unique_decisions
 			target = flag:decision_cleanse_the_high_pass
+		}
+	}
+
+	# AI
+	ai_goal = yes
+	ai_potential = { always = yes }
+	ai_will_do = { base = 100 }
+}
+
+##################################################
+# Retire to Himring (minor decision)
+# Coding by Jaco_Daan
+# Localization by VectorMaximus
+##################################################
+
+decision_retire_to_himring = {
+	# TEXT
+	title = decision_retire_to_himring
+	picture = "gfx/interface/illustrations/decisions/decision_fornost_02.dds"
+	selection_tooltip = decision_retire_to_himring_tooltip
+	desc = decision_retire_to_himring_desc
+	confirm_text = decision_retire_to_himring_confirm
+	major = no
+
+	# IS_SHOWN
+	is_shown = {
+		has_variable = unlock_retire_to_himring_decision
+		faith_is_good = yes
+
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:decision_retire_to_himring
+			}
+		}
+	}
+	
+	# IS_VALID
+	is_valid = { always = yes }
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_available_adult = yes
+		is_at_war = no
+	}
+	
+	# EFFECT 
+	effect = {
+		trigger_event = elven.2021
+		
+		remove_variable = unlock_retire_to_himring_decision
+
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:decision_retire_to_himring
 		}
 	}
 

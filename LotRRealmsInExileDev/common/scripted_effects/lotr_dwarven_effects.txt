@@ -391,6 +391,7 @@ moria_wastelands_to_delvings_effect = {
 			1 = { change_development_level = 4 }
 			1 = { change_development_level = 5 }
 		}
+		generate_coa = yes
 	}
 	# transfer_moria_duchy_titles_effect = { TITLE = this }
 }
@@ -412,6 +413,7 @@ transfer_highpass_to_valemen = {
 			set_county_faith = $VALEMEN$.faith
 			title_province = { set_holding_type = tribal_holding }
 			change_development_level = 3
+			generate_coa = yes
 		}
 		resolve_title_and_vassal_change = scope:change
 	}
