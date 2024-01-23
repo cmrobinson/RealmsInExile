@@ -18,7 +18,7 @@ wastelands.0001 = {
 				scope:barony.holder = {			
 					has_culture = culture:wastelands
 				}
-				scope:barony.title_province = {			
+				scope:barony.title_province ?= {			
 					culture = culture:wastelands
 				}
 				scope:barony.county = {			
@@ -64,7 +64,7 @@ wastelands.0002 = {
 			scope:barony.holder = {			
 				has_culture = culture:wastelands
 			}
-			scope:barony.title_province = {			
+			scope:barony.title_province ?= {			
 				culture = culture:wastelands
 			}
 			scope:barony.county = {			
@@ -148,6 +148,7 @@ wastelands.0006 = {
 			is_sauron = yes
 			has_title = title:e_mordor
 		}
+		is_in_valinor = no
 
 		#Stop Denethor colonising
 		NOT = { this = character:linesteward38 }
@@ -155,42 +156,13 @@ wastelands.0006 = {
 		# As a Wastelands I don't expand
 		NOT = { has_culture = culture:wastelands }
 		
+		monthly_character_income > 3
 		gold >= 150
 		# Only surrounding lands
 		any_sub_realm_county = { any_title_to_title_neighboring_and_across_water_county = { culture = culture:wastelands } }
 
 		### REALM TRIGGER FOR SETTLEMENT HOLDING LIMIT ###
-		trigger_if = {
-			limit = { highest_held_title_tier = tier_county }
-			any_held_title = {
-				tier = tier_county
-				title_province = { has_holding_type = settlement_holding }
-				count < 1
-			}
-		}
-		trigger_else_if = {
-			limit = { highest_held_title_tier = tier_duchy }
-			any_held_title = {
-				tier = tier_county
-				title_province = { has_holding_type = settlement_holding }
-				count < 2
-			}
-		}
-		trigger_else_if = {
-			limit = { highest_held_title_tier = tier_kingdom }
-			any_held_title = {
-				tier = tier_county
-				title_province = { has_holding_type = settlement_holding }
-				count < 3
-			}
-		}
-		trigger_else = {
-			any_held_title = {
-				tier = tier_county
-				title_province = { has_holding_type = settlement_holding }
-				count < 4
-			}
-		}
+		not_above_settlement_limit = yes
 
 		### WHO CAN COLONISE TRIGGERS ###
 
@@ -243,7 +215,7 @@ wastelands.0006 = {
 				debug_log = "Wastelands.0006: Humans List Made"
 				every_sub_realm_county = {
 					limit = { NOT = { culture = culture:wastelands } }
-					every_neighboring_county = {
+					every_title_to_title_neighboring_and_across_water_county = {
 						limit = {
 							culture = culture:wastelands
 							NOT = { holder = root }
@@ -257,7 +229,7 @@ wastelands.0006 = {
 									is_de_jure_liege_or_above_target = scope:target
 								}
 							}
-							title_province = { 
+							title_province ?= { 
 								NOT = { terrain = halls }
 							}
 						}
@@ -272,7 +244,7 @@ wastelands.0006 = {
 				debug_log = "Wastelands.0006: Elves List Made"
 				every_sub_realm_county = {
 					limit = { NOT = { culture = culture:wastelands } }
-					every_neighboring_county = {
+					every_title_to_title_neighboring_and_across_water_county = {
 						limit = {
 							culture = culture:wastelands
 							NOT = { holder = root }
@@ -286,7 +258,7 @@ wastelands.0006 = {
 									is_de_jure_liege_or_above_target = scope:target
 								}
 							}
-							title_province = { 
+							title_province ?= { 
 								NOT = { terrain = halls }
 							}
 						}
@@ -301,12 +273,12 @@ wastelands.0006 = {
 				debug_log = "Wastelands.0006: Dwarves List Made"
 				every_sub_realm_county = {
 					limit = { NOT = { culture = culture:wastelands } }
-					every_neighboring_county = {
+					every_title_to_title_neighboring_and_across_water_county = {
 						limit = {
 							culture = culture:wastelands
 							NOT = { holder = root }
 							NOT = { has_county_modifier = elven_homeland_county_modifier }
-							title_province = { 
+							title_province ?= { 
 								OR = {
 									terrain = mountains
 									terrain = hills
@@ -339,7 +311,7 @@ wastelands.0006 = {
 				debug_log = "Wastelands.0006: Nazgul List Made"
 				every_sub_realm_county = {
 					limit = { NOT = { culture = culture:wastelands } }
-					every_neighboring_county = {
+					every_title_to_title_neighboring_and_across_water_county = {
 						limit = {
 							culture = culture:wastelands
 							NOT = { holder = root }
@@ -364,7 +336,7 @@ wastelands.0006 = {
 				debug_log = "Wastelands.0006: Orc List Made"
 				every_sub_realm_county = {
 					limit = { NOT = { culture = culture:wastelands } }
-					every_neighboring_county = {
+					every_title_to_title_neighboring_and_across_water_county = {
 						limit = {
 							culture = culture:wastelands
 							NOT = { holder = root }
@@ -400,7 +372,7 @@ wastelands.0006 = {
 				debug_log = "Wastelands.0006: Valemen/Woodmen List Made"
 				every_sub_realm_county = {
 					limit = { NOT = { culture = culture:wastelands } }
-					every_neighboring_county = {
+					every_title_to_title_neighboring_and_across_water_county = {
 						limit = {
 							culture = culture:wastelands
 							NOT = { holder = root }
@@ -413,7 +385,7 @@ wastelands.0006 = {
 									is_de_jure_liege_or_above_target = scope:target
 								}
 							}
-							title_province = { 
+							title_province ?= { 
 								NOT = { terrain = halls }
 							}
 						}
@@ -429,12 +401,12 @@ wastelands.0006 = {
 				limit = { OR = { is_human = yes is_hobbit = yes } }
 				every_sub_realm_county = {
 					limit = { NOT = { culture = culture:wastelands } }
-					every_neighboring_county = {
+					every_title_to_title_neighboring_and_across_water_county = {
 						limit = {
 							culture = culture:wastelands
 							NOT = { holder = root }
 							NOT = { has_county_modifier = elven_homeland_county_modifier }
-							title_province = { 
+							title_province ?= { 
 								NOT = { terrain = halls }
 							}
 						}
@@ -449,13 +421,13 @@ wastelands.0006 = {
 				### COUNTY COLONISATION PRIORITY ###
 				every_sub_realm_county = {
 					limit = { NOT = { culture = culture:wastelands } }
-					every_neighboring_county = {
+					every_title_to_title_neighboring_and_across_water_county = {
 						limit = {
 							culture = culture:wastelands
 							NOT = { holder = root }
 							OR = {
 								has_county_modifier = elven_homeland_county_modifier
-								title_province = { 
+								title_province ?= { 
 									OR = {
 										terrain = deep_forest
 										terrain = forest
@@ -480,13 +452,13 @@ wastelands.0006 = {
 				limit = { is_dwarf = yes }
 				every_sub_realm_county = {
 					limit = { NOT = { culture = culture:wastelands } }
-					every_neighboring_county = {
+					every_title_to_title_neighboring_and_across_water_county = {
 						limit = {
 							culture = culture:wastelands
 							NOT = { holder = root }
 							OR = {
 								NOT = { has_county_modifier = elven_homeland_county_modifier }
-								title_province = { 
+								title_province ?= { 
 									NOR = {
 										terrain = deep_forest
 										terrain = forest
@@ -511,11 +483,11 @@ wastelands.0006 = {
 				debug_log = "Wastelands.0006: Nazgul List Made"
 				every_sub_realm_county = {
 					limit = { NOT = { culture = culture:wastelands } }
-					every_neighboring_county = {
+					every_title_to_title_neighboring_and_across_water_county = {
 						limit = {
 							culture = culture:wastelands
 							NOT = { holder = root }
-							title_province = { 
+							title_province ?= { 
 								NOT = { terrain = halls }
 							}
 						}
@@ -530,7 +502,7 @@ wastelands.0006 = {
 				debug_log = "Wastelands.0006: Orc List Made"
 				every_sub_realm_county = {
 					limit = { NOT = { culture = culture:wastelands } }
-					every_neighboring_county = {
+					every_title_to_title_neighboring_and_across_water_county = {
 						limit = {
 							culture = culture:wastelands
 							NOT = { holder = root }
@@ -554,7 +526,7 @@ wastelands.0006 = {
 				debug_log = "Wastelands.0006: Valemen/Woodmen List Made"
 				every_sub_realm_county = {
 					limit = { NOT = { culture = culture:wastelands } }
-					every_neighboring_county = {
+					every_title_to_title_neighboring_and_across_water_county = {
 						limit = {
 							culture = culture:wastelands
 							NOT = { holder = root }
@@ -567,7 +539,7 @@ wastelands.0006 = {
 									is_de_jure_liege_or_above_target = scope:target
 								}
 							}
-							title_province = { 
+							title_province ?= { 
 								NOT = { terrain = halls }
 							}
 						}
@@ -588,7 +560,7 @@ wastelands.0006 = {
 				}
 				every_sub_realm_county = {
 					limit = { NOT = { culture = culture:wastelands } }
-					every_neighboring_county = {
+					every_title_to_title_neighboring_and_across_water_county = {
 						limit = {
 							culture = culture:wastelands
 							NOT = { holder = root }
@@ -600,11 +572,11 @@ wastelands.0006 = {
 			else = {
 				every_sub_realm_county = {
 					limit = { NOT = { culture = culture:wastelands } }
-					every_neighboring_county = {
+					every_title_to_title_neighboring_and_across_water_county = {
 						limit = {
 							culture = culture:wastelands
 							NOT = { holder = root }
-							title_province = { 
+							title_province ?= { 
 								NOT = { terrain = halls }
 							}
 						}
@@ -648,7 +620,7 @@ wastelands.0006 = {
 				limit = {
 					any_in_list = {
 						list = adjacent_wastelands				
-						title_province = { 
+						title_province ?= { 
 							OR = {
 								terrain = deep_forest
 								terrain = forest
@@ -663,7 +635,7 @@ wastelands.0006 = {
 				random_in_list = {
 					list = adjacent_wastelands
 					limit = { 
-						title_province = { 
+						title_province ?= { 
 							OR = {
 								terrain = deep_forest
 								terrain = forest
@@ -692,7 +664,7 @@ wastelands.0006 = {
 				limit = {
 					any_in_list = {
 						list = adjacent_wastelands				
-						title_province = { 
+						title_province ?= { 
 							OR = {
 								terrain = halls
 								terrain = caverns
@@ -704,7 +676,7 @@ wastelands.0006 = {
 				random_in_list = {
 					list = adjacent_wastelands
 					limit = { 
-						title_province = { 
+						title_province ?= { 
 							OR = {
 								terrain = halls
 								terrain = caverns
@@ -719,7 +691,7 @@ wastelands.0006 = {
 				limit = {
 					any_in_list = {
 						list = adjacent_wastelands				
-						title_province = { 
+						title_province ?= { 
 							NOR = {
 								terrain = deep_forest
 								terrain = forest
@@ -734,7 +706,7 @@ wastelands.0006 = {
 				random_in_list = {
 					list = adjacent_wastelands
 					limit = { 
-						title_province = { 
+						title_province ?= { 
 							NOR = {
 								terrain = deep_forest
 								terrain = forest
@@ -1479,6 +1451,50 @@ wastelands.0015 = { # Adding upkeep to dynasty with special modifier, check lotr
 				}
 				remove_character_modifier = holding_five_settlements
 				add_character_modifier = { modifier = holding_more_than_five_settlements }
+			}
+		}
+	}
+}
+
+wastelands.0020 = {
+	hidden = yes
+
+	trigger = {
+		OR = {
+			monthly_character_income < 0.5
+			not_above_settlement_limit = yes
+		}
+	}
+
+	immediate = {
+		every_held_title = {
+			limit = { has_holding_type = settlement_holding }
+			add_to_list = targeted_titles
+		}
+
+		every_in_list = {
+			list = targeted_titles
+
+			if = {
+				limit = { 
+					not_above_settlement_limit = yes
+					title_province ?= { has_building = settlement_01 }
+				}
+				make_settlement_county_wilderness = { COUNTY = this }
+			}
+			else_if = {
+				limit = { 
+					not_above_settlement_limit = yes
+					title_province ?= { has_building = settlement_02 }
+				}
+				make_settlement_county_wilderness = { COUNTY = this }
+			}
+			else_if = {
+				limit = { 
+					not_above_settlement_limit = yes
+					title_province ?= { has_building = settlement_02 }
+				}
+				make_settlement_county_wilderness = { COUNTY = this }
 			}
 		}
 	}
