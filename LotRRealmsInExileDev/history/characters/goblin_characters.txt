@@ -616,7 +616,6 @@ linenapekindler = {
 	trait = sadistic
 	trait = impatient
 	trait = scarred
-	trait = scarred_disease
 	
 	trait = education_learning_1
 	
@@ -757,7 +756,6 @@ lineoffrontporch1 = {
 	
 	religion = faith_goblin_town
     culture = towndweller_goblin
-    dynasty = dynasty_roofsleeper
 	
 	6959.5.8 = { birth = yes }
 	
@@ -770,9 +768,23 @@ lineofgoblingate1 = {
 	
 	religion = faith_goblin_town
     culture = towndweller_goblin
-    dynasty = dynasty_roofsleeper
 	
 	6968.3.12 = { birth = yes }
 	
 	7051.1.1 = { death = { death_reason = death_battle } }
+}
+
+lineofbonesnapper1 = {
+	name = Scutsparg
+	
+	religion = faith_goblin_town
+    culture = bonesnapper_goblin
+
+	trait = education_martial_3
+	trait = strong
+	trait = ambitious
+	trait = gluttonous
+	trait = callous
+	
+	6932.8.12 = { birth = yes }
 }

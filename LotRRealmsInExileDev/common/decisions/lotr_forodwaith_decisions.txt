@@ -33,8 +33,9 @@ decision_empire_angmar_restore = {
 	# IS VALID
 	is_valid = {
 		prestige_level >= high_prestige_level
-		completely_controls = title:k_angmar
+		completely_controls_region = custom_lowlands_angmar
 		completely_controls = title:k_langwell
+		completely_controls = title:d_gundalok
 		highest_held_title_tier < tier_empire
 	}
 

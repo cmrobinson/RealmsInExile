@@ -4537,6 +4537,10 @@ gondor.0567 = { # Royalist victory - A new Dúnedain King is crowned
 				}
 			}
 		}
+		trigger_event = {
+			id = lotr_artifact.0005
+			days = 3
+		}
 		hidden_effect = {
 			title:e_gondor_steward = {
 				every_in_de_jure_hierarchy = {
@@ -8941,5 +8945,23 @@ gondor.2953 = { # Gondor received message that Bellakar ruler died, renew allian
 		ai_chance = {
 			base = 0
 		}
+	}
+}
+
+gondor.3500 = {
+	content_source = realms
+	type = character_event
+	title = gondor.3500.t
+	desc = gondor.3500.desc
+	theme = stewardship_duty_focus
+	override_background = {
+		reference = armenelos
+	}
+	right_portrait = {
+		character = root
+		animation = personality_honorable
+	}
+	option = { 
+		name = gondor.3500.a
 	}
 }

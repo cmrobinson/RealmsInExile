@@ -28,10 +28,55 @@ k_khazad_dum = {
 	2.2.4 = {
 		holder = lineofdurin1 # Durin I
 	}
-	1024.8.12 = { #TOBEUPDATED
+	412.5.12 = { 
+		holder = lineofdurin2 # Alvis
+	}
+	657.2.30 = { 
+		holder = lineofdurin3 # Vitr
+	}
+	677.4.12 = { 
+		holder = lineofdurin4 # Buri
+	}
+	775.11.1 = { 
+		holder = lineofdurin5 # Dwili
+	}
+	862.2.12 = { 
+		holder = lineofdurin6 # Throri
+	}
+	1033.5.21 = { 
+		holder = lineofdurin7 # Rathspakr 
+	}
+	1192.8.9 = { 
+		holder = lineofdurin8 # Brisingr
+	}
+	1299.4.29 = {
 		holder = lineofdurinII # Durin II
 	}
-	2092.8.12 = { #TOBEUPDATED
+	1472.9.22 = {
+		holder = lineofdurin10
+	}
+	1503.4.29 = {
+		holder = lineofdurin11
+	}
+	1632.8.13 = {
+		holder = lineofdurin12
+	}
+	1778.3.10 = {
+		holder = lineofdurin13
+	}
+	1867.2.12 = {
+		holder = lineofdurin14
+	}
+	2023.4.15 = {
+		holder = lineofdurin15
+	}
+	2123.4.15 = {
+		holder = lineofdurin16
+	}
+	2184.8.12 = {
+		holder = lineofdurin17
+	}
+	2250.4.22 = { 
 		holder = lineofdurinIII # Durin III
 	}
 	3883.8.12 = { #TOBEUPDATED
@@ -839,9 +884,9 @@ c_gundabad = {
 	}
 }
 c_chamber_of_awakening = {
-	6974.11.30 = { # T.A. 2941, the last week of autumn, Bolg is Slain during the battle of the 5 armies, Gorgal inherits
+	6974.11.30 = { # T.A. 2941, the last week of autumn, Bolg is Slain during the battle of the 5 armies. In the chaos of the strife over lordship of Gundabad, carves out his own domain.
 		holder = lineofazog9
-		liege = d_gundabad
+		#liege = d_gundabad
 		change_development_level = 11
 	}
 }
@@ -860,9 +905,9 @@ c_pit_of_stonejaws = {
 	#	holder = 0
 	#}
 		
-	6974.11.30 = { # T.A. 2941, the last week of autumn, Bolg is Slain during the battle of the 5 armies, Gorgal inherits
+	6974.11.30 = { # T.A. 2941, the last week of autumn, Bolg is Slain during the battle of the 5 armies. In the chaos of the strife over lordship of Gundabad, carves out his own domain.
 		holder = lineofazog9
-		liege = d_gundabad
+		#liege = d_gundabad
 		change_development_level = 8
 	}
 }
@@ -870,7 +915,7 @@ c_the_cloven_spire = {
 	6955.1.1 = { # Mazog
 		holder = lineofazog10
 	}
-	7023.1.1 = { # Mazog is cast out after a failed rebellion
+	7023.1.1 = { # Mazog is cast out after a failed rebellion, Grishnakh is appointed as master of Western Gundabad
 		holder = lineghrazbul
 		liege = d_gundabad
 		change_development_level = 9
@@ -884,9 +929,8 @@ c_ashlukruk_shalak = {
     }
 }
 c_ibdekh_buzru = {
-	6990.1.1 = {
-		holder = lineghrazbul
-		liege = d_gundabad
+	6990.1.1 = { # Bone-snapper rises to prominence for the first time in... ages.
+		holder = lineofbonesnapper1
 		change_development_level = 7
     }
 }

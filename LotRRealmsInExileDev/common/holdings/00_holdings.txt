@@ -69,7 +69,7 @@
 		dwarven_ale_house_01
 		dwarven_quarry_01
 		dwarven_toolmaker_guild_01
-		#dwarven_forge_01
+		dwarven_forge_01
 		dwarven_crafts_01
 		dwarven_outpost_01
 		dwarven_vaults_01
@@ -77,6 +77,11 @@
 		dwarven_depths_01
 		dwarven_surface_farm_01
 		dwarven_market_01
+		dwarven_surface_workshop_01
+		dwarven_mustering_grounds_01
+		dwarven_pit_mine_01
+		dwarven_tavern_01
+		dwarven_forestry_01
 
 		#Crafting Resource Mines
 		iron_mines_01
@@ -321,6 +326,8 @@ wastelands_holding = {
 		flooded_tunnels_nogrod
 		stale_air
 		strange_creatures
+		ghosts
+		ghosts_eregion
 	}
 }
 
@@ -360,6 +367,10 @@ settlement_holding = {
 		stale_air_cleared
 		strange_creatures
 		strange_creatures_cleared
+		ghosts
+		ghosts_cleared
+		ghosts_eregion
+		ghosts_eregion_cleared
 	}
 }
 #############

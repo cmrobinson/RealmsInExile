@@ -1,7 +1,12 @@
 ﻿l_english:
  ### Additions to Vanilla ###
  steward_convince_dejure_potential_county_faith_alignment_tt:0 "They view our faith as [faith_hostile|E] or [faith_evil|E]"
- 
+ nomad_war_band: "Hired Nomadic War Band"
+ nomad_war_band_desc: "This character has hired a band of Nomads to help educate their troops, much to the horror of some of their vassals."
+
+ rebuffed_nomad_war_band: "Rebuffed Nomadic Warriors"
+ rebuffed_nomad_war_band_desc: "In an impressive show of bravery this character has brazenly insulted a large group of nomadic warriors while traveling."
+
  ### Game Mechanics ###
  NUMENOREAN_BLOOD_HIGHER_TIER_REASON:0 "Your Candidate is of purer Númenórean blood: $VALUE|=+0$"
  NUMENOREAN_BLOOD_LOWER_TIER_REASON:0 "Your Candidate is of weaker Númenórean blood: $VALUE|=+0$"
@@ -434,6 +439,7 @@
 
  ## Faith conversion modifier
  faith_conversion_cost_slave_to_saurons_will:0 "Slave to Sauron's will"
+ faith_conversion_cost_gold_sickness:0 "Gold sickness"
  
  lotr_munchies_sated_modifier:0 "Overate"
  lotr_munchies_sated_modifier_desc:0 "This character overindulged after being overcome by a sudden hunger."
@@ -452,3 +458,16 @@
  the_fat_one_well_fed_tier_4_desc:0 "This character eats great quantities of food, and their hulking figure is an imposing form of muscle and fat."
  the_fat_one_well_fed_tier_5:0 "Obese"
  the_fat_one_well_fed_tier_5_desc:0 "Eating a truly monumental quantity of food, this goliath of fat is able to pack it away like no other. Come not between them and their food, lest you be broken by their weight!"
+
+ ### Gundabad Decision Modifiers ###
+ gundabad_rising_character_modifier:0 "Gundabad Rising"
+ gundabad_rising_character_modifier_desc:0 "This character has overseen the consolidation of Gundabad and is organising large-scale efforts to restore its former power."
+
+ gundabad_war_forges_character_modifier:0 "War Forges of Gundabad"
+ gundabad_war_forges_character_modifier_desc:0 "This character has fired up the ancient dwarven forges of Gundabad, driving great industry to fuel their great war machine." 
+
+ gundabad_ravaged_lands_county_modifier:0 "Ravaged Lands"
+ gundabad_ravaged_lands_county_modifier_desc:0 "This county's native population has been ravaged by vengeful orc bands of Gundabad, who slaughtered and burned anything and anyone that dared to resist them." 
+
+ durins_bane_modifier:0 "Durin's Bane"
+ durins_bane_modifier_desc:0 "Durin's Bane slumbers in the depths of Khazad-dum. It may yet awaken once more..."

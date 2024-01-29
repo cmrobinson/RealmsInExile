@@ -105,3 +105,8 @@ death_durins_bane = {
 death_mining_accident = {
 	icon = "death_unknown.dds"
 }
+
+death_durins_bane = {
+	public_knowledge = yes
+	icon = "death_natural.dds"
+}
