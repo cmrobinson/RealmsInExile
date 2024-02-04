@@ -587,6 +587,30 @@ k_erebor = {
 	}
 }
 
+#Gobbo Yellow Mountains#
+e_yellow_mountains = {
+	item = {
+		trigger = { coa_switch_to_gobbo_trigger = yes }
+		coat_of_arms = e_evil_yellow_mountains
+	}
+}
+
+#Gobbo Barazimab ul#
+k_barazimab_ul = {
+	item = {
+		trigger = { coa_switch_to_gobbo_trigger = yes }
+		coat_of_arms = k_evil_barazimab_ul
+	}
+}
+
+#Gobbo d_duban_urd#
+d_duban_urd = {
+	item = {
+		trigger = { coa_switch_to_gobbo_trigger = yes }
+		coat_of_arms = d_evil_duban_urd
+	}
+}
+
 
 ##Short Kings are the true chosen of Eru###
 #Druedain Arnorien#
@@ -624,5 +648,51 @@ d_imladris = {
 	item = {
 		trigger = { coa_switch_to_gobbo_trigger = yes}
 		coat_of_arms = d_shiny_town
+	}
+}
+
+#Utri Dunhaninn kingdom CoAs#
+k_rohan = {
+		item = {
+		trigger = { coa_switch_to_dunlending_trigger = yes}
+		coat_of_arms = k_forgoiltir
+	}
+}
+
+k_isengard = {
+	item = {
+		trigger = { coa_switch_to_dunlending_trigger = yes}
+		coat_of_arms = k_isengeard
+	}	
+}
+
+
+#Donan/Daen Dynamic Coas#
+k_ithilien = {
+	item = {
+		trigger = { coa_switch_to_daen_trigger = yes}
+		coat_of_arms = k_donan_ithilien
+	}
+}
+
+#Khamul kingdoms#
+k_lothlorien = {
+	item = {
+		trigger = { coa_switch_to_gobbo_trigger = yes}
+		coat_of_arms = k_eryn_gorgor
+	}
+}
+
+k_lasgalen = {
+	item = {
+		trigger = { coa_switch_to_gobbo_trigger = yes}
+		coat_of_arms = k_north_mirkood
+	}
+}
+
+k_langwell = {
+	item = {
+		trigger = { coa_switch_to_gobbo_trigger = yes}
+		coat_of_arms = k_east_angmar
 	}
 }

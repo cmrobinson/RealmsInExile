@@ -1280,6 +1280,29 @@ prince_female_quenya = {
 	heritages = { heritage_quendi heritage_calaquendi }
 	top_liege = no
 }
+king_imladris_quenya = {
+	type = character
+	gender = male
+	special = holder
+	tier = kingdom
+	priority = 301
+	top_liege = no
+	only_holder = no
+	title = { k_rivendell }
+	heritages = { heritage_quendi heritage_calaquendi }	
+}
+queen_imladris_quenya = {
+	type = character
+	gender = female
+	special = holder
+	tier = kingdom
+	priority = 301
+	top_liege = no
+	only_holder = no
+	title = { k_rivendell }
+	heritages = { heritage_quendi heritage_calaquendi }	
+}
+
 
 # Sindarin
 
@@ -1384,6 +1407,32 @@ king_female_lorien = {
 	only_holder = no
 	titles = { k_lothlorien }
 	heritages = { heritage_lomiquendi heritage_moriquendi }
+}
+
+# Falathrim
+
+high_king_falathrim = { # Sealord
+	type = character
+	gender = male
+	special = holder
+	tier = empire
+	priority = 751
+	top_liege = no
+	only_holder = no
+	titles = { e_lindon }
+	heritages = { heritage_lomiquendi }
+}
+
+high_queen_falathrim = { # Sealady
+	type = character
+	gender = female
+	special = holder
+	tier = empire
+	priority = 751
+	top_liege = no
+	only_holder = no
+	titles = { e_lindon }
+	heritages = { heritage_lomiquendi }
 }
 
 #Isengard

@@ -992,7 +992,7 @@ Uirne:0 "Uirne" # Hillmen Female
  Ajoa:0 "Ajoa" # Old Apysaic Female
  Ajona:0 "Ajona" # Old Apysaic Female
  Aka:0 "Aka" # Gwathiurim Unsorted
- Akarg_i_n:0 "Akarg_i_n" # Orc Unsorted
+ Akarg_i_n:0 "Akargîn" # Orc Unsorted
  Akarg_u_n:0 "Akargûn" # Unsorted Unsorted
  Akargra:0 "Akargra" # Orc Unsorted
  Akargu_u_n:0 "Akargûn" # Orc Unsorted
@@ -2494,6 +2494,7 @@ Uirne:0 "Uirne" # Hillmen Female
  Bogyrn:0 "Bogyrn" # Gwathiurim Unsorted
  Bohlman:0 "Bohlman" # Igath Male
  Bohu_u_r:0 "Bohûr" # Womarin Male
+ Boic:0 "Boic" # Dwarven Male
  Boja_a_n:0 "Bojân" # Northern Apysaic Male
  Bokdankh:0 "Bokdankh" # Orc Unsorted
  Bokon:0 "Bokon" # Gwathiurim Unsorted
@@ -2583,6 +2584,7 @@ Uirne:0 "Uirne" # Hillmen Female
  Bozisharh:0 "Bozisharh" # Middle Apysaic Male
  Br_Egon:0 "Brégon" # Sindarin Male
  Br_isingur:0 "Brísingur" # Dwarven Unsorted
+ Branjegar:0 "Branjegar" # Dwarven Unsorted
  Br_o_k:0 "Brôk" # Orc Unsorted
  Br_uni:0 "Brúni" # Dwarven Unsorted
  Bra_a_ghor:0 "Brâghor" # Druedain Unsorted
@@ -8413,6 +8415,7 @@ Uirne:0 "Uirne" # Hillmen Female
  Morinehtar:0 "Morinehtar" # Alatar's Maiar Name # Maiar Unsorted
  Moringotho:0 "Moringotho" # Quenya Male
  Moringotto:0 "Moringotto" # Quenya Male
+ Mordaar:0 "Mordaar" # Dwarven Male
  Morka:0 "Morka" # New Apysaic Female
  Morlaen:0 "Morlaen" # Dunedain Unsorted
  Morlammen:0 "Morlammen" # Sindarin Male

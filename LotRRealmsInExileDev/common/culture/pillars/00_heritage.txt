@@ -423,6 +423,7 @@ heritage_longbeard = {
 
 	parameters = {
 		can_use_mining_activity = yes
+		unlock_full_delving = yes
 	}
 
 	character_modifier = {
@@ -439,6 +440,8 @@ heritage_longbeard = {
 		halls_travel_danger = halls_high_danger_reduction
 		mountains_travel_danger = mountains_high_danger_reduction
 		hills_travel_danger = hills_high_danger_reduction
+		
+		orcish_religion_opinion = -100
 	}
 	culture_modifier = {
 		mercenary_count_mult = -10
@@ -450,6 +453,7 @@ heritage_firebeard = {
 
 	parameters = {
 		can_use_mining_activity = yes
+		unlock_full_delving = yes
 	}
 
 	character_modifier = {
@@ -466,6 +470,8 @@ heritage_firebeard = {
 		halls_travel_danger = halls_high_danger_reduction
 		mountains_travel_danger = mountains_high_danger_reduction
 		hills_travel_danger = hills_high_danger_reduction
+		
+		orcish_religion_opinion = -100
 	}
 	culture_modifier = {
 		mercenary_count_mult = -10
@@ -477,6 +483,7 @@ heritage_broadbeam = {
 
 	parameters = {
 		can_use_mining_activity = yes
+		unlock_full_delving = yes
 	}
 
 	character_modifier = {
@@ -493,6 +500,8 @@ heritage_broadbeam = {
 		halls_travel_danger = halls_high_danger_reduction
 		mountains_travel_danger = mountains_high_danger_reduction
 		hills_travel_danger = hills_high_danger_reduction
+		
+		orcish_religion_opinion = -100
 	}
 	culture_modifier = {
 		mercenary_count_mult = -10
@@ -504,6 +513,7 @@ heritage_ironfist = {
 
 	parameters = {
 		can_use_mining_activity = yes
+		unlock_full_delving = yes
 	}
 
 	character_modifier = {
@@ -520,6 +530,8 @@ heritage_ironfist = {
 		halls_travel_danger = halls_high_danger_reduction
 		mountains_travel_danger = mountains_high_danger_reduction
 		hills_travel_danger = hills_high_danger_reduction
+		
+		orcish_religion_opinion = -100
 	}
 	culture_modifier = {
 		mercenary_count_mult = -10
@@ -531,6 +543,7 @@ heritage_stiffbeard = {
 
 	parameters = {
 		can_use_mining_activity = yes
+		unlock_full_delving = yes
 	}
 
 	character_modifier = {
@@ -547,6 +560,8 @@ heritage_stiffbeard = {
 		halls_travel_danger = halls_high_danger_reduction
 		mountains_travel_danger = mountains_high_danger_reduction
 		hills_travel_danger = hills_high_danger_reduction
+		
+		orcish_religion_opinion = -100
 	}
 	culture_modifier = {
 		mercenary_count_mult = -10
@@ -558,6 +573,7 @@ heritage_blacklock = {
 
 	parameters = {
 		can_use_mining_activity = yes
+		unlock_full_delving = yes
 	}
 
 	character_modifier = {
@@ -574,6 +590,8 @@ heritage_blacklock = {
 		halls_travel_danger = halls_high_danger_reduction
 		mountains_travel_danger = mountains_high_danger_reduction
 		hills_travel_danger = hills_high_danger_reduction
+		
+		orcish_religion_opinion = -100
 	}
 	culture_modifier = {
 		#mercenary_count_mult = -10
@@ -585,6 +603,7 @@ heritage_stonefoot = {
 
 	parameters = {
 		can_use_mining_activity = yes
+		unlock_full_delving = yes
 	}
 
 	character_modifier = {
@@ -601,6 +620,8 @@ heritage_stonefoot = {
 		halls_travel_danger = halls_high_danger_reduction
 		mountains_travel_danger = mountains_high_danger_reduction
 		hills_travel_danger = hills_high_danger_reduction
+		
+		orcish_religion_opinion = -100
 	}
 	culture_modifier = {
 		mercenary_count_mult = -10

@@ -434,7 +434,7 @@
  emperor_bozisha_miraz_male:0 "Kralyi"
  emperor_bozisha_miraz_female:0 "Kralyi"
  king_ray_male:0 "Kralyi"
- king_ray_female:0 "Kralyi
+ king_ray_female:0 "Kralyi"
 
  ## Oligarchy ##
  baron_oligarchy_male:0 "Councilman"
@@ -533,6 +533,9 @@
  emperor_female_quenya:0 "Ingatári"
  prince_male_quenya:0 "Aranion"
  prince_female_quenya:0 "Aranel"
+
+ king_imladris_quenya:0 "Cáno" # Lord of Imladris
+ queen_imladris_quenya:0 "Cáne" # Lady of Imladris
  
  ## Sindarin ##
  
@@ -546,6 +549,12 @@
  prince_male_sindarin:0 "Caun"
  prince_female_sindarin:0 "Brethil"
  
+ # Falathrim
+ high_king_falathrim:0 "Aearhîr" # Sealord
+ high_queen_falathrim:0 "Aearhíril" # Sealady
+ #king_falathrim:0 "Lendhîr" # Havens-Master
+ #queen_falathrim:0 "Lendhíril" # Havens-Master
+
  # Lorien
  
  king_male_lorien:0 "[CHARACTER.Custom('king_male_lorien')]"
