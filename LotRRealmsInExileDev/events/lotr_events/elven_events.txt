@@ -820,12 +820,13 @@ elven.1500 = { # Rouse from slumber
 
 	option = { # Crusade Against Darkness
 		name = elven.1500.a
-
+		custom_tooltip = elven.1500.a.tt
 		set_variable = crusade_against_darkness
 	}
 
 	option = { # Kingship by Seniority
 		name = elven.1500.b
+		custom_tooltip = elven.1500.b.tt
 		
 		set_variable = fourth_kin_slaying
 	}
@@ -2437,7 +2438,7 @@ elven.1800 = { # Probing investigation into Khazad-dum
 	
 	option = { 
 		name = elven.1800.a
-
+		custom_tooltip = elven.1800.a.tt
 		trigger_event = {
 			id = elven.1806
 			days = { 45 60 }

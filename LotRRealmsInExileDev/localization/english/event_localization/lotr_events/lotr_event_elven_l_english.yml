@@ -66,15 +66,17 @@
   ### Maglor Event Chain ###
   ##########################
 
-  elven.1000.t:0 "VECTOR - Placeholder" # Title for Maglor intro
-  elven.1000.desc:0 "VECTOR - Placeholder" # Description for Maglor intro
-  elven.1000.a:0 "VECTOR - Placeholder" # Rouse himself 
-  elven.1000.b:0 "VECTOR - Placeholder" # Remain Melancholy 
+  elven.1000.t:0 "The Last Son of Fëanor" # Title for Maglor intro
+  elven.1000.desc:0 "Once, there were seven. Now, I am the last. In folly of youth, despair, love, and rage was an oath sworn which drove us to our ruin. To ill end indeed did come all we began well. I will not say no good was done, for good was done. Yet good does not erase evil, even if good comes of it.\n\nFor three-thousand years, I wandered the seashore, lamenting. I can scarcely remember those days, the black pit of despair a maw which consumed everything. I did not know of the death of my nephew, not until it was far too late. Yet my deeds and my oath set me still apart from my people, and so I came here, to Himring. Here have I dwelled since. Despite my best efforts, news of my presence became known, and some of my most foolishly loyal followers came and joined me.\n\nWe have built a life, after a fashion. Humble, yet peaceful. Yet even we hear the words carried on the wind and in the seas. The Darkness rises anew, and the strength of the Free Peoples is not what once it was. Dare I act?"
+  elven.1000.a:0 "I can remain secluded no more." # Rouse himself 
+  elven.1000.b:0 "To ill end shall all things turn. I shall remain here." # Remain Melancholy 
 
-  elven.1500.t:0 "VECTOR - Placeholder" 
-  elven.1500.desc:0 "VECTOR - Placeholder"
-  elven.1500.a:0 "VECTOR - Placeholder\nGood Route" # Crusade Against Darkness
-  elven.1500.b:0 "VECTOR - Placeholder\nThe Fourth Kinslaying" # Kingship by Seniority
+  elven.1500.t:0 "The Path of Maglor" 
+  elven.1500.desc:0 "I can remain secluded no more. Yet I am, as now, but one Elda, with a small following. To fight Sauron, I shall need to plan carefully. Two paths lie before me. Try to rally what Elves I can and take the fight to Sauron directly? Or assert my claim (though questionable) to the position of High-king, before leveraging that power to defeat Sauron?"
+  elven.1500.a:0 "We shall take the fight to Sauron." # Crusade Against Darkness
+  elven.1500.a.tt:0 "Maglor will rally what Elves he can to his banner, before taking the war to Sauron.\n\nUnlock the #V Rally the Army of the Righteous#! [decision|E], which will determine the route you take."
+  elven.1500.b:0 "I shall unite the Elves once more under the High-kings." # Kingship by Seniority
+  elven.1500.b.tt:0 "Maglor will attempt to claim the High-kingship of the Noldor on account of his status as the most senior male Finweion left in Middle-earth.\n\n#N This choice will almost assuredly result in war with Lindon, as few will accept the claim of a Fëanorian.#!"
 
   ### 4th Kin-slaying ###
 
@@ -94,18 +96,18 @@
   elven.1560.desc:0 "VECTOR - Placeholder"
   elven.1560.a:0 "VECTOR - Placeholder"
 
-  # Strike the Heart of the Enemy
-  elven.1601.t:0 "VECTOR - Placeholder"
-  elven.1601.desc:0 "VECTOR - Placeholder"
-  elven.1601.a:0 "VECTOR - Placeholder"
-
   # Shield of the Free Peoples
-  elven.1602.t:0 "VECTOR - Placeholder"
-  elven.1602.desc:0 "VECTOR - Placeholder"
-  elven.1602.a:0 "VECTOR - Placeholder"
+  elven.1601.t:0 "The Heir of Eregion"
+  elven.1601.desc:0 "There are many threats which have slowly choked the Free Peoples. The Dwarves have lost their great realms of old, the Elves are diminished and split apart from each other. To defeat Sauron, we must be united. To unite, these threats must be quelled. \n\nSuch was my decision. The first step is to cleanse the Misty Mountains and restore the Dwarves, our allies of ancient days. There is an obvious place for us to begin this work, then - Eregion, the realm of my nephew [celebrimbor|E]. The ancient ruins of the kingdom have decayed but with work can be rebuilt. The close proximity to [khazaddum|E] makes it an ideal location from which to begin the work of cleansing it. \n\nSo we set out, leaving behind Himring and Lindon, marching forth for what may be the final war of the High-Elves."
+  elven.1601.a:0 "Go not quietly into the night."
 
-  elven.1606.opening:0 "VECTOR - Placeholder" # Elven ruler recieves letter from Maglor requesting elven volunteers
-  elven.1606.desc:0 "VECTOR - Placeholder"
+  # Strike the Heart of the Enemy
+  elven.1602.t:0 "The Heart of the Enemy"
+  elven.1602.desc:0 "There can be no delay. Every day, every month waited, Sauron grows in strength, while our own wanes. We must strike him soon, or lose the ability entirely.\n\nSuch was my decision. The ancient haven of Edhellond sits abandoned in Gondor, with few Men daring to touch its silent halls. It is a safe location, but close to Sauron and his dominions. We shall rebuild it and use it as the mustering place of our strength."
+  elven.1602.a:0 "We shall plunge a dagger into his heart!"
+
+  elven.1606.opening:0 "The War against the Shadow" # Elven ruler recieves letter from Maglor requesting elven volunteers
+  elven.1606.desc:0 "Maglor Fëanorian, long rumored to live, has revealed himself once more"
   elven.1606.a:0 "VECTOR - Placeholder" 
   elven.1606.b:0 "VECTOR - Placeholder" 
   elven.1606.c:0 "VECTOR - Placeholder" 
@@ -172,13 +174,14 @@
   elven.1745.b:0 "VECTOR - Placeholder"
   elven.1740.event_troops:0 "VECTOR - Placeholder"
 
-  elven.1800.t:0 "VECTOR - Placeholder"
-  elven.1800.desc:0 "VECTOR - Placeholder"
-  elven.1800.a:0 "Probe into Khazad-dum"
+  elven.1800.t:0 "The Gates of [khazaddum|E]"
+  elven.1800.desc:0 "With the rebuilding of [ostinedhil|E] underway, the time has come to begin probing the depth of [khazaddum|E]. I have heard tales on our journey of its great wealth, craftsmen, and ancient friendship with my people. \n\nI am joined on the way by a small company of warriors, many of them survivors of [eregion|E] who remembered the heady days of its height.\n\nThe western gate we seek are known as the [doorsofdurin|E], the result of collaboration between Elf and Dwarf. I am told it will appear when the moon's light shines on it, the result of [ithildin|E]. It is guarded by a riddle, which was supposedly a small joke between my nephew and King Durin II.\n\nWhen night falls, the door reveals itself, shining in the pale moonlight between two ancient holly trees. My gaze wanders upon it, recognizing the work of Celebrimbor. With a soft exhale, I utter a single word."
+  elven.1800.a:0 "Mellon."
+  elven.1800.a.tt:0 "The [doorsofdurin|E] open. The depths await to be explored."
 
-  elven.1805.t:0 "VECTOR - Placeholder"
-  elven.1805.desc:0 "VECTOR - Placeholder"
-  elven.1805.a:0 "Maglor senses the Balrog"
+  elven.1805.t:0 "The Valaraukar"
+  elven.1805.desc:0 "Songs sing of Durin's Bane, a walking calamity, a beast that destroyed the greatest kingdom of the Dwarves. None could say what it was in truth, but in my heart I suspected. Had I not beheld them many times before? They ambushed Maedhros, and slew Fingon during the Nirnaeth. Now I have no doubt. A Valaraukar dwells in these depths - and it now knows I am here too. \n\nI command my soldiers to begin leaving the depths, and in the distance I see it. A titan of shadow and flame, sword in hand, hate and wrath emenating from it.\n\nWe retreat in good order, and it does not follow."
+  elven.1805.a:0 "It must be slain!"
 
   elven.1806.t:0 "Exploration of [khazaddum|E]"
   elven.1806.desc:0 "With the West-gate of [moria|E] open, we slowly map out the ancient halls of Dwarrowdelf. No tales do its immensity justice, for every hall and path leads to new ones, heading down into the deeps of the earth.\n\nYet these halls are not empty. In their depths scramble goblins, bent and crooked. But they are no match for [elven|E] steel and arrow, and soon the halls fall silent once more. \n\nYet after one group, we find a small bunch of [dwarves|E], harrowed and worn, huddling for warmth in a small hall. Their axes are worn and their armor dulled, and a pall of despair lies on them. Who knows how long they have been trapped here in the deep darkness, bereft of their kin and assailed by the foul goblins? Seeing the light of our lamps, hope returns to their faces, rising with creaking of metal and bone."
