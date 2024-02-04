@@ -736,7 +736,7 @@ elven.0501 = {
 }
 
 elven.1000 = { # Maglor Introduction
-	content_source = realms
+	content_source = realms_dlc
 	type = character_event
 	title = elven.1000.t
 	desc = elven.1000.desc
@@ -804,7 +804,7 @@ elven.1000 = { # Maglor Introduction
 }
 
 elven.1500 = { # Rouse from slumber
-	content_source = realms
+	content_source = realms_dlc
 	type = character_event
 	title = elven.1500.t
 	desc = elven.1500.desc
@@ -870,7 +870,7 @@ elven.1555 = { # Send letter to loyalist asking for support
 }
 
 elven.1556 = { # Start war against Lindon
-	content_source = realms
+	content_source = realms_dlc
 	type = character_event
 	title = elven.1556.t
 	desc = elven.1556.desc
@@ -916,7 +916,7 @@ elven.1556 = { # Start war against Lindon
 }
 
 elven.1560 = { # The Fourth Kinslaying | Maglor wins the war against Cirdan
-	content_source = realms
+	content_source = realms_dlc
 	type = character_event
 	title = elven.1560.t
 	desc = elven.1560.desc
@@ -932,7 +932,7 @@ elven.1560 = { # The Fourth Kinslaying | Maglor wins the war against Cirdan
 }
 
 elven.1565 = { # Maglor loses the war against Cirdan
-	content_source = realms
+	content_source = realms_dlc
 	type = character_event
 	title = elven.1560.t
 	desc = elven.1560.desc
@@ -953,7 +953,7 @@ elven.1565 = { # Maglor loses the war against Cirdan
 }
 
 elven.1601 = { # Shield of the Free Peoples starting event | Go to Eregion
-	content_source = realms
+	content_source = realms_dlc
 	type = character_event
 	title = elven.1601.t
 	desc = elven.1601.desc
@@ -981,7 +981,7 @@ elven.1601 = { # Shield of the Free Peoples starting event | Go to Eregion
 }
 
 elven.1602 = { # Strike the Heart of the Enemy starting event | Go to Edhellond
-	content_source = realms
+	content_source = realms_dlc
 	type = character_event
 	title = elven.1602.t
 	desc = elven.1602.desc
@@ -1589,7 +1589,7 @@ elven.1705 = { # Spawns armies for Maglor
 }
 
 elven.1710 = { # Starts war against Umbar
-	content_source = realms
+	content_source = realms_dlc
 	type = character_event
 	title = elven.1710.t
 	desc = elven.1710.desc
@@ -1623,7 +1623,7 @@ elven.1710 = { # Starts war against Umbar
 }
 
 elven.1715 = { # Event if win against Umbar
-	content_source = realms
+	content_source = realms_dlc
 	type = character_event
 	title = elven.1715.t
 	desc = elven.1715.desc
@@ -1995,7 +1995,7 @@ elven.1730 = { # Letter event to ask for troops from Gondor Lords
 }
 
 elven.1735 = { # Dynasty Rises in Amrun | Demands sent to current Amrun ruler
-	content_source = realms
+	content_source = realms_dlc
 	type = character_event
 	title = elven.1735.t
 	desc = elven.1735.desc
@@ -2289,7 +2289,7 @@ scripted_effect elven_settlement_add_building_effect = {
 }
 
 elven.1745 = { # Maglor gets choice to make Nadi-Manye tributaries
-	content_source = realms
+	content_source = realms_dlc
 	type = character_event
 	title = elven.1745.t
 	desc = elven.1745.desc
@@ -2420,7 +2420,7 @@ elven.1750 = { # Toast event to give Maglor Haruzan Event Troops
 ### Shield of the Free Peoples ###
 
 elven.1800 = { # Probing investigation into Khazad-dum
-	content_source = realms
+	content_source = realms_dlc
 	type = character_event
 	title = elven.1800.t
 	desc = elven.1800.desc
@@ -2446,7 +2446,7 @@ elven.1800 = { # Probing investigation into Khazad-dum
 }
 
 elven.1805 = { # Maglor senses the Balrog
-	content_source = realms
+	content_source = realms_dlc
 	type = character_event
 	title = elven.1805.t
 	desc = elven.1805.desc
@@ -2477,7 +2477,7 @@ elven.1805 = { # Maglor senses the Balrog
 }
 
 elven.1806 = { # Generic event while searching Khazad-dum as Maglor
-	content_source = realms
+	content_source = realms_dlc
 	type = character_event
 	title = elven.1806.t
 	desc = elven.1806.desc
@@ -2600,7 +2600,7 @@ elven.1806 = { # Generic event while searching Khazad-dum as Maglor
 }
 
 elven.1810 = { # Maglor goes to Rivendell to seek Elrond and Glorfindel's aid
-	content_source = realms
+	content_source = realms_dlc
 	type = character_event
 	title = elven.1810.t
 	desc = elven.1810.desc
@@ -2655,7 +2655,7 @@ elven.1810 = { # Maglor goes to Rivendell to seek Elrond and Glorfindel's aid
 }
 
 elven.1811  = { # ROYAL COURT EVENT | Elrond recieves Maglor in his court
-	content_source = realms
+	content_source = realms_dlc
 	type = character_event
 	title = elven.1811.t
 	desc = elven.1811.desc
@@ -2737,7 +2737,7 @@ elven.1811  = { # ROYAL COURT EVENT | Elrond recieves Maglor in his court
 }
 
 elven.1812 = { # NON-ROYAL COURT EVENT | Elrond recieves Maglor in his court
-	content_source = realms
+	content_source = realms_dlc
 	type = character_event
 	title = elven.1811.t
 	desc = elven.1811.desc
@@ -2788,7 +2788,7 @@ scripted_effect maglor_wins_balrog = {
 }
 
 elven.1815 = { # Fight Balrog
-	content_source = realms
+	content_source = realms_dlc
 	type = character_event
 	window = fullscreen_event_with_portrait # tour_arrival_event
 	title = elven.1815.t
@@ -3284,7 +3284,7 @@ elven.1818 = { # Recieve Noldor elves from Rivendell
 }
 
 elven.1820 = { # Event to highlight CB unlocked
-	content_source = realms
+	content_source = realms_dlc
 	type = character_event
 	title = elven.1820.t
 	desc = elven.1820.desc
@@ -3324,7 +3324,7 @@ scripted_effect give_amon_lanc_to_elf = {
 }
 
 elven.1830 = { # Event to give Lothlorien/Lasgalen elf Amon Lanc
-	content_source = realms
+	content_source = realms_dlc
 	type = character_event
 	title = elven.1830.t
 	desc = elven.1830.desc
@@ -3605,7 +3605,7 @@ elven.1831 = { # Hidden event to give elven MaA event troops to Maglor
 }
 
 elven.1840 = { # Call in members of northern alliance into destroy Mordor  war
-	content_source = realms
+	content_source = realms_dlc
 	type = character_event
 	title = elven.1840.t
 	desc = elven.1840.desc
@@ -3659,7 +3659,7 @@ elven.1840 = { # Call in members of northern alliance into destroy Mordor  war
 }
 
 elven.1850 = { # Event to notify of clearing high pass
-	content_source = realms
+	content_source = realms_dlc
 	type = character_event
 	title = elven.1850.t
 	desc = elven.1850.desc
@@ -3741,7 +3741,7 @@ elven.1851 = { # Hidden event to recieve Beorning event MaA
 }
 
 elven.2000 = { # Sauron is attacked by Maglor
-	content_source = realms
+	content_source = realms_dlc
 	type = character_event
 	title = elven.2000.t
 	desc = elven.2000.desc
@@ -3761,7 +3761,7 @@ elven.2000 = { # Sauron is attacked by Maglor
 }
 
 elven.2001 = { # First Song Battle Event between Maglor/Sauron
-	content_source = realms
+	content_source = realms_dlc
 	type = character_event
 	title = elven.2001.t
 	desc = elven.2001.desc
@@ -3786,7 +3786,7 @@ elven.2001 = { # First Song Battle Event between Maglor/Sauron
 }
 
 elven.2002 = { # Second Song Battle Event between Maglor/Sauron
-	content_source = realms
+	content_source = realms_dlc
 	type = character_event
 	title = elven.2002.t
 	desc = elven.2002.desc
@@ -3810,7 +3810,7 @@ elven.2002 = { # Second Song Battle Event between Maglor/Sauron
 }
 
 elven.2003 = { # Third Song Battle Event between Maglor/Sauron
-	content_source = realms
+	content_source = realms_dlc
 	type = character_event
 	title = elven.2003.t
 	desc = elven.2003.desc
@@ -3876,7 +3876,7 @@ elven.2010 = { # Maglor receives Saurons palantir/relics when he wins the song b
 }
 
 elven.2020 = { # Maglor recieives event to go back to Himring
-	content_source = realms
+	content_source = realms_dlc
 	type = character_event
 	title = elven.2020.t
 	desc = elven.2020.desc
@@ -3997,7 +3997,7 @@ elven.2021 = { # Travels back to Himring
 }
 
 elven.2030 = { # DUN DUN DUN, Maglor recieves Silmaril
-	content_source = realms
+	content_source = realms_dlc
 	type = character_event
 	title = elven.2030.t
 	desc = elven.2030.desc

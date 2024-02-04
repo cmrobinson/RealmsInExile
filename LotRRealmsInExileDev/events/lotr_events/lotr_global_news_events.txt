@@ -984,7 +984,7 @@ news_event.0024 = {
 
 # Maglor wins against Sauron
 news_event.0028 = {
-	content_source = realms
+	content_source = realms_dlc
 	type = character_event
 	window = fullscreen_event
 	title = news_event.0028.t
