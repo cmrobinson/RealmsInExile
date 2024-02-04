@@ -1306,10 +1306,10 @@ elven.1606 = { # Letter Event, Request troops from Lindon
 	}
 }
 
-elven.1607 = {
+elven.1607 = { # Hidden event | Give Maglor songsmiths, to help him siege down counties in his war
 	hidden = yes
+
 	immediate = {
-		
 		send_interface_toast = {
 			title = elven.1606.toast
 			random_list = {
@@ -1318,7 +1318,7 @@ elven.1607 = {
 						name = elven.maglor_help_songsmiths
 						men_at_arms = {
 							type = song_smiths
-							stacks = 1
+							stacks = 3
 						}
 						location = root.capital_province
 					}
@@ -1328,7 +1328,7 @@ elven.1607 = {
 						name = elven.maglor_help_songsmiths
 						men_at_arms = {
 							type = song_smiths
-							stacks = 2
+							stacks = 4
 						}
 						location = root.capital_province
 					}
@@ -1338,7 +1338,7 @@ elven.1607 = {
 						name = elven.maglor_help_songsmiths
 						men_at_arms = {
 							type = song_smiths
-							stacks = 3
+							stacks = 5
 						}
 						location = root.capital_province
 					}
@@ -1688,7 +1688,7 @@ elven.1715 = { # Event if win against Umbar
 		if = {
 			limit = { has_variable = raze_umbar }
 			trigger_event = elven.1726
-			trigger_event = elven.1727 # Upgrades Edhellond
+			upgrade_edhellond_province = yes # Upgrades Edhellond
 		}
 		else = { trigger_event = elven.1725 }
 		
@@ -1699,7 +1699,6 @@ elven.1715 = { # Event if win against Umbar
 elven.1720 = { # hidden event to appoint governors
 	hidden = yes 
 	immediate = {
-		
 		every_in_global_list = { # Someone from appropriate house that supported Maglor
 			variable = gondorian_ruler_supported_maglor
 			limit = {
@@ -1921,13 +1920,9 @@ elven.1726 = { # hidden event to recieve half troops form umbar
 	}
 }
 
-elven.1727 = { # Hidden event to upgrade Edhellond
-	hidden = yes
-
-	immediate = {
-		title:c_edhellond = { change_development_level = 5 } 
-		province:420 = { add_building = elven_settlement_03 }
-	}
+scripted_effect upgrade_edhellond_province = {
+	title:c_edhellond = { change_development_level = 5 } 
+	province:420 = { add_building = elven_settlement_03 }
 }
 
 elven.1730 = { # Letter event to ask for troops from Gondor Lords
@@ -2786,6 +2781,14 @@ scripted_effect maglor_wins_balrog = {
 			years = 15
 		}
 	}
+	hidden_effect = {
+		title:k_khazad_dum = {
+			every_de_jure_county = {
+				limit = { title_province = { has_province_modifier = durins_bane_modifier } }
+				title_province = { remove_province_modifier = durins_bane_modifier }
+			}
+		}
+	}
 }
 
 elven.1815 = { # Fight Balrog
@@ -3318,6 +3321,14 @@ scripted_effect give_amon_lanc_to_elf = {
 		change_title_holder = {
 			holder = $HOLDER$
 			change = scope:title_change
+		}
+	}
+
+	if = {
+		limit = { $TITLE$.tier = tier_county }
+		$TITLE$ = {
+			set_county_culture = $HOLDER$.culture
+			set_county_faith = $HOLDER$.faith
 		}
 	}
 	
