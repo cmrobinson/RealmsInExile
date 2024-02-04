@@ -6453,20 +6453,26 @@
 			accessory = {
 				mode = add
 				gene = hairstyles
-				template = all_hairstyles
-				accessory = male_hair_indian_03
+				template = agot_hairstyles
+				accessory = male_hair_custom_16
 			}
 			accessory = {
 				mode = add	
 				gene = clothes
-				template = nazgul_clothes
-				accessory = male_clothes_nazgul
+				template = wizard_clothes
+				accessory = male_clothes_fantasy_wam_wizzard_robe_dark_blue
+			}
+			accessory = {
+				mode = add	
+				gene = cloaks
+				template = ep2_cloak_mena_travel
+				accessory = m_cloaks_secular_ep2_mena_travel_01
 			}
 			accessory = {
 				mode = add	
 				gene = legwear
-				template = mena_war_legwear
-				accessory = male_legwear_secular_mena_war_nobility_01
+				template = generic_legwear
+				accessory = male_legwear_generic
 			}
 		}
 		weight = {
@@ -6490,14 +6496,20 @@
 			accessory = {
 				mode = add	
 				gene = clothes
-				template = nazgul_clothes
-				accessory = male_clothes_nazgul
+				template = wizard_clothes
+				accessory = male_clothes_fantasy_wam_wizzard_robe_dark_blue
+			}
+			accessory = {
+				mode = add	
+				gene = cloaks
+				template = ep2_cloak_mena_travel
+				accessory = m_cloaks_secular_ep2_mena_travel_01
 			}
 			accessory = {
 				mode = add	
 				gene = legwear
-				template = mena_war_legwear
-				accessory = male_legwear_secular_mena_war_nobility_01
+				template = generic_legwear
+				accessory = male_legwear_generic
 			}
 		}
 		weight = {

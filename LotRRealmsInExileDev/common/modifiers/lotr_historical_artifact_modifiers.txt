@@ -32,34 +32,47 @@ ring_of_mortals_dwarves_modifier = {
 	monthly_dynasty_prestige = 0.8
 	monthly_prestige = 0.8
 	stewardship_per_prestige_level = 2
-	halls_advantage = 30
-	domain_tax_mult = 0.2
+	domain_tax_mult = 0.3
 	stress_gain_mult = 0.2
 	stress_loss_mult = -0.2
 }
 
 ring_of_mortals_men_modifier = {
-	monthly_dynasty_prestige = 0.5
-	monthly_prestige = 0.5
+	monthly_dynasty_prestige = 0.8
+	monthly_prestige = 0.8
 	prowess = 15
 	intrigue_per_prestige_level = 2
 	health = 10
+	stress_gain_mult = 0.2
+	stress_loss_mult = -0.2
 }
 
 ring_of_mortals_elves_modifier = {
-	monthly_dynasty_prestige = 0.5
-	monthly_prestige = 0.5
+	monthly_dynasty_prestige = 0.8
+	monthly_prestige = 0.8
 	prowess = 20
 	martial_per_prestige_level = 2
 }
 
 ring_of_mortals_nazgul_modifier = {
-	monthly_dynasty_prestige = 0.5
-	monthly_prestige = 0.5
+	monthly_dynasty_prestige = 0.8
+	monthly_prestige = 0.8
 }
 
 ring_of_mortals_sauron_modifier = {
+	monthly_dynasty_prestige = 0.8
+	monthly_prestige = 0.8
 	domain_tax_mult = 0.02
+}
+
+ring_of_mortals_orcs_modifier = {
+	monthly_dynasty_prestige = 0.8
+	monthly_prestige = 0.8
+	raid_speed = 0.5
+	prowess_no_portrait = 15
+	owned_hostile_scheme_success_chance_add = 20
+	stress_gain_mult = 0.2
+	stress_loss_mult = -0.2
 }
 
 ### HISTORICAL ARTIFACTS ###
@@ -1040,6 +1053,16 @@ azaghal_helmet_modifier = {
     prowess_no_portrait = 12
     tolerance_advantage_mod = 10
     knight_effectiveness_mult = 0.16
+}
+
+lesser_ring_modifier = {
+	monthly_dynasty_prestige = 0.3
+	monthly_prestige = 0.3
+	prowess = 8
+	intrigue_per_prestige_level = 1
+	health = 3
+	stress_gain_mult = 0.1
+	stress_loss_mult = -0.1
 }
 
 ## Nelornieth chain artifacts
