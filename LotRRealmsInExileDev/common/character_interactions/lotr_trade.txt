@@ -1,4 +1,4 @@
-# Purchase resource from another character
+﻿# Purchase resource from another character
 buy_resource_interaction = {
 	icon = icon_gold
 	category = interaction_category_diplomacy

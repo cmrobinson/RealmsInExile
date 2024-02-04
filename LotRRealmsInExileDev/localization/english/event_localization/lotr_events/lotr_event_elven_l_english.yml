@@ -254,6 +254,11 @@
   elven.2020.a:0 "Continue my conquest"
   elven.2020.b:0 "Retire to Himring"
 
+  elven.2030.t:0 ""
+  elven.2030.desc:0 ""
+  elven.2030.a:0 ""
+
+
  ### Elven artifact burns evil characters
  
  elven.9999.t:0 "The Work of the Elves"

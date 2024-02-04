@@ -1133,8 +1133,10 @@ elven.1605 = { # Hidden event | Swap titles for Eregion
 			set_county_culture = root.culture
 			set_county_faith = root.faith
 			change_development_level = 5
-			add_special_building_slot = wonder_mirdairond
-			add_special_building = wonder_mirdairond
+			title_province = {
+				add_special_building_slot = wonder_mirdairond
+				add_special_building = wonder_mirdairond
+			}
 		}
 
 		if = {
@@ -3882,7 +3884,7 @@ elven.2020 = { # Maglor recieives event to go back to Himring
 
 	left_portrait = {
 		character = root
-		scripted_animation = personality_proud
+		animation = personality_proud
 	}
 
 	option = { # Stay, continouing personal conquest
@@ -4003,7 +4005,7 @@ elven.2030 = { # DUN DUN DUN, Maglor recieves Silmaril
 
 	left_portrait = {
 		character = root
-		scripted_animation = personality_proud
+		animation = personality_proud
 	}
 
 	immediate = {

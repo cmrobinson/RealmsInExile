@@ -4890,9 +4890,7 @@ final_battle_maglor_cb = {
 		
 		hidden_effect = {
 			every_living_character = {
-				trigger_event = {
-					id = news_event.0025
-				}
+				trigger_event = { id = news_event.0028 }
 			}
 			faith:lidless_eye = {
 				change_fervor = {
