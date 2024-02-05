@@ -136,9 +136,9 @@
 
   decision_reclamation_of_moria:0 "Reclamation of Khazad-dum"
   decision_reclamation_of_moria_tooltip:0 "Tooltip"
-  decision_reclamation_of_moria_valid_tt:0 "There are no [goblins|E] or [orcs|E] left in the [GetTitleByKey('k_khazad_dum').GetName]"
-  decision_reclamation_of_moria_desc:0 "Description"
-  decision_reclamation_of_moria_confirm:0 "Confirm"
+  decision_reclamation_of_moria_valid_tt:0 "There are no [goblins|E] or [orcs|E] left in the [GetTitleByKey('k_khazad_dum').GetName]."
+  decision_reclamation_of_moria_desc:0 "[GetTitleByKey('k_khazad_dum').GetName] was the mightiest kingdom of the [dwarves|E] in [middleearth|E]. With the fall of the [balrog|E], the greatest impediment to a dwarven return to it has been resolved.\n\nHowever, there still remain many [goblins|E] and [orcs|E] hiding in its depths. We must cleanse the depths, allowing the [longbeards|E] a safe return to their ancient mansion. Their strength shall be needed in the wars to come."
+  decision_reclamation_of_moria_confirm:0 "Let the greatest mansion rise anew!"
   decision_reclamation_of_moria_title_tt:0 "\n$BULLET_WITH_TAB$[GetTitleByKey('k_khazad_dum').GetName]\n$BULLET_WITH_TAB$[GetTitleByKey('d_zirakzigil').GetName]\n$BULLET_WITH_TAB$[GetTitleByKey('d_barazinbar').GetName]\n$BULLET_WITH_TAB$[GetTitleByKey('d_bundushathur').GetName]"
   decision_reclamation_of_moria_troops_tt:0 "You forge an [alliance|E] with the [dwarves|E] for the [battle|E] against [sauroncharacter|E] while periodically recieving troops associated with the [dwarf_in_moria.GetCulture.GetName] [culture|E]\n"
   decision_reclamation_of_moria_tt.1:0 "[dwarf_in_moria.GetName] recieves the duchies of $decision_reclamation_of_moria_title_tt$"
@@ -146,10 +146,10 @@
   decision_reclamation_of_moria_tt.3:0 "[dwarf_in_moria.GetName], a dwarf from the reputed dynasty of [dwarf_in_moria.GetDynastyName] in the Iron Mountains recieves$decision_reclamation_of_moria_title_tt$"
   decision_reclamation_of_moria_tt.4:0 "[dwarf_in_moria.GetName], a dwarf from the reputed dynasty of [dwarf_in_moria.GetDynastyName] in the Blue Mountains recieves$decision_reclamation_of_moria_title_tt$"
 
-  decision_cleanse_the_high_pass:0 "[GetTitleByKey('k_high_pass').GetNameNoTierNoTooltip] cleansed"
+  decision_cleanse_the_high_pass:0 "Cleansing of the [GetTitleByKey('k_high_pass').GetNameNoTierNoTooltip]"
   decision_cleanse_the_high_pass_tooltip:0 "You cleanse [GetTitleByKey('k_high_pass').GetNameNoTierNoTooltip] of goblins."
-  decision_cleanse_the_high_pass_desc:0 "Due to freeing [GetTitleByKey('k_high_pass').GetNameNoTierNoTooltip] of [goblins|E] the valemen will periodically send you [men_at_arms|E]"
-  decision_cleanse_the_high_pass_confirm:0 "VECTOR - PLACEHOLDER"
+  decision_cleanse_the_high_pass_desc:0 "The [GetTitleByKey('k_high_pass').GetNameNoTierNoTooltip] is a vital connection between Rhovanion and Eriador. Of old policed by [imladris|E], in recent history the Valemen under the Beornings has taken over this vital duty. Yet even these strong men struggle. To re-establish the link between the two continents, we must purge the Goblins from the pass!\n\n#I If you successfully remove all [goblins|E] from the [GetTitleByKey('k_high_pass').GetNameNoTierNoTooltip], the Valemen will periodically send you [men_at_arms|E]#!"
+  decision_cleanse_the_high_pass_confirm:0 "The pass shall be made safe!"
   decision_cleanse_the_high_pass_effect:0 "[vale_men.GetName] will recieve:\n$BULLET_WITH_TAB$[GetTitleByKey('c_central_high_pass').GetName]\n$BULLET_WITH_TAB$[GetTitleByKey('c_western_high_pass').GetName]\n$BULLET_WITH_TAB$[GetTitleByKey('c_eastern_high_pass').GetName]"
   decision_cleanse_the_high_pass_valid_tt:0 "There are no [goblins|E] or [orcs|E] left in the [GetTitleByKey('k_high_pass').GetName]"
 
