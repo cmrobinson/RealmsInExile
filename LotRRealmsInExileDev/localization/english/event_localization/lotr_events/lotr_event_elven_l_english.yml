@@ -174,11 +174,11 @@
   elven.1740.a:0 "We shall aid the free men of Harad!"
   elven.1740.b:0 "We are spread too thin already"
 
-  elven.1745.t:0 "VECTOR - Placeholder"
-  elven.1745.desc:0 "Maglor gets a choice on whether to make the Nadi-Manye 'heretics' in Haruzan his tributaries or whether to take immediate resources back to Edhellond, thereby upgrading it. Either choice will make him recieve event MaA"
-  elven.1745.a:0 "VECTOR - Placeholder"
-  elven.1745.b:0 "VECTOR - Placeholder"
-  elven.1740.event_troops:0 "VECTOR - Placeholder"
+  elven.1745.t:0 "The Free Men of Harad"
+  elven.1745.desc:0 "With the final toppling of the Serpent worshippers in Harad, a choice now must be made. Many of the new converts in Harad have approached us, requesting guidance on what to do next.\n\nIf we set them up in the new governments of the Harnen, we could build a powerful coalition of tributaries. That would allow us further long-term support, in the form of both men and materials. Yet if we took them with us, their assistance could be put to work immediately, further strengthening our fortress in Edhellond, as well as fighting in the battles to come."
+  elven.1745.a:0 "Go in peace, and build new realms."
+  elven.1745.b:0 "The war against the Serpent is unfinished. Join me!"
+  elven.1740.event_troops:0 "Free Men of Harad"
 
   elven.1800.t:0 "The Gates of [khazaddum|E]"
   elven.1800.desc:0 "With the rebuilding of [ostinedhil|E] underway, the time has come to begin probing the depth of [khazaddum|E]. I have heard tales on our journey of its great wealth, craftsmen, and ancient friendship with my people. \n\n"
