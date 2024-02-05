@@ -154,7 +154,7 @@
   elven.1725.toast:0 "Freed Gondorian Marines"
 
   elven.1730.opening:0 "The Harad Expedition"
-  elven.1730.desc:0 "Lords of Gondor, hear me!\n\nWith Umbar humbled, Sauron's power in the south wanes. But it is not yet broken. Asking Eastern gondorial lords (Pelargir, Anorien, Ithillien) to send MaA troops for Haruzan conquest"
+  elven.1730.desc:0 "Lords of Gondor, hear me!\n\nWith Umbar humbled, Sauron's power in the south wanes. But it is not yet broken. Now, the foul cults of Harad must be dismantled. This will neuter any threat remaining to Gondor's south, and as such I call upon any man willing to join me!"
   elven.1730.a:0 "Accept"
   elven.1730.b:0 "Decline"
   elven.1730.event_troops.toast:0 "[gondor_ruler.GetNameNoTooltip]'s troops"
