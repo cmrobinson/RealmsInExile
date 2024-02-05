@@ -743,7 +743,7 @@ elven.1000 = { # Maglor Introduction
 	theme = stewardship_wealth_focus
 	right_portrait = {
 		character = root
-		animation = personality_proud
+		animation = personality_content
 	}
 	override_background = { reference = elven_town }
 
@@ -963,9 +963,7 @@ elven.1601 = { # Shield of the Free Peoples starting event | Go to Eregion
 		character = root
 		animation = personality_bold
 	}
-	override_background = {
-		reference = eregion_city
-	}
+	override_background = { reference = eregion_city }
 	
 	option = { 
 		name = elven.1601.a

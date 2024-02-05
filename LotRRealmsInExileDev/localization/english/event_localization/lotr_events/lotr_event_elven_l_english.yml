@@ -67,12 +67,12 @@
   ##########################
 
   elven.1000.t:0 "The Last Son of Fëanor" # Title for Maglor intro
-  elven.1000.desc:0 "Once, there were seven. Now, I am the last. In folly of youth, despair, love, and rage was an oath sworn which drove us to our ruin. To ill end indeed did come all we began well. I will not say no good was done, for good was done. Yet good does not erase evil, even if good comes of it.\n\nFor three-thousand years, I wandered the seashore, lamenting. I can scarcely remember those days, the black pit of despair a maw which consumed everything. I did not know of the death of my nephew, not until it was far too late. Yet my deeds and my oath set me still apart from my people, and so I came here, to Himring. Here have I dwelled since. Despite my best efforts, news of my presence became known, and some of my most foolishly loyal followers came and joined me.\n\nWe have built a life, after a fashion. Humble, yet peaceful. Yet even we hear the words carried on the wind and in the seas. The Darkness rises anew, and the strength of the Free Peoples is not what once it was. Dare I act?"
+  elven.1000.desc:0 "Once, there were seven. Now, I am the last. In folly of youth, despair, love, and rage was an [Concept('oathoffeanor','oath')|E] sworn which drove us to our ruin. To ill end indeed did come all we began well. I will not say no good was done, for good was done. Yet good does not erase evil, even if good comes of it.\n\nFor three-thousand years, I wandered the seashore, lamenting. I can scarcely remember those days, the black pit of despair a maw which consumed everything. I did not know of the death of my nephew, not until it was far too late. Yet my deeds and my oath set me still apart from my people, and so I came here, to Himring. Here have I dwelled since. Despite my best efforts, news of my presence became known, and some of my most foolishly loyal followers came and joined me.\n\nWe have built a life, after a fashion. Humble, yet peaceful. Yet even we hear the words carried on the wind and in the seas. The [Concept('sauroncharacter','Darkness')|E] rises anew, and the strength of the Free Peoples is not what once it was. Dare I act?"
   elven.1000.a:0 "I can remain secluded no more." # Rouse himself 
   elven.1000.b:0 "To ill end shall all things turn. I shall remain here." # Remain Melancholy 
 
   elven.1500.t:0 "The Path of Maglor" 
-  elven.1500.desc:0 "I can remain secluded no more. Yet I am, as now, but one Elda, with a small following. To fight Sauron, I shall need to plan carefully. Two paths lie before me. Try to rally what Elves I can and take the fight to Sauron directly? Or assert my claim (though questionable) to the position of High-king, before leveraging that power to defeat Sauron?"
+  elven.1500.desc:0 "I can remain secluded no more. Yet I am, as now, but one [Concept('eldar','Elda')|E], with a small following. To fight [sauroncharacter|E], I shall need to plan carefully. Two paths lie before me. Try to rally what Elves I can and take the fight to Sauron directly? Or assert my claim (though questionable) to the position of High-king, before leveraging that power to defeat Sauron?"
   elven.1500.a:0 "We shall take the fight to Sauron." # Crusade Against Darkness
   elven.1500.a.tt:0 "Maglor will rally what Elves he can to his banner, before taking the war to Sauron.\n\nUnlock the #V Rally the Army of the Righteous#! [decision|E], which will determine the route you take."
   elven.1500.b:0 "I shall unite the Elves once more under the High-kings." # Kingship by Seniority
@@ -98,7 +98,7 @@
 
   # Shield of the Free Peoples
   elven.1601.t:0 "The Heir of Eregion"
-  elven.1601.desc:0 "There are many threats which have slowly choked the Free Peoples. The Dwarves have lost their great realms of old, the Elves are diminished and split apart from each other. To defeat Sauron, we must be united. To unite, these threats must be quelled. \n\nSuch was my decision. The first step is to cleanse the Misty Mountains and restore the Dwarves, our allies of ancient days. There is an obvious place for us to begin this work, then - Eregion, the realm of my nephew [celebrimbor|E]. The ancient ruins of the kingdom have decayed but with work can be rebuilt. The close proximity to [khazaddum|E] makes it an ideal location from which to begin the work of cleansing it. \n\nSo we set out, leaving behind Himring and Lindon, marching forth for what may be the final war of the High-Elves."
+  elven.1601.desc:0 "There are many threats which have slowly choked the Free Peoples. The [dwarves|E] have lost their great realms of old, the [elves|E] are diminished and split apart from each other. To defeat [sauroncharacter|E], we must be united. To unite, these threats must be quelled. \n\nSuch was my decision. The first step is to cleanse the Misty Mountains and restore the Dwarves, our allies of ancient days. There is an obvious place for us to begin this work, then - Eregion, the realm of my nephew [celebrimbor|E]. The ancient ruins of the kingdom have decayed but with work can be rebuilt. The close proximity to [khazaddum|E] makes it an ideal location from which to begin the work of cleansing it. \n\nSo we set out, leaving behind Himring and Lindon, marching forth for what may be the final war of the High-Elves."
   elven.1601.a:0 "Go not quietly into the night."
 
   # Strike the Heart of the Enemy
@@ -115,7 +115,7 @@
   elven.maglor_help_songsmiths:0 "Volunteers from Helevorn"
   
   elven.1700.opening:0 "Letter Opening"
-  elven.1700.desc:0 "Letter Description"
+  elven.1700.desc:0 "Letter to ask coastal gondorian lords to send MaA to Maglor for Umbar war"
   elven.1700.a:0 "Accept"
   elven.1700.b:0 "Decline"
 
@@ -148,7 +148,7 @@
   elven.1725.toast:0 "Freed Gondorian Marines"
 
   elven.1730.opening:0 "Letter Opening"
-  elven.1730.desc:0 "Letter Description"
+  elven.1730.desc:0 "Asking Eastern gondorial lords (Pelargir, Anorien, Ithillien) to send MaA troops for Haruzan conquest"
   elven.1730.a:0 "Accept"
   elven.1730.b:0 "Decline"
   elven.1730.event_troops.toast:0 "[gondor_ruler.GetNameNoTooltip]'s troops"
@@ -156,7 +156,7 @@
   elven.umbar_marines:0 "Freed Gondorian Troops"
 
   elven.1735.t:0 "VECTOR - Placeholder"
-  elven.1735.desc:0 "VECTOR - Placeholder"
+  elven.1735.desc:0 "Current Amrun ruler gets an event with the Nadi-Manye 'heretics' demanding his titles or his life"
   elven.1735.a:0 "Give titles away"
   elven.1735.b:0 "Give All Duchy title away"
   elven.1735.c:0 "Resist!!!"
@@ -164,12 +164,12 @@
   elven.1735.dynamic_title:0 "Haradric Heretics"
 
   elven.1740.opening:0 "Letter Opening"
-  elven.1740.desc:0 "Letter Description"
-  elven.1740.a:0 "Accept"
-  elven.1740.b:0 "Decline"
+  elven.1740.desc:0 "Maglor recieves a letter asking him to help the Nadi-Manye 'heretics' in their war for Amrun."
+  elven.1740.a:0 "Accept - Join the war"
+  elven.1740.b:0 "Decline - Do not join the war"
 
   elven.1745.t:0 "VECTOR - Placeholder"
-  elven.1745.desc:0 "VECTOR - Placeholder"
+  elven.1745.desc:0 "Maglor gets a choice on whether to make the Nadi-Manye 'heretics' in Haruzan his tributaries or whether to take immediate resources back to Edhellond, thereby upgrading it. Either choice will make him recieve event MaA"
   elven.1745.a:0 "VECTOR - Placeholder"
   elven.1745.b:0 "VECTOR - Placeholder"
   elven.1740.event_troops:0 "VECTOR - Placeholder"
@@ -192,13 +192,13 @@
   elven.1806.event_troops:0 "Dwarven Soldiers"
 
   elven.1810.t:0 "VECTOR - Placeholder"
-  elven.1810.desc:0 "VECTOR - Placeholder"
+  elven.1810.desc:0 "Maglor recieves this event. He shows up to Elronds court asking Elrond/Glorfindel to help him in slaying the Balrog"
   elven.1810.a:0 "Maglor seeks help from Elrond/Glorfindel"
 
   elven.1811.t:0 "VECTOR - Placeholder"
-  elven.1811.desc:0 "VECTOR - Placeholder"
-  elven.1811.a:0 "VECTOR - Placeholder"
-  elven.1811.b:0 "VECTOR - Placeholder"
+  elven.1811.desc:0 "ROYAL COURT EVENT. Elrond is the root character (character recieving event). This is Maglors petition to go and kill the Balrog"
+  elven.1811.a:0 "Go with Maglor to face Balrog"
+  elven.1811.b:0 "Choose to send another elf"
 
   elven.1815.t:0 "VECTOR - Placeholder"
   elven.1815.desc:0 "VECTOR - Placeholder"
@@ -210,11 +210,11 @@
 	elven.1818.toast:0 "Elven soldiers from Rivendell"
 
   elven.1820.t:0 "VECTOR - Placeholder"
-  elven.1820.desc:0 "VECTOR - Placeholder"
-  elven.1820.a:0 "VECTOR - Placeholder"
+  elven.1820.desc:0 "You now have access to special CB, clear Khazad-dum!"
+  elven.1820.a:0 "Lets go and clear Khazad-dum of ORCS!!!"
 
   elven.1830.t:0 "VECTOR - Placeholder"
-  elven.1830.desc:0 "VECTOR - Placeholder"
+  elven.1830.desc:0 "Event for Maglor to decide which of the prominent elven lords/ladies in the region get Amon Lanc, or whether to keep it for himself"
   elven.1830.a:0 "Galadriel gets titles"
   elven.1830.b:0 "Thranduil gets titles"
   elven.1830.c:0 "Keep titles"
@@ -227,39 +227,39 @@
 	elven.1818.lasgalen:0 "Elven soldiers from [GetTitleByKey('k_lasgalen').GetNameNoTier]"
 
   elven.1850.t:0 "VECTOR - Placeholder"
-  elven.1850.desc:0 "VECTOR - Placeholder"
-  elven.1850.a:0 "VECTOR - Placeholder"
+  elven.1850.desc:0 "Event for Maglor after decision for 'Clear High Pass' has been taken. Maglor will now recieve vale MaA for a short period"
+  elven.1850.a:0 "Vale sends MaA to join you"
   
 	elven.1851.toast:0 " Volunteers from the Vale"
  
   elven.1840.t:0 "VECTOR - Placeholder"
-  elven.1840.desc:0 "VECTOR - Placeholder"
+  elven.1840.desc:0 "Event for Maglor/Galadriel/Thranduil/Khazad-dum ruler [ THIS CAN BE SPLIT IF SEPERATE EVENTS WANT TO BE DONE, JUST NOTIFY ME ]. Calls them into the 'Second' last alliance, albeit without Dunedain"
   elven.1840.a:0 "Called into Sauron/Maglor War"
 
   elven.2000.t:0 "VECTOR - Placeholder"
-  elven.2000.desc:0 "VECTOR - Placeholder"
+  elven.2000.desc:0 "Sauron recieves this event. Notification of Maglors alliance attacking him"
   elven.2000.a:0 "VECTOR - Placeholder"
 
   elven.2001.t:0 "Epic Rap Battle - Scene 1"
   elven.2001.desc:0 "And flame before blackest pit spake, before the incarnate of hate. Who rose then from his darkened throne, and spoke ruinous words of woe. Of oaths spoke in youthful days, of blood stained upon the quays\n\nIn reply the flame then sung, of sorrow and of endless tears, of star set high above all fears. Of sorrow deeper than the sea, of good will turned to ill indeed. But though the tears unending flow, still yet unbowed to lord of woes; to build anew and mend aright, the sorrows born in grief-filled nights.\n\nAnd the Shadow sung of falling night, of oaths betrayed and friends to flight. Of shattered halls and rivers of flame, of sorrow and of hate-filled bane."
-  elven.2001.a:0 "AAANDDDD CUT!"
+  elven.2001.a:0 "Epic Rap Battle - Scene 1"
 
   elven.2002.t:0 "Epic Rap Battle - Scene 2"
   elven.2002.desc:0 "The last of seven replied, of hate that would never die. Of war that would not abate, ere the ending of all days. Of love deeper than the earth below, though not of blood, truth would show. Of the flame which cannot die, though malice smothers all under sky. Of embers fanned to flames of war, the rising of the sun of morn."
-  elven.2002.a:0 "Lets re-do it"
+  elven.2002.a:0 "Epic Rap Battle - Scene 2"
 
   elven.2003.t:0 "Epic Rap Battle - Scene 3"
-  elven.2003.desc:0 "VECTOR - Placeholder"
-  elven.2003.a:0 "Attaboy!"
+  elven.2003.desc:0 "Epic Rap Battle - Scene 3"
+  elven.2003.a:0 "Epic Rap Battle - Scene 3"
 
   elven.2020.t:0 "VECTOR - Placeholder"
-  elven.2020.desc:0 "VECTOR - Placeholder"
+  elven.2020.desc:0 "Event that fire the Silmarillion chain. Maglor can either choose to stay put (and retire later) or immediately go back to Himring"
   elven.2020.a:0 "Continue my conquest"
   elven.2020.b:0 "Retire to Himring"
 
-  elven.2030.t:0 ""
-  elven.2030.desc:0 ""
-  elven.2030.a:0 ""
+  elven.2030.t:0 "VECTOR - Placeholder"
+  elven.2030.desc:0 "Maglor recieves a Silmarillion from Ulmo"
+  elven.2030.a:0 "VECTOR - Placeholder"
 
 
  ### Elven artifact burns evil characters
