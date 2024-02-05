@@ -1387,9 +1387,7 @@ decision_umbar_burns = { # Starts war against Umbar
 	}
 	
 	# IS_VALID
-	is_valid = {
-		custom_tooltip = { text = "WIP" }
-	}
+	is_valid = { }
 	is_valid_showing_failures_only = {
 		is_imprisoned = no
 		is_available_adult = yes
@@ -1398,8 +1396,8 @@ decision_umbar_burns = { # Starts war against Umbar
 	
 	# COST 
 	cost = {
-		gold = 250
-		prestige = 500
+		gold = 100
+		prestige = 250
 	}
 	
 	# EFFECT 
@@ -1758,10 +1756,6 @@ decision_bring_harad_down = {
 		has_variable = maglor_aggresive
 		faith_is_good = yes
 		
-		is_target_in_global_variable_list = {
-			name = unavailable_unique_decisions
-			target = flag:decision_umbar_burns
-		}
 		NOT = {
 			is_target_in_global_variable_list = {
 				name = unavailable_unique_decisions
@@ -1775,6 +1769,10 @@ decision_bring_harad_down = {
 		custom_tooltip = {
 			text = "decision_bring_harad_down_custom_tt"
 			has_variable = won_against_umbar
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:decision_umbar_burns
+			}
 		}
 	}
 	is_valid_showing_failures_only = {

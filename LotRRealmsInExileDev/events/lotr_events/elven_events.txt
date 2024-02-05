@@ -1106,6 +1106,22 @@ elven.1604 = { # Hidden event | Swap titles for Edhellond
 		resolve_title_and_vassal_change = scope:title_change
 
 		get_title = title:k_feanor_host
+
+		remove_variable = no_return_event
+		
+		set_location = root.capital_province
+
+		every_knight = {
+			limit = { is_ruler = no }
+			set_location = root.capital_province
+		}
+		every_councillor = {
+			limit = { is_ruler = no }
+			set_location = root.capital_province
+		}
+		every_courtier_or_guest = {
+			set_location = root.capital_province
+		}
 	}
 }
 
@@ -1942,6 +1958,8 @@ elven.1715 = { # Event if win against Umbar
 		else = { trigger_event = elven.1725 }
 		
 		remove_variable = maglor_umbar_event
+
+		add_prestige = 1000
 	}
 }
 
@@ -2022,6 +2040,11 @@ elven.1720 = { # hidden event to appoint governors
 					variable = potential_gondorian_governors
 					limit = { is_alive = yes }
 					save_scope_as = new_holder
+					add_opinion = {
+						modifier = recieved_title
+						opinion = 40
+						target = character:linefinwe11
+					}
 					remove_list_global_variable = { # Remove knight from available governors
 						name = potential_gondorian_governors
 						target = this
@@ -2050,6 +2073,11 @@ elven.1720 = { # hidden event to appoint governors
 				random_in_global_list = {
 					variable = replacement_governors
 					save_scope_as = new_holder
+					add_opinion = {
+						modifier = recieved_title
+						opinion = 40
+						target = character:linefinwe11
+					}
 					remove_list_global_variable = {
 						name = replacement_governors
 						target = this
@@ -2277,9 +2305,12 @@ elven.1735 = { # Dynasty Rises in Amrun | Demands sent to current Amrun ruler
 		}
 		scope:nadi_manye_leader = { set_variable = nadi_manye_war_leader }
 
-		
 		hidden_effect = {
 			title:c_amrun = {
+				add_county_modifier = {
+					modifier = heretic_faction_rose_against_me_modifier
+					years = 5
+				}
 				change_county_control = medium_county_control_loss
 				title_create_faction = {
 					type = peasant_faction
@@ -2406,8 +2437,9 @@ elven.1735 = { # Dynasty Rises in Amrun | Demands sent to current Amrun ruler
 			scope:nadi_manye_leader = { save_scope_as = peasant_leader }
 
 			scope:amrun_peasant_faction = {
-				faction_start_war = { title = scope:peasant_county }
-				
+				faction_start_war = {}
+			
+				# This needs to run after 'faction_start_war' or the troops won't spawn correctly.
 				faction_spawn_member_county_armies_effect = {
 					FACTION = scope:amrun_peasant_faction
 					ARMY_OWNER = scope:nadi_manye_leader
@@ -2423,7 +2455,7 @@ elven.1735 = { # Dynasty Rises in Amrun | Demands sent to current Amrun ruler
 		character:linefinwe11 = {
 			trigger_event = {
 				id = elven.1740
-				days = { 10 15 }
+				days = { 5 10 }
 			} 
 		}
 	}
@@ -2439,17 +2471,21 @@ elven.1736 = {
 			name = elven.1735.army
 			men_at_arms = {
 				type = desert_javelineers
-				stacks = 4
+				stacks = 6
 			}
 			men_at_arms = {
 				type = haradrim_radiers
-				stacks = 2
+				stacks = 6
 			}
 			men_at_arms = {
 				type = desert_screamers 
-				stacks = 1
+				stacks = 6
 			}
-			location = root.capital_province
+			men_at_arms = {
+				type = mangonel
+				stacks = 8
+			}
+			location = root.location
 		}
 	}
 }
@@ -4098,6 +4134,8 @@ elven.2003 = { # Third Song Battle Event between Maglor/Sauron
 
 	option = {
 		name = elven.2003.a
+		
+		remove_character_modifier = valar_ban_modifier
 
 		character:lineofsauron = {
 			show_as_tooltip = {

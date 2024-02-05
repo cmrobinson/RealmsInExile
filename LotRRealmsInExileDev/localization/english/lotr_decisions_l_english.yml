@@ -130,8 +130,8 @@
   decision_help_good_dynasty_rise_tooltip:0 "With the fallen Men of Harad scattered, elevate a righteous people to rule them." 
   decision_help_good_dynasty_rise_desc:0 "With Sauron's most powerful servants in Harad defeated, many of the Haradrim have lost faith in Khaz-gramaze. Their god either unwilling or unable to defend them, many are starting to turn away from him. Perhaps with our support, these dissidents could not only further weaken Sauron's grip, but cause the whole region to turn against him? Rumors already have spread of a zealous leader preaching against Sauron..."
   decision_help_good_dynasty_rise_confirm:0 "Rise, Men of Harad, and know truth and light." 
-  decision_help_good_dynasty_rise_custom_tt.1:0 "A powerful new dynasty will rise in Haruzan aligned with us\n"
-  decision_help_good_dynasty_rise_custom_tt.2:0 "The 'Shatter Realm' Casus Belli can now be used globally"
+  decision_help_good_dynasty_rise_custom_tt.1:0 "A powerful new dynasty will rise in [GetTitleByKey('k_haruzan').GetNameNoTier] aligned with us\n"
+  decision_help_good_dynasty_rise_custom_tt.2:0 "The 'Shatter Realm' Casus Belli can now be used outside of the [GetTitleByKey('e_haradwaith').GetNameNoTier] empire"
   decision_help_good_dynasty_rise_custom_tt.3:0 "Only realms of Duchy tier may exist in the Haradwaith Empire if their holder is of an evil faith."
 
   decision_reclamation_of_moria:0 "Reclamation of Khazad-dum"

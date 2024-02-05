@@ -1588,9 +1588,7 @@ setup_nadi_manye_leader_effect = {
 	save_scope_as = faction
 	# Does a peasant capital county already exist?
 	if = {
-		limit = {
-			NOT = { exists = scope:peasant_county }
-		}
+		limit = { NOT = { exists = scope:peasant_county } }
 		random_faction_county_member = { save_scope_as = peasant_county }
 	}
 	if = {

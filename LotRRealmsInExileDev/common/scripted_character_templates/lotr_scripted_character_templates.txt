@@ -556,14 +556,29 @@ random_dwarf_template = {
 
 maglor_nadi_manye_leader = {
 	age = { 20 40 }
-	random_traits = yes
+	random_traits_list = {
+		count = 1
+		brave = {}
+		calm = {}
+		patient = {}
+		strong = {}
+		diligent = {}
+		stubborn = {}
+		athletic = {}
+	}
 	dynasty = none
 	culture = culture:haruze
 	faith = faith:faith_chelkar
 	gender_female_chance = root_soldier_female_chance
-	stewardship = {
-		min_template_decent_skill
-		max_template_decent_skill
+	random_traits_list = {
+		count = 1
+		education_martial_2 = {}
+		education_martial_3 = {}
+		education_martial_4 = {}
+	}
+	martial = {
+		min_template_high_skill
+		max_template_high_skill
 	}
 	after_creation = {
 		add_trait = holy_warrior
