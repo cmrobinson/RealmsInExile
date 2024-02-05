@@ -2003,6 +2003,22 @@ decision_reclamation_of_moria = {
 				transfer_central_moria_effect = yes
 			}
 		}
+		else_if = { # Check for random dwarf in Moria
+			limit = {
+				title:k_khazad_dum = {
+					any_in_de_jure_hierarchy = {
+						tier = tier_county
+						holder = { culture = { is_dwarf_culture = yes } }
+						holder = { save_temporary_scope_as = dwarf_in_moria }
+					}	
+				}
+			}
+			custom_tooltip = "decision_reclamation_of_moria_troops_tt"
+			custom_tooltip = { # Works
+				text = "decision_reclamation_of_moria_tt.1"
+				transfer_central_moria_effect = yes
+			}
+		}
 		else_if = { # Check for Durin dwarf in Erebor/Iron Hills
 			limit = {
 				OR = {
@@ -2019,22 +2035,6 @@ decision_reclamation_of_moria = {
 			custom_tooltip = "decision_reclamation_of_moria_troops_tt"
 			custom_tooltip = { # Works
 				text = "decision_reclamation_of_moria_tt.2"
-				transfer_central_moria_effect = yes
-			}
-		}
-		else_if = { # Check for random dwarf in Moria
-			limit = {
-				title:k_khazad_dum = {
-					any_in_de_jure_hierarchy = {
-						tier = tier_county
-						holder = { culture = { is_dwarf_culture = yes } }
-						holder = { save_temporary_scope_as = dwarf_in_moria }
-					}	
-				}
-			}
-			custom_tooltip = "decision_reclamation_of_moria_troops_tt"
-			custom_tooltip = { # Works
-				text = "decision_reclamation_of_moria_tt.1"
 				transfer_central_moria_effect = yes
 			}
 		}
