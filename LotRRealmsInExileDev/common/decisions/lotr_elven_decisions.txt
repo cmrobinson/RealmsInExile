@@ -1321,7 +1321,7 @@ decision_annihilate_abhorred = { # Starts war against Sauron
 			}
 		}
 		trigger_else = {
-			custom_tooltip = { text = "decision_annihilate_abhorred_aggresive_tt" }
+			# custom_tooltip = { text = "decision_annihilate_abhorred_aggresive_tt" }
 		}
 	}
 	is_valid_showing_failures_only = {
@@ -1341,7 +1341,13 @@ decision_annihilate_abhorred = { # Starts war against Sauron
 			target_title = title:e_mordor
 		}
 
-		trigger_event = elven.1840
+		if = {
+			limit = { has_variable = maglor_defensive }
+			trigger_event = elven.1840
+		}
+		else = {
+			trigger_event = elven.1841
+		}
 	}
 
 	# AI

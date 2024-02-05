@@ -57,10 +57,10 @@
  elven.0500.b.tt:0 "We shall not cede our claim to Elendil and the Dunedain. This may have consequences, as the Dunedain settlers in our land desire to join with the High-king..."
 
 
- elven.0501.t:0 "PALCEHOLDE - Vector"
- elven.0501.desc:0 "PALCEHOLDE - Vector"
- elven.0501.a:0 "PALCEHOLDE - Vector"
- elven.0501.b:0 "PALCEHOLDE - Vector"
+ elven.0501.t:0 "PALCEHOLDE - Vector" # VECTOR - Placeholder
+ elven.0501.desc:0 "Dunedain in Sirgala get event to determine what they do" # VECTOR - Placeholder
+ elven.0501.a:0 "Become vassal of Elendil" # VECTOR - Placeholder
+ elven.0501.b:0 "Stay vassal of Merethorn" # VECTOR - Placeholder
 
   ##########################
   ### Maglor Event Chain ###
@@ -81,20 +81,20 @@
   ### 4th Kin-slaying ###
 
   # Send letter to loyalists
-  elven.1555.opening:0 "Letter Opening"
-  elven.1555.desc:0 "Letter Description"
-  elven.1555.a:0 "Accept"
-  elven.1555.b:0 "Decline"
+  elven.1555.opening:0 "Letter Opening" # VECTOR - Placeholder
+  elven.1555.desc:0 "Maglor asking elf to help him in 4th kinslaying" # VECTOR - Placeholder
+  elven.1555.a:0 "Join Maglor in war against Cirdan" # VECTOR - Placeholder
+  elven.1555.b:0 "Do NOT join Maglor in war against Cirdan" # VECTOR - Placeholder
 
   # Starts war against Cirdan 
-  elven.1556.t:0 "VECTOR - Placeholder"
-  elven.1556.desc:0 "VECTOR - Placeholder"
-  elven.1556.a:0 "VECTOR - Placeholder"
+  elven.1556.t:0 "VECTOR - Placeholder" # VECTOR - Placeholder
+  elven.1556.desc:0 "Notifies player of war about to start with Cirdan" # VECTOR - Placeholder
+  elven.1556.a:0 "Maglor marches off to war" # VECTOR - Placeholder
 
   # The Fourth Kinslaying
-  elven.1560.t:0 "VECTOR - Placeholder"
-  elven.1560.desc:0 "VECTOR - Placeholder"
-  elven.1560.a:0 "VECTOR - Placeholder"
+  elven.1560.t:0 "VECTOR - Placeholder" # VECTOR - Placeholder 
+  elven.1560.desc:0 "VECTOR - Placeholder" # VECTOR - Placeholder
+  elven.1560.a:0 "VECTOR - Placeholder" # VECTOR - Placeholder
 
   # Shield of the Free Peoples
   elven.1601.t:0 "The Heir of Eregion"
@@ -177,7 +177,10 @@
   elven.1745.t:0 "The Free Men of Harad"
   elven.1745.desc:0 "With the final toppling of the Serpent worshippers in Harad, a choice now must be made. Many of the new converts in Harad have approached us, requesting guidance on what to do next.\n\nIf we set them up in the new governments of the Harnen, we could build a powerful coalition of tributaries. That would allow us further long-term support, in the form of both men and materials. Yet if we took them with us, their assistance could be put to work immediately, further strengthening our fortress in Edhellond, as well as fighting in the battles to come."
   elven.1745.a:0 "Go in peace, and build new realms."
+  elven.1745.a.tt_1:0 "You gain [attacker.GetFirstName] as a [tributary|E]"
+  elven.1745.a.tt_2:0 "You receive #P full#! event troops from [attacker.GetFirstName]"
   elven.1745.b:0 "The war against the Serpent is unfinished. Join me!"
+  elven.1745.b.tt_1:0 "You receive #N half#! event troops from [attacker.GetFirstName]"
   elven.1740.event_troops:0 "Free Men of Harad"
 
   elven.1800.t:0 "The Gates of [khazaddum|E]"
@@ -198,30 +201,30 @@
   elven.1806.a.tt.3:0 "The Dwarves put their great skills to use, helping to rebuild Ost-in-Edhil"
   elven.1806.event_troops:0 "Dwarven Soldiers"
 
-  elven.1810.t:0 "VECTOR - Placeholder"
-  elven.1810.desc:0 "Maglor recieves this event. He shows up to Elronds court asking Elrond/Glorfindel to help him in slaying the Balrog"
-  elven.1810.a:0 "Maglor seeks help from Elrond/Glorfindel"
+  elven.1810.t:0 "VECTOR - Placeholder" # VECTOR - Placeholder
+  elven.1810.desc:0 "Maglor recieves this event. He shows up to Elronds court asking Elrond/Glorfindel to help him in slaying the Balrog" # VECTOR - Placeholder
+  elven.1810.a:0 "Maglor seeks help from Elrond/Glorfindel" # VECTOR - Placeholder
 
-  elven.1811.t:0 "VECTOR - Placeholder"
-  elven.1811.desc:0 "ROYAL COURT EVENT. Elrond is the root character (character recieving event). This is Maglors petition to go and kill the Balrog"
-  elven.1811.a:0 "Go with Maglor to face Balrog"
-  elven.1811.b:0 "Choose to send another elf"
+  elven.1811.t:0 "VECTOR - Placeholder" # VECTOR - Placeholder
+  elven.1811.desc:0 "ROYAL COURT EVENT. Elrond is the root character (character recieving event). This is Maglors petition to go and kill the Balrog" # VECTOR - Placeholder
+  elven.1811.a:0 "Go with Maglor to face Balrog" # VECTOR - Placeholder
+  elven.1811.b:0 "Choose to send another noldor elf" # VECTOR - Placeholder
 
-  elven.1815.t:0 "VECTOR - Placeholder"
-  elven.1815.desc:0 "VECTOR - Placeholder"
-  elven.1815.a:0 "Maglor fights the Balrog"
-  elven.1815.toast:0 "You slay Durin's Bane."
+  elven.1815.t:0 "VECTOR - Placeholder" # VECTOR - Placeholder
+  elven.1815.desc:0 "Description that appears when Maglor/Elrond/Glorfindel fight against Balrog" # VECTOR - Placeholder
+  elven.1815.a:0 "Maglor fights the Balrog" # VECTOR - Placeholder
+  elven.1815.toast:0 "You slay Durin's Bane." # VECTOR - Placeholder
   elven.1815.cb_unlock:0 "Unlock the 'Purge Underground Regions' [casus_belli|E]"
 
   elven.1816.toast:0 "Dwarven troops from Khazad-dum"
 	elven.1818.toast:0 "Elven soldiers from Rivendell"
 
-  elven.1820.t:0 "VECTOR - Placeholder"
-  elven.1820.desc:0 "You now have access to special CB, clear Khazad-dum!"
-  elven.1820.a:0 "Lets go and clear Khazad-dum of ORCS!!!"
+  elven.1820.t:0 "VECTOR - Placeholder" # VECTOR - Placeholder 
+  elven.1820.desc:0 "You now have access to special CB, clear Khazad-dum!" # VECTOR - Placeholder
+  elven.1820.a:0 "Lets go and clear Khazad-dum of ORCS!!!" # VECTOR - Placeholder
 
-  elven.1830.t:0 "VECTOR - Placeholder"
-  elven.1830.desc:0 "Event for Maglor to decide which of the prominent elven lords/ladies in the region get Amon Lanc, or whether to keep it for himself"
+  elven.1830.t:0 "VECTOR - Placeholder" # VECTOR - Placeholder 
+  elven.1830.desc:0 "Event for Maglor to decide which of the prominent elven lords/ladies in the region get Amon Lanc, or whether to keep it for himself" # VECTOR - Placeholders
   elven.1830.a:0 "Galadriel gets titles"
   elven.1830.b:0 "Thranduil gets titles"
   elven.1830.c:0 "Keep titles"
@@ -233,19 +236,29 @@
 	elven.1818.lothlorien:0 "Elven soldiers from [GetTitleByKey('k_lothlorien').GetNameNoTier]"
 	elven.1818.lasgalen:0 "Elven soldiers from [GetTitleByKey('k_lasgalen').GetNameNoTier]"
 
-  elven.1850.t:0 "VECTOR - Placeholder"
+  elven.1850.t:0 "VECTOR - Placeholder" # VECTOR - Placeholder
   elven.1850.desc:0 "Event for Maglor after decision for 'Clear High Pass' has been taken. Maglor will now recieve vale MaA for a short period"
   elven.1850.a:0 "Vale sends MaA to join you"
   
 	elven.1851.toast:0 " Volunteers from the Vale"
  
-  elven.1840.t:0 "VECTOR - Placeholder"
-  elven.1840.desc:0 "Event for Maglor/Galadriel/Thranduil/Khazad-dum ruler [ THIS CAN BE SPLIT IF SEPERATE EVENTS WANT TO BE DONE, JUST NOTIFY ME ]. Calls them into the 'Second' last alliance, albeit without Dunedain"
-  elven.1840.a:0 "Called into Sauron/Maglor War"
+  elven.1840.t:0 "VECTOR - Placeholder" # VECTOR - Placeholder
+  elven.1840.desc:0 "Event for Maglor/Galadriel/Thranduil/Khazad-dum ruler [ THIS CAN BE SPLIT IF SEPERATE EVENTS WANT TO BE DONE, JUST NOTIFY ME ]. Calls them into the 'Second' last alliance, albeit without Dunedain" # VECTOR - Placeholder
+  elven.1840.a:0 "Called into Sauron/Maglor War" # VECTOR - Placeholder
 
-  elven.2000.t:0 "VECTOR - Placeholder"
-  elven.2000.desc:0 "Sauron recieves this event. Notification of Maglors alliance attacking him"
-  elven.2000.a:0 "VECTOR - Placeholder"
+  elven.1841.t:0 "VECTOR - Placeholder"
+  elven.1841.desc:0 "Maglor asks Gondor for help against Sauron"
+  elven.1841.a:0 "Send Gondor ruler a letter asking for help"
+  elven.1841.b:0 "We can defeat Sauron on our own"
+
+  elven.1845.opening:0 "VECTOR - Placeholder"
+  elven.1845.desc:0 "Gondor ruler gets letter from Maglor asking for help against Sauron"
+  elven.1845.a:0 "We shall help Maglor"
+  elven.1845.b:0 "We have our own problems"
+
+  elven.2000.t:0 "VECTOR - Placeholder" # VECTOR - Placeholder
+  elven.2000.desc:0 "Sauron recieves this event. Notification of Maglors alliance attacking him" # VECTOR - Placeholder
+  elven.2000.a:0 "VECTOR - Placeholder" # VECTOR - Placeholder
 
   elven.2001.t:0 "Epic Rap Battle - Scene 1"
   elven.2001.desc:0 "And flame before blackest pit spake, before the incarnate of hate. Who rose then from his darkened throne, and spoke ruinous words of woe. Of oaths spoke in youthful days, of blood stained upon the quays\n\nIn reply the flame then sung, of sorrow and of endless tears, of star set high above all fears. Of sorrow deeper than the sea, of good will turned to ill indeed. But though the tears unending flow, still yet unbowed to lord of woes; to build anew and mend aright, the sorrows born in grief-filled nights.\n\nAnd the Shadow sung of falling night, of oaths betrayed and friends to flight. Of shattered halls and rivers of flame, of sorrow and of hate-filled bane."

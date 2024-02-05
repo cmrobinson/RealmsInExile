@@ -4890,6 +4890,11 @@ final_battle_maglor_cb = {
 		
 		hidden_effect = {
 			every_living_character = {
+				limit = { 
+					is_ruler = yes
+					is_ai = no
+					NOT = { this = scope:attacker } 
+				}
 				trigger_event = { id = news_event.0028 }
 			}
 			faith:lidless_eye = {
@@ -4954,19 +4959,63 @@ nadi_manye_religious_war_cb = {
 	}
 
 	on_victory_desc = {
-		first_valid = {
-			triggered_desc = {
-				trigger = { scope:defender = { is_local_player = yes } }
-				desc = tedjin_civil_war_victory_defender_desc
-			}
-			desc = tedjin_civil_war_victory_desc
-		}
-		desc = tedjin_civil_war_victory_end_desc		
+		desc = nadi_manye_religious_war_victory_end_desc		
 	}
 
 	on_victory = {
+		character:linefinwe11 = {
+			trigger_event = elven.1745
+		}
 		scope:attacker = { 
 			show_pow_release_message_effect = yes
+		}
+		create_title_and_vassal_change = {
+			type = independency
+			save_scope_as = change
+			add_claim_on_loss = no
+		}
+		scope:defender = {
+			if = {
+				limit = { has_vassals = yes }
+				every_vassal_or_below = {
+					limit = { highest_held_title_tier > tier_barony }
+					becomes_independent = {
+						change = scope:change
+					}
+				}
+			}
+		}
+		resolve_title_and_vassal_change = scope:change
+
+		hidden_effect = {
+			create_title_and_vassal_change = {
+				type = faction_demand
+				save_scope_as = change
+				add_claim_on_loss = no
+			}
+	
+			scope:defender = {
+				every_held_title = {
+					add_to_list = targeted_titles
+				}
+			}
+	
+			every_in_list = {
+				list = targeted_titles
+				random = {
+					chance = 50
+					if = {
+						limit = { this.tier = tier_county }
+						set_county_faith = scope:attacker.faith
+					}
+				}
+				change_title_holder = {
+					holder = scope:attacker
+					change = scope:change
+				}
+			}
+			
+			resolve_title_and_vassal_change = scope:change
 		}
 	}
 
@@ -4982,25 +5031,7 @@ nadi_manye_religious_war_cb = {
 		}
 	}
 
-	on_defeat_desc = {
-		first_valid = {
-			triggered_desc = {
-				trigger = { scope:defender = { is_local_player = yes } }
-				desc = tedjin_civil_war_defeat_defender_desc
-			}
-			triggered_desc = {
-				trigger = {
-					scope:attacker.joined_faction = {
-						any_faction_member = { is_local_player = yes }
-					}
-				}
-				desc = tedjin_civil_war_defeat_attacker_desc
-			}
-			desc = tedjin_civil_war_defeat_desc
-		}
-		desc = tedjin_civil_war_defeat_end_desc
-		
-	}
+	on_defeat_desc = { desc = nadi_manye_religious_war_defeat_end_desc }
 
 	on_defeat = {
 		on_lost_faction_revolt_war = yes
@@ -5018,7 +5049,7 @@ nadi_manye_religious_war_cb = {
 	attacker_allies_inherit = yes
 	defender_allies_inherit = yes
 
-	war_name = "TEDJIN_CIVIL_WAR_NAME"
+	war_name = "nadi_manye_religious_war_cb"
 
 	interface_priority = 80
 

@@ -2311,27 +2311,9 @@ elven.1735 = { # Dynasty Rises in Amrun | Demands sent to current Amrun ruler
 					modifier = heretic_faction_rose_against_me_modifier
 					years = 5
 				}
-				change_county_control = medium_county_control_loss
-				title_create_faction = {
-					type = peasant_faction
-					target = title:c_amrun.holder
-				}
-				holder = {
-					every_targeting_faction = {  # go through all existing factions
-						if = {
-							limit = { any_faction_county_member = { this = title:c_amrun } }
-							save_scope_as = amrun_peasant_faction
-						}
-					}
-				}
-			}
-			scope:amrun_peasant_faction = {
-				title:c_amrun = { save_scope_as = peasant_county }
-				scope:nadi_manye_leader = { save_scope_as = peasant_leader }
-				setup_nadi_manye_leader_effect = yes
-				add_faction_discontent = 100
 			}
 		}
+		
 	}
 
 	option = { # Give all of your titles to new dynasty
@@ -2429,6 +2411,33 @@ elven.1735 = { # Dynasty Rises in Amrun | Demands sent to current Amrun ruler
 
 	option = { # Resist against dynasty
 		name = elven.1735.c
+		custom_tooltip = {
+			text = elven.1735.c.tt
+			hidden_effect = {
+				title:c_amrun = {
+					change_county_control = medium_county_control_loss
+					title_create_faction = {
+						type = maglor_nadi_manye_faction
+						target = title:c_amrun.holder
+					}
+					holder = {
+						every_targeting_faction = {  # go through all existing factions
+							if = {
+								limit = { any_faction_county_member = { this = title:c_amrun } }
+								save_scope_as = amrun_peasant_faction
+							}
+						}
+					}
+				}
+				scope:amrun_peasant_faction = {
+					title:c_amrun = { save_scope_as = peasant_county }
+					scope:nadi_manye_leader = { save_scope_as = peasant_leader }
+					setup_nadi_manye_leader_effect = yes
+					add_faction_discontent = 100
+				}
+			}
+		}
+		
 
 		# Make the faction declare war on the person holding c_amrun
 		if = {
@@ -2582,12 +2591,16 @@ elven.1745 = { # Maglor gets choice to make Nadi-Manye tributaries
 	}
 
 	left_portrait = {
-		character = title:c_amrun.holder
+		character = scope:attacker
 		animation = personality_proud
 	}
+
+	# immediate = { title:c_amrun.holder = { save_scope_as = nadi_manye_leader } }
 	
 	option = { # Accept Rebel Leader tributary status
 		name = elven.1745.a
+		custom_tooltip = elven.1745.a.tt_1
+		custom_tooltip = elven.1745.a.tt_2
 		make_tributary = {
 			TYPE = tributary_permanent
 			SUZERAIN = character:linefinwe11
@@ -2598,6 +2611,7 @@ elven.1745 = { # Maglor gets choice to make Nadi-Manye tributaries
 	option = { # Decline, take resources back to Edhellond
 		name = elven.1745.b
 
+		custom_tooltip = elven.1745.b.tt_1
 		province:420 = { elven_settlement_add_building_effect = yes }
 	}
 
@@ -2612,7 +2626,7 @@ elven.1750 = { # Toast event to give Maglor Haruzan Event Troops
 	trigger = {
 		trigger_if = {
 			limit = { has_variable = maglor_haruzan_event_troops }
-			var:maglor_haruzan_event_troops < 4
+			var:maglor_haruzan_event_troops < 6
 		}
 		sauron_is_alive = yes
 	}
@@ -2664,7 +2678,13 @@ elven.1750 = { # Toast event to give Maglor Haruzan Event Troops
 			}
 			else = {
 				random_list = {
-					2 = {}
+					2 = {
+						spawn_army = {
+							name = elven.1740.event_troops
+							levies = 50
+							location = root.capital_province
+						}
+					}
 					1 = {
 						spawn_army = {
 							name = elven.1740.event_troops
@@ -2693,7 +2713,7 @@ elven.1750 = { # Toast event to give Maglor Haruzan Event Troops
 	after = {
 		trigger_event = {
 			id = elven.1750
-			months = { 4 6 }
+			days = { 15 30 }
 		}
 	}
 }
@@ -3905,7 +3925,7 @@ elven.1831 = { # Hidden event to give elven MaA event troops to Maglor
 
 		trigger_event = {
 			id = elven.1831
-			days = { 45 90 }
+			days = { 15 30 }
 		}
 	}
 }
@@ -3961,6 +3981,68 @@ elven.1840 = { # Call in members of northern alliance into destroy Mordor  war
 			}
 			
 		}
+	}
+}
+
+elven.1841 = {
+	content_source = realms_dlc
+	type = character_event
+	title = elven.1841.t
+	desc = elven.1841.desc
+	theme = realm
+
+	right_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	left_portrait = {
+		character = title:c_minas_tirith.holder
+		animation = personality_honorable
+	}
+
+	option = { # Seek help from Gondor
+		name = elven.1841.a
+
+		title:c_minas_tirith.holder = { trigger_event = elven.1845 }
+	}
+
+	option = { # We can do it on our own
+		name = elven.1841.b
+	}
+}
+
+elven.1845 = {
+	type = letter_event
+	sender = character:linefinwe11
+
+	opening = {
+		desc = elven.1845.opening
+	}
+
+	desc = elven.1845.desc
+
+	on_trigger_fail = { #Trigger invitation again if it was blocked because the character was handling another invitation
+		trigger_event = {
+			id = elven.1845
+			days = 1
+		}
+	}
+
+	option = { # Join Maglor in his war
+		name = elven.1845.a
+
+		character:linefinwe11 = {
+			random_character_war = {
+				limit = { using_cb = final_battle_maglor_cb }
+				add_attacker = root
+			}
+		}
+	}
+
+	option = { # Refuse to join war
+		name = elven.1845.b
+
 	}
 }
 
@@ -4134,8 +4216,6 @@ elven.2003 = { # Third Song Battle Event between Maglor/Sauron
 
 	option = {
 		name = elven.2003.a
-		
-		remove_character_modifier = valar_ban_modifier
 
 		character:lineofsauron = {
 			show_as_tooltip = {
@@ -4183,6 +4263,21 @@ elven.2010 = { # Maglor receives Saurons palantir/relics when he wins the song b
 	}
 }
 
+scripted_effect give_back_himring = {
+	create_title_and_vassal_change = {
+		type = granted
+		save_scope_as = change
+		add_claim_on_loss = no
+	}
+	title:c_himring = {
+		change_title_holder = {
+			holder = root
+			change = scope:change
+		}
+	}
+	resolve_title_and_vassal_change = scope:change
+}
+
 elven.2020 = { # Maglor recieives event to go back to Himring
 	content_source = realms_dlc
 	type = character_event
@@ -4204,7 +4299,14 @@ elven.2020 = { # Maglor recieives event to go back to Himring
 	option = { # Retire to Himring
 		name = elven.2020.b
 
-		trigger_event = elven.2021
+		if = {
+			limit = { has_variable = maglor_defensive }
+			trigger_event = elven.2021
+		}
+		else_if = {
+			limit = { has_variable = maglor_aggresive }
+			trigger_event = elven.2021
+		}
 	}
 }
 
@@ -4225,18 +4327,7 @@ elven.2021 = { # Travels back to Himring
 			remove_from_list = defenders
 		}
 
-		create_title_and_vassal_change = {
-			type = granted
-			save_scope_as = change
-			add_claim_on_loss = no
-		}
-		title:c_himring = {
-			change_title_holder = {
-				holder = root
-				change = scope:change
-			}
-		}
-		resolve_title_and_vassal_change = scope:change
+		give_back_himring = yes
 
 		# Create elf to inherit titles
 		create_character = {
@@ -4320,6 +4411,128 @@ elven.2021 = { # Travels back to Himring
 	}
 }
 
+elven.2022 = { # Travels back to Himring
+	hidden = yes
+
+	immediate = {
+		give_back_himring = yes
+
+		# Create elf to inherit titles
+		create_character = {
+			template = noldor_feanorian
+			employer = root
+			save_scope_as = elf_1
+		}
+
+		# Add all personally held titles to list
+		every_held_title = {
+			limit = {
+				tier = tier_county
+				NOR = {
+					de_jure_liege = title:e_orrostar
+					de_jure_liege.de_jure_liege = title:e_orrostar
+					de_jure_liege.de_jure_liege.de_jure_liege = title:e_orrostar
+					this = title:c_edhellond
+					this = title:c_himring
+				}
+			}
+			add_to_list = targeted_titles
+		}
+
+		create_title_and_vassal_change = {
+			type = granted
+			save_scope_as = change
+			add_claim_on_loss = no
+		}
+
+		every_in_list = {
+			list = targeted_titles
+
+			change_title_holder = {
+				holder = scope:elf_1
+				change = scope:change
+			}
+		}
+		resolve_title_and_vassal_change = scope:change
+
+		### Freeing every vassal
+		every_vassal = {
+			limit = { 
+				NOT = {
+					any_held_title = {
+						OR = {
+							de_jure_liege = title:e_orrostar
+							de_jure_liege.de_jure_liege = title:e_orrostar
+							de_jure_liege.de_jure_liege.de_jure_liege = title:e_orrostar
+							this = title:c_edhellond
+						}
+					}
+				}
+				is_human = yes
+				faith_is_good = yes
+			}
+			add_to_list = human_vassals
+		}
+
+		create_title_and_vassal_change = {
+			type = granted
+			save_scope_as = change
+			add_claim_on_loss = no
+		}
+		every_in_list = {
+			list = human_vassals
+			change_liege = {
+				liege = title:c_minas_tirith.holder
+				change = scope:change
+			}
+		}
+		resolve_title_and_vassal_change = scope:change
+
+		
+		### Freeing every vassal
+		every_vassal = {
+			limit = { 
+				NOT = {
+					any_held_title = {
+						OR = {
+							de_jure_liege = title:e_orrostar
+							de_jure_liege.de_jure_liege = title:e_orrostar
+							de_jure_liege.de_jure_liege.de_jure_liege = title:e_orrostar
+							this = title:c_edhellond
+						}
+					}
+				}
+			}
+			add_to_list = vassals
+		}
+
+		create_title_and_vassal_change = {
+			type = independency
+			save_scope_as = change
+			add_claim_on_loss = no
+		}
+		every_in_list = {
+			list = vassals
+			becomes_independent = { change = scope:change }
+		}
+		resolve_title_and_vassal_change = scope:change
+		
+		start_travel_plan = {
+			destination = title:c_himring.title_province
+			on_arrival_event = elven.2030
+			return_trip = no
+			players_use_planner = no
+			on_arrival_destinations = last
+		}
+		add_truce_both_ways = { 
+			character = character:lineofcirdan
+			years = 3
+			name = TRUCE_GRANT_INDEPENDENCE
+		}
+		set_variable = cannot_cancel_travel
+	}
+}
+
 elven.2030 = { # DUN DUN DUN, Maglor recieves Silmaril
 	content_source = realms_dlc
 	type = character_event
@@ -4351,5 +4564,6 @@ elven.2030 = { # DUN DUN DUN, Maglor recieves Silmaril
 
 	option = { # Stay, continouing personal conquest
 		name = elven.2030.a
+		remove_character_modifier = valar_ban_modifier
 	}
 }

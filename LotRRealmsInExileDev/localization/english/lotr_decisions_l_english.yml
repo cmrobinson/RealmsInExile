@@ -98,9 +98,9 @@
 
   decision_umbar_burns:0 "Destroy the City of Corsairs"
   decision_umbar_burns_tooltip:0 "Rally the men of Gondor to attack Umbar" 
-  decision_umbar_burns_desc:0 "Umbar is the oldest and mightiest of the colonial strongholds of the Numenoreans, steeped in the corruption of first the King’s Men and then those in the service of Sauron. For countless generations it has been a thorn in Gondor's side, and now, a knife aimed at its coastal underbelly. Its raids tie up much of the men and materials of Gondor, depriving them from the war against Sauron. This cannot stand any longer. Let us rally what of the Men of Gondor will join us and neutralize this threat.\n\nUmbar is not the first port Maglor has put to the torch, but Eru willing, let this be the last."
+  decision_umbar_burns_desc:0 "[GetTitleByKey('k_umbar').GetNameNoTier] is the oldest and mightiest of the colonial strongholds of the [numenoreans|E], steeped in the corruption of first the King’s Men and then those in the service of [sauroncharacter|E]. For countless generations it has been a thorn in [gondor|E]'s side, and now, a knife aimed at its coastal underbelly. Its raids tie up much of the men and materials of Gondor, depriving them from the war against Sauron. This cannot stand any longer. Let us rally what of the Men of Gondor will join us and neutralize this threat.\n\nUmbar is not the first port [maglor|E] has put to the torch, but Eru willing, let this be the last."
   decision_umbar_burns_confirm:0 "To me, men of Gondor!"
-  decision_umbar_burns_effect_tt:0 "You may recieve Men-at-Arms, Levies, and Knights from coastal Gondorian lords\n\nAfter a mustering period, you will launch a war against Umbar to destroy it."
+  decision_umbar_burns_effect_tt:0 "You may recieve [men_at_arms|E], [levies|E], and [knights|E] from coastal Gondorian lords\n\nAfter a mustering period, you will launch a [war|E] against [GetTitleByKey('k_umbar').GetNameNoTier] to destroy it."
 
   decision_fourth_kinslaying:0 "Fourth Kinslaying" 
   decision_fourth_kinslaying_tooltip:0 "We shall claim the Kingship by force" 
