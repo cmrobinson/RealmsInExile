@@ -297,6 +297,7 @@ request_elven_healer_decision = {
 # Establish the high kingdom of Eryn Lasgalen
 # by Fredsch
 ##################################################
+
 decision_establish_high_kingdom_of_eryn_lasgalen = {
 	picture = "gfx/interface/illustrations/decisions/decision_eryn_lasgalen.dds"
 	title = decision_establish_high_kingdom_of_eryn_lasgalen
@@ -806,7 +807,14 @@ decision_rebuild_ost_in_edhil= {
 
 	# EFFECT
 	effect = {
-		province:4351 = { add_special_building_slot = wonder_mirdairond }
+		if = {
+			limit = { 
+				province:4351 = {
+					has_special_building_slot = no
+				}
+		 	}
+			province:4351 = { add_special_building_slot = wonder_mirdairond }
+		}
 		title:c_ost_in_edhil = {
 			change_development_level = 5
 		}

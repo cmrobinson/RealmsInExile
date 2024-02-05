@@ -1186,7 +1186,7 @@ elven.1605 = { # Hidden event | Swap titles for Eregion
 					any_vassal_or_below = {
 						is_elf = yes 
 						has_variable = volunteers_sent
-						count > 8
+						count > 7
 					}
 				}
 			}
@@ -1216,7 +1216,7 @@ elven.1605 = { # Hidden event | Swap titles for Eregion
 					any_vassal_or_below = {
 						is_elf = yes 
 						has_variable = volunteers_sent
-						count > 16
+						count > 11
 					}
 				}
 			}
@@ -2587,15 +2587,15 @@ elven.1745 = { # Maglor gets choice to make Nadi-Manye tributaries
 
 	right_portrait = {
 		character = root
-		animation = personality_proud
+		animation = personality_bold
 	}
 
 	left_portrait = {
-		character = scope:attacker
-		animation = personality_proud
+		character = scope:nadi_manye_leader
+		animation = personality_zealous
 	}
 
-	# immediate = { title:c_amrun.holder = { save_scope_as = nadi_manye_leader } }
+	immediate = { title:c_amrun.holder = { save_scope_as = nadi_manye_leader } }
 	
 	option = { # Accept Rebel Leader tributary status
 		name = elven.1745.a
@@ -2833,14 +2833,13 @@ elven.1806 = { # Generic event while searching Khazad-dum as Maglor
 		random_list = {
 			33 = {	
 				custom_tooltip = elven.1806.a.tt.1
-				character:linefinwe11 = {
-					send_interface_toast = {
-						title = elven.1806.a.tt.1
-		
-						scope:dwarven_leader = {
-							set_employer = root
-							set_knight_status = force
-						}
+				
+				send_interface_toast = {
+					title = elven.1806.a.tt.1
+	
+					scope:dwarven_leader = {
+						hidden_effect = { set_employer = root }
+						set_knight_status = force
 					}
 				}
 			}
@@ -2880,7 +2879,7 @@ elven.1806 = { # Generic event while searching Khazad-dum as Maglor
 				20 = {
 					modifier = {
 						add = {
-							value = 25
+							value = 20
 							multiply = var:searched_khazad_dum
 						}
 					}
@@ -3984,7 +3983,7 @@ elven.1840 = { # Call in members of northern alliance into destroy Mordor  war
 	}
 }
 
-elven.1841 = {
+elven.1841 = { # Maglor sends letter to Gondor to ask for help
 	content_source = realms_dlc
 	type = character_event
 	title = elven.1841.t
@@ -4005,14 +4004,22 @@ elven.1841 = {
 		name = elven.1841.a
 
 		title:c_minas_tirith.holder = { trigger_event = elven.1845 }
+
+		ai_chance = {
+			base = 1 
+		}
 	}
 
 	option = { # We can do it on our own
 		name = elven.1841.b
+
+		ai_chance = {
+			base = 0
+		}
 	}
 }
 
-elven.1845 = {
+elven.1845 = { # Gondor receives letter from Maglor to join in war against Sauron
 	type = letter_event
 	sender = character:linefinwe11
 
@@ -4026,7 +4033,7 @@ elven.1845 = {
 		trigger_event = {
 			id = elven.1845
 			days = 1
-		}
+		}	
 	}
 
 	option = { # Join Maglor in his war
@@ -4038,11 +4045,18 @@ elven.1845 = {
 				add_attacker = root
 			}
 		}
+
+		ai_chance = {
+			base = 1 
+		}
 	}
 
 	option = { # Refuse to join war
 		name = elven.1845.b
 
+		ai_chance = {
+			base = 0
+		}
 	}
 }
 
@@ -4305,7 +4319,7 @@ elven.2020 = { # Maglor recieives event to go back to Himring
 		}
 		else_if = {
 			limit = { has_variable = maglor_aggresive }
-			trigger_event = elven.2021
+			trigger_event = elven.2022
 		}
 	}
 }
