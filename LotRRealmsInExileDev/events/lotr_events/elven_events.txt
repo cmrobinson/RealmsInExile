@@ -1391,7 +1391,6 @@ elven.1608 = { # Event for Eregion | If Eregion already occupied, get an event t
 	hidden = yes
 
 	immediate = {
-		remove_variable = different_on_arrival_event
 		if = {
 			limit = { title:c_ost_in_edhil.holder = character:k_wastelands_holder }
 			trigger_event = elven.1605
@@ -1888,6 +1887,12 @@ elven.1710 = { # Starts war against Umbar
 	}
 }
 
+
+scripted_effect upgrade_edhellond_province = {
+	title:c_edhellond = { change_development_level = 5 } 
+	province:420 = { add_building = elven_settlement_03 }
+}
+
 elven.1715 = { # Event if win against Umbar
 	content_source = realms_dlc
 	type = character_event
@@ -2195,11 +2200,6 @@ elven.1726 = { # hidden event to recieve half troops form umbar
 			months = 6
 		}
 	}
-}
-
-scripted_effect upgrade_edhellond_province = {
-	title:c_edhellond = { change_development_level = 5 } 
-	province:420 = { add_building = elven_settlement_03 }
 }
 
 elven.1730 = { # Letter event to ask for troops from Gondor Lords
