@@ -3291,6 +3291,8 @@ elven.1816 = { # Hidden Event to recieve dwarven troops
 					OR = {
 						title:k_khazad_dum.holder.culture = culture:longbeards
 						title:k_khazad_dum.holder.culture = { any_parent_culture_or_above = { this = culture:longbeards } }
+						title:k_khazad_dum.holder.culture = culture:iron_hills
+						title:k_khazad_dum.holder.culture = { any_parent_culture_or_above = { this = culture:iron_hills } }
 					}
 					title:k_khazad_dum.holder = { is_dwarf = yes }
 				}
@@ -3406,13 +3408,6 @@ elven.1816 = { # Hidden Event to recieve dwarven troops
 							location = root.capital_province
 						}
 					}
-					5 = { # Levies
-						spawn_army = {
-							name = elven.1816.toast
-							levies = 100
-							location = root.capital_province
-						}
-					}
 				}
 			}
 			else_if = { # Firebeard
@@ -3474,10 +3469,66 @@ elven.1816 = { # Hidden Event to recieve dwarven troops
 							location = root.capital_province
 						}
 					}
-					5 = { # Levies
+				}
+			}
+			else_if = { # Blacklock
+				limit = {
+					OR = {
+						title:k_khazad_dum.holder.culture = culture:blacklocks_nargubraz
+						title:k_khazad_dum.holder.culture = { any_parent_culture_or_above = { this = culture:blacklocks_nargubraz } }
+						title:k_khazad_dum.holder.culture = culture:blacklocks
+						title:k_khazad_dum.holder.culture = { any_parent_culture_or_above = { this = culture:blacklocks } }
+					}
+					title:k_khazad_dum.holder = { is_dwarf = yes }
+				}
+				random_list = {
+					1 = { # Special Firebeard unit
 						spawn_army = {
 							name = elven.1816.toast
-							levies = 100
+							men_at_arms = {
+								type = blacklock_engineers
+								stacks = 1
+							}
+							location = root.capital_province
+						}
+					}
+					5 = { # Skirmishers
+						spawn_army = {
+							name = elven.1816.toast
+							men_at_arms = {
+								type = blacklock_skirmishers
+								stacks = 1
+							}
+							location = root.capital_province
+						}
+					}
+					5 = { # Archers
+						spawn_army = {
+							name = elven.1816.toast
+							men_at_arms = {
+								type = blacklock_crossbowmen
+								stacks = 1
+							}
+							location = root.capital_province
+						}
+					}
+					5 = { # Heavy Infantry
+						spawn_army = {
+						name = elven.1816.toast
+							men_at_arms = {
+								type = blacklock_heavy_infantry
+								stacks = 1
+							}
+							location = root.capital_province
+						}
+					}
+					5 = { # Pikemen
+						spawn_army = {
+							name = elven.1816.toast
+							men_at_arms = {
+								type = blacklock_pikemen
+								stacks = 1
+							}
 							location = root.capital_province
 						}
 					}
