@@ -3272,7 +3272,7 @@ elven.1816 = { # Hidden Event to recieve dwarven troops
 	trigger = {
 		trigger_if = {
 			limit = { has_variable = maglor_khazad_dum_event_troops }
-			var:maglor_khazad_dum_event_troops < 5
+			var:maglor_khazad_dum_event_troops < 6
 		}
 		sauron_is_alive = yes
 	}
