@@ -1275,7 +1275,7 @@ decision_return_cuind = {
 decision_annihilate_abhorred = { # Starts war against Sauron
 	# TEXT
 	title = decision_annihilate_abhorred
-	picture = "gfx/interface/illustrations/decisions/decision_fornost_02.dds"
+	picture = "gfx/interface/illustrations/decisions/decision_barad_dur_01.dds"
 	selection_tooltip = decision_annihilate_abhorred_tooltip
 	desc = decision_annihilate_abhorred_desc
 	confirm_text = decision_annihilate_abhorred_confirm
@@ -1459,7 +1459,7 @@ decision_umbar_burns = { # Starts war against Umbar
 decision_annihilate_dol_guldur = { # Starts war against Dol Guldur
 	# TEXT
 	title = decision_annihilate_dol_guldur
-	picture = "gfx/interface/illustrations/decisions/decision_fornost_02.dds"
+	picture = "gfx/interface/illustrations/decisions/decision_dol_guldur_dominion_of_the_sorcerer.dds"
 	selection_tooltip = decision_annihilate_dol_guldur_tooltip
 	desc = decision_annihilate_dol_guldur_desc
 	confirm_text = decision_annihilate_dol_guldur_confirm
@@ -1932,7 +1932,7 @@ decision_help_good_dynasty_rise = {
 decision_reclamation_of_moria = { 
 	# TEXT
 	title = decision_reclamation_of_moria
-	picture = "gfx/interface/illustrations/decisions/decision_fornost_02.dds"
+	picture = "gfx/interface/illustrations/decisions/decision_dwarves_02.dds"
 	selection_tooltip = decision_reclamation_of_moria_tooltip
 	desc = decision_reclamation_of_moria_desc
 	confirm_text = decision_reclamation_of_moria_confirm
@@ -2150,7 +2150,7 @@ decision_reclamation_of_moria = {
 decision_cleanse_the_high_pass = {
 	# TEXT
 	title = decision_cleanse_the_high_pass
-	picture = "gfx/interface/illustrations/decisions/decision_fornost_02.dds"
+	picture = "gfx/interface/illustrations/decisions/decision_dol_guldur_subjugate_mount_gundabad.dds"
 	selection_tooltip = decision_cleanse_the_high_pass_tooltip
 	desc = decision_cleanse_the_high_pass_desc
 	confirm_text = decision_cleanse_the_high_pass_confirm

@@ -964,6 +964,11 @@ elven.1601 = { # Shield of the Free Peoples starting event | Go to Eregion
 		animation = personality_bold
 	}
 	override_background = { reference = eregion_city }
+
+	immediate = {
+		set_variable = no_return_event
+		set_variable = temp_maglor_var
+	}
 	
 	option = { 
 		name = elven.1601.a
@@ -971,7 +976,7 @@ elven.1601 = { # Shield of the Free Peoples starting event | Go to Eregion
 
 		start_travel_plan = {
 			destination = title:c_ost_in_edhil.title_province
-			on_arrival_event = elven.1605
+			on_arrival_event  = elven.1609
 			return_trip = no
 			players_use_planner = no
 			on_arrival_destinations = all
@@ -989,6 +994,8 @@ elven.1602 = { # Strike the Heart of the Enemy starting event | Go to Edhellond
 		character = root
 		animation = fear
 	}
+
+	immediate = { set_variable = no_return_event }
 	
 	option = { 
 		name = elven.1602.a
@@ -1102,6 +1109,25 @@ elven.1604 = { # Hidden event | Swap titles for Edhellond
 	}
 }
 
+scripted_effect grant_himring_away = {
+	## Grant Himring to Maglor Friend
+
+	create_title_and_vassal_change = {
+		type = granted
+		save_scope_as = title_change
+		add_claim_on_loss = no
+	}
+
+	title:c_himring = {
+		change_title_holder = {
+			holder = character:lineoflauriel
+			change = scope:title_change
+		}
+	}
+	
+	resolve_title_and_vassal_change = scope:title_change
+}
+
 elven.1605 = { # Hidden event | Swap titles for Eregion
 	hidden = yes
 
@@ -1201,28 +1227,27 @@ elven.1605 = { # Hidden event | Swap titles for Eregion
 
 		resolve_title_and_vassal_change = scope:title_change
 		
-		## Grant Himring to Maglor Friend
-
-		create_title_and_vassal_change = {
-			type = granted
-			save_scope_as = title_change
-			add_claim_on_loss = no
-		}
-
-		title:c_himring = {
-			change_title_holder = {
-				holder = character:lineoflauriel
-				change = scope:title_change
-			}
-		}
-		
-		resolve_title_and_vassal_change = scope:title_change
+		grant_himring_away = yes
 
 		trigger_event = {
 			id = elven.1800
 			days = { 15 30 }
 		}
 		get_title = title:k_feanor_host
+
+		set_location = root.capital_province
+
+		every_knight = {
+			limit = { is_ruler = no }
+			set_location = root.capital_province
+		}
+		every_councillor = {
+			limit = { is_ruler = no }
+			set_location = root.capital_province
+		}
+		every_courtier_or_guest = {
+			set_location = root.capital_province
+		}
 	}
 }
 
@@ -1342,6 +1367,232 @@ elven.1607 = { # Hidden event | Give Maglor songsmiths, to help him siege down c
 					}
 				}
 			}
+		}
+	}
+}
+
+elven.1608 = { # Event for Eregion | If Eregion already occupied, get an event to either move more northwards or fight the current occupants
+	hidden = yes
+
+	immediate = {
+		remove_variable = different_on_arrival_event
+		if = {
+			limit = { title:c_ost_in_edhil.holder = character:k_wastelands_holder }
+			trigger_event = elven.1605
+		}
+		else = { trigger_event = elven.1610 }
+	}
+}
+
+elven.1609 = {
+	hidden = yes
+
+	immediate = { }
+}
+
+elven.1610 = { # Event that Maglor gets to either move north or fight Eregion holders
+	content_source = realms_dlc
+	type = character_event
+	title = elven.1610.t
+	desc = elven.1610.desc
+	theme = martial_authority_focus
+	right_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	immediate = {
+		title:k_eregion = {
+			random_de_jure_county = {
+				limit = {
+					holder = character:k_wastelands_holder
+					NOT = { any_neighboring_county = { NOT = { holder = character:k_wastelands_holder } } }
+				}
+				save_scope_as = selected_county
+			}
+		}
+	}
+	
+	option = { # Lets rather settle towards the north
+		name = elven.1610.a
+		remove_variable = no_return_event
+
+		start_travel_plan = {
+			destination = scope:selected_county.title_province
+			on_arrival_event = elven.1611
+			return_trip = no
+			players_use_planner = no
+			on_arrival_destinations = first
+		}
+	}
+
+	option = { # Fight the current occupants
+		name = elven.1610.b
+
+		set_variable = war_for_eregion
+		remove_variable = no_return_event
+		start_war = {
+			casus_belli = elven_homelands_duchy_conquest_cb
+			target = title:c_ost_in_edhil.holder
+			target_title = title:d_eregion
+		}
+		spawn_army = {
+			name = elven.1610.noldor_army
+			men_at_arms = {
+				type = noldor_glaivesmen
+				stacks = 4
+			}
+			men_at_arms = {
+				type = noldor_veterans
+				stacks = 4
+			}
+			men_at_arms = {
+				type = noldor_archers
+				stacks = 4
+			}
+			men_at_arms = {
+				type = noldor_cavalry
+				stacks = 4
+			}
+			men_at_arms = {
+				type = song_smiths
+				stacks = 4
+			}
+			location = root.location
+		}
+	}
+}
+
+elven.1611 = {
+	hidden = yes
+
+	immediate = {
+		remove_variable = cannot_cancel_travel
+
+		every_province = { # Changes province to elven holding
+			limit = { 
+				county = scope:selected_county
+				has_holding = yes
+			}
+			set_holding_type = elven_holding			
+		}
+		
+		## Grant Maglor Edhellond
+
+		create_title_and_vassal_change = {
+			type = granted
+			save_scope_as = title_change
+			add_claim_on_loss = no
+		}
+
+		scope:selected_county = {
+			change_title_holder = {
+				holder = root
+				change = scope:title_change
+			}
+			set_county_culture = root.culture
+			set_county_faith = root.faith
+			change_development_level = 5
+		}
+
+		if = {
+			limit = {
+				title:e_lindon.holder = {
+					any_vassal_or_below = {
+						is_elf = yes 
+						has_variable = volunteers_sent
+						count > 8
+					}
+				}
+			}
+			scope:selected_county = {
+				random_connected_county = {
+					limit = { holder = character:k_wastelands_holder }
+					save_scope_as = secondary_county
+					every_province = { # Changes province to elven holding
+						limit = { 
+							county = scope:secondary_county
+							has_holding = yes
+						}
+						set_holding_type = elven_holding			
+					}
+				}
+			}
+			scope:secondary_county = {
+				change_title_holder = {
+					holder = root
+					change = scope:title_change
+				}
+				set_county_culture = root.culture
+				set_county_faith = root.faith
+				change_development_level = 5
+			}
+		}
+
+		if = {
+			limit = {
+				title:e_lindon.holder = {
+					has_variable = volunteers_sent
+					is_elf = yes 
+					any_vassal_or_below = {
+						is_elf = yes 
+						has_variable = volunteers_sent
+						count > 16
+					}
+				}
+			}
+			scope:selected_county = {
+				random_connected_county = {
+					limit = {
+						holder = character:k_wastelands_holder
+						NOT = { this = scope:secondary_county }
+					}
+					save_scope_as = tertiary_county
+					every_province = { # Changes province to elven holding
+						limit = { 
+							county = scope:tertiary_county
+							has_holding = yes
+						}
+						set_holding_type = elven_holding			
+					}
+				}
+			}
+			scope:tertiary_county = {
+				change_title_holder = {
+					holder = root
+					change = scope:title_change
+				}
+				set_county_culture = root.culture
+				set_county_faith = root.faith
+				change_development_level = 5
+			}
+		}
+
+		becomes_independent = { change = scope:title_change }
+
+		resolve_title_and_vassal_change = scope:title_change
+
+		grant_himring_away = yes
+
+		get_title = title:k_feanor_host
+
+		set_location = root.capital_province
+
+		every_knight = {
+			limit = { is_ruler = no }
+			set_location = root.capital_province
+		}
+		every_councillor = {
+			limit = { is_ruler = no }
+			set_location = root.capital_province
+		}
+		every_courtier_or_guest = {
+			set_location = root.capital_province
+		}
+		
+		trigger_event = {
+			id = elven.1800
+			days = { 15 30 }
 		}
 	}
 }
@@ -2417,7 +2668,13 @@ elven.1800 = { # Probing investigation into Khazad-dum
 	content_source = realms_dlc
 	type = character_event
 	title = elven.1800.t
-	desc = elven.1800.desc
+	desc = {
+		triggered_desc = {
+			trigger = { has_title = title:c_ost_in_edhil }
+			desc = elven.1800.desc
+		}
+		desc = elven.1800.fallback_desc
+	}
 	theme = intrigue
 
 	right_portrait = {
@@ -2936,6 +3193,9 @@ elven.1815 = { # Fight Balrog
 				}
 			}
 		}
+
+		add_prestige = 1250
+		add_piety = 750
 	}
 
 	after = {
@@ -3206,7 +3466,7 @@ elven.1818 = { # Recieve Noldor elves from Rivendell
 	trigger = {
 		trigger_if = {
 			limit = { has_variable = rivendell_troops }
-			var:rivendell_troops < 3
+			var:rivendell_troops < 4
 		}
 		sauron_is_alive = yes
 	}
@@ -3659,7 +3919,7 @@ elven.1840 = { # Call in members of northern alliance into destroy Mordor  war
 			save_temporary_scope_as = current_char
 			root = {
 				random_character_war = {
-					limit = { using_cb = final_battle_gondor_cb }
+					limit = { using_cb = final_battle_maglor_cb }
 					add_attacker = scope:current_char
 				}
 			}
@@ -3914,6 +4174,19 @@ elven.2021 = { # Travels back to Himring
 	hidden = yes
 
 	immediate = {
+		every_in_list = {
+			list = target_titles
+			remove_from_list = target_titles
+		}
+		every_in_list = {
+			list = attackers
+			remove_from_list = attackers
+		}
+		every_in_list = {
+			list = defenders
+			remove_from_list = defenders
+		}
+
 		create_title_and_vassal_change = {
 			type = granted
 			save_scope_as = change
@@ -3927,7 +4200,6 @@ elven.2021 = { # Travels back to Himring
 		}
 		resolve_title_and_vassal_change = scope:change
 
-
 		# Create elf to inherit titles
 		create_character = {
 			template = noldor_feanorian
@@ -3938,11 +4210,13 @@ elven.2021 = { # Travels back to Himring
 		# Add all personally held titles to list
 		every_held_title = {
 			limit = {
-				NOT = {
+				tier = tier_county
+				NOR = {
 					de_jure_liege = title:e_orrostar
 					de_jure_liege.de_jure_liege = title:e_orrostar
 					de_jure_liege.de_jure_liege.de_jure_liege = title:e_orrostar
 					this = title:c_edhellond
+					this = title:c_himring
 				}
 			}
 			add_to_list = targeted_titles
@@ -3950,11 +4224,13 @@ elven.2021 = { # Travels back to Himring
 
 		create_title_and_vassal_change = {
 			type = granted
-			save_scope_as = title_change
+			save_scope_as = change
 			add_claim_on_loss = no
 		}
+
 		every_in_list = {
 			list = targeted_titles
+
 			change_title_holder = {
 				holder = scope:elf_1
 				change = scope:change
@@ -3991,7 +4267,7 @@ elven.2021 = { # Travels back to Himring
 		resolve_title_and_vassal_change = scope:change
 		
 		start_travel_plan = {
-			destination = province:4265
+			destination = title:c_himring.title_province
 			on_arrival_event = elven.2030
 			return_trip = no
 			players_use_planner = no
@@ -4013,9 +4289,17 @@ elven.2030 = { # DUN DUN DUN, Maglor recieves Silmaril
 	desc = elven.2030.desc
 	theme = realm
 
+	override_background = { reference = ulmo }
+
 	left_portrait = {
 		character = root
-		animation = personality_proud
+		animation = happiness
+	}
+
+	artifact = {
+		position = lower_right_portrait
+		target = scope:newly_created_artifact
+		trigger = { exists = scope:newly_created_artifact }
 	}
 
 	immediate = {
@@ -4024,11 +4308,10 @@ elven.2030 = { # DUN DUN DUN, Maglor recieves Silmaril
 			remove_variable = cannot_cancel_travel
 		}
 		set_realm_capital = title:c_himring
+		create_artifact_silmaril_effect = { OWNER = root }
 	}
 
 	option = { # Stay, continouing personal conquest
 		name = elven.2030.a
-
-		create_artifact_silmaril_effect = { OWNER = root }
 	}
 }

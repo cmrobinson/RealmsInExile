@@ -589,14 +589,18 @@ mag_beard_leader = {
 	faith = faith:faith_khazad
 	gender_female_chance = 0
 	martial = {
-		min_template_decent_skill
-		max_template_decent_skill
+		min_template_high_skill
+		max_template_high_skill
+	}
+	prowess = {
+		min_template_high_skill
+		max_template_high_skill
 	}
 	random_traits_list = {
 		count = 1
-		education_martial_1 = {}
 		education_martial_2 = {}
 		education_martial_3 = {}
+		education_martial_4 = {}
 	}
 	after_creation = {
 		if = {

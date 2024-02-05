@@ -113,6 +113,12 @@
   elven.1606.c:0 "VECTOR - Placeholder" 
   elven.1606.toast:0 "Volunteers from [elven_ruler_title.GetNameNoTierNoTooltip]" # Ruler doesn't care | MaA name
   elven.maglor_help_songsmiths:0 "Volunteers from Helevorn"
+
+  elven.1610.t:0 "VECTOR - Placeholder"
+  elven.1610.desc:0 "Maglor arrives at Eregion and is surprised to see that someone has occupied Eregion, gets a choice in what to do."
+  elven.1610.a:0 "Move northwards - Don't fight current holders of Eregion"
+  elven.1610.b:0 "Fight current holders of Eregion"
+  elven.1610.noldor_army:0 "Elven Soldiers from Rivendell"
   
   elven.1700.opening:0 "Letter Opening"
   elven.1700.desc:0 "Letter to ask coastal gondorian lords to send MaA to Maglor for Umbar war"
@@ -175,12 +181,13 @@
   elven.1740.event_troops:0 "VECTOR - Placeholder"
 
   elven.1800.t:0 "The Gates of [khazaddum|E]"
-  elven.1800.desc:0 "With the rebuilding of [ostinedhil|E] underway, the time has come to begin probing the depth of [khazaddum|E]. I have heard tales on our journey of its great wealth, craftsmen, and ancient friendship with my people. \n\nI am joined on the way by a small company of warriors, many of them survivors of [eregion|E] who remembered the heady days of its height.\n\nThe western gate we seek are known as the [doorsofdurin|E], the result of collaboration between Elf and Dwarf. I am told it will appear when the moon's light shines on it, the result of [ithildin|E]. It is guarded by a riddle, which was supposedly a small joke between my nephew and King Durin II.\n\nWhen night falls, the door reveals itself, shining in the pale moonlight between two ancient holly trees. My gaze wanders upon it, recognizing the work of Celebrimbor. With a soft exhale, I utter a single word."
+  elven.1800.desc:0 "With the rebuilding of [ostinedhil|E] underway, the time has come to begin probing the depth of [khazaddum|E]. I have heard tales on our journey of its great wealth, craftsmen, and ancient friendship with my people. \n\n"
+  elven.1800.fallback_desc:0 "I am joined on the way by a small company of warriors, many of them survivors of [eregion|E] who remembered the heady days of its height.\n\nThe western gate we seek are known as the [doorsofdurin|E], the result of collaboration between Elf and Dwarf. I am told it will appear when the moon's light shines on it, the result of [ithildin|E]. It is guarded by a riddle, which was supposedly a small joke between my nephew and King Durin II.\n\nWhen night falls, the door reveals itself, shining in the pale moonlight between two ancient holly trees. My gaze wanders upon it, recognizing the work of Celebrimbor. With a soft exhale, I utter a single word."
   elven.1800.a:0 "Mellon."
   elven.1800.a.tt:0 "The [doorsofdurin|E] open. The depths await to be explored."
 
-  elven.1805.t:0 "The Valaraukar"
-  elven.1805.desc:0 "Songs sing of Durin's Bane, a walking calamity, a beast that destroyed the greatest kingdom of the Dwarves. None could say what it was in truth, but in my heart I suspected. Had I not beheld them many times before? They ambushed Maedhros, and slew Fingon during the Nirnaeth. Now I have no doubt. A Valaraukar dwells in these depths - and it now knows I am here too. \n\nI command my soldiers to begin leaving the depths, and in the distance I see it. A titan of shadow and flame, sword in hand, hate and wrath emenating from it.\n\nWe retreat in good order, and it does not follow."
+  elven.1805.t:0 "The Valaraukar" # DO NOT REMOVE/REPLACE THE WEIRD APOSTRAPHE
+  elven.1805.desc:0 "Songs sing of [Concept('balrog','Durin’s Bane')|E], a walking calamity, a beast that destroyed the greatest kingdom of the Dwarves. None could say what it was in truth, but in my heart I suspected. Had I not beheld them many times before? They ambushed [maedhros|E], and slew [fingon|E] during the Nirnaeth. Now I have no doubt. A Valaraukar dwells in these depths - and it now knows I am here too. \n\nI command my [soldiers|E] to begin leaving the depths, and in the distance I see it. A titan of shadow and flame, sword in hand, hate and wrath emenating from it.\n\nWe retreat in good order, and it does not follow."
   elven.1805.a:0 "It must be slain!"
 
   elven.1806.t:0 "Exploration of [khazaddum|E]"
