@@ -3534,6 +3534,57 @@ elven.1816 = { # Hidden Event to recieve dwarven troops
 					}
 				}
 			}
+			else_if = { # Stiffbeard
+				limit = {
+					OR = {
+						title:k_khazad_dum.holder.culture = culture:stiffbeards
+						title:k_khazad_dum.holder.culture = { any_parent_culture_or_above = { this = culture:stiffbeards } }
+					}
+					title:k_khazad_dum.holder = { is_dwarf = yes }
+				}
+				random_list = {
+					5 = { # Skirmishers
+						spawn_army = {
+							name = elven.1816.toast
+							men_at_arms = {
+								type = stiffbeard_skirmishers
+								stacks = 1
+							}
+							location = root.capital_province
+						}
+					}
+					5 = { # Archers
+						spawn_army = {
+							name = elven.1816.toast
+							men_at_arms = {
+								type = stiffbeard_crossbowmen
+								stacks = 1
+							}
+							location = root.capital_province
+						}
+					}
+					5 = { # Heavy Infantry
+						spawn_army = {
+						name = elven.1816.toast
+							men_at_arms = {
+								type = stiffbeard_heavy_infantry
+								stacks = 1
+							}
+							location = root.capital_province
+						}
+					}
+					5 = { # Pikemen
+						spawn_army = {
+							name = elven.1816.toast
+							men_at_arms = {
+								type = stiffbeard_pikemen
+								stacks = 1
+							}
+							location = root.capital_province
+						}
+					}
+				}
+			}
 			
 			trigger_event = {
 				id = elven.1816
