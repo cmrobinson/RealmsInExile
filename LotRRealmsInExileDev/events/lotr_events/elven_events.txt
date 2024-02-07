@@ -1063,7 +1063,7 @@ elven.1604 = { # Hidden event | Swap titles for Edhellond
 		## Grant Maglor Edhellond
 
 		create_title_and_vassal_change = {
-			type = granted
+			type = usurped
 			save_scope_as = title_change
 			add_claim_on_loss = no
 		}
@@ -1158,10 +1158,10 @@ elven.1605 = { # Hidden event | Swap titles for Eregion
 			set_holding_type = elven_holding			
 		}
 		
-		## Grant Maglor Edhellond
+		## Grant Maglor Eregion
 
 		create_title_and_vassal_change = {
-			type = granted
+			type = usurped
 			save_scope_as = title_change
 			add_claim_on_loss = no
 		}
@@ -1495,7 +1495,7 @@ elven.1611 = {
 		## Grant Maglor Edhellond
 
 		create_title_and_vassal_change = {
-			type = granted
+			type = usurped
 			save_scope_as = title_change
 			add_claim_on_loss = no
 		}
