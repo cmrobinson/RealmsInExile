@@ -4071,6 +4071,16 @@ elven.1840 = { # Call in members of northern alliance into destroy Mordor  war
 
 	option = {
 		name = elven.1840.a
+
+		# if = {
+		# 	limit = {
+		# 		is_target_in_global_variable_list = {
+		# 			name = unavailable_unique_decisions
+		# 			target = flag:decision_annihilate_dol_guldur
+		# 		}
+		# 	}
+		# }
+
 		every_in_list = {
 			list = northern_alliance 
 			save_temporary_scope_as = current_char

@@ -1322,9 +1322,12 @@ decision_annihilate_abhorred = { # Starts war against Sauron
 			}
 			custom_tooltip = {
 				text = "decision_annihilate_abhorred_defensive_mirkwood"
-				is_target_in_global_variable_list = {
-					name = unavailable_unique_decisions
-					target = flag:decision_annihilate_dol_guldur
+				OR = {
+					NOT = { title:k_amon_lanc.holder = character:nazgul2 }
+					is_target_in_global_variable_list = {
+						name = unavailable_unique_decisions
+						target = flag:decision_annihilate_dol_guldur
+					}
 				}
 			}
 		}
@@ -1340,6 +1343,7 @@ decision_annihilate_abhorred = { # Starts war against Sauron
 	
 	# EFFECT 
 	effect = {
+		custom_tooltip = decision_annihilate_abhorred_aggresive_tt_2
 		custom_tooltip = {
 			text = decision_annihilate_abhorred_aggresive_tt
 			start_war = {
@@ -2019,7 +2023,26 @@ decision_reclamation_of_moria = {
 				transfer_central_moria_effect = yes
 			}
 		}
-		else_if = { # Check for Durin dwarf in Erebor/Iron Hills
+		else_if = { # Check for landless Durin dwarf in Erebor/Iron Hills
+			limit = {
+				OR = {
+					title:e_iron_mountains = {
+						any_in_de_jure_hierarchy = {
+							tier = tier_county
+							holder = { culture = { is_dwarf_culture = yes } }
+							holder = { dynasty = dynasty:dynasty_durin }	
+							holder.primary_heir = { save_temporary_scope_as = dwarf_in_moria }
+						}	
+					}
+				}
+			}
+			custom_tooltip = "decision_reclamation_of_moria_troops_tt"
+			custom_tooltip = { # Works
+				text = "decision_reclamation_of_moria_tt.2"
+				transfer_central_moria_effect = yes
+			}
+		}
+		else_if = { # Check for landed Durin dwarf in Erebor/Iron Hills
 			limit = {
 				OR = {
 					title:e_iron_mountains = {
@@ -2090,7 +2113,7 @@ decision_reclamation_of_moria = {
 				transfer_central_moria_effect = yes
 			}
 		}
-		else = {
+		else = { # Create a random dwarven character
 			hidden_effect = {
 				create_character = {
 					age = { 70 250 }
