@@ -1328,9 +1328,6 @@ decision_annihilate_abhorred = { # Starts war against Sauron
 				}
 			}
 		}
-		trigger_else = {
-			# custom_tooltip = { text = "decision_annihilate_abhorred_aggresive_tt" }
-		}
 	}
 	is_valid_showing_failures_only = {
 		is_imprisoned = no
@@ -1343,10 +1340,13 @@ decision_annihilate_abhorred = { # Starts war against Sauron
 	
 	# EFFECT 
 	effect = {
-		start_war = {
-			casus_belli = final_battle_maglor_cb
-			target = title:e_mordor.holder
-			target_title = title:e_mordor
+		custom_tooltip = {
+			text = decision_annihilate_abhorred_aggresive_tt
+			start_war = {
+				casus_belli = final_battle_maglor_cb
+				target = title:e_mordor.holder
+				target_title = title:e_mordor
+			}
 		}
 
 		if = {
