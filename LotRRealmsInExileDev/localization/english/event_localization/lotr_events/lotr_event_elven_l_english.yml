@@ -166,6 +166,7 @@
   elven.1735.a:0 "We bow to the will of the people."
   elven.1735.b:0 "We will join the new movement."
   elven.1735.c:0 "Traitors to the Great Serpent shall die!"
+  elven.1735.c.tt:0 "The Haradric Heretics rise up against you."
   elven.1735.army:0 "Faithful Haradrim"
   elven.1735.dynamic_title:0 "Haradric Heretics"
 
@@ -220,7 +221,7 @@
 	elven.1818.toast:0 "Elven soldiers from Rivendell"
 
   elven.1820.t:0 "VECTOR - Placeholder" # VECTOR - Placeholder 
-  elven.1820.desc:0 "You now have access to special CB, clear Khazad-dum!" # VECTOR - Placeholder
+  elven.1820.desc:0 "Event telling player they have access to a new CB for use to clear the underground regions in Moria/High-pass. It is also locked to these regions until Moria has been cleansed" # VECTOR - Placeholder
   elven.1820.a:0 "Lets go and clear Khazad-dum of ORCS!!!" # VECTOR - Placeholder
 
   elven.1830.t:0 "VECTOR - Placeholder" # VECTOR - Placeholder 
@@ -250,6 +251,11 @@
   elven.1841.desc:0 "Maglor asks Gondor for help against Sauron"
   elven.1841.a:0 "Send Gondor ruler a letter asking for help"
   elven.1841.b:0 "We can defeat Sauron on our own"
+
+  elven.1843.t:0 "VECTOR - Placeholder"
+  elven.1843.desc:0 "Maglor asks Galadriel/Thranduil for help against Sauron"
+  elven.1843.a:0 "I WILL assist Maglor"
+  elven.1843.b:0 "I will NOT assist Maglor"
 
   elven.1845.opening:0 "VECTOR - Placeholder"
   elven.1845.desc:0 "Gondor ruler gets letter from Maglor asking for help against Sauron"

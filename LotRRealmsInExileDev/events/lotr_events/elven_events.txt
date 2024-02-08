@@ -2863,10 +2863,14 @@ elven.1806 = { # Generic event while searching Khazad-dum as Maglor
 			}
 			33 = {
 				custom_tooltip = elven.1806.a.tt.3
-				title:c_ost_in_edhil = {
-					add_county_modifier = {
-						modifier = rebuilding_ost_in_edhil
-						years = 5
+				send_interface_toast = {
+					title = elven.1806.a.tt.3
+	
+					title:c_ost_in_edhil = {
+						add_county_modifier = {
+							modifier = rebuilding_ost_in_edhil
+							years = 5
+						}
 					}
 				}
 			}
@@ -3745,6 +3749,13 @@ scripted_effect give_amon_lanc_to_elf = {
 			set_county_culture = $HOLDER$.culture
 			set_county_faith = $HOLDER$.faith
 		}
+		if = {
+			limit = {
+				NOT = { title_province = { has_holding_type = elven_holding } }
+			}
+			every_county_province = { set_holding_type = elven_holding }
+		}
+
 	}
 	
 	resolve_title_and_vassal_change = scope:title_change
@@ -3857,7 +3868,8 @@ elven.1830 = { # Event to give Lothlorien/Lasgalen elf Amon Lanc
 				opinion = -15
 			}
 		}
-		
+
+		set_variable = kept_amon_lanc
 
 		ai_chance = { base = 0 }
 	}
@@ -4124,6 +4136,47 @@ elven.1841 = { # Maglor sends letter to Gondor to ask for help
 
 	option = { # We can do it on our own
 		name = elven.1841.b
+
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+elven.1843 = { # Galdriel/Thranduil recieving a letter to join Maglor in war against Sauron
+	type = letter_event
+	sender = character:linefinwe11
+
+	opening = {
+		desc = elven.1843.opening
+	}
+
+	desc = elven.1843.desc
+
+	on_trigger_fail = { #Trigger invitation again if it was blocked because the character was handling another invitation
+		trigger_event = {
+			id = elven.1843
+			days = 1
+		}	
+	}
+
+	option = { # Join Maglor in his war
+		name = elven.1843.a
+
+		character:linefinwe11 = {
+			random_character_war = {
+				limit = { using_cb = final_battle_maglor_cb }
+				add_attacker = root
+			}
+		}
+
+		ai_chance = {
+			base = 1 
+		}
+	}
+
+	option = { # Refuse to join war
+		name = elven.1843.b
 
 		ai_chance = {
 			base = 0

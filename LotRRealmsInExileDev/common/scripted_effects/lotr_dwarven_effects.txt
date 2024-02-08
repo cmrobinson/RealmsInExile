@@ -369,8 +369,18 @@ moria_wastelands_to_delvings_effect = {
 	every_de_jure_county = {
 		transfer_moria_duchy_titles_effect = { TITLE = this }
 		every_county_province = {
-			limit = { has_holding = yes }
+			limit = {
+				terrain = halls
+				has_holding = yes
+			}
 			set_holding_type = dwarven_holding
+		}
+		every_county_province = {
+			limit = {
+				NOT = { terrain = halls }
+				has_holding = yes
+			}
+			set_holding_type = castle_holding
 		}
 		if = {
 			limit = {
