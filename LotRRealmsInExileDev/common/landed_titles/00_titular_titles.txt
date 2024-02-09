@@ -137,6 +137,15 @@ k_gondolin = { # Gondolin
 	capital = c_caras_galadhon #Temporary
 }
 
+k_nargothrond = { # Nargothrond
+	color = "black"
+	landless = yes
+	destroy_if_invalid_heir = yes
+	de_jure_drift_disabled = yes
+	always_follows_primary_heir = yes
+	capital = c_caras_galadhon #Temporary
+}
+
 d_feanorians = { # The unified Feanorians - duchy so localization doesn't make them a 'king'
 	color = wastelands
 	landless = yes

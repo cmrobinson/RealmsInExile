@@ -90,6 +90,18 @@ k_gondolin = {
 	}
 }
 
+k_nargothrond = {
+	102.4.7 = {
+		holder = linefinwe33
+	}
+	467.1.1 = { # death of Finrod
+		holder = linefinwe39
+	}
+	497.1.1 = { # Orodreth is slain in the battle of Tumhalad
+		holder = 0
+	}
+}
+
 d_feanorians = {
 	5.2.1 = { # Abdication of Maedhros of the High-Kingship
 		holder = linefinwe10
