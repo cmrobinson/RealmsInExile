@@ -10576,6 +10576,7 @@ hunt.2530 = {
 		hunt_activity_master_aptitude_positive_modifier = { LIEGE = root } # Aptitude affects frequency
 		hunt_activity_lifestyle_modifier = { TRACK = falconer } # Lifestyle affects frequency
 		hunt_activity_realm_size_modifier = yes
+		hunt_activity_sighting_county_modifier = yes
 	}
 
 	immediate = {
@@ -10585,19 +10586,17 @@ hunt.2530 = {
 				hunt_activity_recent_hunt_sighting_trigger = no
 				is_underground_county = no
 			}
-			base = 1
-			hunt_activity_sighting_county_modifier = yes
-		}
-		random_county_province = {
-			weight = {
-				base = 1
-				hunt_activity_sighting_terrain_modifier = yes
-				hunt_activity_sighting_building_modifier = { PROVINCE = this }
-				hunt_activity_game_building_modifier = { PROVINCE = this }
+			random_county_province = {
+				weight = {
+					base = 1
+					hunt_activity_sighting_terrain_modifier = yes
+					hunt_activity_sighting_building_modifier = { PROVINCE = this }
+					hunt_activity_game_building_modifier = { PROVINCE = this }
+				}
+				save_scope_as = sighting_province
 			}
-			save_scope_as = sighting_province
+			save_scope_as = sighting_county
 		}
-		save_scope_as = sighting_county
 		hunt_activity_falconry_game_effect = { PROVINCE = scope:sighting_province }
 		# Create new sighting
 		hunt_create_sighting_effect = {
