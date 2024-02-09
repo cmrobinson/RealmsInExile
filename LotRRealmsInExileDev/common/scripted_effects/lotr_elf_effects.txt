@@ -864,137 +864,167 @@ replace_unelven_traits = {
 maglor_crusade_elven_warriors = {
 	if = {
 		limit = { scope:elven_ruler.culture = culture:noldor }
-		random_list = {
-			1 = {
-				spawn_army = {
-					name = elven.1606.toast
-					men_at_arms = {
-						type = noldor_swordsmen
-						stacks = $SUPPORT$
-					}
-					location = root.capital_county.title_province
-					origin = scope:gondor_ruler.capital_county.title_province
-				}
-			}
-			1 = {
-				spawn_army = {
-					name = elven.1606.toast
-					men_at_arms = {
-						type = noldor_archers
-						stacks = $SUPPORT$
-					}
-					location = root.capital_county.title_province
-					origin = scope:gondor_ruler.capital_county.title_province
-				}
-			}
+		random_list = { # Noldor
+			1 = { increase_variable = { NAME = noldor_swordsmen AMOUNT = $SUPPORT$ } }
+			1 = { increase_variable = { NAME = noldor_archers AMOUNT = $SUPPORT$ } }
 		}
 	}
 	else_if = {
 		limit = { scope:elven_ruler.culture = culture:sindar }
-		random_list = {
-			1 = {
-				spawn_army = {
-					name = elven.1606.toast
-					men_at_arms = {
-						type = falathrim_haven_guard
-						stacks = $SUPPORT$
-					}
-					location = root.capital_county.title_province
-					origin = scope:gondor_ruler.capital_county.title_province
-				}
-			}
-			1 = {
-				spawn_army = {
-					name = elven.1606.toast
-					men_at_arms = {
-						type = marchwardens
-						stacks = $SUPPORT$
-					}
-					location = root.capital_county.title_province
-					origin = scope:gondor_ruler.capital_county.title_province
-				}
-			}
+		random_list = { # Sindar
+			1 = { increase_variable = { NAME = falathrim_haven_guard AMOUNT = $SUPPORT$ } }
+			1 = { increase_variable = { NAME = marchwardens AMOUNT = $SUPPORT$ } }
 		}
 	}
 	else_if = {
 		limit = { scope:elven_ruler.culture = culture:falathrim }
-		random_list = {
-			1 = {
-				spawn_army = {
-					name = elven.1606.toast
-					men_at_arms = {
-						type = hir_hathol
-						stacks = $SUPPORT$
-					}
-					location = root.capital_county.title_province
-					origin = scope:gondor_ruler.capital_county.title_province
-				}
-			}
-			1 = {
-				spawn_army = {
-					name = elven.1606.toast
-					men_at_arms = {
-						type = sindar_nobility
-						stacks = $SUPPORT$
-					}
-					location = root.capital_county.title_province
-					origin = scope:gondor_ruler.capital_county.title_province
-				}
-			}
+		random_list = { # Falathrim
+			1 = { increase_variable = { NAME = hir_hathol AMOUNT = $SUPPORT$ } }
+			1 = { increase_variable = { NAME = sindar_nobility AMOUNT = $SUPPORT$ } }
 		}
 	}
 	else_if = {
 		limit = { scope:elven_ruler.culture = culture:laiquendi }
-		random_list = {
-			1 = {
-				spawn_army = {
-					name = elven.1606.toast
-					men_at_arms = {
-						type = laiquendi_ambushers
-						stacks = $SUPPORT$
-					}
-					location = root.capital_county.title_province
-					origin = scope:gondor_ruler.capital_county.title_province
-				}
-			}
-			1 = {
-				spawn_army = {
-					name = elven.1606.toast
-					men_at_arms = {
-						type = laiquendi_scouts
-						stacks = $SUPPORT$
-					}
-					location = root.capital_county.title_province
-					origin = scope:gondor_ruler.capital_county.title_province
-				}
-			}
+		random_list = { # Laiquendi
+			1 = { increase_variable = { NAME = laiquendi_ambushers AMOUNT = $SUPPORT$ } }
+			1 = { increase_variable = { NAME = laiquendi_scouts AMOUNT = $SUPPORT$ } }
 		}
 	}
 	else = {
-		random_list = {
-			1 = {
-				spawn_army = {
-					name = elven.1606.toast
-					men_at_arms = {
-						type = noldor_veterans
-						stacks = $SUPPORT$
-					}
-					location = root.capital_county.title_province
-					origin = scope:gondor_ruler.capital_county.title_province
-				}
-			}
-			1 = {
-				spawn_army = {
-					name = elven.1606.toast
-					men_at_arms = {
-						type = noldor_glaivesmen
-						stacks = $SUPPORT$
-					}
-					location = root.capital_county.title_province
-					origin = scope:gondor_ruler.capital_county.title_province
-				}
-			}
+		random_list = { # Noldor troops ||| Fallback
+			1 = { increase_variable = { NAME = noldor_veterans AMOUNT = 1 } }
+			1 = { increase_variable = { NAME = noldor_glaivesmen AMOUNT = 1 } }
 		}
+	}
+}
+
+give_maglor_elven_warriors_effect = {
+	if = {
+		limit = { has_variable = noldor_swordsmen }
+		spawn_army = {
+			name = elven.1601.noldor_troops
+			
+			men_at_arms = {
+				type = noldor_swordsmen
+				stacks = var:noldor_swordsmen
+			}
+			location = root.capital_province
+		}
+	}
+	if = {
+		limit = { has_variable = noldor_archers }
+		spawn_army = {
+			name = elven.1601.noldor_troops
+			
+			men_at_arms = {
+				type = noldor_archers
+				stacks = var:noldor_archers
+			}
+			location = root.capital_province
+		}
+	}
+	if = {
+		limit = { has_variable = falathrim_haven_guard }
+		spawn_army = {
+			name = elven.1601.falathrim_troops
+			
+			men_at_arms = {
+				type = falathrim_haven_guard
+				stacks = var:falathrim_haven_guard
+			}
+			location = root.capital_province
+		}
+	}
+	if = {
+		limit = { has_variable = marchwardens }
+		spawn_army = {
+			name = elven.1601.falathrim_troops
+			
+			men_at_arms = {
+				type = marchwardens
+				stacks = var:marchwardens
+			}
+			location = root.capital_province
+		}
+		remove_variable = marchwardens
+	}
+	if = {
+		limit = { has_variable = hir_hathol }
+		spawn_army = {
+			name = elven.1601.sindar_troops
+			
+			men_at_arms = {
+				type = hir_hathol
+				stacks = var:hir_hathol
+			}
+			location = root.capital_province
+		}
+		remove_variable = hir_hathol
+	}
+	if = {
+		limit = { has_variable = sindar_nobility }
+		spawn_army = {
+			name = elven.1601.sindar_troops
+			
+			men_at_arms = {
+				type = sindar_nobility
+				stacks = var:sindar_nobility
+			}
+			location = root.capital_province
+		}
+		remove_variable = sindar_nobility
+	}
+	if = {
+		limit = { has_variable = laiquendi_ambushers }
+		spawn_army = {
+			name = elven.1601.laiquendi_troops
+			
+			men_at_arms = {
+				type = laiquendi_ambushers
+				stacks = var:laiquendi_ambushers
+			}
+			location = root.capital_province
+		}
+		remove_variable = laiquendi_ambushers
+	}
+	if = {
+		limit = { has_variable = laiquendi_scouts }
+		spawn_army = {
+			name = elven.1601.laiquendi_troops
+			
+			men_at_arms = {
+				type = laiquendi_scouts
+				stacks = var:laiquendi_scouts
+			}
+			location = root.capital_province
+		}
+		remove_variable = laiquendi_scouts
+	}
+	if = {
+		limit = { has_variable = noldor_veterans }
+		spawn_army = {
+			name = elven.1601.noldor_troops
+			
+			men_at_arms = {
+				type = noldor_veterans
+				stacks = var:noldor_veterans
+			}
+			location = root.capital_province
+		}
+		remove_variable = noldor_veterans
+	}
+	if = {
+		limit = { has_variable = noldor_glaivesmen }
+		spawn_army = {
+			name = elven.1601.noldor_troops
+			
+			men_at_arms = {
+				type = noldor_glaivesmen
+				stacks = var:noldor_glaivesmen
+			}
+			location = root.capital_province
+		}
+		remove_variable = noldor_glaivesmen
 	}
 }
 

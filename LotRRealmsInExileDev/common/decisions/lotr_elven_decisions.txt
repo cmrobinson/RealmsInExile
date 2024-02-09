@@ -1741,7 +1741,7 @@ decision_rally_army_righteous = {
 	
 				trigger_event = {
 					id = elven.1607
-					days = { 5 10 }
+					days = { 25 30 }
 				}
 				trigger_event = {
 					id = elven.1601
@@ -1755,7 +1755,7 @@ decision_rally_army_righteous = {
 				
 				trigger_event = {
 					id = elven.1607
-					days = { 5 10 }
+					days = { 25 30 }
 				}
 				trigger_event = {
 					id = elven.1602

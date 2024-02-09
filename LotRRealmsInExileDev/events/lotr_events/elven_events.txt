@@ -974,6 +974,14 @@ elven.1601 = { # Shield of the Free Peoples starting event | Go to Eregion
 		name = elven.1601.a
 		set_variable = cannot_cancel_travel
 
+		send_interface_toast = {
+			title = elven.1606.toast 
+			custom_tooltip = {
+				text = elven.1601.a.tt
+				give_maglor_elven_warriors_effect = yes
+			}
+		}
+		
 		start_travel_plan = {
 			destination = title:c_ost_in_edhil.title_province
 			on_arrival_event  = elven.1609
@@ -1000,6 +1008,11 @@ elven.1602 = { # Strike the Heart of the Enemy starting event | Go to Edhellond
 	option = { 
 		name = elven.1602.a
 		set_variable = cannot_cancel_travel
+		
+		send_interface_toast = {
+			title = elven.1606.toast 
+			give_maglor_elven_warriors_effect = yes
+		}
 
 		start_travel_plan = {
 			destination = title:c_edhellond.title_province
@@ -1293,11 +1306,11 @@ elven.1606 = { # Letter Event, Request troops from Lindon
 		name = elven.1606.a
 
 		character:linefinwe11 = {
-			send_interface_toast = {
-				title = elven.1606.toast
-
+			# send_interface_toast = {
+			# 	title = elven.1606.toast
+				
 				maglor_crusade_elven_warriors = { SUPPORT = 2 }
-			}
+			# }
 		}
 
 		ai_chance = {
@@ -1314,11 +1327,11 @@ elven.1606 = { # Letter Event, Request troops from Lindon
 		name = elven.1606.b
 
 		character:linefinwe11 = {
-			send_interface_toast = {
-				title = elven.1606.toast
+			# send_interface_toast = {
+			# 	title = elven.1606.toast
 
 				maglor_crusade_elven_warriors = { SUPPORT = 1 }
-			}
+			# }
 		}
 
 		ai_chance = {
@@ -2013,13 +2026,30 @@ elven.1720 = { # hidden event to appoint governors
 			every_in_de_jure_hierarchy = {
 				limit = {
 					tier = tier_duchy
-
-					any_in_de_jure_hierarchy = {
-						tier = tier_county
-						holder ?= character:linefinwe11
+					NOT = {
+						any_in_de_jure_hierarchy = {
+							tier = tier_county
+							NOT = { holder ?= character:linefinwe11 }
+						}
 					}
 				}
 				add_to_list = duchy_titles_in_umbar
+			}
+		}
+
+		title:e_umbar = {
+			every_in_de_jure_hierarchy = {
+				limit = {
+					tier = tier_county
+					holder ?= character:linefinwe11
+					duchy = {
+						any_in_de_jure_hierarchy = {
+							tier = tier_county
+							NOT = { holder ?= character:linefinwe11 }
+						}
+					}
+				}
+				add_to_list = county_titles_in_umbar
 			}
 		}
 
@@ -2102,6 +2132,32 @@ elven.1720 = { # hidden event to appoint governors
 				}
 			}
 		}
+
+		if = { # Generate some random gondorian rulers
+			limit = { any_in_list = { list = county_titles_in_umbar } }
+			every_in_list = {
+				list = county_titles_in_umbar
+				random_in_global_list = { # List of Gondorian governors
+					variable = replacement_governors
+					save_scope_as = new_holder
+					add_opinion = {
+						modifier = recieved_title
+						opinion = 40
+						target = character:linefinwe11
+					}
+					remove_list_global_variable = {
+						name = replacement_governors
+						target = this
+					}
+				}
+				change_title_holder = {
+					holder = scope:new_holder
+					change = scope:title_change
+				}
+			}
+		}
+
+
 
 		resolve_title_and_vassal_change = scope:title_change
 	}
