@@ -5094,12 +5094,14 @@ maglor_shatter_realm_cb = {
 			### Converts holder to different faith
 			every_in_list = {
 				list = affected_rulers
-				limit = { any_held_title = { title_province = { geographical_region = middleearth_haradwaith_near } } }
-				random_list = {
-					67 = {} # Stay same faith
-					33 = {
-						set_character_faith_with_conversion = faith:faith_chelkar
-					}
+				limit = { 
+					any_held_title = { title_province = { geographical_region = middleearth_haradwaith_near } } 
+					NOT = { this = scope:defender }
+				}
+
+				random = {
+					chance = 33 
+					set_character_faith_with_conversion = faith:faith_chelkar
 				}
 			}
 
@@ -5109,11 +5111,9 @@ maglor_shatter_realm_cb = {
 				limit = { title_province = { geographical_region = middleearth_haradwaith_near } }
 				
 				every_de_jure_county = {
-					random_list = {
-						67 = {} # Stay same faith
-						33 = {
-							set_county_faith = faith:faith_chelkar
-						}
+					random = {
+						chance = 33 
+						set_county_faith = faith:faith_chelkar
 					}
 				}
 			}
