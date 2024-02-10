@@ -102,6 +102,15 @@ k_nargothrond = {
 	}
 }
 
+k_ossiriand = {
+	2.8.1 = {
+		holder = lineoflenwe3	
+	}
+	2.12.1 = {
+		holder = 0
+	}
+}
+
 d_feanorians = {
 	5.2.1 = { # Abdication of Maedhros of the High-Kingship
 		holder = linefinwe10

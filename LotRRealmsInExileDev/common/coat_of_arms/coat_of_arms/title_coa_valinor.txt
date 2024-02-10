@@ -188,6 +188,81 @@ k_nargothrond =	{
 	}
 }
 
+k_ossiriand = {
+	pattern="pattern_solid.dds"
+	color1=grey
+	color2=dark_green
+	color3=light_purple
+	color4=light_gold
+	colored_emblem={
+		color1=dark_green
+		color2=white
+		texture="ce_cc_edain_border_30.dds"
+	}
+
+	colored_emblem={
+		color1=light_gold
+		texture="ce_cc_edain_border_32.dds"
+	}
+
+	colored_emblem={
+		color1=dark_green
+		color2=white
+		texture="ce_cc_edain_border_33.dds"
+		instance={
+			scale={ 0.975000 0.975000 }
+		}
+
+	}
+
+	colored_emblem={
+		color1=light_gold
+		texture="ce_empty.dds"
+	}
+
+	colored_emblem={
+		color1=light_gold
+		color2=light_purple
+		color3=purple
+		texture="beta_13.dds"
+		instance={
+			scale={ 0.800000 0.800000 }
+		}
+
+	}
+
+	colored_emblem={
+		color1=light_gold
+		color2=light_purple
+		texture="ce_star_22.dds"
+		instance={
+			position={ 0.500000 0.100000 }
+			scale={ 0.100000 0.100000 }
+		}
+
+		instance={
+			position={ 0.500000 0.900000 }
+			scale={ 0.100000 0.100000 }
+			rotation=90
+		}
+
+		instance={
+			position={ 0.100000 0.500000 }
+			scale={ 0.100000 0.100000 }
+			rotation=180
+		}
+
+		instance={
+			position={ 0.900000 0.500000 }
+			scale={ 0.100000 0.100000 }
+			rotation=270
+		}
+
+	}
+
+}
+
+
 
 d_feanorians = { # Host of Feanor, uses the same as the house
 	pattern = "pattern_solid.dds"
