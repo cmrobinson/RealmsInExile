@@ -141,6 +141,21 @@ d_middle_army_mercenaries = { # Historical Variag mercenary band
 	}
 }
 
+d_dor_lomin = {
+	418.6.11 = {
+		holder = lineofhador1
+	}
+	457.5.29 = {
+		holder = lineofhador3
+	}
+	464.8.18 = {
+		holder = lineofhador5
+	}
+	472.3.9 = {
+		holder = 0
+	}
+}
+
 ### Valinor ###
 
 c_tol_eressea = {

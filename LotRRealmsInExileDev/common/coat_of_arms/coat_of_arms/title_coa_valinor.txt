@@ -314,6 +314,41 @@ d_feanorians = { # Host of Feanor, uses the same as the house
     }
 }
 
+d_dor_lomin = {
+	pattern="pattern_checkers_02.dds"
+	color1=rgb { 5 10 127 }
+	color2=white
+	color3=red
+	colored_emblem={
+		color1=white
+		color2=yellow_light
+		texture="ce_aeolia_ilion_athena_ilias.dds"
+		instance={
+			scale={ 0.585000 0.585000 }
+			depth=1.010000
+		}
+
+	}
+
+	colored_emblem={
+		color1=rgb { 215 0 15 }
+		texture="ce_roundel.dds"
+		instance={
+			scale={ 0.835000 0.835000 }
+			depth=2.010000
+		}
+
+	}
+
+	colored_emblem={
+		color1=yellow
+		texture="ce_frame_circle_urnes_runes.dds"
+	}
+
+}
+
+
+
 ### Valinor ###
 
 e_valinor = {
