@@ -115,3 +115,39 @@ dynasty_dusalanharadrim = {
 	name = "dynn_dusalanharadrim"
 	culture = haruze
 }
+dynasty_zamadur = {
+	name = "dynn_zamadur"
+	culture = black_numenorean
+}
+dynasty_zamadurtwo = {
+	name = "dynn_zamadurtwo"
+	culture = black_numenorean
+}
+dynasty_caldurcolonial = {
+	name = "dynn_caldurcolonial"
+	culture = black_numenorean
+}
+dynasty_eradascolonial = {
+	name = "dynn_eradascolonial"
+	culture = black_numenorean
+}
+dynasty_melkoritesakal = {
+	name = "dynn_melkoritesakal"
+	culture = black_numenorean
+}
+dynasty_appointedsakal = {
+	name = "dynn_appointedsakal"
+	culture = black_numenorean
+}
+dynasty_appointedsakaltwo = {
+	name = "dynn_appointedsakaltwo"
+	culture = black_numenorean
+}
+dynasty_mixedsakal = {
+	name = "dynn_mixedsakal"
+	culture = old_umbarean
+}
+dynasty_mixedsakaltwo = {
+	name = "dynn_mixedsakaltwo"
+	culture = sakalai
+}
