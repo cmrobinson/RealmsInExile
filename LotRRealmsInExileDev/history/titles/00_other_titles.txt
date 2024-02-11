@@ -111,6 +111,18 @@ k_ossiriand = {
 	}
 }
 
+k_hithlum = {
+	5.1.1 = {
+		holder = linefinwe4
+	}
+	458.1.1 = {
+		holder = linefinwe20
+	}
+	474.1.1 = {
+		holder = 0
+	}	
+}
+
 d_feanorians = {
 	5.2.1 = { # Abdication of Maedhros of the High-Kingship
 		holder = linefinwe10

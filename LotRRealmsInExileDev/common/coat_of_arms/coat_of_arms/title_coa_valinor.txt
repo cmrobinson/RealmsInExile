@@ -262,6 +262,47 @@ k_ossiriand = {
 
 }
 
+k_hithlum = {
+	pattern="pattern_solid.dds"
+	color1=rgb { 24 36 47 }
+	color2=white
+	color3=blue
+	colored_emblem={
+		color1=white
+		color2=yellow_light
+		texture="ce_elven_star_of_feanor_02.dds"
+		instance={
+			position={ 0.815000 0.475000 }
+			scale={ 0.400000 0.400000 }
+		}
+
+		instance={
+			position={ 0.200000 0.475000 }
+			scale={ 0.400000 0.400000 }
+			depth=1.010000
+		}
+
+		instance={
+			position={ 0.500000 0.175000 }
+			scale={ 0.500000 0.500000 }
+			depth=3.010000
+		}
+
+	}
+
+	colored_emblem={
+		color1=rgb { 90 90 90 }
+		color2=rgb { 193 193 193 }
+		texture="ce_cc_mountains_01.dds"
+		instance={
+			position={ 0.500000 0.580000 }
+			depth=2.010000
+		}
+
+	}
+
+}
+
 
 
 d_feanorians = { # Host of Feanor, uses the same as the house
