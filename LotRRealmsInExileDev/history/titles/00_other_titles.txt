@@ -142,6 +142,9 @@ d_middle_army_mercenaries = { # Historical Variag mercenary band
 }
 
 d_dor_lomin = {
+	5.1.1 = {
+		holder = linefinwe20
+	}
 	418.6.11 = {
 		holder = lineofhador1
 	}
