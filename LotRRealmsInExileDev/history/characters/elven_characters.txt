@@ -2382,6 +2382,7 @@ lineofelwe9 = { # Elwing
 	
 	503.1.9 = { #F.A. 501
 		birth = yes
+		employer = linefinwe6
 	}
 }
 ### Olwe of Alqualondë
