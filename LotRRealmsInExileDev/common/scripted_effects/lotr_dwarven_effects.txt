@@ -352,7 +352,7 @@ transfer_moria_duchy_titles_effect = {
 	}
 	else = {
 		create_title_and_vassal_change = {
-			type = granted
+			type = revoked
 			save_scope_as = change
 			add_claim_on_loss = no
 		}
@@ -390,22 +390,7 @@ moria_wastelands_to_delvings_effect = {
 			}
 			set_holding_type = castle_holding
 		}
-		if = {
-			limit = {
-				NOT = {
-					OR = {
-						culture = { has_cultural_pillar = heritage_longbeard }
-						culture = { has_cultural_pillar = heritage_firebeard }
-						culture = { has_cultural_pillar = heritage_broadbeam }
-						culture = { has_cultural_pillar = heritage_ironfist }
-						culture = { has_cultural_pillar = heritage_stiffbeard }
-						culture = { has_cultural_pillar = heritage_blacklock }
-						culture = { has_cultural_pillar = heritage_stonefoot }
-					}
-				}
-			}
-			set_county_culture = scope:dwarf_in_moria.culture
-		}
+		set_county_culture = scope:dwarf_in_moria.culture
 		set_county_faith = scope:dwarf_in_moria.faith
 		random_list = {
 			1 = { change_development_level = 3 }
