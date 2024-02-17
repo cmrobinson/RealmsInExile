@@ -340,6 +340,15 @@ transfer_moria_duchy_titles_effect = {
 				change = scope:change
 			}
 		}
+		resolve_title_and_vassal_change = scope:change
+	}
+	else_if = {
+		limit = {
+			OR = {
+				is_elf = yes
+				is_human = yes
+			}
+		}
 	}
 	else = {
 		create_title_and_vassal_change = {
@@ -353,9 +362,9 @@ transfer_moria_duchy_titles_effect = {
 				change = scope:change
 			}
 		}
+		resolve_title_and_vassal_change = scope:change
 	}
 
-	resolve_title_and_vassal_change = scope:change
 }
 
 transfer_central_moria_effect = {
@@ -367,7 +376,6 @@ transfer_central_moria_effect = {
 
 moria_wastelands_to_delvings_effect = {
 	every_de_jure_county = {
-		transfer_moria_duchy_titles_effect = { TITLE = this }
 		every_county_province = {
 			limit = {
 				terrain = halls
@@ -404,9 +412,10 @@ moria_wastelands_to_delvings_effect = {
 			1 = { change_development_level = 4 }
 			1 = { change_development_level = 5 }
 		}
+		### THIS SHOULD BE DOWN HERE
+		transfer_moria_duchy_titles_effect = { TITLE = this }
 		generate_coa = yes
 	}
-	# transfer_moria_duchy_titles_effect = { TITLE = this }
 }
 
 transfer_highpass_to_valemen = {
