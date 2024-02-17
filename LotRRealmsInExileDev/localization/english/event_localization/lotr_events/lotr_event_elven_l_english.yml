@@ -100,11 +100,11 @@
   elven.1601.t:0 "The Heir of Eregion"
   elven.1601.desc:0 "There are many threats which have slowly choked the Free Peoples. The [dwarves|E] have lost their great realms of old, the [elves|E] are diminished and split apart from each other. To defeat [sauroncharacter|E], we must be united. To unite, these threats must be quelled. \n\nSuch was my decision. The first step is to cleanse the Misty Mountains and restore the Dwarves, our allies of ancient days. There is an obvious place for us to begin this work, then - Eregion, the realm of my nephew [celebrimbor|E]. The ancient ruins of the kingdom have decayed but with work can be rebuilt. The close proximity to [khazaddum|E] makes it an ideal location from which to begin the work of cleansing it. \n\nSo we set out, leaving behind Himring and Lindon, marching forth for what may be the final war of the High-Elves."
   elven.1601.a:0 "Go not quietly into the night."
-  elven.1601.a.tt:0 "Elven warriors from Lindon"
-  elven.1601.noldor_troops:0 "Noldorin warriors from Lindon"
-  elven.1601.sindar_troops:0 "Sindarin warriors from Lindon"
-  elven.1601.laiquendi_troops:0 "Laiquendi warriors from Lindon"
-  elven.1601.falathrim_troops:0 "Falathrim warriors from Lindon"
+  elven.1601.a.tt:0 "Elven Warriors from Lindon"
+  elven.1601.noldor_troops:0 "Noldorin Warriors from Lindon"
+  elven.1601.sindar_troops:0 "Sindarin Warriors from Lindon"
+  elven.1601.laiquendi_troops:0 "Laiquendi Warriors from Lindon"
+  elven.1601.falathrim_troops:0 "Falathrim Warriors from Lindon"
 
   # Strike the Heart of the Enemy
   elven.1602.t:0 "The Heart of the Enemy"
@@ -222,8 +222,8 @@
   elven.1815.toast:0 "You slay Durin's Bane." # VECTOR - Placeholder
   elven.1815.cb_unlock:0 "Unlock the 'Purge Underground Regions' [casus_belli|E]"
 
-  elven.1816.toast:0 "Dwarven troops from Khazad-dum"
-	elven.1818.toast:0 "Elven soldiers from Rivendell"
+  elven.1816.toast:0 "Dwarven Troops from Khazad-dum"
+  elven.1818.toast:0 "Elven Soldiers from Rivendell"
 
   elven.1820.t:0 "VECTOR - Placeholder" # VECTOR - Placeholder 
   elven.1820.desc:0 "Event telling player they have access to a new CB for use to clear the underground regions in Moria/High-pass. It is also locked to these regions until Moria has been cleansed" # VECTOR - Placeholder
@@ -239,14 +239,14 @@
   elven.1830.c.tt:0 "Keep the titles in [GetTitleByKey('k_amon_lanc').GetNameNoTier] to yourself"
 
   
-	elven.1818.lothlorien:0 "Elven soldiers from [GetTitleByKey('k_lothlorien').GetNameNoTier]"
-	elven.1818.lasgalen:0 "Elven soldiers from [GetTitleByKey('k_lasgalen').GetNameNoTier]"
+  elven.1818.lothlorien:0 "Elven Soldiers from [GetTitleByKey('k_lothlorien').GetNameNoTier]"
+  elven.1818.lasgalen:0 "Elven Soldiers from [GetTitleByKey('k_lasgalen').GetNameNoTier]"
 
   elven.1850.t:0 "VECTOR - Placeholder" # VECTOR - Placeholder
   elven.1850.desc:0 "Event for Maglor after decision for 'Clear High Pass' has been taken. Maglor will now recieve vale MaA for a short period"
   elven.1850.a:0 "Vale sends MaA to join you"
   
-	elven.1851.toast:0 " Volunteers from the Vale"
+  elven.1851.toast:0 " Volunteers from the Vale"
  
   elven.1840.t:0 "VECTOR - Placeholder" # VECTOR - Placeholder
   elven.1840.desc:0 "Event for Maglor/Galadriel/Thranduil/Khazad-dum ruler [ THIS CAN BE SPLIT IF SEPERATE EVENTS WANT TO BE DONE, JUST NOTIFY ME ]. Calls them into the 'Second' last alliance, albeit without Dunedain" # VECTOR - Placeholder
