@@ -2250,35 +2250,7 @@ decision_cleanse_the_high_pass = {
 	
 	# EFFECT 
 	effect = { # Give
-		custom_tooltip = {
-			text = decision_cleanse_the_high_pass_effect
-			if = {
-				limit = { title:d_carrock_vale.holder = { is_human = yes faith_is_evil = no save_temporary_scope_as = vale_men } }
-				transfer_highpass_to_valemen = { VALEMEN = scope:vale_men }
-			}
-			else_if = {
-				limit = { title:d_warnelath.holder = { is_human = yes faith_is_evil = no save_temporary_scope_as = vale_men } }
-				transfer_highpass_to_valemen = { VALEMEN = scope:vale_men }
-			}
-			else_if = {
-				limit = { title:d_west_bight.holder = { is_human = yes faith_is_evil = no save_temporary_scope_as = vale_men } }
-				transfer_highpass_to_valemen = { VALEMEN = scope:vale_men }
-			}
-			else_if = {
-				limit = { title:d_suflond.holder = { is_human = yes faith_is_evil = no save_temporary_scope_as = vale_men } }
-				transfer_highpass_to_valemen = { VALEMEN = scope:vale_men }
-			}
-			if = {
-				limit = {
-					scope:vale_men = {
-						has_title = title:c_western_high_pass
-						has_title = title:c_central_high_pass
-						has_title = title:c_eastern_high_pass
-					}
-				}
-				get_title = title:d_high_pass
-			}
-		}
+		custom_tooltip = decision_cleanse_the_high_pass_effect
 
 		trigger_event = elven.1850
 

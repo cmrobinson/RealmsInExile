@@ -5414,7 +5414,10 @@ maglor_underground_cb = {
 
 				scope:defender = {
 					every_held_title = {
-						limit = { tier = tier_county }
+						limit = {
+							tier = tier_county
+							title_province = { terrain = halls }
+						}
 						set_county_faith = faith:faith_wastelands_pagan
 						set_county_culture = culture:wastelands
 						generate_coa = yes
@@ -5427,7 +5430,10 @@ maglor_underground_cb = {
 					}
 					every_vassal_or_below = {
 						every_held_title = {
-							limit = { tier = tier_county }
+							limit = {
+								tier = tier_county
+								title_province = { terrain = halls }
+							}
 							set_county_faith = faith:faith_wastelands_pagan
 							set_county_culture = culture:wastelands
 							generate_coa = yes

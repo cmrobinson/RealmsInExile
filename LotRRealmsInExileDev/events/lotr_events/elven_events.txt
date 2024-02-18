@@ -3841,6 +3841,19 @@ elven.1830 = { # Event to give Lothlorien/Lasgalen elf Amon Lanc
 			every_de_jure_county = {
 				limit = { holder = root }
 				add_to_list = titles_in_amon_lanc
+
+				if = {
+					limit = {
+						exists = duchy.holder
+						NOT = {
+							any_in_list = {
+								list = duchy_titles_in_amon_lanc
+								this = prev.duchy
+							}
+						}
+					}
+					duchy = { add_to_list = duchy_titles_in_amon_lanc }
+				}
 			}
 		}
 	}
@@ -3853,6 +3866,10 @@ elven.1830 = { # Event to give Lothlorien/Lasgalen elf Amon Lanc
 				list = titles_in_amon_lanc
 				limit = { holder = root }
 				give_amon_lanc_to_elf = { TITLE = this HOLDER = title:k_lothlorien.holder }
+			}
+			every_in_list = {
+				list = duchy_titles_in_amon_lanc
+				holder = { destroy_title = prev }
 			}
 		}
 		
@@ -3883,6 +3900,10 @@ elven.1830 = { # Event to give Lothlorien/Lasgalen elf Amon Lanc
 				list = titles_in_amon_lanc
 				limit = { holder = root }
 				give_amon_lanc_to_elf = { TITLE = this HOLDER = title:k_lasgalen.holder }
+			}
+			every_in_list = {
+				list = duchy_titles_in_amon_lanc
+				holder = { destroy_title = prev }
 			}
 		}
 		title:k_lasgalen.holder = {
@@ -4176,14 +4197,29 @@ elven.1841 = { # Maglor sends letter to Gondor to ask for help
 	}
 
 	left_portrait = {
-		character = title:c_minas_tirith.holder
+		character = scope:gondor_ruler
 		animation = personality_honorable
+	}
+
+	immediate = {
+		if = {
+			limit = { exists = title:e_gondor_steward.holder }
+			title:e_gondor_steward.holder = { save_scope_as = gondor_ruler }
+		}
+		else_if = {
+			limit = { exists = title:e_gondor.holder }
+			title:e_gondor.holder = { save_scope_as = gondor_ruler }
+		}
+		else_if = {
+			limit = { exists = title:e_reunitedkingdom.holder }
+			title:e_reunitedkingdom.holder = { save_scope_as = gondor_ruler }
+		}
 	}
 
 	option = { # Seek help from Gondor
 		name = elven.1841.a
 
-		title:c_minas_tirith.holder = { trigger_event = elven.1845 }
+		scope:gondor_ruler = { trigger_event = elven.1845 }
 
 		ai_chance = {
 			base = 1 
@@ -4311,7 +4347,7 @@ elven.1851 = { # Hidden event to recieve Beorning event MaA
 	trigger = {
 		trigger_if = {
 			limit = { has_variable = beorning_event_troops }
-			var:beorning_event_troops < 7
+			var:beorning_event_troops < 9
 		}
 		sauron_is_alive = yes
 	}
@@ -4323,7 +4359,7 @@ elven.1851 = { # Hidden event to recieve Beorning event MaA
 			title = elven.1606.toast
 
 			random_list = {
-				1 = { # Special Longbeard unit
+				1 = { # Vale MaA unit
 					spawn_army = {
 						name = elven.1851.toast
 						men_at_arms = {
@@ -4333,7 +4369,7 @@ elven.1851 = { # Hidden event to recieve Beorning event MaA
 						location = root.capital_province
 					}
 				}
-				1 = { # Special Longbeard unit
+				1 = { # Vale MaA unit
 					spawn_army = {
 						name = elven.1851.toast
 						men_at_arms = {
@@ -4343,7 +4379,7 @@ elven.1851 = { # Hidden event to recieve Beorning event MaA
 						location = root.capital_province
 					}
 				}
-				1 = { # Special Longbeard unit
+				1 = { # Vale MaA unit
 					spawn_army = {
 						name = elven.1851.toast
 						men_at_arms = {

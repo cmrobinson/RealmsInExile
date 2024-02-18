@@ -149,9 +149,9 @@
 
   decision_cleanse_the_high_pass:0 "Cleansing of the [GetTitleByKey('k_high_pass').GetNameNoTierNoTooltip]"
   decision_cleanse_the_high_pass_tooltip:0 "You cleanse [GetTitleByKey('k_high_pass').GetNameNoTierNoTooltip] of goblins."
-  decision_cleanse_the_high_pass_desc:0 "The [GetTitleByKey('k_high_pass').GetNameNoTierNoTooltip] is a vital connection between Rhovanion and Eriador. Of old policed by [imladris|E], in recent history the Valemen under the Beornings has taken over this vital duty. Yet even these strong men struggle. To re-establish the link between the two continents, we must purge the Goblins from the pass!\n\n#I If you successfully remove all [goblins|E] from the [GetTitleByKey('k_high_pass').GetNameNoTierNoTooltip], the Valemen will periodically send you [men_at_arms|E]#!"
+  decision_cleanse_the_high_pass_desc:0 "The [GetTitleByKey('k_high_pass').GetNameNoTierNoTooltip] is a vital connection between Rhovanion and Eriador. Of old policed by [imladris|E], in recent history the Valemen under the Beornings has taken over this vital duty. Yet even these strong men struggle. To re-establish the link between the two continents, we must purge the Goblins from the pass!"
   decision_cleanse_the_high_pass_confirm:0 "The pass shall be made safe!"
-  decision_cleanse_the_high_pass_effect:0 "[vale_men.GetName] will recieve:\n$BULLET_WITH_TAB$[GetTitleByKey('c_central_high_pass').GetName]\n$BULLET_WITH_TAB$[GetTitleByKey('c_western_high_pass').GetName]\n$BULLET_WITH_TAB$[GetTitleByKey('c_eastern_high_pass').GetName]"
+  decision_cleanse_the_high_pass_effect:0 "The men of the Vale will periodically send you [men_at_arms|E] to aid you in your alliance"
   decision_cleanse_the_high_pass_valid_tt:0 "There are no [goblins|E] or [orcs|E] left in the [GetTitleByKey('k_high_pass').GetName]"
 
   decision_retire_to_himring:0 "Return to Himring"
