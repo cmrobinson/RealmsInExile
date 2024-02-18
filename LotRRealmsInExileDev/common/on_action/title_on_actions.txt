@@ -101,7 +101,10 @@ on_title_gain = {
 
 		if = {
 			limit = {
-				scope:title ?= title:d_amon_lanc
+				OR = {
+					scope:title ?= title:d_amon_lanc
+					scope:title ?= title:k_amon_lanc
+				}
 				root = character:linefinwe11
 				NOT = {
 					is_target_in_global_variable_list = {
