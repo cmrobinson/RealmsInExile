@@ -87,7 +87,7 @@
   decision_annihilate_abhorred_confirm:0 "Aurë entuluva! Auta i lómë!"
   decision_annihilate_abhorred_defensive_azaghal:0 "Repayed Azaghal's debt"
   decision_annihilate_abhorred_defensive_mirkwood:0 "Slain the sorcerer of Mirkwood"
-  decision_annihilate_abhorred_aggresive_tt:0 "You send a letter to [GetTitleByKey('c_minas_tirith').GetHolder.GetNameNoTooltip], asking them for aid in the war against [sauroncharacter|E]." 
+  decision_annihilate_abhorred_aggresive_tt:0 "You send a letter to [gondor_ruler.GetNameNoTooltip], asking them for aid in the war against [sauroncharacter|E]." 
   decision_annihilate_abhorred_aggresive_tt_2:0 "Start a [war|E] against [sauroncharacter|E]\n"
 
   decision_annihilate_dol_guldur:0 "Annihilate Dol Guldur"

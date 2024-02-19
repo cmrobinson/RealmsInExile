@@ -1343,6 +1343,19 @@ decision_annihilate_abhorred = { # Starts war against Sauron
 	
 	# EFFECT 
 	effect = {
+		if = {
+			limit = { exists = title:e_gondor_steward.holder }
+			title:e_gondor_steward.holder = { save_temporary_scope_as = gondor_ruler }
+		}
+		else_if = {
+			limit = { exists = title:e_gondor.holder }
+			title:e_gondor.holder = { save_temporary_scope_as = gondor_ruler }
+		}
+		else_if = {
+			limit = { exists = title:e_reunitedkingdom.holder }
+			title:e_reunitedkingdom.holder = { save_temporary_scope_as = gondor_ruler }
+		}
+
 		custom_tooltip = decision_annihilate_abhorred_aggresive_tt_2
 		custom_tooltip = {
 			text = decision_annihilate_abhorred_aggresive_tt
@@ -1400,7 +1413,7 @@ decision_annihilate_abhorred = { # Starts war against Sauron
 decision_umbar_burns = { # Starts war against Umbar
 	# TEXT
 	title = decision_umbar_burns
-	picture = "gfx/interface/illustrations/decisions/decision_host_of_the_west.dds"
+	picture = "gfx/interface/illustrations/event_scenes/kinslaying.dds"
 	selection_tooltip = decision_umbar_burns_tooltip
 	desc = decision_umbar_burns_desc
 	confirm_text = decision_umbar_burns_confirm
@@ -1460,7 +1473,10 @@ decision_umbar_burns = { # Starts war against Umbar
 				every_vassal_or_below = {
 					limit = {
 						highest_held_title_tier >= tier_county
-						any_held_title = { is_coastal_county = yes }
+						any_held_title = {
+							tier = tier_county
+							is_coastal_county = yes 
+						}
 					}
 					trigger_event = {
 						id = elven.1700
@@ -1785,7 +1801,7 @@ decision_rally_army_righteous = {
 decision_bring_harad_down = {
 	# TEXT
 	title = decision_bring_harad_down
-	picture = "gfx/interface/illustrations/decisions/decision_fornost_02.dds"
+	picture = "gfx/interface/illustrations/decisions/decision_harad_02.dds"
 	selection_tooltip = decision_bring_harad_down_tooltip
 	desc = decision_bring_harad_down_desc
 	confirm_text = decision_bring_harad_down_confirm

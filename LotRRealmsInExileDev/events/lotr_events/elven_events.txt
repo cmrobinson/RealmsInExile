@@ -822,6 +822,22 @@ elven.1500 = { # Rouse from slumber
 		name = elven.1500.a
 		custom_tooltip = elven.1500.a.tt
 		set_variable = crusade_against_darkness
+		
+		ai_chance = {
+			base = 0 # LotR: This should be tied to WotR mode.
+			modifier = { # Game Rule
+				has_game_rule = default_ai_behavior
+				add = 100
+			}
+			modifier = { # Game Rule
+				has_game_rule = weighted_ai_behavior
+				add = 70
+			}
+			modifier = { # Game Rule
+				has_game_rule = random_ai_behavior
+				add = 50
+			}
+		}
 	}
 
 	option = { # Kingship by Seniority
@@ -829,6 +845,22 @@ elven.1500 = { # Rouse from slumber
 		custom_tooltip = elven.1500.b.tt
 		
 		set_variable = fourth_kin_slaying
+		
+		ai_chance = {
+			base = 0 # LotR: This should be tied to WotR mode.
+			modifier = { # Game Rule
+				has_game_rule = default_ai_behavior
+				add = 0
+			}
+			modifier = { # Game Rule
+				has_game_rule = weighted_ai_behavior
+				add = 30
+			}
+			modifier = { # Game Rule
+				has_game_rule = random_ai_behavior
+				add = 50
+			}
+		}
 	}
 }
 
