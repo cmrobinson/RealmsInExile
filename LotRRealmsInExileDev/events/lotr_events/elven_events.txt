@@ -1951,14 +1951,24 @@ elven.1715 = { # Event if win against Umbar
 	override_background = {
 		reference = docks_adunai
 	}
-	
-	widget = {
-		is_shown = {}
-		
-		gui = "umbar_maglor_option_select_widget"
-		container = "custom_widgets_container"  
-		controller = event_chain_progress
+	widgets = {
+		widget = {
+			gui = "lotr_shader_event_sparks"
+			container = "lotr_shader_event_foreground"
+		}
+		widget = {
+			gui = "lotr_shader_event_fire"
+			container = "lotr_shader_event_background"
+		}
+		widget = {
+			is_shown = {}
+			
+			gui = "umbar_maglor_option_select_widget"
+			container = "custom_widgets_container"  
+			controller = event_chain_progress
+		}
 	}
+	
 
 	immediate = {
 		send_interface_toast = {
