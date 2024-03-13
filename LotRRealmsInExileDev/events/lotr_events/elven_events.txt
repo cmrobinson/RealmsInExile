@@ -908,9 +908,25 @@ elven.1556 = { # Start war against Lindon
 	title = elven.1556.t
 	desc = elven.1556.desc
 	theme = death
+
 	right_portrait = {
 		character = root
-		animation = fear
+		animation = marshal
+	}
+
+	override_background = { reference = kinslaying }
+	
+	immediate = { play_music_cue = mx_cue_murder }
+
+	widgets = {
+		widget = {
+			gui = "lotr_shader_event_sparks"
+			container = "lotr_shader_event_foreground"
+		}
+		widget = {
+			gui = "lotr_shader_event_fire"
+			container = "lotr_shader_event_background"
+		}
 	}
 	
 	option = { 
