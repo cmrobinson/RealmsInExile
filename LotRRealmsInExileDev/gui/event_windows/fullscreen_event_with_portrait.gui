@@ -183,7 +183,7 @@
 								{
 									portrait_texture = "[EventWindowData.GetAnimatedEventPortraitTexture('left_portrait', 'camera_event_right', PdxGetWidgetScreenSize(PdxGuiWidget.Self))]"
 									alwaystransparent = "[Not(EventWindowData.ShouldShowPortraitInfo('left_portrait'))]"
-									tooltip_enabled = "[EventWindowData.ShouldShowPortraitInfo('left_portrait')]"
+									tooltip_visible = "[EventWindowData.ShouldShowPortraitInfo('left_portrait')]"
 								}
 
 								blockoverride "highlight_visible"
@@ -234,7 +234,7 @@
 								{
 									portrait_texture = "[EventWindowData.GetAnimatedEventPortraitTexture('right_portrait', 'camera_event_right', PdxGetWidgetScreenSize(PdxGuiWidget.Self))]"
 									alwaystransparent = "[Not(EventWindowData.ShouldShowPortraitInfo('right_portrait'))]"
-									tooltip_enabled = "[EventWindowData.ShouldShowPortraitInfo('right_portrait')]"
+									tooltip_visible = "[EventWindowData.ShouldShowPortraitInfo('right_portrait')]"
 								}
 
 								blockoverride "highlight_visible"
@@ -285,7 +285,7 @@
 								{
 									portrait_texture = "[EventWindowData.GetAnimatedEventPortraitTexture('center_portrait', 'camera_event_right', PdxGetWidgetScreenSize(PdxGuiWidget.Self))]"
 									alwaystransparent = "[Not(EventWindowData.ShouldShowPortraitInfo('center_portrait'))]"
-									tooltip_enabled = "[EventWindowData.ShouldShowPortraitInfo('center_portrait')]"
+									tooltip_visible = "[EventWindowData.ShouldShowPortraitInfo('center_portrait')]"
 								}
 
 								blockoverride "highlight_visible"
