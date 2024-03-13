@@ -2614,7 +2614,7 @@ elven.1736 = {
 
 elven.1740 = { # Maglor gets message to join war with Nadi-Manye rebels
 	type = letter_event
-	sender = character:linefinwe11
+	sender = scope:nadi_manye_leader
 
 	opening = {
 		desc = elven.1740.opening
@@ -2650,7 +2650,7 @@ elven.1740 = { # Maglor gets message to join war with Nadi-Manye rebels
 	}	
 	
 	option = { # Decline | Decline War
-		name = elven.1555.b
+		name = elven.1740.b
 		
 		ai_chance = {
 			base = 0 
@@ -2708,7 +2708,32 @@ elven.1745 = { # Maglor gets choice to make Nadi-Manye tributaries
 		animation = personality_zealous
 	}
 
-	immediate = { title:c_amrun.holder = { save_scope_as = nadi_manye_leader } }
+	immediate = {
+		hidden_effect = {
+			scope:nadi_manye_leader = {
+				spawn_army = {
+					name = elven.1735.army
+					men_at_arms = {
+						type = desert_javelineers
+						stacks = 8
+					}
+					men_at_arms = {
+						type = haradrim_radiers
+						stacks = 8
+					}
+					men_at_arms = {
+						type = desert_screamers 
+						stacks = 6
+					}
+					men_at_arms = {
+						type = mangonel
+						stacks = 5
+					}
+					location = root.location
+				}
+			}
+		}
+	}
 	
 	option = { # Accept Rebel Leader tributary status
 		name = elven.1745.a
@@ -2717,7 +2742,7 @@ elven.1745 = { # Maglor gets choice to make Nadi-Manye tributaries
 		make_tributary = {
 			TYPE = tributary_permanent
 			SUZERAIN = character:linefinwe11
-			TRIBUTARY = title:c_amrun.holder
+			TRIBUTARY = scope:nadi_manye_leader
 		}
 		set_variable = nadi_manye_tributary
 	}

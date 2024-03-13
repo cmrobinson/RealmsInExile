@@ -4959,11 +4959,13 @@ nadi_manye_religious_war_cb = {
 	}
 
 	on_victory = {
-		character:linefinwe11 = {
-			trigger_event = elven.1745
-		}
 		scope:attacker = { 
 			show_pow_release_message_effect = yes
+		}
+		create_character = {
+			template = maglor_nadi_manye_leader
+			location = root.capital_province
+			save_scope_as = nadi_manye_leader
 		}
 		create_title_and_vassal_change = {
 			type = independency
@@ -5006,12 +5008,15 @@ nadi_manye_religious_war_cb = {
 					}
 				}
 				change_title_holder = {
-					holder = scope:attacker
+					holder = scope:nadi_manye_leader
 					change = scope:change
 				}
 			}
 			
 			resolve_title_and_vassal_change = scope:change
+		}
+		character:linefinwe11 = {
+			trigger_event = elven.1745
 		}
 	}
 
