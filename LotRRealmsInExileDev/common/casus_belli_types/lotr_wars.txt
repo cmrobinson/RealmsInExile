@@ -5004,10 +5004,23 @@ maglor_shatter_realm_cb = {
 	}
 
 	valid_to_start = {
-		scope:target = {
-			tier < tier_empire
-			tier > tier_county
+		trigger_if = {
+			limit = {
+				scope:defender = {
+					highest_held_title_tier = tier_kingdom
+				}
+			}
+			scope:target.tier = tier_kingdom
 		}
+		trigger_else_if = {
+			limit = {
+				scope:defender = {
+					highest_held_title_tier = tier_duchy
+				}
+			}
+			scope:target.tier = tier_duchy
+		}
+		trigger_else = { scope:target.tier = tier_duchy }
 	}
 
 	allowed_for_character_display_regardless = { }
@@ -5017,7 +5030,7 @@ maglor_shatter_realm_cb = {
 	on_invalidated_desc = msg_county_conquest_war_invalidated_message
 	on_invalidated = {}
 
-	cost = { prestige = 500 }
+	cost = { prestige = 350 }
 
 	on_declaration = { on_declared_war = yes }
 

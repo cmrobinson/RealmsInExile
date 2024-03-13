@@ -2122,6 +2122,12 @@ elven.1720 = { # hidden event to appoint governors
 						opinion = 40
 						target = character:linefinwe11
 					}
+					character:linefinwe11 = {
+						add_hook = {
+							type = loyalty_hook
+							target = scope:new_holder
+						}
+					}
 					remove_list_global_variable = { # Remove knight from available governors
 						name = potential_gondorian_governors
 						target = this
@@ -2155,6 +2161,12 @@ elven.1720 = { # hidden event to appoint governors
 						opinion = 40
 						target = character:linefinwe11
 					}
+					character:linefinwe11 = {
+						add_hook = {
+							type = loyalty_hook
+							target = scope:new_holder
+						}
+					}
 					remove_list_global_variable = {
 						name = replacement_governors
 						target = this
@@ -2187,6 +2199,12 @@ elven.1720 = { # hidden event to appoint governors
 						opinion = 40
 						target = character:linefinwe11
 					}
+					character:linefinwe11 = {
+						add_hook = {
+							type = loyalty_hook
+							target = scope:new_holder
+						}
+					}
 					remove_list_global_variable = {
 						name = replacement_governors
 						target = this
@@ -2198,9 +2216,6 @@ elven.1720 = { # hidden event to appoint governors
 				}
 			}
 		}
-
-
-
 		resolve_title_and_vassal_change = scope:title_change
 	}
 }
@@ -4472,10 +4487,12 @@ elven.2001 = { # First Song Battle Event between Maglor/Sauron
 	left_portrait = {
 		character = character:linefinwe11
 		scripted_animation = duel_wield_weapon
+		outfit_tags = { elven_war }
 	}
 	right_portrait = {
 		character = character:lineofsauron
 		scripted_animation = duel_wield_weapon
+		outfit_tags = { vasa }
 	}
 
 	override_background = { reference = throne_room_sauron }
@@ -4485,10 +4502,10 @@ elven.2001 = { # First Song Battle Event between Maglor/Sauron
 			gui = "lotr_shader_event_sparks"
 			container = "lotr_shader_event_foreground"
 		}
-		widget = {
-			gui = "lotr_shader_event_fire"
-			container = "lotr_shader_event_background"
-		}
+	}
+
+	immediate = {
+		play_music_cue = lotr_cue_sauron
 	}
 
 	option = {
@@ -4510,10 +4527,12 @@ elven.2002 = { # Second Song Battle Event between Maglor/Sauron
 	left_portrait = {
 		character = character:linefinwe11
 		scripted_animation = duel_wield_weapon
+		outfit_tags = { elven_war }
 	}
 	right_portrait = {
 		character = character:lineofsauron
 		scripted_animation = duel_wield_weapon
+		outfit_tags = { vasa }
 	}
 
 	override_background = { reference = barad_dur }
@@ -4522,10 +4541,6 @@ elven.2002 = { # Second Song Battle Event between Maglor/Sauron
 		widget = {
 			gui = "lotr_shader_event_sparks"
 			container = "lotr_shader_event_foreground"
-		}
-		widget = {
-			gui = "lotr_shader_event_fire"
-			container = "lotr_shader_event_background"
 		}
 	}
 
@@ -4547,10 +4562,12 @@ elven.2003 = { # Third Song Battle Event between Maglor/Sauron
 	left_portrait = {
 		character = character:linefinwe11
 		scripted_animation = duel_wield_weapon
+		outfit_tags = { elven_war }
 	}
 	right_portrait = {
 		character = character:lineofsauron
 		scripted_animation = duel_wield_weapon
+		outfit_tags = { vasa }
 	}
 	
 	override_background = { reference = barad_dur }
@@ -4559,10 +4576,6 @@ elven.2003 = { # Third Song Battle Event between Maglor/Sauron
 		widget = {
 			gui = "lotr_shader_event_sparks"
 			container = "lotr_shader_event_foreground"
-		}
-		widget = {
-			gui = "lotr_shader_event_fire"
-			container = "lotr_shader_event_background"
 		}
 	}
 
