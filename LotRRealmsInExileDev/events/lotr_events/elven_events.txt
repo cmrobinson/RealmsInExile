@@ -3233,12 +3233,18 @@ scripted_effect maglor_wins_balrog = {
 			years = 15
 		}
 	}
-	hidden_effect = {
-		title:k_khazad_dum = {
-			every_de_jure_county = {
-				limit = { title_province = { has_province_modifier = durins_bane_modifier } }
-				title_province = { remove_province_modifier = durins_bane_modifier }
-			}
+	struggle:balrog_struggle = { end_struggle = yes }
+	character:linefinwe11 = { 
+		immediate = {
+			save_scope_as = balrog_contender
+		}
+	}
+	if = {
+		limit = { # Major News
+			NOT = { has_game_rule = no_news }
+		}
+		every_player = { # Global News Announcement
+			trigger_event = balrog_struggle.0002
 		}
 	}
 }
