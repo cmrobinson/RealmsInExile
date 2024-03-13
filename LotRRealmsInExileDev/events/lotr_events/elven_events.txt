@@ -1016,6 +1016,21 @@ elven.1601 = { # Shield of the Free Peoples starting event | Go to Eregion
 	immediate = {
 		set_variable = no_return_event
 		set_variable = temp_maglor_var
+
+		hidden_effect = {
+			create_character = {
+				template = foreign_architect_template
+				employer = root
+				save_scope_as = caravan_master
+			}
+			if = {
+				limit = { NOT = { employs_court_position = travel_leader_court_position } }
+				appoint_court_position = {
+					recipient = scope:caravan_master
+					court_position = travel_leader_court_position
+				}
+			}
+		}
 	}
 	
 	option = { 
@@ -1051,7 +1066,23 @@ elven.1602 = { # Strike the Heart of the Enemy starting event | Go to Edhellond
 		animation = fear
 	}
 
-	immediate = { set_variable = no_return_event }
+	immediate = { 
+		set_variable = no_return_event 
+		hidden_effect = {
+			create_character = {
+				template = foreign_architect_template
+				employer = root
+				save_scope_as = caravan_master
+			}
+			if = {
+				limit = { NOT = { employs_court_position = travel_leader_court_position } }
+				appoint_court_position = {
+					recipient = scope:caravan_master
+					court_position = travel_leader_court_position
+				}
+			}
+		}
+	}
 	
 	option = { 
 		name = elven.1602.a
