@@ -4478,6 +4478,19 @@ elven.2001 = { # First Song Battle Event between Maglor/Sauron
 		scripted_animation = duel_wield_weapon
 	}
 
+	override_background = { reference = throne_room_sauron }
+
+	widgets = {
+		widget = {
+			gui = "lotr_shader_event_sparks"
+			container = "lotr_shader_event_foreground"
+		}
+		widget = {
+			gui = "lotr_shader_event_fire"
+			container = "lotr_shader_event_background"
+		}
+	}
+
 	option = {
 		name = elven.2001.a
 
@@ -4503,6 +4516,19 @@ elven.2002 = { # Second Song Battle Event between Maglor/Sauron
 		scripted_animation = duel_wield_weapon
 	}
 
+	override_background = { reference = barad_dur }
+	
+	widgets = {
+		widget = {
+			gui = "lotr_shader_event_sparks"
+			container = "lotr_shader_event_foreground"
+		}
+		widget = {
+			gui = "lotr_shader_event_fire"
+			container = "lotr_shader_event_background"
+		}
+	}
+
 	option = {
 		name = elven.2002.a
 		
@@ -4525,6 +4551,19 @@ elven.2003 = { # Third Song Battle Event between Maglor/Sauron
 	right_portrait = {
 		character = character:lineofsauron
 		scripted_animation = duel_wield_weapon
+	}
+	
+	override_background = { reference = barad_dur }
+	
+	widgets = {
+		widget = {
+			gui = "lotr_shader_event_sparks"
+			container = "lotr_shader_event_foreground"
+		}
+		widget = {
+			gui = "lotr_shader_event_fire"
+			container = "lotr_shader_event_background"
+		}
 	}
 
 	option = {
