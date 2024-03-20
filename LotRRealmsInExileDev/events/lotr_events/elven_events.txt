@@ -1546,19 +1546,19 @@ elven.1610 = { # Event that Maglor gets to either move north or fight Eregion ho
 		spawn_army = {
 			name = elven.1610.noldor_army
 			men_at_arms = {
-				type = noldor_glaivesmen
+				type = high_elven_heavy_infantry
 				stacks = 4
 			}
 			men_at_arms = {
-				type = noldor_veterans
+				type = high_elven_heavy_cavalry
 				stacks = 4
 			}
 			men_at_arms = {
-				type = noldor_archers
+				type = high_elven_archers
 				stacks = 4
 			}
 			men_at_arms = {
-				type = noldor_cavalry
+				type = high_elven_heavy_infantry
 				stacks = 4
 			}
 			men_at_arms = {
@@ -3836,7 +3836,7 @@ elven.1818 = { # Recieve Noldor elves from Rivendell
 					spawn_army = {
 						name = elven.1818.toast
 						men_at_arms = {
-							type = noldor_swordsmen
+							type = high_elven_heavy_infantry
 							stacks = 1
 						}
 						location = root.capital_county.title_province
@@ -3847,7 +3847,7 @@ elven.1818 = { # Recieve Noldor elves from Rivendell
 					spawn_army = {
 						name = elven.1818.toast
 						men_at_arms = {
-							type = noldor_glaivesmen
+							type = high_elven_archers
 							stacks = 1
 						}
 						location = root.capital_county.title_province
@@ -3858,18 +3858,7 @@ elven.1818 = { # Recieve Noldor elves from Rivendell
 					spawn_army = {
 						name = elven.1818.toast
 						men_at_arms = {
-							type = noldor_cavalry
-							stacks = 1
-						}
-						location = root.capital_county.title_province
-						origin = scope:gondor_ruler.capital_county.title_province
-					}
-				}
-				1 = {
-					spawn_army = {
-						name = elven.1818.toast
-						men_at_arms = {
-							type = noldor_archers
+							type = high_elven_heavy_cavalry
 							stacks = 1
 						}
 						location = root.capital_county.title_province
@@ -3881,6 +3870,17 @@ elven.1818 = { # Recieve Noldor elves from Rivendell
 						name = elven.1818.toast
 						men_at_arms = {
 							type = noldor_veterans
+							stacks = 1
+						}
+						location = root.capital_county.title_province
+						origin = scope:gondor_ruler.capital_county.title_province
+					}
+				}
+				1 = {
+					spawn_army = {
+						name = elven.1818.toast
+						men_at_arms = {
+							type = noldor_cavalry
 							stacks = 1
 						}
 						location = root.capital_county.title_province
@@ -4123,7 +4123,7 @@ elven.1831 = { # Hidden event to give elven MaA event troops to Maglor
 					spawn_army = {
 						name = elven.1818.lothlorien
 						men_at_arms = {
-							type = galadhrim_warriors
+							type = high_elven_heavy_infantry
 							stacks = 1
 						}
 						location = root.capital_county.title_province
@@ -4134,7 +4134,7 @@ elven.1831 = { # Hidden event to give elven MaA event troops to Maglor
 					spawn_army = {
 						name = elven.1818.lothlorien
 						men_at_arms = {
-							type = knights_of_amroth
+							type = high_elven_heavy_cavalry
 							stacks = 1
 						}
 						location = root.capital_county.title_province
@@ -4145,7 +4145,7 @@ elven.1831 = { # Hidden event to give elven MaA event troops to Maglor
 					spawn_army = {
 						name = elven.1818.lothlorien
 						men_at_arms = {
-							type = galadhrim_wardens
+							type = grey_elven_pikemen
 							stacks = 1
 						}
 						location = root.capital_county.title_province
@@ -4167,7 +4167,7 @@ elven.1831 = { # Hidden event to give elven MaA event troops to Maglor
 					spawn_army = {
 						name = elven.1818.lothlorien
 						men_at_arms = {
-							type = galadhrim_sentinels
+							type = grey_elven_heavy_cavalry
 							stacks = 1
 						}
 						location = root.capital_county.title_province
@@ -4183,7 +4183,7 @@ elven.1831 = { # Hidden event to give elven MaA event troops to Maglor
 					spawn_army = {
 						name = elven.1818.lasgalen
 						men_at_arms = {
-							type = gilded_guard
+							type = high_elven_archers
 							stacks = 1
 						}
 						location = root.capital_county.title_province
@@ -4194,7 +4194,7 @@ elven.1831 = { # Hidden event to give elven MaA event troops to Maglor
 					spawn_army = {
 						name = elven.1818.lasgalen
 						men_at_arms = {
-							type = greenwood_swordsmen
+							type = grey_elven_heavy_cavalry
 							stacks = 1
 						}
 						location = root.capital_county.title_province
@@ -4205,7 +4205,7 @@ elven.1831 = { # Hidden event to give elven MaA event troops to Maglor
 					spawn_army = {
 						name = elven.1818.lasgalen
 						men_at_arms = {
-							type = greenwood_archers
+							type = grey_elven_archers
 							stacks = 1
 						}
 						location = root.capital_county.title_province
@@ -4216,7 +4216,7 @@ elven.1831 = { # Hidden event to give elven MaA event troops to Maglor
 					spawn_army = {
 						name = elven.1818.lasgalen
 						men_at_arms = {
-							type = silvan_rangers
+							type = grey_elven_pikemen
 							stacks = 1
 						}
 						location = root.capital_county.title_province
