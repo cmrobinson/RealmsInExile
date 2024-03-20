@@ -3228,6 +3228,12 @@
 				template = all_beards
 				value = 0.0
 			}
+			accessory = {
+				mode = add
+				gene = headgear
+				template = no_headgear
+				range = { 0 1 } # For the randomness to work correctly
+			}
 		}   
 		weight = {
 			base = 0
@@ -3833,25 +3839,7 @@
 				template = all_beards
 				value = 0.0
 			}
-			accessory = {
-				mode = add
-				gene = headgear
-				template = all_headgear
-				range = { 0.008 0.008 } # For the randomness to work correctly
-			}
-			accessory = {
-				mode = add
-				gene = clothes
-				template = gondorian_commoner_clothes
-				range = { 0 0 }
-			}
-			accessory = {
-				mode = add
-				gene = cloaks
-				template = wam_light_cloaks
-				range = 0
-			}
-		}   
+		}
 		weight = {
 			base = 0
 			modifier = {
@@ -4510,7 +4498,7 @@
 				mode = add
 				gene = hairstyles
 				template = all_hairstyles
-				accessory = male_hair_ep2_western_01
+				accessory = m_hair_ep2_western_01
 			}
 			accessory = {
 				mode = add

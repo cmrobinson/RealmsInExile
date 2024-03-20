@@ -2005,6 +2005,7 @@ fp3_iranian_high_nobles = {
 				add = 50
 				portrait_royalty_clothing_trigger = { 
                     CULTURE_INPUT = gondorian
+					CULTURE_INPUT = dunedain
                 }
 			}
 		}
@@ -2025,6 +2026,7 @@ fp3_iranian_high_nobles = {
 				add = 50
 				portrait_imperial_clothing_trigger = { 
                     CULTURE_INPUT = gondorian
+					CULTURE_INPUT = dunedain
                 }
 			}
 		}
@@ -2333,6 +2335,25 @@ fp3_iranian_high_nobles = {
 				portrait_duchy_clothing_trigger = { 
                     CULTURE_INPUT = dunedain
                 } 
+			}
+		}
+	}
+	
+	## UIALDAIN ##
+	uialdain_clothes = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = clothes
+                template = fp4_western_era3_low_nobility_clothes
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }   
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				portrait_uialdain_clothing_trigger = yes
 			}
 		}
 	}
