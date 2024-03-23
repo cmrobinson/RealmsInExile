@@ -433,8 +433,8 @@
 
 maglor_nadi_manye_faction = {
 	casus_belli = nadi_manye_religious_war_cb
-	county_allow_create = no
-	county_allow_join = no
+	# county_allow_create = no
+	# county_allow_join = no
 	short_effect_desc = maglor_nadi_manye_faction_short_effect_desc
 
 	sort_order = 5
@@ -508,6 +508,8 @@ maglor_nadi_manye_faction = {
 			value = scope:founding_county.faith
 		}
 	}
+
+	can_character_create = { always = no }
 
 	on_destroy = {
 		set_variable = {
@@ -748,7 +750,8 @@ maglor_nadi_manye_faction = {
 	can_county_create = {
 		# Peasants can only join a faction against their direct liege.
 		holder = scope:target
-		
+		scope:target = title:c_amrun.holder
+		title:c_amrun.holder = { has_variable = maglor_faction }
 		scope:target = {
 			NAND = {
 				is_ai = yes
@@ -758,16 +761,6 @@ maglor_nadi_manye_faction = {
 				}
 			}
 			NOT = { culture ?= culture:wastelands } # LotR: No Peasant uprisings against Wastelands
-		}
-		
-		####
-		# BLOCKERS
-		####
-		# General Faction immunity
-		custom_description = {
-			text = character_is_immune_to_factions
-			subject = scope:target
-			NOT = { scope:target = { immune_to_factions_trigger = yes } }
 		}
 	}
 

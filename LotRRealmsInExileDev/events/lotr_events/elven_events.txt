@@ -2445,6 +2445,7 @@ elven.1735 = { # Dynasty Rises in Amrun | Demands sent to current Amrun ruler
 	}
 
 	immediate = {
+		title:c_amrun.holder = { set_variable = maglor_faction }
 		# Adding all county tier titles to list
 		every_held_title = {
 			limit = { tier = tier_county }
@@ -2636,6 +2637,7 @@ elven.1736 = {
 	hidden = yes
 
 	immediate = {
+		title:c_amrun.holder = { remove_variable = maglor_faction }
 		spawn_army = {
 			name = elven.1735.army
 			men_at_arms = {
