@@ -626,7 +626,14 @@ on_game_start_after_lobby = {
 		}
 
 		### Aesthetically pleasing Rhudaur game rule ###
-
+		title:d_shire.holder ?= {
+			if = {
+				limit = {
+					is_independent_ruler = no
+				}
+				vassal_contract_set_obligation_level = { type = title_revocation_rights level = 1 }
+			}
+		}
 		if = {
 			limit = { 
 				has_game_rule = aesthetic_rhudaur
@@ -646,12 +653,3 @@ on_game_start_after_lobby = {
 		game_rule.1000	#Autopopulate families.
 	}
 }
-
-title:d_shire.holder ?= {
-			if = {
-				limit = {
-					is_independent_ruler = no
-				}
-				vassal_contract_set_obligation_level = { type = title_revocation_rights level = 1 }
-			}
-		}
