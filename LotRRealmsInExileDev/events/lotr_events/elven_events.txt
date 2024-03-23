@@ -39,7 +39,7 @@ elven.0100 = { # Introduction to Galadriel
 			trigger = {
 				exists = title:d_parth_celebrant.holder
 			}
-			#character:lineofguthmunding5 = {
+			#character:lineofguthmunding5 = {}
 			title:d_parth_celebrant.holder	= {
 				if = {
 					limit = {
@@ -3284,9 +3284,7 @@ scripted_effect maglor_wins_balrog = {
 	}
 	struggle:balrog_struggle = { end_struggle = yes }
 	character:linefinwe11 = { 
-		immediate = {
-			save_scope_as = balrog_contender
-		}
+		save_scope_as = balrog_contender
 	}
 	if = {
 		limit = { # Major News
@@ -4377,7 +4375,7 @@ elven.1843 = { # Galdriel/Thranduil recieving a letter to join Maglor in war aga
 	sender = character:linefinwe11
 
 	opening = {
-		desc = elven.1843.opening
+		desc = elven.1843.t
 	}
 
 	desc = elven.1843.desc

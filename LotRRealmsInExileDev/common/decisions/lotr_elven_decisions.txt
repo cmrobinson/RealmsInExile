@@ -1610,7 +1610,7 @@ decision_fourth_kinslaying = {
 	
 	# IS_VALID
 	is_valid = {
-		custom_tooltip = { text = "Completed: Stronghold at Edhellond" }
+		#custom_tooltip = { text = "Completed: Stronghold at Edhellond" }
 	}
 	is_valid_showing_failures_only = {
 		is_imprisoned = no
