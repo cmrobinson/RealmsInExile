@@ -181,11 +181,13 @@
   elven.1740.b:0 "We are spread too thin already"
 
   elven.1745.t:0 "The Free Men of Harad"
-  elven.1745.desc:0 "With the final toppling of the Serpent worshippers in Harad, a choice now must be made. Many of the new converts in Harad have approached us, requesting guidance on what to do next.\n\nIf we set them up in the new governments of the Harnen, we could build a powerful coalition of tributaries. That would allow us further long-term support, in the form of both men and materials. Yet if we took them with us, their assistance could be put to work immediately, further strengthening our fortress in Edhellond, as well as fighting in the battles to come."
+  elven.1745.desc.1:0 "With the final toppling of the Serpent worshippers in Harad, a choice now must be made. Many of the new converts in Harad have approached us, requesting guidance on what to do next.\n\nIf we set them up in the new governments of the Harnen, we could build a powerful coalition of tributaries. That would allow us further long-term support, in the form of both men and materials. Yet if we took them with us, their assistance could be put to work immediately, further strengthening our fortress in Edhellond, as well as fighting in the battles to come."
+  elven.1745.desc.2:0 "The last of the followers of the Serpent-god have fallen, defeated by the victorious [nadi_manye_leader.GetName]. Assuredly a foe of Sauron, many of [nadi_manye_leader.GetHerHis] followers were inspired by my own vigorous campaigns in the region.\n\nIf I made the correct overtures, many of these converts, still filled with newfound zeal, may be willing to continue the fight beyond their own homeland. Other lands remain in Sauron's thrall, shackled by chains of faith and iron. Together, we may break them and cast down his false idols in lands afar."
   elven.1745.a:0 "Go in peace, and build new realms."
   elven.1745.a.tt_1:0 "You gain [nadi_manye_leader.GetFirstName] as a [tributary|E]"
   elven.1745.a.tt_2:0 "You receive #P full#! event troops from [nadi_manye_leader.GetFirstName]"
-  elven.1745.b:0 "The war against the Serpent is unfinished. Join me!"
+  elven.1745.b.1:0 "The war against the Serpent is unfinished. Join me!"
+  elven.1745.b.2:0 "Join me, Men of Harad, if you would!"
   elven.1745.b.tt_1:0 "You receive #N half#! event troops from [nadi_manye_leader.GetFirstName]"
   elven.1740.event_troops:0 "Free Men of Harad"
 

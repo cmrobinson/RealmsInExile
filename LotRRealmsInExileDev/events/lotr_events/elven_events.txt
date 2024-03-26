@@ -1214,6 +1214,12 @@ elven.1604 = { # Hidden event | Swap titles for Edhellond
 		every_courtier_or_guest = {
 			set_location = root.capital_province
 		}
+		
+		add_truce_both_ways = { 
+			character = title:k_anfalas.holder
+			years = 3
+			name = TRUCE_TRADE_DEAL
+		}
 	}
 }
 
@@ -2744,7 +2750,16 @@ elven.1745 = { # Maglor gets choice to make Nadi-Manye tributaries
 	content_source = realms_dlc
 	type = character_event
 	title = elven.1745.t
-	desc = elven.1745.desc
+	desc = {
+		triggered_desc = {
+			trigger = { scope:nadi_manye_leader = { has_variable = nadi_manye_war_leader } }
+			desc = elven.1745.desc.1
+		}
+		triggered_desc = {
+			trigger = { scope:nadi_manye_leader = { NOT = { has_variable = nadi_manye_war_leader } } }
+			desc = elven.1745.desc.2
+		}
+	}
 	theme = stewardship_duty_focus
 
 	right_portrait = {
@@ -2786,6 +2801,9 @@ elven.1745 = { # Maglor gets choice to make Nadi-Manye tributaries
 	
 	option = { # Accept Rebel Leader tributary status
 		name = elven.1745.a
+
+		trigger = { NOT = { has_variable = already_good_haruzan } }
+
 		custom_tooltip = elven.1745.a.tt_1
 		custom_tooltip = elven.1745.a.tt_2
 		make_tributary = {
@@ -2796,7 +2814,13 @@ elven.1745 = { # Maglor gets choice to make Nadi-Manye tributaries
 		set_variable = nadi_manye_tributary
 	}
 	option = { # Decline, take resources back to Edhellond
-		name = elven.1745.b
+		name = {
+			text = elven.1745.b.1
+		}
+		name = {
+			text = elven.1745.b.2
+			trigger = { scope:nadi_manye_leader = { has_variable = nadi_manye_war_leader } }
+		}
 
 		custom_tooltip = elven.1745.b.tt_1
 		province:420 = { elven_settlement_add_building_effect = yes }
@@ -2900,7 +2924,7 @@ elven.1750 = { # Toast event to give Maglor Haruzan Event Troops
 	after = {
 		trigger_event = {
 			id = elven.1750
-			days = { 15 30 }
+			days = { 5 15 }
 		}
 	}
 }

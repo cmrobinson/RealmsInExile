@@ -1934,7 +1934,20 @@ decision_help_good_dynasty_rise = {
 			}
 		}
 	
-		title:c_amrun.holder = { is_independent_ruler = yes } 
+		OR = {
+			### Amrun Holder is Evil
+			trigger_if = {
+				limit = { exists = title:c_amrun.holder.liege }
+				title:c_amrun.holder.liege ?= { faith_is_evil = yes }
+			}
+			trigger_else = { title:c_amrun.holder ?= { faith_is_good = yes } }
+			### Amrun Holder is Good
+			trigger_if = {
+				limit = { exists = title:c_amrun.holder.liege }
+				title:c_amrun.holder.liege ?= { faith_is_good = yes }
+			}
+			trigger_else = { title:c_amrun.holder ?= { faith_is_good = yes } }
+		}
 	}
 	is_valid_showing_failures_only = {
 		is_imprisoned = no
@@ -1944,10 +1957,18 @@ decision_help_good_dynasty_rise = {
 	
 	# EFFECT 
 	effect = {
-		title:c_amrun.holder = {
-			trigger_event = {
-				id = elven.1735
-				days = { 10 15 }
+		if = {
+			limit = { title:c_amrun.holder = { faith_is_good = yes } }
+			title:c_amrun.holder = { save_scope_as = nadi_manye_leader }
+			set_variable = already_good_haruzan
+			trigger_event = elven.1745
+		}
+		else = {
+			title:c_amrun.holder = {
+				trigger_event = {
+					id = elven.1735
+					days = { 10 15 }
+				}
 			}
 		}
 		custom_tooltip = decision_help_good_dynasty_rise_custom_tt.1
