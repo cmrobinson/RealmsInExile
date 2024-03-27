@@ -209,33 +209,33 @@
   elven.1806.a.tt.3:0 "The Dwarves put their great skills to use, helping to rebuild Ost-in-Edhil"
   elven.1806.event_troops:0 "Dwarven Soldiers"
 
-  elven.1810.t:0 "VECTOR - Placeholder" # VECTOR - Placeholder
-  elven.1810.desc:0 "Maglor recieves this event. He shows up to Elronds court asking Elrond/Glorfindel to help him in slaying the Balrog" # VECTOR - Placeholder
-  elven.1810.a:0 "Maglor seeks help from Elrond/Glorfindel" # VECTOR - Placeholder
+  elven.1810.t:0 "The Plea to Imladris"
+  elven.1810.desc:0 "I have little right to stand here, in the halls of one who I once stole away. Yet alone I have not the power to destroy one such as the Valaraukar which lurks in the depth's of Durin's palace.\n\nThough much remains to be said between Elrond and I, I must immediately cut to the chase. \n\n"I have discovered what lurks in the darkness of Durin's depths. One of the Valaraukar - perhaps the last of his ilk. Though it has long contented to slumber in the shadows of the earth, if roused by rage or swayed by Sauron, it would be a dread foe to all the Free Peoples. Most of all Imladris and Lorien. I have little right to the loyalty of others, yet I must plead - join with me and let us smother this last ember of the War of Wrath!"\n\nElrond's brow furrows, deep in thought. I hold my breath."
+  elven.1810.a:0 "Please..." # VECTOR - Placeholder
 
-  elven.1811.t:0 "VECTOR - Placeholder" # VECTOR - Placeholder
-  elven.1811.desc:0 "ROYAL COURT EVENT. Elrond is the root character (character recieving event). This is Maglors petition to go and kill the Balrog" # VECTOR - Placeholder
-  elven.1811.a:0 "Go with Maglor to face Balrog" # VECTOR - Placeholder
-  elven.1811.b:0 "Choose to send another noldor elf" # VECTOR - Placeholder
+  elven.1811.t:0 "The Plea of the Scion of Fëanor"
+  elven.1811.desc:0 "Before me kneels one I had not thought to see ere the world was broken and remade. Though I had heard of the rumors, I had not dared to hope after so long chasing mist and rumors.\n\nMaglor Fëanorian kneels in the court of Imladris, having finished his impassioned plea for my aid.\n\n"I have discovered what lurks in the darkness of Durin's depths. One of the Valaraukar - perhaps the last of his ilk. Though it has long contented to slumber in the shadows of the earth, if roused by rage or swayed by Sauron, it would be a dread foe to all the Free Peoples. Most of all Imladris and Lorien. I have little right to the loyalty of others, yet I must plead - join with me and let us smother this last ember of the War of Wrath!"\n\nHis voice has lost none of its potency, the fire of the House of [feanor|E] burning hot."
+  elven.1811.a:0 "I shall fight with you. After, we shall speak of other things..."
+  elven.1811.b:0 "Let others go - I must protect Imladris foremost."
 
-  elven.1815.t:0 "VECTOR - Placeholder" # VECTOR - Placeholder
-  elven.1815.desc:0 "Description that appears when Maglor/Elrond/Glorfindel fight against Balrog" # VECTOR - Placeholder
-  elven.1815.a:0 "Maglor fights the Balrog" # VECTOR - Placeholder
-  elven.1815.toast:0 "You slay Durin's Bane." # VECTOR - Placeholder
+  elven.1815.t:0 "Blade and Song" 
+  elven.1815.desc:0 "Revealed in the fullness of their glory, mighty lords of Eldar Days, it takes not long for the Balrog to find them.\n\nGlorfindel takes the charge, the light of Valinor burning through the Balrog's shadows. Flanking him are Elrond and Maglor, their voices raised in song. Maglor's voice blazes with fire and starlight, and Elrond's with all the strength of the line of Luthien. Yet even then, it is close.\n\nThe Balrog's song is one of ruin, of brutal flame and toppled kings.\n\nYet after much long battle, a single chance appears. A new song is taken up, ringing from the depths of the mountains, the roots of the earth. Celebdil raises its ancient voice in vengeance for its fallen beloved sons, and with the very earth roaring as a choir, the Balrog stumbles, if but for a moment."
+  elven.1815.a:0 "NOW!"
+  elven.1815.toast:0 "You slay Durin's Bane."
   elven.1815.cb_unlock:0 "Unlock the 'Purge Underground Regions' [casus_belli|E]"
 
   elven.1816.toast:0 "Dwarven Troops from Khazad-dum"
   elven.1818.toast:0 "Elven Soldiers from Rivendell"
 
-  elven.1820.t:0 "VECTOR - Placeholder" # VECTOR - Placeholder 
-  elven.1820.desc:0 "Event telling player they have access to a new CB for use to clear the underground regions in Moria/High-pass. It is also locked to these regions until Moria has been cleansed" # VECTOR - Placeholder
-  elven.1820.a:0 "Lets go and clear Khazad-dum of ORCS!!!" # VECTOR - Placeholder
+  elven.1820.t:0 "The Misty Mountain Campaigns"
+  elven.1820.desc:0 "With the fall of the Balrog of [moria|E], the greatest threat in the Misty Mountains has been defeated.\n\nYet many more remain - orcs and goblins still squat in the halls of Durin, and in the high mountain passes. Until they are removed, there will always be a threat from the mountains.\n\n#IA new [casus_belli|E] has been unlocked for use within the titles of [GetTitleByKey('k_khazad_dum').GetNameNoTier] and [GetTitleByKey('k_high_pass').GetNameNoTier], enabling the purging of the malevolent forces which remain with them."
+  elven.1820.a:0 "We shall avenge Durin, and reclaim his halls!" # VECTOR - Placeholder
 
-  elven.1830.t:0 "VECTOR - Placeholder" # VECTOR - Placeholder 
-  elven.1830.desc:0 "Event for Maglor to decide which of the prominent elven lords/ladies in the region get Amon Lanc, or whether to keep it for himself" # VECTOR - Placeholders
-  elven.1830.a:0 "Galadriel gets titles"
-  elven.1830.b:0 "Thranduil gets titles"
-  elven.1830.c:0 "Keep titles"
+  elven.1830.t:0 "The Fate of Amon Lanc"
+  elven.1830.desc:0 "The Hill of Sorcery has fallen before the flaming banners of Fëanor, and Oropher's halls now once more are in Elven hands. The question now is what to do with it. Oropher's folk dwell still in the north, and his son has long reigned there as King, yet they are remote and, purportedly, isolationist.\n\nAcross the Anduin is the realm of Lorien, long shephered by my cousin Galadriel.\n\nAlternatively, Amon Lanc could be kept as an eastern outpost of my own hosts, in preparation for the thrust against Mordor itself."
+  elven.1830.a:0 "Lorien shall grow greater!"
+  elven.1830.b:0 "Let us restore Oropher's halls to his folk."
+  elven.1830.c:0 "I shall keep Amon Lanc"
   elven.1830.a.tt:0 "Give the titles in [GetTitleByKey('k_amon_lanc').GetNameNoTier] to [GetTitleByKey('k_lothlorien').GetHolder.GetName]"
   elven.1830.b.tt:0 "Give the titles in [GetTitleByKey('k_amon_lanc').GetNameNoTier] to [GetTitleByKey('k_lasgalen').GetHolder.GetName]"
   elven.1830.c.tt:0 "Keep the titles in [GetTitleByKey('k_amon_lanc').GetNameNoTier] to yourself"
@@ -269,30 +269,32 @@
   elven.1845.a:0 "We shall help Maglor"
   elven.1845.b:0 "We have our own problems"
 
-  elven.2000.t:0 "VECTOR - Placeholder" # VECTOR - Placeholder
+  elven.2000.t:0 "The Second Last Alliance"
   elven.2000.desc:0 "Sauron recieves this event. Notification of Maglors alliance attacking him" # VECTOR - Placeholder
   elven.2000.a:0 "VECTOR - Placeholder" # VECTOR - Placeholder
 
-  elven.2001.t:0 "Epic Rap Battle - Scene 1"
-  elven.2001.desc:0 "And flame before blackest pit spake, before the incarnate of hate. Who rose then from his darkened throne, and spoke ruinous words of woe. Of oaths spoke in youthful days, of blood stained upon the quays\n\nIn reply the flame then sung, of sorrow and of endless tears, of star set high above all fears. Of sorrow deeper than the sea, of good will turned to ill indeed. But though the tears unending flow, still yet unbowed to lord of woes; to build anew and mend aright, the sorrows born in grief-filled nights.\n\nAnd the Shadow sung of falling night, of oaths betrayed and friends to flight. Of shattered halls and rivers of flame, of sorrow and of hate-filled bane."
-  elven.2001.a:0 "Epic Rap Battle - Scene 1"
+  elven.2001.t:0 "The Song of Flame and Shadow"
+  elven.2001.desc:0 "And in the dark tower, legend says that a battle ensued such as had not been seen since the Elder Days. \n\n#EMP And flame before blackest pit spake, before the incarnate of hate. Who rose then from his darkened throne, and spoke ruinous words of woe. Of oaths spoke in youthful days, of blood stained upon the quays\n\nIn reply the flame then sung, of sorrow and of endless tears, of star set high above all fears. Of sorrow deeper than the sea, of good will turned to ill indeed. But though the tears unending flow, still yet unbowed to lord of woes; to build anew and mend aright, the sorrows born in grief-filled nights.\n\nAnd the Shadow sung of falling night, of oaths betrayed and friends to flight. Of shattered halls and rivers of flame, of sorrow and of hate-filled bane.#"
+  elven.2001.a:0 "The last of seven then replied..."
 
-  elven.2002.t:0 "Epic Rap Battle - Scene 2"
-  elven.2002.desc:0 "The last of seven replied, of hate that would never die. Of war that would not abate, ere the ending of all days. Of love deeper than the earth below, though not of blood, truth would show. Of the flame which cannot die, though malice smothers all under sky. Of embers fanned to flames of war, the rising of the sun of morn."
-  elven.2002.a:0 "Epic Rap Battle - Scene 2"
+  elven.2002.t:0 "The Song of Flame and Shadow"
+  elven.2002.desc:0 "#EMP The last of seven replied, of hate that would never die. Of war that would not abate, ere the ending of all days. Of love deeper than the earth below, though not of blood, truth would show. Of the flame which cannot die, though malice smothers all under sky. Of embers fanned to flames of war, the rising of the sun of morn.\n\nTo this the Shadow made reply, what flame is this that cannot die? To embers shall fall all flames, as must end the sun each day. The Dark within all hearts remains, the truth revealed on bloody quays.\n\nFlames of war and hate fanned high, consuming all beneath the sky. Abandoned is the world of Men, no Power shall avail them then.\n\nA gentler song he then did raise - why not build a better way? This land may yet fair be made, if our hands be joined and not estranged. Of Order pure and land made great, perfect and all in place.# "
+  elven.2002.a:0 "To this did say the dispossed..."
 
-  elven.2003.t:0 "Epic Rap Battle - Scene 3"
-  elven.2003.desc:0 "Epic Rap Battle - Scene 3"
-  elven.2003.a:0 "Epic Rap Battle - Scene 3"
+  elven.2003.t:0 "The Song of Flame and Shadow"
+  elven.2003.desc:0 "#EMP To this did say the dispossessed, to show these lies of hollowness. Crafstmens hands once did did join, to build a world fair, rejoice. Yet bloody turned the dream of old, for one soul's greed and tyrant's throne.\n\nA rightful king shall keep his own, by their wills, not chains of gold. To order world by common cause, not by whip and savage throng.\n\nAnd this song, flawed and frail, shall be the one which shall prevail. For lo, behold, behind me stand, free people from all lands! Hate endures, but so does love, and the flame within shall stir us up!\n\nTo this no song could make reply, the darkness roaring with a cry.\n\nAnd before that flame which shone, the Dark Lord fell from his high throne. His spirit quailed, his song wained, and in terror he flew away. From the West there came a wind, and through the clouds the light streamed in. The Land of Shadows came to light, and all his armies set to flight. The tower quaked, the mountains sang, and the shadow gave way to day.#"
+  elven.2003.a:0 "Utulie'n aure! Auta i lome!"
 
-  elven.2020.t:0 "VECTOR - Placeholder"
-  elven.2020.desc:0 "Event that fire the Silmarillion chain. Maglor can either choose to stay put (and retire later) or immediately go back to Himring"
-  elven.2020.a:0 "Continue my conquest"
-  elven.2020.b:0 "Retire to Himring"
+  elven.2020.t:0 "True Victory"
+  elven.2020.desc:0 "Sauron has fallen! He shall not return, his spirit broken and unhoused.\n\nDespite the jubilant chears of my victorious forces, my mind turns inexorably to the future. Though Sauron is beaten, much of his taint remains in the world, to be uprooted and cleansed. It would be a fitting burden, one worthy of Maedhros - to fight the darkness unceasingly.\n\nYet I am not Maedhros. I am Maglor, and I am weary and spent, as a cloth that has grown thin with long years of weather and toil. The sea calls to me once more."
+  elven.2020.a:0 "Yet I dare not leave the task unfinished."
+  elven.2020.a.tt:0 "You keep all your titles, and continue your campaigns against the remnants of Sauron's influence."
+  elven.2020.b:0 "To the shore I shall go, to sing once more."
+  elven.2020.b.tt:0 "You relinquish all your titles and return to Himring. The sea sings a new song that you can scarcely understand, but it is powerful..."
 
-  elven.2030.t:0 "VECTOR - Placeholder"
-  elven.2030.desc:0 "Maglor recieves a Silmarillion from Ulmo"
-  elven.2030.a:0 "VECTOR - Placeholder"
+  elven.2030.t:0 "The Lord of the Deep"
+  elven.2030.desc:0 "And so I return to the shore, gazing out alone. My task is finished. Sauron is no more. Yet from the tranquil depths slowly rises a mighty wave, and as it does, my heart twists painfully, and alarm fills my mind. It comes ashore, and with a great voice speaks.\n\n"Peace, Makalaurë!\n\n"My lord Ulmo", I reply faintly.\n\n"Long ago, you were told that not even the echo of your lamentations would be heard. Yet I say to you that long I have listened, as you wandered upon my shores. Your songs of regret, sorrow, and pain. The House of Fëanor, and you, have long been in the debates of Máhanaxar. And in our counsel we are now split. Little pity you were promised, but little is not none, and our own failings in the affairs of thy house we have grappled with.\n\nTwo ages ago, the Ban was ended for all but the most unrepentent or of deepest sins. For two ages of the world you have repented bitterly, wandering alone and sundered from thy house. Now at the ending of the Eldar's age, you took upon yourself a task thought impossible, and succeeded despite our deepest doubts. You have wrought a new theme in the great song, and in it we see the echo of the words of our own father, that from evil may come the greater beauty and good. Our counsel is split, and thus we came to a compromise, for I bear a gift."\n\nHe unfurled his hand, and lo! Light undwindled shone forth, brilliant and pure. For in his hand laid the Silmaril that long ago I had cast into the depths of the sea, which had rightly burned me in judgement for my sins.\n\n"Varda shall be thy judge, and the works of thy father's own hands. Once you entrusted it to me - now I return it to you."\n\nAnd with that, he turned his hand over and let the jewel - the jewel for which gods, Elves, and mortals had died and slain for - fall."
+  elven.2030.a:0 "My hand stretches out to catch the falling Silmaril..."
 
 
  ### Elven artifact burns evil characters
