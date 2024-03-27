@@ -228,7 +228,7 @@
   elven.1818.toast:0 "Elven Soldiers from Rivendell"
 
   elven.1820.t:0 "The Misty Mountain Campaigns"
-  elven.1820.desc:0 "With the fall of the Balrog of [moria|E], the greatest threat in the Misty Mountains has been defeated.\n\nYet many more remain - orcs and goblins still squat in the halls of Durin, and in the high mountain passes. Until they are removed, there will always be a threat from the mountains.\n\n#IA New [casus_belli|E] has been unlocked for use within the titles of [GetTitleByKey('k_khazad_dum').GetNameNoTier] and [GetTitleByKey('k_high_pass').GetNameNoTier], enabling the purging of the malevolent forces which remain with them."
+  elven.1820.desc:0 "With the fall of the Balrog of [moria|E], the greatest threat in the Misty Mountains has been defeated.\n\nYet many more remain - orcs and goblins still squat in the halls of Durin, and in the high mountain passes. Until they are removed, there will always be a threat from the mountains.\n\n#I A new [casus_belli|E] has been unlocked for use within the titles of [GetTitleByKey('k_khazad_dum').GetNameNoTier] and [GetTitleByKey('k_high_pass').GetNameNoTier], enabling the purging of the malevolent forces which remain with them."
   elven.1820.a:0 "We shall avenge Durin, and reclaim his halls!" # VECTOR - Placeholder
 
   elven.1830.t:0 "The Fate of Amon Lanc"
