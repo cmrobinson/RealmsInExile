@@ -228,7 +228,7 @@
   elven.1818.toast:0 "Elven Soldiers from Rivendell"
 
   elven.1820.t:0 "The Misty Mountain Campaigns"
-  elven.1820.desc:0 "With the fall of the Balrog of [moria|E], the greatest threat in the Misty Mountains has been defeated.\n\nYet many more remain - orcs and goblins still squat in the halls of Durin, and in the high mountain passes. Until they are removed, there will always be a threat from the mountains.\n\n#IA new [casus_belli|E] has been unlocked for use within the titles of [GetTitleByKey('k_khazad_dum').GetNameNoTier] and [GetTitleByKey('k_high_pass').GetNameNoTier], enabling the purging of the malevolent forces which remain with them."
+  elven.1820.desc:0 "With the fall of the Balrog of [moria|E], the greatest threat in the Misty Mountains has been defeated.\n\nYet many more remain - orcs and goblins still squat in the halls of Durin, and in the high mountain passes. Until they are removed, there will always be a threat from the mountains.\n\n#IA New [casus_belli|E] has been unlocked for use within the titles of [GetTitleByKey('k_khazad_dum').GetNameNoTier] and [GetTitleByKey('k_high_pass').GetNameNoTier], enabling the purging of the malevolent forces which remain with them."
   elven.1820.a:0 "We shall avenge Durin, and reclaim his halls!" # VECTOR - Placeholder
 
   elven.1830.t:0 "The Fate of Amon Lanc"
@@ -279,14 +279,14 @@
 
   elven.2002.t:0 "The Song of Flame and Shadow"
   elven.2002.desc:0 "#EMP The last of seven replied, of hate that would never die. Of war that would not abate, ere the ending of all days. Of love deeper than the earth below, though not of blood, truth would show. Of the flame which cannot die, though malice smothers all under sky. Of embers fanned to flames of war, the rising of the sun of morn.\n\nTo this the Shadow made reply, what flame is this that cannot die? To embers shall fall all flames, as must end the sun each day. The Dark within all hearts remains, the truth revealed on bloody quays.\n\nFlames of war and hate fanned high, consuming all beneath the sky. Abandoned is the world of Men, no Power shall avail them then.\n\nA gentler song he then did raise - why not build a better way? This land may yet fair be made, if our hands be joined and not estranged. Of Order pure and land made great, perfect and all in place.# "
-  elven.2002.a:0 "To this did say the dispossed..."
+  elven.2002.a:0 "To this did say the dispossessed..."
 
   elven.2003.t:0 "The Song of Flame and Shadow"
   elven.2003.desc:0 "#EMP To this did say the dispossessed, to show these lies of hollowness. Crafstmens hands once did did join, to build a world fair, rejoice. Yet bloody turned the dream of old, for one soul's greed and tyrant's throne.\n\nA rightful king shall keep his own, by their wills, not chains of gold. To order world by common cause, not by whip and savage throng.\n\nAnd this song, flawed and frail, shall be the one which shall prevail. For lo, behold, behind me stand, free people from all lands! Hate endures, but so does love, and the flame within shall stir us up!\n\nTo this no song could make reply, the darkness roaring with a cry.\n\nAnd before that flame which shone, the Dark Lord fell from his high throne. His spirit quailed, his song wained, and in terror he flew away. From the West there came a wind, and through the clouds the light streamed in. The Land of Shadows came to light, and all his armies set to flight. The tower quaked, the mountains sang, and the shadow gave way to day.#"
   elven.2003.a:0 "Utulie'n aure! Auta i lome!"
 
   elven.2020.t:0 "True Victory"
-  elven.2020.desc:0 "Sauron has fallen! He shall not return, his spirit broken and unhoused.\n\nDespite the jubilant chears of my victorious forces, my mind turns inexorably to the future. Though Sauron is beaten, much of his taint remains in the world, to be uprooted and cleansed. It would be a fitting burden, one worthy of Maedhros - to fight the darkness unceasingly.\n\nYet I am not Maedhros. I am Maglor, and I am weary and spent, as a cloth that has grown thin with long years of weather and toil. The sea calls to me once more."
+  elven.2020.desc:0 "Sauron has fallen! He shall not return, his spirit broken and unhoused.\n\nDespite the jubilant cheers of my victorious forces, my mind turns inexorably to the future. Though Sauron is beaten, much of his taint remains in the world, to be uprooted and cleansed. It would be a fitting burden, one worthy of Maedhros - to fight the darkness unceasingly.\n\nYet I am not Maedhros. I am Maglor, and I am weary and spent, as a cloth that has grown thin with long years of weather and toil. The sea calls to me once more."
   elven.2020.a:0 "Yet I dare not leave the task unfinished."
   elven.2020.a.tt:0 "You keep all your titles, and continue your campaigns against the remnants of Sauron's influence."
   elven.2020.b:0 "To the shore I shall go, to sing once more."
