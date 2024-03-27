@@ -5029,8 +5029,41 @@ elven.2030 = { # DUN DUN DUN, Maglor recieves Silmaril
 		create_artifact_silmaril_effect = { OWNER = root }
 	}
 
-	option = { # Stay, continouing personal conquest
+	option = {
 		name = elven.2030.a
 		remove_character_modifier = valar_ban_modifier
+		trigger_event = elven.2035
+	}
+}
+
+elven.2035 = { # DUN DUN DUN, Maglor recieves Silmaril
+	content_source = realms_dlc
+	type = character_event
+	title = elven.2035.t
+	desc = elven.2035.desc
+	theme = realm
+
+	override_background = { reference = ulmo }
+
+	left_portrait = {
+		character = root
+		animation = happiness
+	}
+
+	artifact = {
+		position = lower_right_portrait
+		target = scope:silmaril_artifact
+		trigger = { exists = scope:silmaril_artifact }
+	}
+
+	immediate = {
+		random_equipped_character_artifact = {
+			limit = { has_variable = silmaril }
+			save_scope_as = silmaril_artifact
+		}
+	}
+
+	option = {
+		name = elven.2035.a
 	}
 }
